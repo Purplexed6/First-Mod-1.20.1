@@ -1,0 +1,32 @@
+{
+  "display": {
+    "icon": {
+      "item": "oresrise:cheese_wheel"
+    },
+    "title": {
+      "text": "Dairy Industry"
+    },
+    "description": {
+      "text": "Produce your first Cheese Wheel"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "get_cheese_wheel": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["oresrise:cheese_wheel"]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    ["get_cheese_wheel"]
+  ]
+}

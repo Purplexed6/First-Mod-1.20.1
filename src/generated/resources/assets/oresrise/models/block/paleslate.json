@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "oresrise:block/paleslate_top",
+    "side": "oresrise:block/paleslate"
+  }
+}

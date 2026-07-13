@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "oresrise:pyrogel"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "magma_cream": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:magma_cream"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "magma_cream",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "oresrise:pyrogel"
+    ]
+  },
+  "sends_telemetry_event": false
+}

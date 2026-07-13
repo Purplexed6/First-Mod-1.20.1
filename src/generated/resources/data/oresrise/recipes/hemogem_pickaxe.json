@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "oresrise:iron_stick"
+    },
+    "S": {
+      "item": "oresrise:hemogem"
+    }
+  },
+  "pattern": [
+    "SSS",
+    " # ",
+    " # "
+  ],
+  "result": {
+    "item": "oresrise:hemogem_pickaxe"
+  },
+  "show_notification": true
+}

@@ -1,0 +1,32 @@
+{
+  "display": {
+    "icon": {
+      "item": "oresrise:witherite_ingot"
+    },
+    "title": {
+      "text": "Ashes of a God"
+    },
+    "description": {
+      "text": "Obtain a Witherite Ingot"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "witherite_ingot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["oresrise:witherite_ingot"]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    ["witherite_ingot"]
+  ]
+}

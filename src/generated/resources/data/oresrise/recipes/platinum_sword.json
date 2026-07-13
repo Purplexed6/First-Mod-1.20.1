@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "S": {
+      "item": "oresrise:platinum_ingot"
+    }
+  },
+  "pattern": [
+    " S ",
+    " S ",
+    " # "
+  ],
+  "result": {
+    "item": "oresrise:platinum_sword"
+  },
+  "show_notification": true
+}

@@ -1,0 +1,32 @@
+{
+  "display": {
+    "icon": {
+      "item": "oresrise:star_platinum_ingot"
+    },
+    "title": {
+      "text": "Stand Proud"
+    },
+    "description": {
+      "text": "ORA!"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "get_star_platinum_ingot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["oresrise:star_platinum_ingot"]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    ["get_star_platinum_ingot"]
+  ]
+}

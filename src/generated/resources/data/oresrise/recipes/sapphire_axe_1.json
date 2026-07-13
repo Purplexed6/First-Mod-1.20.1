@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "S": {
+      "item": "oresrise:sapphire"
+    }
+  },
+  "pattern": [
+    "SS ",
+    "S# ",
+    " # "
+  ],
+  "result": {
+    "item": "oresrise:sapphire_axe"
+  },
+  "show_notification": true
+}

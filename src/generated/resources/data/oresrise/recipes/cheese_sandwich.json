@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "oresrise:bread_slice"
+    },
+    {
+      "item": "oresrise:bread_slice"
+    },
+    {
+      "item": "oresrise:cheese_slice"
+    }
+  ],
+  "result": {
+    "item": "oresrise:cheese_sandwich"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "display": {
+    "icon": {
+      "item": "oresrise:starrite"
+    },
+    "title": {
+      "text": "I get Messages from the Stars"
+    },
+    "description": {
+      "text": "When you're making love to me.."
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "get_starrite": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["oresrise:starrite"]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    ["get_starrite"]
+  ]
+}

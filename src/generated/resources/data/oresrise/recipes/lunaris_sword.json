@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "oresrise:iron_stick"
+    },
+    "S": {
+      "item": "oresrise:lunaris"
+    }
+  },
+  "pattern": [
+    " S ",
+    " S ",
+    " # "
+  ],
+  "result": {
+    "item": "oresrise:lunaris_sword"
+  },
+  "show_notification": true
+}

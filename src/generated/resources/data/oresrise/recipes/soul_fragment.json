@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "oresrise:soul_crystal"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "item": "oresrise:soul_fragment"
+  }
+}

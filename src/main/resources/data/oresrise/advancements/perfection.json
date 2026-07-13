@@ -1,0 +1,32 @@
+{
+  "display": {
+    "icon": {
+      "item": "oresrise:quintessite"
+    },
+    "title": {
+      "text": "Perfect Life Form"
+    },
+    "description": {
+      "text": "Obtain Quintessite"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "quintessite": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["oresrise:quintessite"]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    ["quintessite"]
+  ]
+}

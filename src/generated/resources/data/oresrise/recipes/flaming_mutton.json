@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:cooked_mutton"
+    },
+    {
+      "item": "minecraft:blaze_powder"
+    },
+    {
+      "item": "oresrise:pepper"
+    }
+  ],
+  "result": {
+    "item": "oresrise:flaming_mutton"
+  }
+}

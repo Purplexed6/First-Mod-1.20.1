@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "S": {
+      "item": "oresrise:cobalt_ingot"
+    }
+  },
+  "pattern": [
+    " SS",
+    " #S",
+    " # "
+  ],
+  "result": {
+    "item": "oresrise:cobalt_axe"
+  },
+  "show_notification": true
+}

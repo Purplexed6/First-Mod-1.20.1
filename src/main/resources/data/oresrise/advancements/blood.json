@@ -1,0 +1,32 @@
+{
+  "display": {
+    "icon": {
+      "item": "oresrise:hemogem"
+    },
+    "title": {
+      "text": "BLOOD IS FUEL."
+    },
+    "description": {
+      "text": "MANKIND IS DEAD. HELL IS FULL."
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "get_hemogem": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["oresrise:hemogem"]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    ["get_hemogem"]
+  ]
+}

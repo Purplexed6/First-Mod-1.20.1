@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "oresrise:iron_stick"
+    },
+    "S": {
+      "item": "oresrise:azurite"
+    }
+  },
+  "pattern": [
+    " S ",
+    " # ",
+    " # "
+  ],
+  "result": {
+    "item": "oresrise:azurite_shovel"
+  },
+  "show_notification": true
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "oresrise:iron_stick"
+    },
+    "S": {
+      "item": "oresrise:hemogem"
+    }
+  },
+  "pattern": [
+    " S ",
+    " S ",
+    " # "
+  ],
+  "result": {
+    "item": "oresrise:hemogem_sword"
+  },
+  "show_notification": true
+}

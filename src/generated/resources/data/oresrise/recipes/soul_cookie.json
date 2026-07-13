@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "minecraft:cookie"
+    },
+    "E": {
+      "item": "minecraft:netherrack"
+    },
+    "S": {
+      "item": "oresrise:soul_powder"
+    }
+  },
+  "pattern": [
+    " S ",
+    "ECE",
+    " S "
+  ],
+  "result": {
+    "item": "oresrise:soul_cookie"
+  },
+  "show_notification": true
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:apple"
+    },
+    "S": {
+      "item": "oresrise:sapphire"
+    }
+  },
+  "pattern": [
+    " S ",
+    "SAS",
+    " S "
+  ],
+  "result": {
+    "item": "oresrise:sapphire_apple"
+  },
+  "show_notification": true
+}

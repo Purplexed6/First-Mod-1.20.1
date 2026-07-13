@@ -1,0 +1,6 @@
+{
+  "parent": "oresrise:block/amberwood_sapling",
+  "textures": {
+    "layer0": "oresrise:block/amberwood_sapling"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "oresrise:platinum_ingot"
+    },
+    {
+      "item": "oresrise:starrite"
+    }
+  ],
+  "result": {
+    "item": "oresrise:star_platinum_ingot"
+  }
+}

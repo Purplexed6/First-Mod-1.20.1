@@ -1,0 +1,82 @@
+{
+  "metal_detector_found_ore": {
+    "subtitles": "sounds.oresrise.metal_detector_found_ore",
+    "sounds": [
+      "oresrise:metal_detector_found_ore"
+    ]
+  },
+  "sound_block_break": {
+    "subtitle": "sounds.oresrise.sound_block_break",
+    "sounds": [
+      "oresrise:sound_block_break"
+    ]
+  },
+  "sound_block_step": {
+    "subtitle": "sounds.oresrise.sound_block_step",
+    "sounds": [
+      "oresrise:sound_block_step"
+    ]
+  },
+  "sound_block_place": {
+    "subtitle": "sounds.oresrise.sound_block_place",
+    "sounds": [
+      "oresrise:sound_block_place"
+    ]
+  },
+  "sound_block_hit": {
+    "subtitle": "sounds.oresrise.sound_block_hit",
+    "sounds": [
+      "oresrise:sound_block_hit"
+    ]
+  },
+  "star_platinum_impact": {
+    "subtitle": "sounds.oresrise.star_platinum_impact",
+    "sounds": [
+      "oresrise:star_platinum_impact"
+    ]
+  },
+  "glow": {
+    "subtitle": "sounds.oresrise.glow",
+    "sounds": [
+      "oresrise:glow"
+    ]
+  },
+  "ding": {
+    "subtitle": "sounds.oresrise.ding",
+    "sounds": [
+      "oresrise:ding"
+    ]
+  },
+  "teleport": {
+    "subtitle": "sounds.oresrise.teleport",
+    "sounds": [
+      "oresrise:teleport"
+    ]
+  },
+  "charm": {
+    "subtitle": "sounds.oresrise.charm",
+    "sounds": [
+      "oresrise:charm"
+    ]
+  },
+  "titan": {
+    "subtitle": "sounds.oresrise.titan",
+    "sounds": [
+      "oresrise:titan"
+    ]
+  },
+  "sound_block_fall": {
+    "subtitle": "sounds.oresrise.sound_block_fall",
+    "sounds": [
+      "oresrise:sound_block_fall"
+    ]
+  },
+  "bar_brawl": {
+    "sounds": [
+      {
+        "name": "oresrise:bar_brawl",
+        "stream": true
+      }
+    ]
+  }
+}

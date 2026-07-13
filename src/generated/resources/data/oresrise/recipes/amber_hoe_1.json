@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "oresrise:iron_stick"
+    },
+    "S": {
+      "item": "oresrise:amber"
+    }
+  },
+  "pattern": [
+    "SS ",
+    " # ",
+    " # "
+  ],
+  "result": {
+    "item": "oresrise:amber_hoe"
+  },
+  "show_notification": true
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "oresrise:iron_stick"
+    },
+    "S": {
+      "item": "oresrise:witherite_ingot"
+    }
+  },
+  "pattern": [
+    "SS ",
+    "S# ",
+    " # "
+  ],
+  "result": {
+    "item": "oresrise:witherite_axe"
+  },
+  "show_notification": true
+}

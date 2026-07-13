@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "S": {
+      "item": "oresrise:starrite"
+    }
+  },
+  "pattern": [
+    " SS",
+    " #S",
+    " # "
+  ],
+  "result": {
+    "item": "oresrise:starrite_axe"
+  },
+  "show_notification": true
+}

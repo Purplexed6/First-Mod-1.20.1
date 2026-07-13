@@ -1,0 +1,17 @@
+{
+  "type": "oresrise:add_item",
+  "conditions": [
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "type": "minecraft:blaze"
+      }
+    },
+    {
+      "chance": 0.2,
+      "condition": "minecraft:random_chance"
+    }
+  ],
+  "item": "oresrise:blaze_slag"
+}

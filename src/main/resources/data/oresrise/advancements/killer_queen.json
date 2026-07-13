@@ -1,0 +1,32 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:tnt"
+    },
+    "title": {
+      "text": "Killer Queen"
+    },
+    "description": {
+      "text": "Obtain TNT"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "get_tnt": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["minecraft:tnt"]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    ["get_tnt"]
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "display": {
+    "icon": {
+      "item": "oresrise:oblivionite_shard"
+    },
+    "title": {
+      "text": "Half Way"
+    },
+    "description": {
+      "text": "Acquire an Oblivionite Shard"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "oblivionite_shard": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["oresrise:oblivionite_shard"]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    ["oblivionite_shard"]
+  ]
+}

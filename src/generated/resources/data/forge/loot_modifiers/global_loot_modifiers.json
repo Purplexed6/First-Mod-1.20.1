@@ -1,0 +1,11 @@
+{
+  "entries": [
+    "oresrise:witherite_ingot_from_wither",
+    "oresrise:wither_slag_from_wither_skeleton",
+    "oresrise:metal_detector_from_jungle_temples",
+    "oresrise:raw_witherite_from_wither",
+    "oresrise:end_slag_from_enderman",
+    "oresrise:blaze_slag_from_blaze"
+  ],
+  "replace": false
+}

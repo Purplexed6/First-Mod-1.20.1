@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "oresrise:netherite_stick"
+    },
+    "S": {
+      "item": "oresrise:onyx"
+    }
+  },
+  "pattern": [
+    " S ",
+    " S ",
+    " # "
+  ],
+  "result": {
+    "item": "oresrise:onyx_sword"
+  },
+  "show_notification": true
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "S": {
+      "item": "minecraft:amethyst_shard"
+    }
+  },
+  "pattern": [
+    " SS",
+    " #S",
+    " # "
+  ],
+  "result": {
+    "item": "oresrise:amethyst_axe"
+  },
+  "show_notification": true
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "minecraft:cookie"
+    },
+    "S": {
+      "item": "oresrise:obsidian_shard"
+    }
+  },
+  "pattern": [
+    " S ",
+    "SCS",
+    " S "
+  ],
+  "result": {
+    "item": "oresrise:obsidian_cookie"
+  },
+  "show_notification": true
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "oresrise:iron_stick"
+    },
+    "S": {
+      "item": "oresrise:hemogem"
+    }
+  },
+  "pattern": [
+    " S ",
+    " # ",
+    " # "
+  ],
+  "result": {
+    "item": "oresrise:hemogem_shovel"
+  },
+  "show_notification": true
+}
