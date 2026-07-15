@@ -12,7 +12,7 @@ public class StarPlatinumSet {
             () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> STAR_PLATINUM_SWORD = ModItems.ITEMS.register("star_platinum_sword",
-            () -> new ModSwordItem(ModToolTiers.STAR_PLATINUM, 4, -2.4f, new Item.Properties()));
+            () -> new SwordItem(ModToolTiers.STAR_PLATINUM, 4, -2.4f, new Item.Properties()));
     public static final RegistryObject<Item> STAR_PLATINUM_PICKAXE = ModItems.ITEMS.register("star_platinum_pickaxe",
             () -> new PickaxeItem(ModToolTiers.STAR_PLATINUM, 1, -2.8f, new Item.Properties()));
     public static final RegistryObject<Item> STAR_PLATINUM_AXE = ModItems.ITEMS.register("star_platinum_axe",
@@ -30,6 +30,9 @@ public class StarPlatinumSet {
             () -> new ArmorItem(ModArmorMaterials.STAR_PLATINUM, ArmorItem.Type.LEGGINGS, new Item.Properties()));
     public static final RegistryObject<Item> STAR_PLATINUM_BOOTS = ModItems.ITEMS.register("star_platinum_boots",
             () -> new ArmorItem(ModArmorMaterials.STAR_PLATINUM, ArmorItem.Type.BOOTS, new Item.Properties()));
+
+    public static final RegistryObject<Item> STAR_BREAKER = ModItems.ITEMS.register("star_breaker",
+            () -> new ModSwordItem(ModToolTiers.STAR_PLATINUM, 5, -2.4f, new Item.Properties()));
 
     public static void register() {}
 }

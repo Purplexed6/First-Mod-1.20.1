@@ -1,7 +1,6 @@
 package net.mak.oresrise;
 
 import net.mak.oresrise.combat.ComboManager;
-import net.mak.oresrise.item.ModItems;
 import net.mak.oresrise.item.custom.*;
 import net.mak.oresrise.item.ModArmorMaterials;
 import net.minecraft.core.BlockPos;
@@ -47,8 +46,8 @@ public class ModEvents {
             else if (stack.is(Items.OBSIDIAN)) {
                 processGrind(event, level, pos, player, stack, new ItemStack(ObsidianSet.OBSIDIAN_SHARD.get()));
             }
-            else if (stack.is(AmberSet.ROUGH_AMBER.get())) {
-                processGrind(event, level, pos, player, stack, new ItemStack(AmberSet.AMBER.get()));
+            else if (stack.is(VibraniumSet.ROUGH_VIBRANIUM.get())) {
+                processGrind(event, level, pos, player, stack, new ItemStack(VibraniumSet.VIBRANIUM.get()));
             }
             else if (stack.is(SoulSet.SOUL_FRAGMENT.get())) {
                 ItemStack output = new ItemStack(SoulSet.SOUL_POWDER.get());

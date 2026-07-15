@@ -47,7 +47,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.CRYPTON_BLOCK.get());
         this.dropSelf(ModBlocks.SOUL_STEEL_BLOCK.get());
         this.dropSelf(ModBlocks.LUNARIS_BLOCK.get());
-        this.dropSelf(ModBlocks.AZURITE_BLOCK.get());
+        this.dropSelf(ModBlocks.FLUXITE_BLOCK.get());
         this.dropSelf(ModBlocks.ONYX_BLOCK.get());
         this.dropSelf(ModBlocks.STARRITE_BLOCK.get());
         this.dropSelf(ModBlocks.COBALT_BLOCK.get());
@@ -57,6 +57,8 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.RAW_PLATINUM_BLOCK.get());
         this.dropSelf(ModBlocks.STAR_PLATINUM_BLOCK.get());
         this.dropSelf(ModBlocks.ROSE_GOLD_BLOCK.get());
+        this.dropSelf(ModBlocks.ROUGH_VIBRANIUM_BLOCK.get());
+        this.dropSelf(ModBlocks.VIBRANIUM_BLOCK.get());
 
         this.add(ModBlocks.SAPPHIRE_ORE.get(), (block) ->
                 createOreDrop(block, SapphireSet.ROUGH_SAPPHIRE.get())
@@ -98,6 +100,12 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                                 .add(LootItem.lootTableItem(Misc.COMPRESSED_SLAG.get()))));
         this.add(ModBlocks.DEEPSLATE_ALEXANDRITE_ORE.get(), (block) ->
                 createOreDrop(block, AlexandriteSet.ALEXANDRITE.get())
+                        .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1.0f))
+                                .when(LootItemRandomChanceCondition.randomChance(0.1f))
+                                .add(LootItem.lootTableItem(Misc.COMPRESSED_SLAG.get()))));
+
+        this.add(ModBlocks.VIBRANIUM_ORE.get(), (block) ->
+                createOreDrop(block, VibraniumSet.ROUGH_VIBRANIUM.get())
                         .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1.0f))
                                 .when(LootItemRandomChanceCondition.randomChance(0.1f))
                                 .add(LootItem.lootTableItem(Misc.COMPRESSED_SLAG.get()))));
@@ -161,9 +169,9 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                                 .apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0f, 2.0f)))
                                 .apply(ApplyBonusCount.addOreBonusCount(Enchantments.BLOCK_FORTUNE)))));
 
-        this.add(ModBlocks.AZURITE_ORE.get(), (block) ->
+        this.add(ModBlocks.FLUXITE_ORE.get(), (block) ->
                 createSilkTouchDispatchTable(block, this.applyExplosionDecay(block,
-                        LootItem.lootTableItem(AzuriteSet.AZURITE.get())
+                        LootItem.lootTableItem(FluxiteSet.FLUXITE.get())
                                 .apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0f, 2.0f)))
                                 .apply(ApplyBonusCount.addOreBonusCount(Enchantments.BLOCK_FORTUNE)))));
 

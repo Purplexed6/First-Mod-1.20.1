@@ -4,12 +4,10 @@ import net.mak.oresrise.ExampleMod;
 import net.mak.oresrise.item.custom.*;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
-import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
-import org.spongepowered.tools.obfuscation.fg3.ObfuscationServiceFG3;
 
 import java.util.function.Supplier;
 
@@ -65,8 +63,8 @@ public enum ModArmorMaterials implements ArmorMaterial {
     WITHERITE("witherite", 40, new int[]{ 4, 9, 7, 4 }, 18,
             SoundEvents.ARMOR_EQUIP_DIAMOND, 3f, 0.2f, () -> Ingredient.of(WitheriteSet.WITHERITE_INGOT.get())),
 
-    AZURITE("azurite", 37, new int[]{ 3, 8, 6, 3 }, 15,
-            SoundEvents.ARMOR_EQUIP_NETHERITE, 3f, 0.1f, () -> Ingredient.of(AzuriteSet.AZURITE.get())),
+    FLUXITE("fluxite", 37, new int[]{ 3, 8, 6, 3 }, 15,
+            SoundEvents.ARMOR_EQUIP_NETHERITE, 3f, 0.1f, () -> Ingredient.of(FluxiteSet.FLUXITE.get())),
 
     PLATINUM("platinum", 30, new int[]{ 3, 8, 6, 3 }, 15,
             SoundEvents.ARMOR_EQUIP_DIAMOND,
@@ -80,12 +78,11 @@ public enum ModArmorMaterials implements ArmorMaterial {
             0.02f, // very small knockback resist
             () -> Ingredient.of(StarriteSet.STARRITE.get())),
 
-    AMBER("amber", 40, new int[]{3, 8, 6, 3}, 18,
+    RESONITE("resonite", 40, new int[]{3, 8, 6, 3}, 18,
             SoundEvents.ARMOR_EQUIP_DIAMOND,
             2.0f, // ⬅ decent toughness (diamond = 2, netherite = 3)
             0.0f, // ⬅ no knockback resistance
-            () -> Ingredient.of(AmberSet.AMBER.get())),
-
+            () -> Ingredient.of(ResoniteSet.RESONITE_INGOT.get())),
 
     ROSITE("rosite", 15, new int[]{ 2, 6, 5, 2 }, 10,
             SoundEvents.ARMOR_EQUIP_DIAMOND, 0f, 0f, () -> Ingredient.of(RositeSet.ROSITE_INGOT.get())),

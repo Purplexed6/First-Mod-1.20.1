@@ -147,28 +147,34 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.FLAMING_RABBIT);
         simpleItem(ModItems.FLAMING_STEAK);
 
-        simpleItem(AzuriteSet.AZURITE);
-        handheldItem(AzuriteSet.AZURITE_SWORD);
-        handheldItem(AzuriteSet.AZURITE_PICKAXE);
-        handheldItem(AzuriteSet.AZURITE_AXE);
-        handheldItem(AzuriteSet.AZURITE_SHOVEL);
-        handheldItem(AzuriteSet.AZURITE_HOE);
-        simpleItem(AzuriteSet.AZURITE_HELMET);
-        simpleItem(AzuriteSet.AZURITE_CHESTPLATE);
-        simpleItem(AzuriteSet.AZURITE_LEGGINGS);
-        simpleItem(AzuriteSet.AZURITE_BOOTS);
+        simpleItem(FluxiteSet.FLUXITE);
+        handheldItem(FluxiteSet.FLUXITE_SWORD);
+        handheldItem(FluxiteSet.FLUXITE_PICKAXE);
+        handheldItem(FluxiteSet.FLUXITE_AXE);
+        handheldItem(FluxiteSet.FLUXITE_SHOVEL);
+        handheldItem(FluxiteSet.FLUXITE_HOE);
+        simpleItem(FluxiteSet.FLUXITE_HELMET);
+        simpleItem(FluxiteSet.FLUXITE_CHESTPLATE);
+        simpleItem(FluxiteSet.FLUXITE_LEGGINGS);
+        simpleItem(FluxiteSet.FLUXITE_BOOTS);
 
-        simpleItem(AmberSet.AMBER);
-        simpleItem(AmberSet.ROUGH_AMBER);
-        handheldItem(AmberSet.AMBER_SWORD);
-        handheldItem(AmberSet.AMBER_PICKAXE);
-        handheldItem(AmberSet.AMBER_AXE);
-        handheldItem(AmberSet.AMBER_SHOVEL);
-        handheldItem(AmberSet.AMBER_HOE);
-        simpleItem(AmberSet.AMBER_HELMET);
-        simpleItem(AmberSet.AMBER_CHESTPLATE);
-        simpleItem(AmberSet.AMBER_LEGGINGS);
-        simpleItem(AmberSet.AMBER_BOOTS);
+        simpleItem(VibraniumSet.VIBRANIUM);
+        simpleItem(VibraniumSet.ROUGH_VIBRANIUM);
+
+        simpleItem(ResoniteSet.RESONITE_INGOT);
+        handheldItem(ResoniteSet.RESONITE_SWORD);
+        handheldItem(ResoniteSet.RESONITE_PICKAXE);
+        handheldItem(ResoniteSet.RESONITE_AXE);
+        handheldItem(ResoniteSet.RESONITE_SHOVEL);
+        handheldItem(ResoniteSet.RESONITE_HOE);
+        simpleItem(ResoniteSet.RESONITE_HELMET);
+        simpleItem(ResoniteSet.RESONITE_CHESTPLATE);
+        simpleItem(ResoniteSet.RESONITE_LEGGINGS);
+        simpleItem(ResoniteSet.RESONITE_BOOTS);
+
+        simpleItem(Misc.ECHO_STEEL_INGOT);
+
+        simpleItem(Misc.WITHERED_BONE);
 
         simpleItem(CryptonSet.CRYPTON);
         simpleItem(CryptonSet.CRYPTON_SHARD);
@@ -263,6 +269,8 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         simpleItem(FireiteSet.PYROGEL);
         simpleItem(FireiteSet.FIREITE_INGOT);
+        handheldItem(FireiteSet.FIREITE_BLADE);
+        basicItem(FireiteSet.FIREITE_UPGRADE_SMITHING_TEMPLATE.get());
 
         simpleItem(PlatinumSet.RAW_PLATINUM);
         simpleItem(PlatinumSet.PLATINUM_INGOT);
@@ -286,6 +294,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         handheldItem(StarPlatinumSet.STAR_PLATINUM_AXE);
         handheldItem(StarPlatinumSet.STAR_PLATINUM_SHOVEL);
         handheldItem(StarPlatinumSet.STAR_PLATINUM_HOE);
+        handheldItem(StarPlatinumSet.STAR_BREAKER);
 
         simpleItem(CobaltSet.RAW_COBALT);
         simpleItem(CobaltSet.COBALT_INGOT);

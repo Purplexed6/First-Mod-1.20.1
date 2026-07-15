@@ -100,7 +100,7 @@ public class ModItems {
 
         // This wakes up the class.
         // DO NOT put "eventBus" inside these parentheses!
-        AzuriteSet.register();
+        FluxiteSet.register();
         RubySet.register();
         SapphireSet.register();
         SoulSet.register();
@@ -114,7 +114,7 @@ public class ModItems {
         HemoSet.register();
         CryptonSet.register();
         AlexandriteSet.register();
-        AmberSet.register();
+        ResoniteSet.register();
         QuintessiteSet.register();
         SugiliteSet.register();
         OnyxSet.register();
@@ -128,5 +128,6 @@ public class ModItems {
         OblivioniteSet.register();
         ShadowSteelSet.register();
         FireiteSet.register();
+        VibraniumSet.register();
     }
 }

@@ -39,11 +39,13 @@ public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> RUBY_ORE_KEY = registerKey("ruby_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> ALEXANDRITE_ORE_KEY = registerKey("alexandrite_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> SUGILITE_ORE_KEY = registerKey("sugilite_ore");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> VIBRANIUM_ORE_KEY = registerKey("vibranium_ore");
 
     public static final ResourceKey<ConfiguredFeature<?, ?>> WITHERITE_ORE_KEY = registerKey("witherite_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> SOUL_ORE_KEY = registerKey("soul_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> QUINTESSITE_ORE_KEY = registerKey("quintessite_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> HEMOGEM_ORE_KEY = registerKey("hemogem_ore");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> FLUXITE_ORE_KEY = registerKey("fluxite_ore");
 
     public static final ResourceKey<ConfiguredFeature<?, ?>> OBLIVIONITE_ORE_KEY = registerKey("oblivionite_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> LUNARIS_ORE_KEY = registerKey("lunaris_ore");
@@ -60,6 +62,7 @@ public class ModConfiguredFeatures {
         RuleTest netherrackReplacables = new BlockMatchTest(Blocks.NETHERRACK);
         RuleTest blackstoneReplacables = new BlockMatchTest(Blocks.BLACKSTONE);
         RuleTest soulsoilReplacables = new BlockMatchTest(Blocks.SOUL_SOIL);
+        RuleTest basaltReplacables = new BlockMatchTest(Blocks.SMOOTH_BASALT);
         RuleTest paleslateReplacables = new BlockMatchTest(ModBlocks.PALESLATE.get());
         RuleTest endReplaceables = new BlockMatchTest(Blocks.END_STONE);
         RuleTest astraliteReplaceables = new BlockMatchTest(ModBlocks.ASTRALITE.get());
@@ -77,9 +80,16 @@ public class ModConfiguredFeatures {
         List<OreConfiguration.TargetBlockState> overworldAlexandriteOres = List.of(OreConfiguration.target(stoneReplaceable,
                         ModBlocks.ALEXANDRITE_ORE.get().defaultBlockState()),
                 OreConfiguration.target(deepslateReplaceables, ModBlocks.DEEPSLATE_ALEXANDRITE_ORE.get().defaultBlockState()));
+        List<OreConfiguration.TargetBlockState> overworldVibraniumOres = List.of(
+                OreConfiguration.target(
+                        deepslateReplaceables,
+                        ModBlocks.VIBRANIUM_ORE.get().defaultBlockState()
+                )
+        );
         List<OreConfiguration.TargetBlockState> starriteOres = List.of(
                 OreConfiguration.target(stoneReplaceable,
                         ModBlocks.STARRITE_ORE.get().defaultBlockState())
+
         );
         List<OreConfiguration.TargetBlockState> astraliteReplace = List.of(
                 // Target 1: Replaces Grass
@@ -91,12 +101,15 @@ public class ModConfiguredFeatures {
         register(context, RUBY_ORE_KEY, Feature.ORE, new OreConfiguration(overworldRubyOres, 4));
         register(context, ALEXANDRITE_ORE_KEY, Feature.ORE, new OreConfiguration(overworldAlexandriteOres, 4));
         register(context, SUGILITE_ORE_KEY, Feature.ORE, new OreConfiguration(overworldSugiliteOres, 4));
+        register(context, VIBRANIUM_ORE_KEY, Feature.ORE, new OreConfiguration(overworldVibraniumOres, 4));
         // register(context, STARRITE_ORE_KEY, Feature.ORE, new OreConfiguration(starriteOres, 9));
 
         register(context, WITHERITE_ORE_KEY, Feature.ORE, new OreConfiguration(paleslateReplacables,
-                ModBlocks.WITHERITE_ORE.get().defaultBlockState(), 30));
+                ModBlocks.WITHERITE_ORE.get().defaultBlockState(), 3));
         register(context, SOUL_ORE_KEY, Feature.ORE, new OreConfiguration(soulsoilReplacables,
                 ModBlocks.SOUL_ORE.get().defaultBlockState(), 3));
+        register(context, FLUXITE_ORE_KEY, Feature.ORE, new OreConfiguration(basaltReplacables,
+                ModBlocks.FLUXITE_ORE.get().defaultBlockState(), 3));
         register(context, QUINTESSITE_ORE_KEY, Feature.ORE, new OreConfiguration(netherrackReplacables,
                 ModBlocks.QUINTESSITE_ORE.get().defaultBlockState(), 3));
         register(context, HEMOGEM_ORE_KEY, Feature.ORE, new OreConfiguration(blackstoneReplacables,

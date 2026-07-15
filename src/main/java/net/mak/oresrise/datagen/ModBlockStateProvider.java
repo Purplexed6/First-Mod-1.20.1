@@ -31,6 +31,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.RUBY_BLOCK);
         blockWithItem(ModBlocks.ROUGH_RUBY_BLOCK);
         blockWithItem(ModBlocks.ROSITE_BLOCK);
+        blockWithItem(ModBlocks.ROSE_GOLD_BLOCK);
         blockWithItem(ModBlocks.OBLIVIONITE_BLOCK);
         blockWithItem(ModBlocks.WITHERITE_BLOCK);
         blockWithItem(ModBlocks.RAW_WITHERITE_BLOCK);
@@ -42,7 +43,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.SOUL_STEEL_BLOCK);
         blockWithItem(ModBlocks.CRYPTON_BLOCK);
         blockWithItem(ModBlocks.LUNARIS_BLOCK);
-        blockWithItem(ModBlocks.AZURITE_BLOCK);
+        blockWithItem(ModBlocks.FLUXITE_BLOCK);
         blockWithItem(ModBlocks.ONYX_BLOCK);
         blockWithItem(ModBlocks.STARRITE_BLOCK);
         blockWithItem(ModBlocks.COBALT_BLOCK);
@@ -51,6 +52,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.PLATINUM_BLOCK);
         blockWithItem(ModBlocks.RAW_PLATINUM_BLOCK);
         blockWithItem(ModBlocks.STAR_PLATINUM_BLOCK);
+        blockWithItem(ModBlocks.ROUGH_VIBRANIUM_BLOCK);
+        blockWithItem(ModBlocks.VIBRANIUM_BLOCK);
 
         blockWithItem(ModBlocks.SAPPHIRE_ORE);
         blockWithItem(ModBlocks.DEEPSLATE_SAPPHIRE_ORE);
@@ -68,12 +71,13 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.LUNARIS_ORE);
         blockWithItem(ModBlocks.CRYPTON_ORE);
         blockWithItem(ModBlocks.STARRITE_ORE);
-        blockWithItem(ModBlocks.AZURITE_ORE);
+        blockWithItem(ModBlocks.FLUXITE_ORE);
         blockWithItem(ModBlocks.ONYX_ORE);
         blockWithItem(ModBlocks.MALACHITE_ORE);
         blockWithItem(ModBlocks.DEEPSLATE_MALACHITE_ORE);
         blockWithItem(ModBlocks.PLATINUM_ORE);
         blockWithItem(ModBlocks.COBALT_ORE);
+        blockWithItem(ModBlocks.VIBRANIUM_ORE);
 
         blockWithItem(ModBlocks.ASTRALITE);
         blockWithItem(ModBlocks.UMBROCK);

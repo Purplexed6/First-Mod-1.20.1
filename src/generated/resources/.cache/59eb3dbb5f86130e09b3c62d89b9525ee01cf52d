@@ -1,4 +1,4 @@
-// 1.20.1	2026-07-12T22:41:20.9534751	Loot Tables
+// 1.20.1	2026-07-15T17:36:14.6000044	Loot Tables
 3d2659b1401d7d913ea79a6852905ae4fe806efc data/oresrise/loot_tables/blocks/alexandrite_block.json
 1701d4cdb4021cff154a51e750ece8e4917a881c data/oresrise/loot_tables/blocks/alexandrite_ore.json
 81fd54698f270c17cf9e40d36bf6ec28d7ae10d9 data/oresrise/loot_tables/blocks/amberwood_leaves.json
@@ -7,8 +7,6 @@
 ee04f80c7f8fab2323b1060ca5968aeba97a4af0 data/oresrise/loot_tables/blocks/amberwood_sapling.json
 79a1b8a4fbebe27edbf670d6cc3ab0057cbeb861 data/oresrise/loot_tables/blocks/amberwood_wood.json
 ae9faa4d2120a8aead78726ef28897e45e4b38c3 data/oresrise/loot_tables/blocks/astralite.json
-f157eec2282264114050f00ca188e6dc40411c35 data/oresrise/loot_tables/blocks/azurite_block.json
-62132901f30661252eae140ccaf104f78310c5a7 data/oresrise/loot_tables/blocks/azurite_ore.json
 4864f27f4090c9561f836545d4dd07b7159abaa4 data/oresrise/loot_tables/blocks/cobalt_block.json
 73d2d9bba088bc531688961d7a2aef052bd9dc32 data/oresrise/loot_tables/blocks/cobalt_ore.json
 f66bad5bc060334b67e1198c91330b7fc489ab06 data/oresrise/loot_tables/blocks/crypton_block.json
@@ -18,6 +16,8 @@ e6f8b0f40d8a55c8d9fc1437edf2e00900c7e5e1 data/oresrise/loot_tables/blocks/crypto
 62b4bc0b0a97dd48fb5c35a7294c72a56ad5ad22 data/oresrise/loot_tables/blocks/deepslate_ruby_ore.json
 3b34e95f9b3566a753bc97273eb8b02bcef4a2ed data/oresrise/loot_tables/blocks/deepslate_sapphire_ore.json
 53e8baaf1430468d8a5b2b454f7094a7a759e461 data/oresrise/loot_tables/blocks/deepslate_sugilite_ore.json
+907129810c72b14149c7d39f369f53735bc8a134 data/oresrise/loot_tables/blocks/fluxite_block.json
+c2ae0a4c9c24c4bdd20ac1d88769acc0298cd125 data/oresrise/loot_tables/blocks/fluxite_ore.json
 33abe2b9a4302e054eb51671abb4054b945f8d39 data/oresrise/loot_tables/blocks/hemogem_block.json
 f568eaf9e51166004d90c38661d85c97883f953d data/oresrise/loot_tables/blocks/hemogem_ore.json
 89ead7ad3df784cef53120612983b72e87012948 data/oresrise/loot_tables/blocks/lunaris_block.json
@@ -40,6 +40,7 @@ dbeb3dcb4e24d8e9f6736a332211bcaa211b7923 data/oresrise/loot_tables/blocks/raw_wi
 e6100d86e3f5c789a2e4737a75383212fc2320f1 data/oresrise/loot_tables/blocks/rosite_block.json
 bf355e1d089e2752a724217d683e6044ff252703 data/oresrise/loot_tables/blocks/rough_ruby_block.json
 3fb31bc989bb32b569086eb15443ae6bc89678d3 data/oresrise/loot_tables/blocks/rough_sapphire_block.json
+a53f2a70f085cf0d33d075cd134b1b54b401a11c data/oresrise/loot_tables/blocks/rough_vibranium_block.json
 2821829d6991e8fa1df420666052bd9a7aaa9928 data/oresrise/loot_tables/blocks/ruby_block.json
 b2977adc24f15abb0bbcc8d8e179824de2bcbd9b data/oresrise/loot_tables/blocks/ruby_ore.json
 b432ad2f32b133022cf1dabf2e2171ef6bd0233b data/oresrise/loot_tables/blocks/sapphire_block.json
@@ -57,5 +58,7 @@ b5c2e0560c432c8d50b5b07366354663404d0bf0 data/oresrise/loot_tables/blocks/starri
 814247b06e9bdb4906375bf18e160cc929e27bc1 data/oresrise/loot_tables/blocks/sugilite_block.json
 ebaad5b93721ee2227d794e752d4481f88c1270a data/oresrise/loot_tables/blocks/sugilite_ore.json
 6a6960e8604c3067ee29b6bcdedbb603536ba633 data/oresrise/loot_tables/blocks/umbrock.json
+6908ffa6a347d0497958f5fc42b7008b6db67a44 data/oresrise/loot_tables/blocks/vibranium_block.json
+b82a6da054ac18e5cf6591ac493705591f74ffba data/oresrise/loot_tables/blocks/vibranium_ore.json
 14b7f625438652ae3ce8580a418fd5ffa654fbae data/oresrise/loot_tables/blocks/witherite_block.json
 94f34f66ec7f08e02b10e5ae75eb5938a6c1faf1 data/oresrise/loot_tables/blocks/witherite_ore.json

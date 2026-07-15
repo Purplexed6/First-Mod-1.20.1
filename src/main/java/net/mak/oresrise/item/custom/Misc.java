@@ -25,6 +25,10 @@ public class Misc {
             () -> new FuelItem(new Item.Properties(), 15000));
     public static final RegistryObject<Item> STARDUST = ModItems.ITEMS.register("stardust",
             () -> new StardustItem(new Item.Properties()));
+    public static final RegistryObject<Item> ECHO_STEEL_INGOT = ModItems.ITEMS.register("echo_steel_ingot",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> WITHERED_BONE = ModItems.ITEMS.register("withered_bone",
+            () -> new Item(new Item.Properties()));
 
     public static void register() {}
 }

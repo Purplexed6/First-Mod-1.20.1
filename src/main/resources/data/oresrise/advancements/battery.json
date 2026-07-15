@@ -1,32 +1,32 @@
 {
   "display": {
     "icon": {
-      "item": "oresrise:soul_crystal"
+      "item": "oresrise:fluxite"
     },
     "title": {
-      "text": "They Speak as One"
+      "text": "Cannot Kill The Battery!"
     },
     "description": {
-      "text": "Acquire a Soul Crystal"
+      "text": "Mine Fluxite Ore"
     },
-    "frame": "goal",
+    "frame": "task",
     "show_toast": true,
     "announce_to_chat": true,
     "hidden": false
   },
   "criteria": {
-    "get_soul_crystal": {
+    "get_fluxite": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "items": ["oresrise:soul_crystal"]
+            "items": ["oresrise:fluxite"]
           }
         ]
       }
     }
   },
   "requirements": [
-    ["get_soul_crystal"]
+    ["get_fluxite"]
   ]
 }

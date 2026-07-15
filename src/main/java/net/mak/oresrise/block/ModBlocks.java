@@ -1,9 +1,7 @@
 package net.mak.oresrise.block;
 
 import net.mak.oresrise.ExampleMod;
-import net.mak.oresrise.block.custom.ModFlammableRotatedPillarBlock;
-import net.mak.oresrise.block.custom.ModPortalBlock;
-import net.mak.oresrise.block.custom.StrawberryCropBlock;
+import net.mak.oresrise.block.custom.*;
 import net.mak.oresrise.item.ModItems;
 import net.mak.oresrise.sound.ModSounds;
 import net.mak.oresrise.worldgen.tree.AmberwoodTreeGrower;
@@ -52,6 +50,14 @@ public class ModBlocks {
     public static final RegistryObject<Block> ROSITE_BLOCK = registerBlock("rosite_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
 
+    public static final RegistryObject<Block> VIBRANIUM_BLOCK = registerBlock("vibranium_block",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST)));
+    public static final RegistryObject<Block> ROUGH_VIBRANIUM_BLOCK = registerBlock("rough_vibranium_block",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+    public static final RegistryObject<Block> VIBRANIUM_ORE = registerBlock("vibranium_ore",
+            () -> new VibraniumOreBlock(BlockBehaviour.Properties.copy(Blocks.DIAMOND_ORE)
+                    .requiresCorrectToolForDrops(), UniformInt.of(4, 8)));
+
     public static final RegistryObject<Block> OBLIVIONITE_BLOCK = registerBlock("oblivionite_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).sound(SoundType.AMETHYST)));
     public static final RegistryObject<Block> OBLIVIONITE_ORE = registerBlock("oblivionite_ore",
@@ -61,13 +67,13 @@ public class ModBlocks {
     public static final RegistryObject<Block> WITHERITE_BLOCK = registerBlock("witherite_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).sound(SoundType.STONE)));
     public static final RegistryObject<Block> WITHERITE_ORE = registerBlock("witherite_ore",
-            () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_DIAMOND_ORE)
+            () -> new WitheriteOreBlock(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_DIAMOND_ORE)
                     .requiresCorrectToolForDrops(), UniformInt.of(10, 15)));
     public static final RegistryObject<Block> RAW_WITHERITE_BLOCK = registerBlock("raw_witherite_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.RAW_GOLD_BLOCK)));
 
     public static final RegistryObject<Block> SOUL_ORE = registerBlock("soul_ore",
-            () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.DIAMOND_ORE)
+            () -> new SoulOreBlock(BlockBehaviour.Properties.copy(Blocks.DIAMOND_ORE)
                     .requiresCorrectToolForDrops(), UniformInt.of(7, 12)));
     public static final RegistryObject<Block> SOUL_BLOCK = registerBlock("soul_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).sound(SoundType.AMETHYST)));
@@ -84,7 +90,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> HEMOGEM_BLOCK = registerBlock("hemogem_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).sound(SoundType.AMETHYST)));
     public static final RegistryObject<Block> HEMOGEM_ORE = registerBlock("hemogem_ore",
-            () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.DIAMOND_ORE)
+            () -> new HemogemOreBlock(BlockBehaviour.Properties.copy(Blocks.DIAMOND_ORE)
                     .requiresCorrectToolForDrops(), UniformInt.of(4, 8)));
 
     public static final RegistryObject<Block> ALEXANDRITE_BLOCK = registerBlock("alexandrite_block",
@@ -117,10 +123,10 @@ public class ModBlocks {
             () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.DIAMOND_ORE)
                     .requiresCorrectToolForDrops(), UniformInt.of(4, 8)));
 
-    public static final RegistryObject<Block> AZURITE_BLOCK = registerBlock("azurite_block",
+    public static final RegistryObject<Block> FLUXITE_BLOCK = registerBlock("fluxite_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).sound(SoundType.AMETHYST)));
-    public static final RegistryObject<Block> AZURITE_ORE = registerBlock("azurite_ore",
-            () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.DIAMOND_ORE)
+    public static final RegistryObject<Block> FLUXITE_ORE = registerBlock("fluxite_ore",
+            () -> new FluxiteOreBlock(BlockBehaviour.Properties.copy(Blocks.DIAMOND_ORE)
                     .requiresCorrectToolForDrops(), UniformInt.of(4, 8)));
 
     public static final RegistryObject<Block> ONYX_BLOCK = registerBlock("onyx_block",

@@ -69,8 +69,8 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
 
                         ModBlocks.SOUL_STEEL_BLOCK.get(),
 
-                        ModBlocks.AZURITE_ORE.get(),
-                        ModBlocks.AZURITE_BLOCK.get(),
+                        ModBlocks.FLUXITE_ORE.get(),
+                        ModBlocks.FLUXITE_BLOCK.get(),
 
                         ModBlocks.WITHERITE_BLOCK.get(),
                         ModBlocks.RAW_WITHERITE_BLOCK.get(),
@@ -140,8 +140,8 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
 
 
         this.tag(BlockTags.NEEDS_DIAMOND_TOOL)
-                .add(ModBlocks.AZURITE_ORE.get(),
-                        ModBlocks.AZURITE_BLOCK.get(),
+                .add(ModBlocks.FLUXITE_ORE.get(),
+                        ModBlocks.FLUXITE_BLOCK.get(),
 
                         ModBlocks.HEMOGEM_ORE.get(),
                         ModBlocks.HEMOGEM_BLOCK.get());

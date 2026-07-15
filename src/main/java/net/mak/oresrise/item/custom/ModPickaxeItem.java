@@ -26,7 +26,7 @@ public class ModPickaxeItem extends PickaxeItem {
     @Override
     public boolean mineBlock(ItemStack stack, Level level, BlockState state, BlockPos pos, LivingEntity entity) {
 
-        if (this.getTier() == ModToolTiers.AMBER && entity instanceof Player player) {
+        if (this.getTier() == ModToolTiers.RESONITE && entity instanceof Player player) {
 
             if (!level.isClientSide && level instanceof ServerLevel serverLevel) {
 

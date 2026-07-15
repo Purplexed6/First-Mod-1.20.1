@@ -1,7 +1,7 @@
-// 1.20.1	2026-07-13T16:11:42.4618307	Tags for minecraft:block mod id oresrise
+// 1.20.1	2026-07-15T17:36:14.6050269	Tags for minecraft:block mod id oresrise
 2e43b9c8c6b8c6ea42ff1ab2749962151dbe4b65 data/minecraft/tags/blocks/logs_that_burn.json
-53faf81982e1fd3fca57bed934e69660afe23d2d data/minecraft/tags/blocks/mineable/pickaxe.json
-38a67efd0cad37be64088dd0603ebd1224920db8 data/minecraft/tags/blocks/needs_diamond_tool.json
+7473a038d6eba394374c641b804408b22bae9576 data/minecraft/tags/blocks/mineable/pickaxe.json
+c0028c70fb2a60881c7b37a664a1fcbad92156b8 data/minecraft/tags/blocks/needs_diamond_tool.json
 ac4113716d246a5b52a69976f18d42586f9732f2 data/minecraft/tags/blocks/needs_iron_tool.json
 f6603ab240a37596d37c336891a436e77174196f data/minecraft/tags/blocks/planks.json
 4abafc9c85a46ee7f57004065056c2dc9daf9003 data/oresrise/tags/blocks/needs_netherite_tool.json

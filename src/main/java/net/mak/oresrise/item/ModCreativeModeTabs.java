@@ -11,7 +11,6 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
-import org.checkerframework.checker.units.qual.A;
 
 public class ModCreativeModeTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
@@ -91,16 +90,16 @@ public class ModCreativeModeTabs {
                         pOutput.accept(SoulSet.SOULFORGED_LEGGINGS.get());
                         pOutput.accept(SoulSet.SOULFORGED_BOOTS.get());
 
-                        pOutput.accept(AzuriteSet.AZURITE.get());
-                        pOutput.accept(AzuriteSet.AZURITE_SWORD.get());
-                        pOutput.accept(AzuriteSet.AZURITE_PICKAXE.get());
-                        pOutput.accept(AzuriteSet.AZURITE_AXE.get());
-                        pOutput.accept(AzuriteSet.AZURITE_SHOVEL.get());
-                        pOutput.accept(AzuriteSet.AZURITE_HOE.get());
-                        pOutput.accept(AzuriteSet.AZURITE_HELMET.get());
-                        pOutput.accept(AzuriteSet.AZURITE_CHESTPLATE.get());
-                        pOutput.accept(AzuriteSet.AZURITE_LEGGINGS.get());
-                        pOutput.accept(AzuriteSet.AZURITE_BOOTS.get());
+                        pOutput.accept(FluxiteSet.FLUXITE.get());
+                        pOutput.accept(FluxiteSet.FLUXITE_SWORD.get());
+                        pOutput.accept(FluxiteSet.FLUXITE_PICKAXE.get());
+                        pOutput.accept(FluxiteSet.FLUXITE_AXE.get());
+                        pOutput.accept(FluxiteSet.FLUXITE_SHOVEL.get());
+                        pOutput.accept(FluxiteSet.FLUXITE_HOE.get());
+                        pOutput.accept(FluxiteSet.FLUXITE_HELMET.get());
+                        pOutput.accept(FluxiteSet.FLUXITE_CHESTPLATE.get());
+                        pOutput.accept(FluxiteSet.FLUXITE_LEGGINGS.get());
+                        pOutput.accept(FluxiteSet.FLUXITE_BOOTS.get());
 
                         pOutput.accept(OblivioniteSet.OBLIVIONITE_CRYSTAL.get());
                         pOutput.accept(OblivioniteSet.OBLIVIONITE_SHARD.get());
@@ -150,17 +149,21 @@ public class ModCreativeModeTabs {
                         pOutput.accept(AlexandriteSet.ALEXANDRITE_LEGGINGS.get());
                         pOutput.accept(AlexandriteSet.ALEXANDRITE_BOOTS.get());
 
-                        pOutput.accept(AmberSet.AMBER.get());
-                        pOutput.accept(AmberSet.ROUGH_AMBER.get());
-                        pOutput.accept(AmberSet.AMBER_SWORD.get());
-                        pOutput.accept(AmberSet.AMBER_PICKAXE.get());
-                        pOutput.accept(AmberSet.AMBER_AXE.get());
-                        pOutput.accept(AmberSet.AMBER_SHOVEL.get());
-                        pOutput.accept(AmberSet.AMBER_HOE.get());
-                        pOutput.accept(AmberSet.AMBER_HELMET.get());
-                        pOutput.accept(AmberSet.AMBER_CHESTPLATE.get());
-                        pOutput.accept(AmberSet.AMBER_LEGGINGS.get());
-                        pOutput.accept(AmberSet.AMBER_BOOTS.get());
+                        pOutput.accept(VibraniumSet.VIBRANIUM.get());
+                        pOutput.accept(VibraniumSet.ROUGH_VIBRANIUM.get());
+
+                        pOutput.accept(ResoniteSet.RESONITE_INGOT.get());
+                        pOutput.accept(ResoniteSet.RESONITE_SWORD.get());
+                        pOutput.accept(ResoniteSet.RESONITE_PICKAXE.get());
+                        pOutput.accept(ResoniteSet.RESONITE_AXE.get());
+                        pOutput.accept(ResoniteSet.RESONITE_SHOVEL.get());
+                        pOutput.accept(ResoniteSet.RESONITE_HOE.get());
+                        pOutput.accept(ResoniteSet.RESONITE_HELMET.get());
+                        pOutput.accept(ResoniteSet.RESONITE_CHESTPLATE.get());
+                        pOutput.accept(ResoniteSet.RESONITE_LEGGINGS.get());
+                        pOutput.accept(ResoniteSet.RESONITE_BOOTS.get());
+
+                        pOutput.accept(Misc.ECHO_STEEL_INGOT.get());
 
                         pOutput.accept(QuintessiteSet.QUINTESSITE.get());
                         pOutput.accept(QuintessiteSet.QUINTESSITE_SWORD.get());
@@ -197,6 +200,8 @@ public class ModCreativeModeTabs {
 
                         pOutput.accept(FireiteSet.PYROGEL.get());
                         pOutput.accept(FireiteSet.FIREITE_INGOT.get());
+                        pOutput.accept(FireiteSet.FIREITE_BLADE.get());
+                        pOutput.accept(FireiteSet.FIREITE_UPGRADE_SMITHING_TEMPLATE.get());
 
                         pOutput.accept(CryptonSet.CRYPTON.get());
                         pOutput.accept(CryptonSet.CRYPTON_SHARD.get());
@@ -256,6 +261,7 @@ public class ModCreativeModeTabs {
                         pOutput.accept(StarPlatinumSet.STAR_PLATINUM_CHESTPLATE.get());
                         pOutput.accept(StarPlatinumSet.STAR_PLATINUM_LEGGINGS.get());
                         pOutput.accept(StarPlatinumSet.STAR_PLATINUM_BOOTS.get());
+                        pOutput.accept(StarPlatinumSet.STAR_BREAKER.get());
 
                         pOutput.accept(CobaltSet.COBALT_INGOT.get());
                         pOutput.accept(CobaltSet.RAW_COBALT.get());
@@ -320,6 +326,7 @@ public class ModCreativeModeTabs {
                         pOutput.accept(Misc.IRON_STICK.get());
                         pOutput.accept(Misc.NETHERITE_STICK.get());
                         pOutput.accept(Misc.STARDUST.get());
+                        pOutput.accept(Misc.WITHERED_BONE.get());
 
                         pOutput.accept(ModItems.STRAWBERRY.get());
                         pOutput.accept(ModItems.STRAWBERRY_SEEDS.get());
@@ -350,6 +357,8 @@ public class ModCreativeModeTabs {
 
                         pOutput.accept(ModBlocks.ROSITE_BLOCK.get());
 
+                        pOutput.accept(ModBlocks.ROSE_GOLD_BLOCK.get());
+
                         pOutput.accept(ModBlocks.MALACHITE_BLOCK.get());
                         pOutput.accept(ModBlocks.MALACHITE_ORE.get());
                         pOutput.accept(ModBlocks.DEEPSLATE_MALACHITE_ORE.get());
@@ -376,12 +385,16 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.SUGILITE_ORE.get());
                         pOutput.accept(ModBlocks.DEEPSLATE_SUGILITE_ORE.get());
 
+                        pOutput.accept(ModBlocks.VIBRANIUM_BLOCK.get());
+                        pOutput.accept(ModBlocks.VIBRANIUM_ORE.get());
+                        pOutput.accept(ModBlocks.ROUGH_VIBRANIUM_BLOCK.get());
+
                         pOutput.accept(ModBlocks.PLATINUM_BLOCK.get());
                         pOutput.accept(ModBlocks.RAW_PLATINUM_BLOCK.get());
                         pOutput.accept(ModBlocks.PLATINUM_ORE.get());
 
-                        pOutput.accept(ModBlocks.AZURITE_BLOCK.get());
-                        pOutput.accept(ModBlocks.AZURITE_ORE.get());
+                        pOutput.accept(ModBlocks.FLUXITE_BLOCK.get());
+                        pOutput.accept(ModBlocks.FLUXITE_ORE.get());
 
                         pOutput.accept(ModBlocks.STARRITE_ORE.get());
                         pOutput.accept(ModBlocks.STARRITE_BLOCK.get());
