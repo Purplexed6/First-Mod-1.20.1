@@ -116,7 +116,7 @@ public class ModItems {
         AlexandriteSet.register();
         ResoniteSet.register();
         QuintessiteSet.register();
-        SugiliteSet.register();
+        AquamarineSet.register();
         OnyxSet.register();
         StarriteSet.register();
         PlatinumSet.register();

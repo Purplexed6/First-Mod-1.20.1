@@ -114,17 +114,17 @@ public class ModToolTiers {
             List.of(ModToolTiers.ALEXANDRITE),
             List.of());
 
-    public static final Tier SUGILITE = TierSortingRegistry.registerTier(       //SAME AS DIAMOND
+    public static final Tier AQUAMARINE = TierSortingRegistry.registerTier(       //SAME AS DIAMOND
             new ForgeTier(
                     3,                      // ⬅ mining level
                     1500,                    // ⬅ durability
                     8f,                    // ⬅ mining speed
                     3f,                     // ⬅ attack damage bonus wait lemme find this shit
                     10,                     // ⬅ enchantability
-                    ModTags.Blocks.NEEDS_SUGILITE_TOOL, // ⬅ what blocks it can mine
-                    () -> Ingredient.of(SugiliteSet.SUGILITE.get()) // ⬅ repair item
+                    ModTags.Blocks.NEEDS_AQUAMARINE_TOOL, // ⬅ what blocks it can mine
+                    () -> Ingredient.of(AquamarineSet.AQUAMARINE.get()) // ⬅ repair item
             ),
-            ResourceLocation.fromNamespaceAndPath(ExampleMod.MOD_ID, "sugilite"),
+            ResourceLocation.fromNamespaceAndPath(ExampleMod.MOD_ID, "aquamarine"),
             List.of(ModToolTiers.RUBY),
             List.of());
 
@@ -139,7 +139,7 @@ public class ModToolTiers {
                     () -> Ingredient.of(SapphireSet.SAPPHIRE.get()) // ⬅ repair item
             ),
             ResourceLocation.fromNamespaceAndPath(ExampleMod.MOD_ID, "sapphire"),
-            List.of(ModToolTiers.SUGILITE),
+            List.of(ModToolTiers.AQUAMARINE),
             List.of());
 
     public static final Tier PLATINUM = TierSortingRegistry.registerTier(
@@ -170,20 +170,6 @@ public class ModToolTiers {
             List.of(ModToolTiers.PLATINUM),
             List.of());
 
-    public static final Tier NETHERITE = TierSortingRegistry.registerTier(
-            new ForgeTier(
-                    4, // mining level
-                    2031, // durability
-                    9f, // mining speed
-                    4f, // attack damage bonus
-                    15, // enchantability
-                    ModTags.Blocks.NEEDS_NETHERITE_TOOL,
-                    () -> Ingredient.of(Items.NETHERITE_INGOT)
-            ),
-            ResourceLocation.fromNamespaceAndPath(ExampleMod.MOD_ID, "netherite"),
-            List.of(Tiers.DIAMOND),
-            List.of());
-
     public static final Tier FIREITE = TierSortingRegistry.registerTier(
             new ForgeTier(
                     4, // mining level
@@ -195,7 +181,7 @@ public class ModToolTiers {
                     () -> Ingredient.of(FireiteSet.FIREITE_INGOT.get())
             ),
             ResourceLocation.fromNamespaceAndPath(ExampleMod.MOD_ID, "fireite"),
-            List.of(ModToolTiers.NETHERITE),
+            List.of(ModToolTiers.OBSIDIAN),
             List.of());
 
     public static final Tier FLUXITE = TierSortingRegistry.registerTier(
@@ -222,7 +208,7 @@ public class ModToolTiers {
                     () -> Ingredient.of(SoulSet.SOUL_CRYSTAL.get())
             ),
             ResourceLocation.fromNamespaceAndPath(ExampleMod.MOD_ID, "soulforged"),
-            List.of(ModToolTiers.NETHERITE),
+            List.of(Tiers.NETHERITE),
             List.of());
 
     public static final Tier SHADOW_STEEL = TierSortingRegistry.registerTier(

@@ -1,9 +1,9 @@
-// 1.20.1	2026-07-15T17:36:14.6050269	Tags for minecraft:block mod id oresrise
+// 1.20.1	2026-07-16T20:46:44.2202101	Tags for minecraft:block mod id oresrise
+4abafc9c85a46ee7f57004065056c2dc9daf9003 data/forge/tags/blocks/needs_netherite_tool.json
 2e43b9c8c6b8c6ea42ff1ab2749962151dbe4b65 data/minecraft/tags/blocks/logs_that_burn.json
-7473a038d6eba394374c641b804408b22bae9576 data/minecraft/tags/blocks/mineable/pickaxe.json
+ffa8040994bbb267e89e6eba47bcc4de5e7ca121 data/minecraft/tags/blocks/mineable/pickaxe.json
 c0028c70fb2a60881c7b37a664a1fcbad92156b8 data/minecraft/tags/blocks/needs_diamond_tool.json
-ac4113716d246a5b52a69976f18d42586f9732f2 data/minecraft/tags/blocks/needs_iron_tool.json
+865dfad1c3dc5cbe7b413f63e7c2fed9b6a548d0 data/minecraft/tags/blocks/needs_iron_tool.json
 f6603ab240a37596d37c336891a436e77174196f data/minecraft/tags/blocks/planks.json
-4abafc9c85a46ee7f57004065056c2dc9daf9003 data/oresrise/tags/blocks/needs_netherite_tool.json
 f2aa22549b22dd6342bb40aaba0cd8a3125d53c4 data/oresrise/tags/blocks/needs_soul_steel_tool.json
 63052ab9337e74f1ff22193625532df00a39ed44 data/oresrise/tags/blocks/ore_detector_valuables.json

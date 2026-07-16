@@ -104,8 +104,8 @@ public enum ModArmorMaterials implements ArmorMaterial {
 
 
 
-    SUGILITE("sugilite", 33, new int[]{ 3, 8, 6, 3 }, 10,
-            SoundEvents.ARMOR_EQUIP_DIAMOND, 2f, 0f, () -> Ingredient.of(SugiliteSet.SUGILITE.get())),
+    AQUAMARINE("aquamarine", 33, new int[]{ 3, 8, 6, 3 }, 10,
+            SoundEvents.ARMOR_EQUIP_DIAMOND, 2f, 0f, () -> Ingredient.of(AquamarineSet.AQUAMARINE.get())),
 
     ALEXANDRITE("alexandrite", 33, new int[]{ 3, 8, 6, 3 }, 10,
             SoundEvents.ARMOR_EQUIP_DIAMOND, 2f, 0f, () -> Ingredient.of(AlexandriteSet.ALEXANDRITE.get())),

@@ -148,6 +148,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("pyrogel", has(FireiteSet.PYROGEL.get()))
                 .save(pWriter);
 
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, SoulSet.SOUL_ESSENCE.get(), 2)
+                .requires(SoulSet.SOUL_CRYSTAL.get())
+                .requires(SoulSet.SOUL_POWDER.get())
+                .requires(Items.ECHO_SHARD)
+                .requires(Items.GHAST_TEAR)
+                .unlockedBy("soul_crystal", has(SoulSet.SOUL_CRYSTAL.get()))
+                .save(pWriter);
+
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, StarPlatinumSet.STAR_PLATINUM_INGOT.get(), 1)
                 .requires(PlatinumSet.PLATINUM_INGOT.get()) 
                 .requires(StarriteSet.STARRITE.get())
@@ -155,8 +163,9 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(pWriter);
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, SoulSteelSet.SOUL_STEEL_INGOT.get(), 2)
-                .requires(SoulSet.SOUL_CRYSTAL.get(), 4) 
-                .requires(Items.NETHERITE_INGOT, 4)        
+                .requires(SoulSet.SOUL_CRYSTAL.get(), 2)
+                .requires(SoulSet.SOUL_ESSENCE.get(), 2)
+                .requires(Items.NETHERITE_INGOT, 4)
                 .requires(Misc.STARDUST.get()) 
                 .unlockedBy("has_soul_crystal", has(SoulSet.SOUL_CRYSTAL.get()))
                 .save(pWriter, new ResourceLocation("oresrise", "soul_steel_craft"));
@@ -798,17 +807,17 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(RoseGoldSet.ROSE_GOLD_INGOT.get()), has(RoseGoldSet.ROSE_GOLD_INGOT.get()))
                 .save(pWriter);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SUGILITE_BLOCK.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.AQUAMARINE_BLOCK.get())
                 .pattern("SSS")
                 .pattern("SSS")
                 .pattern("SSS")
-                .define('S', SugiliteSet.SUGILITE.get())
-                .unlockedBy(getHasName(SugiliteSet.SUGILITE.get()), has(SugiliteSet.SUGILITE.get()))
+                .define('S', AquamarineSet.AQUAMARINE.get())
+                .unlockedBy(getHasName(AquamarineSet.AQUAMARINE.get()), has(AquamarineSet.AQUAMARINE.get()))
                 .save(pWriter);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, SugiliteSet.SUGILITE.get(), 9)
-                .requires(ModBlocks.SUGILITE_BLOCK.get())
-                .unlockedBy(getHasName(ModBlocks.SUGILITE_BLOCK.get()), has(ModBlocks.SUGILITE_BLOCK.get()))
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, AquamarineSet.AQUAMARINE.get(), 9)
+                .requires(ModBlocks.AQUAMARINE_BLOCK.get())
+                .unlockedBy(getHasName(ModBlocks.AQUAMARINE_BLOCK.get()), has(ModBlocks.AQUAMARINE_BLOCK.get()))
                 .save(pWriter);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ALEXANDRITE_BLOCK.get())
@@ -1325,94 +1334,94 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, SoulSet.SOULFORGED_HELMET.get())
                 .pattern("SSS")
                 .pattern("S S")
-                .define('S', SoulSet.SOUL_CRYSTAL.get())
-                .unlockedBy(getHasName(SoulSet.SOUL_CRYSTAL.get()), has(SoulSet.SOUL_CRYSTAL.get()))
+                .define('S', SoulSet.SOUL_ESSENCE.get())
+                .unlockedBy(getHasName(SoulSet.SOUL_ESSENCE.get()), has(SoulSet.SOUL_ESSENCE.get()))
                 .save(pWriter);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, SoulSet.SOULFORGED_CHESTPLATE.get())
                 .pattern("S S")
                 .pattern("SSS")
                 .pattern("SSS")
-                .define('S', SoulSet.SOUL_CRYSTAL.get())
-                .unlockedBy(getHasName(SoulSet.SOUL_CRYSTAL.get()), has(SoulSet.SOUL_CRYSTAL.get()))
+                .define('S', SoulSet.SOUL_ESSENCE.get())
+                .unlockedBy(getHasName(SoulSet.SOUL_ESSENCE.get()), has(SoulSet.SOUL_ESSENCE.get()))
                 .save(pWriter);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, SoulSet.SOULFORGED_LEGGINGS.get())
                 .pattern("SSS")
                 .pattern("S S")
                 .pattern("S S")
-                .define('S', SoulSet.SOUL_CRYSTAL.get())
-                .unlockedBy(getHasName(SoulSet.SOUL_CRYSTAL.get()), has(SoulSet.SOUL_CRYSTAL.get()))
+                .define('S', SoulSet.SOUL_ESSENCE.get())
+                .unlockedBy(getHasName(SoulSet.SOUL_ESSENCE.get()), has(SoulSet.SOUL_ESSENCE.get()))
                 .save(pWriter);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, SoulSet.SOULFORGED_BOOTS.get())
                 .pattern("S S")
                 .pattern("S S")
-                .define('S', SoulSet.SOUL_CRYSTAL.get())
-                .unlockedBy(getHasName(SoulSet.SOUL_CRYSTAL.get()), has(SoulSet.SOUL_CRYSTAL.get()))
+                .define('S', SoulSet.SOUL_ESSENCE.get())
+                .unlockedBy(getHasName(SoulSet.SOUL_ESSENCE.get()), has(SoulSet.SOUL_ESSENCE.get()))
                 .save(pWriter);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, SoulSet.SOULFORGED_PICKAXE.get())
                 .pattern("SSS")  
                 .pattern(" # ")
                 .pattern(" # ") 
-                .define('S', SoulSet.SOUL_CRYSTAL.get())  
-                .define('#', Misc.IRON_STICK.get())                     
-                .unlockedBy(getHasName(SoulSet.SOUL_CRYSTAL.get()), has(SoulSet.SOUL_CRYSTAL.get()))
+                .define('S', SoulSet.SOUL_ESSENCE.get())
+                .define('#', Misc.OBSIDIAN_STICK.get())
+                .unlockedBy(getHasName(SoulSet.SOUL_ESSENCE.get()), has(SoulSet.SOUL_ESSENCE.get()))
                 .save(pWriter);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, SoulSet.SOULFORGED_SWORD.get())
                 .pattern(" S ")  
                 .pattern(" S ")
                 .pattern(" # ") 
-                .define('S', SoulSet.SOUL_CRYSTAL.get())  
-                .define('#', Misc.IRON_STICK.get())                     
-                .unlockedBy(getHasName(SoulSet.SOUL_CRYSTAL.get()), has(SoulSet.SOUL_CRYSTAL.get()))
+                .define('S', SoulSet.SOUL_ESSENCE.get())
+                .define('#', Misc.OBSIDIAN_STICK.get())
+                .unlockedBy(getHasName(SoulSet.SOUL_ESSENCE.get()), has(SoulSet.SOUL_ESSENCE.get()))
                 .save(pWriter);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, SoulSet.SOULFORGED_AXE.get())
                 .pattern("SS ")  
                 .pattern("S# ")
                 .pattern(" # ") 
-                .define('S', SoulSet.SOUL_CRYSTAL.get())  
-                .define('#', Misc.IRON_STICK.get())                     
-                .unlockedBy(getHasName(SoulSet.SOUL_CRYSTAL.get()), has(SoulSet.SOUL_CRYSTAL.get()))
+                .define('S', SoulSet.SOUL_ESSENCE.get())
+                .define('#', Misc.OBSIDIAN_STICK.get())
+                .unlockedBy(getHasName(SoulSet.SOUL_ESSENCE.get()), has(SoulSet.SOUL_ESSENCE.get()))
                 .save(pWriter, ExampleMod.MOD_ID + ":soul_axe_1");
 
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, SoulSet.SOULFORGED_AXE.get())
                 .pattern(" SS")  
                 .pattern(" #S")
                 .pattern(" # ") 
-                .define('S', SoulSet.SOUL_CRYSTAL.get())  
-                .define('#', Misc.IRON_STICK.get())                     
-                .unlockedBy(getHasName(SoulSet.SOUL_CRYSTAL.get()), has(SoulSet.SOUL_CRYSTAL.get()))
+                .define('S', SoulSet.SOUL_ESSENCE.get())
+                .define('#', Misc.OBSIDIAN_STICK.get())
+                .unlockedBy(getHasName(SoulSet.SOUL_ESSENCE.get()), has(SoulSet.SOUL_ESSENCE.get()))
                 .save(pWriter, ExampleMod.MOD_ID + ":soul_axe_2");
 
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, SoulSet.SOULFORGED_SHOVEL.get())
                 .pattern(" S ")  
                 .pattern(" # ")
                 .pattern(" # ") 
-                .define('S', SoulSet.SOUL_CRYSTAL.get())  
-                .define('#', Misc.IRON_STICK.get())                     
-                .unlockedBy(getHasName(SoulSet.SOUL_CRYSTAL.get()), has(SoulSet.SOUL_CRYSTAL.get()))
+                .define('S', SoulSet.SOUL_ESSENCE.get())
+                .define('#', Misc.OBSIDIAN_STICK.get())
+                .unlockedBy(getHasName(SoulSet.SOUL_ESSENCE.get()), has(SoulSet.SOUL_ESSENCE.get()))
                 .save(pWriter);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, SoulSet.SOULFORGED_HOE.get())
                 .pattern("SS ")  
                 .pattern(" # ")
                 .pattern(" # ") 
-                .define('S', SoulSet.SOUL_CRYSTAL.get())  
-                .define('#', Misc.IRON_STICK.get())                     
-                .unlockedBy(getHasName(SoulSet.SOUL_CRYSTAL.get()), has(SoulSet.SOUL_CRYSTAL.get()))
+                .define('S', SoulSet.SOUL_ESSENCE.get())
+                .define('#', Misc.OBSIDIAN_STICK.get())
+                .unlockedBy(getHasName(SoulSet.SOUL_ESSENCE.get()), has(SoulSet.SOUL_ESSENCE.get()))
                 .save(pWriter, ExampleMod.MOD_ID + ":soul_hoe_1");
 
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, SoulSet.SOULFORGED_HOE.get())
                 .pattern(" SS")  
                 .pattern(" # ")
                 .pattern(" # ") 
-                .define('S', SoulSet.SOUL_CRYSTAL.get())  
-                .define('#', Misc.IRON_STICK.get())                     
-                .unlockedBy(getHasName(SoulSet.SOUL_CRYSTAL.get()), has(SoulSet.SOUL_CRYSTAL.get()))
+                .define('S', SoulSet.SOUL_ESSENCE.get())
+                .define('#', Misc.OBSIDIAN_STICK.get())
+                .unlockedBy(getHasName(SoulSet.SOUL_ESSENCE.get()), has(SoulSet.SOUL_ESSENCE.get()))
                 .save(pWriter, ExampleMod.MOD_ID + ":soul_hoe_2");
 
 
@@ -1654,7 +1663,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern(" # ")
                 .pattern(" # ") 
                 .define('S', SoulSteelSet.SOUL_STEEL_INGOT.get())  
-                .define('#', Misc.IRON_STICK.get())                        
+                .define('#', Misc.OBSIDIAN_STICK.get())
                 .unlockedBy(getHasName(SoulSteelSet.SOUL_STEEL_INGOT.get()), has(SoulSteelSet.SOUL_STEEL_INGOT.get()))
                 .save(pWriter);
 
@@ -1663,7 +1672,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern(" S ")
                 .pattern(" # ") 
                 .define('S', SoulSteelSet.SOUL_STEEL_INGOT.get())  
-                .define('#', Misc.IRON_STICK.get())                  
+                .define('#', Misc.OBSIDIAN_STICK.get())
                 .unlockedBy(getHasName(SoulSteelSet.SOUL_STEEL_INGOT.get()), has(SoulSteelSet.SOUL_STEEL_INGOT.get()))
                 .save(pWriter);
 
@@ -1672,7 +1681,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("S# ")
                 .pattern(" # ") 
                 .define('S', SoulSteelSet.SOUL_STEEL_INGOT.get())  
-                .define('#', Misc.IRON_STICK.get())                    
+                .define('#', Misc.OBSIDIAN_STICK.get())
                 .unlockedBy(getHasName(SoulSteelSet.SOUL_STEEL_INGOT.get()), has(SoulSteelSet.SOUL_STEEL_INGOT.get()))
                 .save(pWriter, ExampleMod.MOD_ID + ":soul_steel_axe_1");
 
@@ -1681,7 +1690,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern(" #S")
                 .pattern(" # ") 
                 .define('S', SoulSteelSet.SOUL_STEEL_INGOT.get())  
-                .define('#', Misc.IRON_STICK.get())                         
+                .define('#', Misc.OBSIDIAN_STICK.get())
                 .unlockedBy(getHasName(SoulSteelSet.SOUL_STEEL_INGOT.get()), has(SoulSteelSet.SOUL_STEEL_INGOT.get()))
                 .save(pWriter, ExampleMod.MOD_ID + ":soul_steel_axe_2");
 
@@ -1690,7 +1699,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern(" # ")
                 .pattern(" # ") 
                 .define('S', SoulSteelSet.SOUL_STEEL_INGOT.get())  
-                .define('#', Misc.IRON_STICK.get())                   
+                .define('#', Misc.OBSIDIAN_STICK.get())
                 .unlockedBy(getHasName(SoulSteelSet.SOUL_STEEL_INGOT.get()), has(SoulSteelSet.SOUL_STEEL_INGOT.get()))
                 .save(pWriter);
 
@@ -1699,7 +1708,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern(" # ")
                 .pattern(" # ") 
                 .define('S', SoulSteelSet.SOUL_STEEL_INGOT.get())  
-                .define('#', Misc.IRON_STICK.get())                      
+                .define('#', Misc.OBSIDIAN_STICK.get())
                 .unlockedBy(getHasName(SoulSteelSet.SOUL_STEEL_INGOT.get()), has(SoulSteelSet.SOUL_STEEL_INGOT.get()))
                 .save(pWriter, ExampleMod.MOD_ID + ":soul_steel_hoe_1");
 
@@ -1708,7 +1717,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern(" # ")
                 .pattern(" # ") 
                 .define('S', SoulSteelSet.SOUL_STEEL_INGOT.get())  
-                .define('#', Misc.IRON_STICK.get())                    
+                .define('#', Misc.OBSIDIAN_STICK.get())
                 .unlockedBy(getHasName(SoulSteelSet.SOUL_STEEL_INGOT.get()), has(SoulSteelSet.SOUL_STEEL_INGOT.get()))
                 .save(pWriter, ExampleMod.MOD_ID + ":soul_steel_hoe_2");
 

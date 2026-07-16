@@ -36,7 +36,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.WITHERITE_BLOCK);
         blockWithItem(ModBlocks.RAW_WITHERITE_BLOCK);
         blockWithItem(ModBlocks.SOUL_BLOCK);
-        blockWithItem(ModBlocks.SUGILITE_BLOCK);
+        blockWithItem(ModBlocks.AQUAMARINE_BLOCK);
         blockWithItem(ModBlocks.ALEXANDRITE_BLOCK);
         blockWithItem(ModBlocks.QUINTESSITE_BLOCK);
         blockWithItem(ModBlocks.HEMOGEM_BLOCK);
@@ -62,8 +62,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.OBLIVIONITE_ORE);
         blockWithItem(ModBlocks.WITHERITE_ORE);
         blockWithItem(ModBlocks.SOUL_ORE);
-        blockWithItem(ModBlocks.SUGILITE_ORE);
-        blockWithItem(ModBlocks.DEEPSLATE_SUGILITE_ORE);
+        blockWithItem(ModBlocks.AQUAMARINE_ORE);
         blockWithItem(ModBlocks.ALEXANDRITE_ORE);
         blockWithItem(ModBlocks.DEEPSLATE_ALEXANDRITE_ORE);
         blockWithItem(ModBlocks.QUINTESSITE_ORE);
@@ -82,6 +81,16 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.ASTRALITE);
         blockWithItem(ModBlocks.UMBROCK);
         blockWithItem(ModBlocks.MOD_PORTAL);
+
+
+
+        simpleBlock(ModBlocks.ICE_CRYSTAL_BLOCK.get(),
+                models().cross(
+                        "ice_crystal_block",
+                        blockTexture(ModBlocks.ICE_CRYSTAL_BLOCK.get())
+                ).renderType("translucent"));
+
+
 
         makeStrawberryCrop(
                 (CropBlock) ModBlocks.STRAWBERRY_CROP.get(),

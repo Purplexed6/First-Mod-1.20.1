@@ -80,6 +80,7 @@ public class ModCreativeModeTabs {
                         pOutput.accept(SoulSet.SOUL_FRAGMENT.get());
                         pOutput.accept(SoulSet.SOUL_CRYSTAL.get());
                         pOutput.accept(SoulSet.SOUL_POWDER.get());
+                        pOutput.accept(SoulSet.SOUL_ESSENCE.get());
                         pOutput.accept(SoulSet.SOULFORGED_SWORD.get());
                         pOutput.accept(SoulSet.SOULFORGED_PICKAXE.get());
                         pOutput.accept(SoulSet.SOULFORGED_AXE.get());
@@ -127,16 +128,16 @@ public class ModCreativeModeTabs {
                         pOutput.accept(SoulSteelSet.SOUL_STEEL_LEGGINGS.get());
                         pOutput.accept(SoulSteelSet.SOUL_STEEL_BOOTS.get());
 
-                        pOutput.accept(SugiliteSet.SUGILITE.get());
-                        pOutput.accept(SugiliteSet.SUGILITE_SWORD.get());
-                        pOutput.accept(SugiliteSet.SUGILITE_PICKAXE.get());
-                        pOutput.accept(SugiliteSet.SUGILITE_AXE.get());
-                        pOutput.accept(SugiliteSet.SUGILITE_SHOVEL.get());
-                        pOutput.accept(SugiliteSet.SUGILITE_HOE.get());
-                        pOutput.accept(SugiliteSet.SUGILITE_HELMET.get());
-                        pOutput.accept(SugiliteSet.SUGILITE_CHESTPLATE.get());
-                        pOutput.accept(SugiliteSet.SUGILITE_LEGGINGS.get());
-                        pOutput.accept(SugiliteSet.SUGILITE_BOOTS.get());
+                        pOutput.accept(AquamarineSet.AQUAMARINE.get());
+                        pOutput.accept(AquamarineSet.AQUAMARINE_SWORD.get());
+                        pOutput.accept(AquamarineSet.AQUAMARINE_PICKAXE.get());
+                        pOutput.accept(AquamarineSet.AQUAMARINE_AXE.get());
+                        pOutput.accept(AquamarineSet.AQUAMARINE_SHOVEL.get());
+                        pOutput.accept(AquamarineSet.AQUAMARINE_HOE.get());
+                        pOutput.accept(AquamarineSet.AQUAMARINE_HELMET.get());
+                        pOutput.accept(AquamarineSet.AQUAMARINE_CHESTPLATE.get());
+                        pOutput.accept(AquamarineSet.AQUAMARINE_LEGGINGS.get());
+                        pOutput.accept(AquamarineSet.AQUAMARINE_BOOTS.get());
 
                         pOutput.accept(AlexandriteSet.ALEXANDRITE.get());
                         pOutput.accept(AlexandriteSet.ALEXANDRITE_SWORD.get());
@@ -202,6 +203,8 @@ public class ModCreativeModeTabs {
                         pOutput.accept(FireiteSet.FIREITE_INGOT.get());
                         pOutput.accept(FireiteSet.FIREITE_BLADE.get());
                         pOutput.accept(FireiteSet.FIREITE_UPGRADE_SMITHING_TEMPLATE.get());
+
+                        pOutput.accept(Misc.ICE_CRYSTAL.get());
 
                         pOutput.accept(CryptonSet.CRYPTON.get());
                         pOutput.accept(CryptonSet.CRYPTON_SHARD.get());
@@ -381,9 +384,8 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.ALEXANDRITE_ORE.get());
                         pOutput.accept(ModBlocks.DEEPSLATE_ALEXANDRITE_ORE.get());
 
-                        pOutput.accept(ModBlocks.SUGILITE_BLOCK.get());
-                        pOutput.accept(ModBlocks.SUGILITE_ORE.get());
-                        pOutput.accept(ModBlocks.DEEPSLATE_SUGILITE_ORE.get());
+                        pOutput.accept(ModBlocks.AQUAMARINE_BLOCK.get());
+                        pOutput.accept(ModBlocks.AQUAMARINE_ORE.get());
 
                         pOutput.accept(ModBlocks.VIBRANIUM_BLOCK.get());
                         pOutput.accept(ModBlocks.VIBRANIUM_ORE.get());

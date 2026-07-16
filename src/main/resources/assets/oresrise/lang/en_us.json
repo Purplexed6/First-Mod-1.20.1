@@ -135,6 +135,7 @@
   "item.oresrise.soul_fragment": "Spectral Fragment",
   "item.oresrise.soul_crystal": "Spectral Gem",
   "item.oresrise.soul_powder": "Spectral Powder",
+  "item.oresrise.soul_essence": "Spectral Essence",
 
   "item.oresrise.soulforged_sword": "Soulforged Sword",
   "item.oresrise.soulforged_pickaxe": "Soulforged Pickaxe",
@@ -213,6 +214,9 @@
   "item.oresrise.smithing_template.fireite_upgrade.ingredients": "Ingredients: Fireite Ingot",
   "item.oresrise.smithing_template.fireite_upgrade.base_slot_description": "Add diamond weapon, tool, or armor",
   "item.oresrise.smithing_template.fireite_upgrade.additions_slot_description": "Add Fireite Ingot",
+
+  "item.oresrise.ice_crystal": "Ice Crystal",
+  "item.oresrise.ice_crystal_block": "Ice Crystal",
 
   "item.oresrise.lunaris": "Lunaris",
   "block.oresrise.lunaris_block": "Block of Lunaris",

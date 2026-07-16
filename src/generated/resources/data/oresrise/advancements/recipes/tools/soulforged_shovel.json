@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_soul_crystal": {
+    "has_soul_essence": {
       "conditions": {
         "items": [
           {
             "items": [
-              "oresrise:soul_crystal"
+              "oresrise:soul_essence"
             ]
           }
         ]
@@ -22,7 +22,7 @@
   },
   "requirements": [
     [
-      "has_soul_crystal",
+      "has_soul_essence",
       "has_the_recipe"
     ]
   ],

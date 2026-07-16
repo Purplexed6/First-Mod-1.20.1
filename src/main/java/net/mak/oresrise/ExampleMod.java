@@ -15,6 +15,8 @@ import net.mak.oresrise.worldgen.ModPlacedFeatures;
 import net.mak.oresrise.worldgen.biome.ModNetherRegion;
 import net.mak.oresrise.worldgen.biome.ModTerrablender;
 import net.mak.oresrise.worldgen.biome.surface.ModSurfaceRules;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.core.RegistrySetBuilder;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
@@ -102,13 +104,17 @@ public class ExampleMod {
 
     }
 
-    // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
-    @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
-    public static class ClientModEvents {
-        @SubscribeEvent
-        public static void onClientSetup(FMLClientSetupEvent event) {
 
-        }
+
+    @SubscribeEvent
+    public static void onClientSetup(FMLClientSetupEvent event) {
+        event.enqueueWork(() -> {
+            ItemBlockRenderTypes.setRenderLayer(
+                    ModBlocks.ICE_CRYSTAL_BLOCK.get(),
+                    RenderType.cutout()
+            );
+        });
+
     }
 
     @Mod.EventBusSubscriber(value = Dist.CLIENT)

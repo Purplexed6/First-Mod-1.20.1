@@ -14,6 +14,8 @@ public class SoulSet {
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> SOUL_POWDER = ModItems.ITEMS.register("soul_powder",
             () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> SOUL_ESSENCE = ModItems.ITEMS.register("soul_essence",
+            () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> SOULFORGED_SWORD = ModItems.ITEMS.register("soulforged_sword",
             () -> new ModSwordItem(ModToolTiers.SOULFORGED, 4, -2.3f, new Item.Properties()));

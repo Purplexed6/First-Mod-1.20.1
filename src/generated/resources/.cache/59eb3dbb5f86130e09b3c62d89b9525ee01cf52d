@@ -1,4 +1,4 @@
-// 1.20.1	2026-07-15T17:36:14.6000044	Loot Tables
+// 1.20.1	2026-07-16T20:46:44.2156043	Loot Tables
 3d2659b1401d7d913ea79a6852905ae4fe806efc data/oresrise/loot_tables/blocks/alexandrite_block.json
 1701d4cdb4021cff154a51e750ece8e4917a881c data/oresrise/loot_tables/blocks/alexandrite_ore.json
 81fd54698f270c17cf9e40d36bf6ec28d7ae10d9 data/oresrise/loot_tables/blocks/amberwood_leaves.json
@@ -6,6 +6,8 @@
 833bd47763d04b9f1a3630a3745062bbad4b2ae5 data/oresrise/loot_tables/blocks/amberwood_planks.json
 ee04f80c7f8fab2323b1060ca5968aeba97a4af0 data/oresrise/loot_tables/blocks/amberwood_sapling.json
 79a1b8a4fbebe27edbf670d6cc3ab0057cbeb861 data/oresrise/loot_tables/blocks/amberwood_wood.json
+49792a66d747591a28f4268126f84026c10537ce data/oresrise/loot_tables/blocks/aquamarine_block.json
+58109f4d3dfd1310fbf0e602131e5c6665bc2a26 data/oresrise/loot_tables/blocks/aquamarine_ore.json
 ae9faa4d2120a8aead78726ef28897e45e4b38c3 data/oresrise/loot_tables/blocks/astralite.json
 4864f27f4090c9561f836545d4dd07b7159abaa4 data/oresrise/loot_tables/blocks/cobalt_block.json
 73d2d9bba088bc531688961d7a2aef052bd9dc32 data/oresrise/loot_tables/blocks/cobalt_ore.json
@@ -15,11 +17,11 @@ e6f8b0f40d8a55c8d9fc1437edf2e00900c7e5e1 data/oresrise/loot_tables/blocks/crypto
 5875b88aa5c183f33055d54c0394c178da92fa56 data/oresrise/loot_tables/blocks/deepslate_malachite_ore.json
 62b4bc0b0a97dd48fb5c35a7294c72a56ad5ad22 data/oresrise/loot_tables/blocks/deepslate_ruby_ore.json
 3b34e95f9b3566a753bc97273eb8b02bcef4a2ed data/oresrise/loot_tables/blocks/deepslate_sapphire_ore.json
-53e8baaf1430468d8a5b2b454f7094a7a759e461 data/oresrise/loot_tables/blocks/deepslate_sugilite_ore.json
 907129810c72b14149c7d39f369f53735bc8a134 data/oresrise/loot_tables/blocks/fluxite_block.json
 c2ae0a4c9c24c4bdd20ac1d88769acc0298cd125 data/oresrise/loot_tables/blocks/fluxite_ore.json
 33abe2b9a4302e054eb51671abb4054b945f8d39 data/oresrise/loot_tables/blocks/hemogem_block.json
 f568eaf9e51166004d90c38661d85c97883f953d data/oresrise/loot_tables/blocks/hemogem_ore.json
+f47c75c8d3fd729bd4ccadbfde5ef4b55f75100d data/oresrise/loot_tables/blocks/ice_crystal_block.json
 89ead7ad3df784cef53120612983b72e87012948 data/oresrise/loot_tables/blocks/lunaris_block.json
 d9e77ea3ff14e298c76396121e2b1c45c345d403 data/oresrise/loot_tables/blocks/lunaris_ore.json
 f6c77a750ea19811d065fb392aaa72f1deb49114 data/oresrise/loot_tables/blocks/malachite_block.json
@@ -55,8 +57,6 @@ b5c2e0560c432c8d50b5b07366354663404d0bf0 data/oresrise/loot_tables/blocks/starri
 1df347b0f67596168350336ea57e3ea4407cef06 data/oresrise/loot_tables/blocks/strawberry_crop.json
 511a20015fd4bca018b2053edd517a4d8a0dd4a5 data/oresrise/loot_tables/blocks/stripped_amberwood_log.json
 8f55e060984e915cca07b14b63269103c576a2d4 data/oresrise/loot_tables/blocks/stripped_amberwood_wood.json
-814247b06e9bdb4906375bf18e160cc929e27bc1 data/oresrise/loot_tables/blocks/sugilite_block.json
-ebaad5b93721ee2227d794e752d4481f88c1270a data/oresrise/loot_tables/blocks/sugilite_ore.json
 6a6960e8604c3067ee29b6bcdedbb603536ba633 data/oresrise/loot_tables/blocks/umbrock.json
 6908ffa6a347d0497958f5fc42b7008b6db67a44 data/oresrise/loot_tables/blocks/vibranium_block.json
 b82a6da054ac18e5cf6591ac493705591f74ffba data/oresrise/loot_tables/blocks/vibranium_ore.json

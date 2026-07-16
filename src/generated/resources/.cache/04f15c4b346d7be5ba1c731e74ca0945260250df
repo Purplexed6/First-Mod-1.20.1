@@ -1,4 +1,4 @@
-// 1.20.1	2026-07-15T17:36:14.5939939	Item Models: oresrise
+// 1.20.1	2026-07-16T21:22:21.971436	Item Models: oresrise
 aad4f5f14eaf51e4fadb90ca7564d2d09c762c9f assets/oresrise/models/item/alexandrite.json
 cc08013324240e9326063b7231668969fc7a9323 assets/oresrise/models/item/alexandrite_axe.json
 33dcd9d9ab1b7dd174dcb66888feb84f8b26b34f assets/oresrise/models/item/alexandrite_boots.json
@@ -23,6 +23,7 @@ dfa18459338bbc558c646c7eaec29d6df464496a assets/oresrise/models/item/amethyst_ho
 babb2db09dc67f85582cc54c864279433e37eb65 assets/oresrise/models/item/amethyst_pickaxe.json
 fa4737e78638cfeae0cf6f90f3b2fc0a129535dc assets/oresrise/models/item/amethyst_shovel.json
 547d9968f65e97f6582c44d514ad95776750966d assets/oresrise/models/item/amethyst_sword.json
+3ef50a9bbfbd4fea5512189038c1706f8b964d35 assets/oresrise/models/item/aquamarine.json
 890e1384235fc2587f58c2606d2bf3fa4ac386e8 assets/oresrise/models/item/astralite.json
 f9410c82ac52f6dd13841f2501653958f37da9dd assets/oresrise/models/item/blaze_slag.json
 b8ec9c42811737cfd9bdcea9d1b89bd63617959c assets/oresrise/models/item/bread_slice.json
@@ -93,6 +94,8 @@ c401165797e6f094f9efea24080dfe1218844269 assets/oresrise/models/item/hemogem_leg
 5e6adcb83c7ce6670962dd16c7d6d0793dc5cdb1 assets/oresrise/models/item/hemogem_pickaxe.json
 fa8164717cc7df22d0c2d73577f51994b960ca31 assets/oresrise/models/item/hemogem_shovel.json
 26597bad417e5f62ed3493cc5b2b924f164171a6 assets/oresrise/models/item/hemogem_sword.json
+7400dc5fc06802cda791671d3c8ed7a7f50b7eec assets/oresrise/models/item/ice_crystal.json
+f055dc8e285b7666f30f211c9cb783a95540e33e assets/oresrise/models/item/ice_crystal_block.json
 3edbe6b67f7b2fa7f41dd4e44236466d01307e64 assets/oresrise/models/item/iron_stick.json
 363e6a6beabb27429a346fce45e2d47fad14b93a assets/oresrise/models/item/lunaris.json
 a10f3909995883b5236c5045f2b352ea7725bab4 assets/oresrise/models/item/lunaris_axe.json
@@ -188,6 +191,7 @@ fbe6012f8697e08e425e794c3bf50f68d9af11ae assets/oresrise/models/item/rosite_boot
 2dddbdea0d9cc96873dd29829c2db3401255cb83 assets/oresrise/models/item/rosite_pickaxe.json
 41d21f239f67e07791174fe1c9649e2598dca2d2 assets/oresrise/models/item/rosite_shovel.json
 2cb9df38311a3fa551bfd95237aa0ea77278425c assets/oresrise/models/item/rosite_sword.json
+b17fc0bddf3898e3f9a002bb536228eecf6b3cc8 assets/oresrise/models/item/rough_aquamarine.json
 2f6d6408aae56215b4d8d5932e723a9e74948993 assets/oresrise/models/item/rough_ruby.json
 1e6f9197b8ca3f7802c0d0a18e234a2fec581a94 assets/oresrise/models/item/rough_sapphire.json
 5ff2c36a010011b94039cdc72899943649f9c816 assets/oresrise/models/item/rough_vibranium.json
@@ -225,6 +229,7 @@ e53e34120c613d8379b49498e4f9d6276b7d90ed assets/oresrise/models/item/soulforged_
 43a5a5a49cb355c0a823d750abbfe56169b15740 assets/oresrise/models/item/soulforged_sword.json
 5806b73a1bb95a716f54bb48614cf17892fd0cf5 assets/oresrise/models/item/soul_cookie.json
 7c2783c70fea4205f6cb79dfeda63b582fe04e5f assets/oresrise/models/item/soul_crystal.json
+a925dbaa5e7869753315bd80fed5e3e7d2a8a93a assets/oresrise/models/item/soul_essence.json
 0d2b93a4614bd4bebdaa0978a67393a7820a8163 assets/oresrise/models/item/soul_fragment.json
 e0dacbe15c4992fecab2b257797669031bd398d8 assets/oresrise/models/item/soul_powder.json
 bcdacd550014d9c5cbaaaf51568547c7cfc4fd77 assets/oresrise/models/item/soul_steel_axe.json
@@ -265,16 +270,6 @@ a0b435057f54f0ff60756f867126e26ac6188958 assets/oresrise/models/item/strawberry.
 d7cb92d76cb8dab73448909356e590770b701c48 assets/oresrise/models/item/strawberry_seeds.json
 9dcf69cf0940d526d731a22d628e827124e55d34 assets/oresrise/models/item/stripped_amberwood_log.json
 48e9dedecf66e2e88ab4ed6e09bd566174e191ca assets/oresrise/models/item/stripped_amberwood_wood.json
-95c1ad90b5b9788724072b9bb885e272b0c2cc20 assets/oresrise/models/item/sugilite.json
-cc2913a36a10d516fd38beb9117c9570c6b0615c assets/oresrise/models/item/sugilite_axe.json
-7819726596f771280e418f93a68949af1142407b assets/oresrise/models/item/sugilite_boots.json
-78fd10a4aaaacbe87ef95f0ac8b89ae7b2c916d8 assets/oresrise/models/item/sugilite_chestplate.json
-4e38d20e3846cdcd9880573d9b52f689193f9871 assets/oresrise/models/item/sugilite_helmet.json
-51e9cd180cdf95a3a45935778b994e410580fac9 assets/oresrise/models/item/sugilite_hoe.json
-e7a54ac7f114799dfefac2f959a4f326df7c015c assets/oresrise/models/item/sugilite_leggings.json
-efe488440b0b1a6de71245d6b124e0cbd1a402c8 assets/oresrise/models/item/sugilite_pickaxe.json
-90524b8d2e7945794e9cd39ec3ce92220416645d assets/oresrise/models/item/sugilite_shovel.json
-23ccbf3514fa639f928f8ea9082be7061d85320a assets/oresrise/models/item/sugilite_sword.json
 22ba5753e9cb09bef51bab47eae40cdd3f4b9812 assets/oresrise/models/item/toasted_bread.json
 590b683f4558bc18432e2d9f0d1ba9a10f059ff6 assets/oresrise/models/item/umbrock.json
 c53fa669204d49f02b5e0f5567809ea687c650b8 assets/oresrise/models/item/vibranium.json

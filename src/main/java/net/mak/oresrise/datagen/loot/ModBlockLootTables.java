@@ -40,7 +40,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.WITHERITE_BLOCK.get());
         this.dropSelf(ModBlocks.OBLIVIONITE_BLOCK.get());
         this.dropSelf(ModBlocks.SOUL_BLOCK.get());
-        this.dropSelf(ModBlocks.SUGILITE_BLOCK.get());
+        this.dropSelf(ModBlocks.AQUAMARINE_BLOCK.get());
         this.dropSelf(ModBlocks.ALEXANDRITE_BLOCK.get());
         this.dropSelf(ModBlocks.QUINTESSITE_BLOCK.get());
         this.dropSelf(ModBlocks.HEMOGEM_BLOCK.get());
@@ -82,13 +82,8 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                                 .when(LootItemRandomChanceCondition.randomChance(0.1f))
                                 .add(LootItem.lootTableItem(Misc.COMPRESSED_SLAG.get()))));
 
-        this.add(ModBlocks.SUGILITE_ORE.get(), (block) ->
-                createOreDrop(block, SugiliteSet.SUGILITE.get())
-                        .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1.0f))
-                                .when(LootItemRandomChanceCondition.randomChance(0.1f))
-                                .add(LootItem.lootTableItem(Misc.COMPRESSED_SLAG.get()))));
-        this.add(ModBlocks.DEEPSLATE_SUGILITE_ORE.get(), (block) ->
-                createOreDrop(block, SugiliteSet.SUGILITE.get())
+        this.add(ModBlocks.AQUAMARINE_ORE.get(), (block) ->
+                createOreDrop(block, AquamarineSet.ROUGH_AQUAMARINE.get())
                         .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1.0f))
                                 .when(LootItemRandomChanceCondition.randomChance(0.1f))
                                 .add(LootItem.lootTableItem(Misc.COMPRESSED_SLAG.get()))));
@@ -210,6 +205,9 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                         .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1.0f))
                                 .when(LootItemRandomChanceCondition.randomChance(0.1f))
                                 .add(LootItem.lootTableItem(Misc.ENDER_SLAG.get()))));
+
+        add(ModBlocks.ICE_CRYSTAL_BLOCK.get(),
+                createSingleItemTable(Misc.ICE_CRYSTAL.get()));
 
 
         LootItemCondition.Builder lootitemcondition$builder = LootItemBlockStatePropertyCondition

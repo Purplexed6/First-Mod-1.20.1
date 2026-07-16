@@ -89,16 +89,32 @@ public class ModEvents {
             }
         }
 
-        // 💀 SOUL → SOUL SPEED STYLE
+        // 💀 SOULFORGED → Soul Speed + Soul particles
         if (hasFullSet(player, ModArmorMaterials.SOULFORGED)) {
+
             if (player.getBlockStateOn().is(net.minecraft.tags.BlockTags.SOUL_SPEED_BLOCKS)) {
-                player.addEffect(new net.minecraft.world.effect.MobEffectInstance(
-                        net.minecraft.world.effect.MobEffects.MOVEMENT_SPEED,
+                player.addEffect(new MobEffectInstance(
+                        MobEffects.MOVEMENT_SPEED,
                         40,
                         1,
                         false,
                         false
                 ));
+            }
+
+            // Cosmetic particles
+            if (player.tickCount % 6 == 0) {
+                ((ServerLevel) player.level()).sendParticles(
+                        ParticleTypes.SOUL,
+                        player.getX(),
+                        player.getY() + 1.0,
+                        player.getZ(),
+                        2,
+                        0.35,
+                        0.5,
+                        0.35,
+                        0.01
+                );
             }
         }
 
@@ -144,7 +160,27 @@ public class ModEvents {
                 }
             }
         }
+
+        // 💀 SOULFORGED → Soul particles
+        if (hasFullSet(player, ModArmorMaterials.SOULFORGED)) {
+
+            if (player.tickCount % 6 == 0) {
+
+                ((ServerLevel) player.level()).sendParticles(
+                        ParticleTypes.SOUL,
+                        player.getX(),
+                        player.getY() + 1.0,
+                        player.getZ(),
+                        2,          // particle count
+                        0.35,       // X spread
+                        0.5,        // Y spread
+                        0.35,       // Z spread
+                        0.01        // speed
+                );
+            }
+        }
     }
+
 
     private static boolean hasFullSet(Player player, ArmorMaterial material) {
 

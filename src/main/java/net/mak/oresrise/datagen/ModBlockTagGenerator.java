@@ -6,6 +6,7 @@ import net.mak.oresrise.util.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.BlockTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
@@ -40,8 +41,7 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.ALEXANDRITE_ORE.get(),
                         ModBlocks.DEEPSLATE_ALEXANDRITE_ORE.get(),
 
-                        ModBlocks.SUGILITE_ORE.get(),
-                        ModBlocks.DEEPSLATE_SUGILITE_ORE.get(),
+                        ModBlocks.AQUAMARINE_ORE.get(),
 
                         ModBlocks.MALACHITE_ORE.get(),
                         ModBlocks.DEEPSLATE_MALACHITE_ORE.get(),
@@ -117,8 +117,7 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.ALEXANDRITE_ORE.get(),
                         ModBlocks.DEEPSLATE_ALEXANDRITE_ORE.get(),
 
-                        ModBlocks.SUGILITE_ORE.get(),
-                        ModBlocks.DEEPSLATE_SUGILITE_ORE.get(),
+                        ModBlocks.AQUAMARINE_ORE.get(),
 
                         ModBlocks.MALACHITE_ORE.get(),
                         ModBlocks.DEEPSLATE_MALACHITE_ORE.get(),
@@ -148,7 +147,7 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
 
 
 
-        this.tag(ModTags.Blocks.NEEDS_NETHERITE_TOOL)
+        this.tag(Tags.Blocks.NEEDS_NETHERITE_TOOL)
                 .add(ModBlocks.SOUL_ORE.get(),
                         ModBlocks.SOUL_STEEL_BLOCK.get(),
                         ModBlocks.SOUL_BLOCK.get(),

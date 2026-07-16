@@ -78,13 +78,10 @@ public class ModBlocks {
     public static final RegistryObject<Block> SOUL_BLOCK = registerBlock("soul_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).sound(SoundType.AMETHYST)));
 
-    public static final RegistryObject<Block> SUGILITE_BLOCK = registerBlock("sugilite_block",
+    public static final RegistryObject<Block> AQUAMARINE_BLOCK = registerBlock("aquamarine_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).sound(SoundType.AMETHYST)));
-    public static final RegistryObject<Block> SUGILITE_ORE = registerBlock("sugilite_ore",
+    public static final RegistryObject<Block> AQUAMARINE_ORE = registerBlock("aquamarine_ore",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.DIAMOND_ORE)
-                    .requiresCorrectToolForDrops(), UniformInt.of(4, 8)));
-    public static final RegistryObject<Block> DEEPSLATE_SUGILITE_ORE = registerBlock("deepslate_sugilite_ore",
-            () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_DIAMOND_ORE)
                     .requiresCorrectToolForDrops(), UniformInt.of(4, 8)));
 
     public static final RegistryObject<Block> HEMOGEM_BLOCK = registerBlock("hemogem_block",
@@ -171,6 +168,12 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> ROSE_GOLD_BLOCK = registerBlock("rose_gold_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.STONE)));
+
+    public static final RegistryObject<Block> ICE_CRYSTAL_BLOCK = registerBlock("ice_crystal_block",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.AMETHYST_CLUSTER)
+                    .sound(SoundType.GLASS)
+                    .strength(0.3f)
+                    .lightLevel(state -> 5)));
 
     public static final RegistryObject<Block> STRAWBERRY_CROP = BLOCKS.register("strawberry_crop",
             () -> new StrawberryCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));

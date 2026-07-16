@@ -95,6 +95,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(SoulSet.SOUL_FRAGMENT);
         simpleItem(SoulSet.SOUL_CRYSTAL);
         simpleItem(SoulSet.SOUL_POWDER);
+        simpleItem(SoulSet.SOUL_ESSENCE);
         simpleItem(SoulSet.SOULFORGED_HELMET);
         simpleItem(SoulSet.SOULFORGED_CHESTPLATE);
         simpleItem(SoulSet.SOULFORGED_LEGGINGS);
@@ -188,16 +189,17 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(CryptonSet.CRYPTON_LEGGINGS);
         simpleItem(CryptonSet.CRYPTON_BOOTS);
 
-        simpleItem(SugiliteSet.SUGILITE);
-        simpleItem(SugiliteSet.SUGILITE_HELMET);
-        simpleItem(SugiliteSet.SUGILITE_CHESTPLATE);
-        simpleItem(SugiliteSet.SUGILITE_LEGGINGS);
-        simpleItem(SugiliteSet.SUGILITE_BOOTS);
-        handheldItem(SugiliteSet.SUGILITE_SWORD);
-        handheldItem(SugiliteSet.SUGILITE_PICKAXE);
-        handheldItem(SugiliteSet.SUGILITE_AXE);
-        handheldItem(SugiliteSet.SUGILITE_SHOVEL);
-        handheldItem(SugiliteSet.SUGILITE_HOE);
+        simpleItem(AquamarineSet.AQUAMARINE);
+        simpleItem(AquamarineSet.ROUGH_AQUAMARINE);
+        // simpleItem(AquamarineSet.AQUAMARINE_HELMET);
+        // simpleItem(AquamarineSet.AQUAMARINE_CHESTPLATE);
+        // simpleItem(AquamarineSet.AQUAMARINE_LEGGINGS);
+        // simpleItem(AquamarineSet.AQUAMARINE_BOOTS);
+        // handheldItem(AquamarineSet.AQUAMARINE_SWORD);
+        // handheldItem(AquamarineSet.AQUAMARINE_PICKAXE);
+        // handheldItem(AquamarineSet.AQUAMARINE_AXE);
+        // handheldItem(AquamarineSet.AQUAMARINE_SHOVEL);
+        // handheldItem(AquamarineSet.AQUAMARINE_HOE);
 
         simpleItem(QuintessiteSet.QUINTESSITE);
         handheldItem(QuintessiteSet.QUINTESSITE_SWORD);
@@ -272,6 +274,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         handheldItem(FireiteSet.FIREITE_BLADE);
         basicItem(FireiteSet.FIREITE_UPGRADE_SMITHING_TEMPLATE.get());
 
+        simpleItem(Misc.ICE_CRYSTAL);
+
         simpleItem(PlatinumSet.RAW_PLATINUM);
         simpleItem(PlatinumSet.PLATINUM_INGOT);
         simpleItem(PlatinumSet.PLATINUM_HELMET);
@@ -330,6 +334,14 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         handheldItem(ShadowSteelSet.SHADOW_DAGGER);
         handheldItem(StarriteSet.STAR_STAFF);
+
+        withExistingParent(
+                "ice_crystal_block",
+                "minecraft:item/generated"
+        ).texture(
+                "layer0",
+                modLoc("item/ice_crystal_1")
+        );
 
         withExistingParent("astralite",
                 new ResourceLocation(ExampleMod.MOD_ID, "block/astralite"));

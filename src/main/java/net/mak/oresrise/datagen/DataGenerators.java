@@ -41,5 +41,6 @@ public class DataGenerators {
         generator.addProvider(event.includeServer(), new ModGlobalLootModifiersProvider(packOutput));
 
         generator.addProvider(event.includeServer(), new ModWorldGenProvider(packOutput, lookupProvider));
+        generator.addProvider(event.includeServer(), new ModBiomeTagsProvider(packOutput, lookupProvider));
     }
 }

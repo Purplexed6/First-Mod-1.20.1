@@ -19,7 +19,7 @@ public class ModTags {
         public static final TagKey<Block> NEEDS_RUBY_TOOL = tag("needs_ruby_tool");
         public static final TagKey<Block> NEEDS_EMERALD_TOOL = tag("needs_emerald_tool");
         public static final TagKey<Block> NEEDS_ALEXANDRITE_TOOL = tag("needs_alexandrite_tool");
-        public static final TagKey<Block> NEEDS_SUGILITE_TOOL = tag("needs_sugilite_tool");
+        public static final TagKey<Block> NEEDS_AQUAMARINE_TOOL = tag("needs_aquamarine_tool");
         public static final TagKey<Block> NEEDS_PLATINUM_TOOL = tag("needs_platinum_tool");
         public static final TagKey<Block> NEEDS_OBSIDIAN_TOOL = tag("needs_obsidian_tool");
         public static final TagKey<Block> NEEDS_STARRITE_TOOL = tag("needs_starrite_tool");

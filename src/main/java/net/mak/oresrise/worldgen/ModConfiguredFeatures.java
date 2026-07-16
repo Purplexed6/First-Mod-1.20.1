@@ -3,8 +3,10 @@ package net.mak.oresrise.worldgen;
 import com.mojang.blaze3d.audio.Library;
 import net.mak.oresrise.ExampleMod;
 import net.mak.oresrise.block.ModBlocks;
+import net.minecraft.core.BlockPos;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstapContext;
+import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
@@ -14,6 +16,7 @@ import net.minecraft.util.valueproviders.IntProvider;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.util.valueproviders.WeightedListInt;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.configurations.*;
@@ -38,7 +41,7 @@ public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> SAPPHIRE_ORE_KEY = registerKey("sapphire_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> RUBY_ORE_KEY = registerKey("ruby_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> ALEXANDRITE_ORE_KEY = registerKey("alexandrite_ore");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> SUGILITE_ORE_KEY = registerKey("sugilite_ore");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> AQUAMARINE_ORE_KEY = registerKey("aquamarine_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> VIBRANIUM_ORE_KEY = registerKey("vibranium_ore");
 
     public static final ResourceKey<ConfiguredFeature<?, ?>> WITHERITE_ORE_KEY = registerKey("witherite_ore");
@@ -55,6 +58,8 @@ public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> AMBERWOOD_KEY = registerKey("amberwood");
     public static final ResourceKey<ConfiguredFeature<?, ?>> ASTRALITE_SURFACE_KEY = registerKey("astralite_surface");
     public static final ResourceKey<ConfiguredFeature<?, ?>> UMBROCK_FILLER_KEY = registerKey("umbrock_filler");
+
+    public static final ResourceKey<ConfiguredFeature<?, ?>> ICE_CRYSTAL = registerKey("ice_crystal");
 
     public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
         RuleTest stoneReplaceable = new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES);
@@ -74,18 +79,20 @@ public class ModConfiguredFeatures {
         List<OreConfiguration.TargetBlockState> overworldRubyOres = List.of(OreConfiguration.target(stoneReplaceable,
                         ModBlocks.RUBY_ORE.get().defaultBlockState()),
                 OreConfiguration.target(deepslateReplaceables, ModBlocks.DEEPSLATE_RUBY_ORE.get().defaultBlockState()));
-        List<OreConfiguration.TargetBlockState> overworldSugiliteOres = List.of(OreConfiguration.target(stoneReplaceable,
-                        ModBlocks.SUGILITE_ORE.get().defaultBlockState()),
-                OreConfiguration.target(deepslateReplaceables, ModBlocks.DEEPSLATE_SUGILITE_ORE.get().defaultBlockState()));
         List<OreConfiguration.TargetBlockState> overworldAlexandriteOres = List.of(OreConfiguration.target(stoneReplaceable,
                         ModBlocks.ALEXANDRITE_ORE.get().defaultBlockState()),
                 OreConfiguration.target(deepslateReplaceables, ModBlocks.DEEPSLATE_ALEXANDRITE_ORE.get().defaultBlockState()));
+
+        List<OreConfiguration.TargetBlockState> overworldAquamarineOres = List.of(
+                OreConfiguration.target(
+                        stoneReplaceable,
+                        ModBlocks.AQUAMARINE_ORE.get().defaultBlockState()));
+
         List<OreConfiguration.TargetBlockState> overworldVibraniumOres = List.of(
                 OreConfiguration.target(
                         deepslateReplaceables,
-                        ModBlocks.VIBRANIUM_ORE.get().defaultBlockState()
-                )
-        );
+                        ModBlocks.VIBRANIUM_ORE.get().defaultBlockState()));
+
         List<OreConfiguration.TargetBlockState> starriteOres = List.of(
                 OreConfiguration.target(stoneReplaceable,
                         ModBlocks.STARRITE_ORE.get().defaultBlockState())
@@ -97,12 +104,16 @@ public class ModConfiguredFeatures {
                 // Target 2: Replaces Dirt
                 OreConfiguration.target(new BlockMatchTest(Blocks.DIRT), ModBlocks.ASTRALITE.get().defaultBlockState()));
 
-        register(context, SAPPHIRE_ORE_KEY, Feature.ORE, new OreConfiguration(overworldSapphireOres, 4));
-        register(context, RUBY_ORE_KEY, Feature.ORE, new OreConfiguration(overworldRubyOres, 4));
-        register(context, ALEXANDRITE_ORE_KEY, Feature.ORE, new OreConfiguration(overworldAlexandriteOres, 4));
-        register(context, SUGILITE_ORE_KEY, Feature.ORE, new OreConfiguration(overworldSugiliteOres, 4));
-        register(context, VIBRANIUM_ORE_KEY, Feature.ORE, new OreConfiguration(overworldVibraniumOres, 4));
+        register(context, SAPPHIRE_ORE_KEY, Feature.ORE, new OreConfiguration(overworldSapphireOres, 8));
+        register(context, RUBY_ORE_KEY, Feature.ORE, new OreConfiguration(overworldRubyOres, 8));
+        register(context, ALEXANDRITE_ORE_KEY, Feature.ORE, new OreConfiguration(overworldAlexandriteOres, 8));
+        register(context, AQUAMARINE_ORE_KEY, Feature.ORE, new OreConfiguration(overworldAquamarineOres, 8));
+        register(context, VIBRANIUM_ORE_KEY, Feature.ORE, new OreConfiguration(overworldVibraniumOres, 3));
         // register(context, STARRITE_ORE_KEY, Feature.ORE, new OreConfiguration(starriteOres, 9));
+        register(context, ICE_CRYSTAL, Feature.SIMPLE_BLOCK,
+                new SimpleBlockConfiguration(
+                        BlockStateProvider.simple(ModBlocks.ICE_CRYSTAL_BLOCK.get())
+                ));
 
         register(context, WITHERITE_ORE_KEY, Feature.ORE, new OreConfiguration(paleslateReplacables,
                 ModBlocks.WITHERITE_ORE.get().defaultBlockState(), 3));
