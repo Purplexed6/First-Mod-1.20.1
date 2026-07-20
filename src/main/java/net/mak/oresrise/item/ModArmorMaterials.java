@@ -22,6 +22,12 @@ public enum ModArmorMaterials implements ArmorMaterial {
             0.05f, // knockback resistance (small bonus)
             () -> Ingredient.of(HemoSet.HEMOGEM.get())),
 
+    STEEL("steel", 30, new int[]{ 2, 7, 5, 2 }, 18,
+            SoundEvents.ARMOR_EQUIP_IRON,
+            1.0f,   // toughness (+1 over iron)
+            0.05f,   // no knockback resistance
+            () -> Ingredient.of(SteelSet.STEEL_INGOT.get())),
+
     QUINTESSITE("quintessite", 40,
             new int[]{ 4, 9, 7, 4 }, // strong but not insane
             20,
@@ -63,8 +69,8 @@ public enum ModArmorMaterials implements ArmorMaterial {
     WITHERITE("witherite", 40, new int[]{ 4, 9, 7, 4 }, 18,
             SoundEvents.ARMOR_EQUIP_DIAMOND, 3f, 0.2f, () -> Ingredient.of(WitheriteSet.WITHERITE_INGOT.get())),
 
-    FLUXITE("fluxite", 37, new int[]{ 3, 8, 6, 3 }, 15,
-            SoundEvents.ARMOR_EQUIP_NETHERITE, 3f, 0.1f, () -> Ingredient.of(FluxiteSet.FLUXITE.get())),
+    VOLTIUM("voltium", 37, new int[]{ 3, 8, 6, 3 }, 15,
+            SoundEvents.ARMOR_EQUIP_NETHERITE, 3f, 0.1f, () -> Ingredient.of(VoltiumSet.VOLTIUM_INGOT.get())),
 
     PLATINUM("platinum", 30, new int[]{ 3, 8, 6, 3 }, 15,
             SoundEvents.ARMOR_EQUIP_DIAMOND,
@@ -90,7 +96,7 @@ public enum ModArmorMaterials implements ArmorMaterial {
     ROSE_GOLD_INGOT("rose_gold_ingot", 15, new int[]{ 2, 6, 5, 2 }, 14,
             SoundEvents.ARMOR_EQUIP_GOLD, 0f, 0f, () -> Ingredient.of(RoseGoldSet.ROSE_GOLD_INGOT.get())),
 
-    AMETHYST("amethyst", 18, new int[]{ 2, 5, 7, 2 }, 18,
+    AMETHYST("amethyst", 18, new int[]{ 2, 6, 5, 2 }, 18,
             SoundEvents.AMETHYST_BLOCK_PLACE, 0f, 0f, () -> Ingredient.of(Items.AMETHYST_SHARD)),
 
     EMERALD("emerald", 25, new int[]{ 3, 8, 6, 3 }, 20,
@@ -99,16 +105,16 @@ public enum ModArmorMaterials implements ArmorMaterial {
     OBSIDIAN("obsidian", 50, new int[]{ 3, 8, 6, 3 }, 16,
             SoundEvents.ARMOR_EQUIP_DIAMOND, 3f, 0.2f, () -> Ingredient.of(Items.OBSIDIAN)),
 
-    COBALT("cobalt", 33, new int[]{ 3, 8, 6, 3 }, 10,
-            SoundEvents.ARMOR_EQUIP_DIAMOND, 2f, 0f, () -> Ingredient.of(CobaltSet.COBALT_INGOT.get())),
+   // COBALT("cobalt", 33, new int[]{ 3, 8, 6, 3 }, 10,
+   //         SoundEvents.ARMOR_EQUIP_DIAMOND, 2f, 0f, () -> Ingredient.of(CobaltSet.COBALT_INGOT.get())),
 
 
 
     AQUAMARINE("aquamarine", 33, new int[]{ 3, 8, 6, 3 }, 10,
             SoundEvents.ARMOR_EQUIP_DIAMOND, 2f, 0f, () -> Ingredient.of(AquamarineSet.AQUAMARINE.get())),
 
-    ALEXANDRITE("alexandrite", 33, new int[]{ 3, 8, 6, 3 }, 10,
-            SoundEvents.ARMOR_EQUIP_DIAMOND, 2f, 0f, () -> Ingredient.of(AlexandriteSet.ALEXANDRITE.get())),
+    //JADE("jade", 33, new int[]{ 3, 8, 6, 3 }, 10,
+     //       SoundEvents.ARMOR_EQUIP_DIAMOND, 2f, 0f, () -> Ingredient.of(JadeSet.JADE.get())),
 
     RUBY("ruby", 33, new int[]{ 3, 8, 6, 3 }, 10,
             SoundEvents.ARMOR_EQUIP_DIAMOND, 2f, 0f, () -> Ingredient.of(RubySet.RUBY.get())),

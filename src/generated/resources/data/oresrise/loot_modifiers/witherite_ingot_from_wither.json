@@ -6,5 +6,6 @@
       "loot_table_id": "minecraft:entities/wither"
     }
   ],
+  "count": 5,
   "item": "oresrise:witherite_ingot"
 }

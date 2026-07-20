@@ -10,6 +10,8 @@ public class RositeSet {
 
     public static final RegistryObject<Item> ROSITE_INGOT = ModItems.ITEMS.register("rosite_ingot",
             () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> ROSITE_NUGGET = ModItems.ITEMS.register("rosite_nugget",
+            () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> ROSITE_SWORD = ModItems.ITEMS.register("rosite_sword",
             () -> new SwordItem(ModToolTiers.ROSITE, 3, -2.4f, new Item.Properties()));

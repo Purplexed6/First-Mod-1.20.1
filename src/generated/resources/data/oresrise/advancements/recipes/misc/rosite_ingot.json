@@ -1,13 +1,7 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_the_recipe": {
-      "conditions": {
-        "recipe": "oresrise:rosite_ingot"
-      },
-      "trigger": "minecraft:recipe_unlocked"
-    },
-    "redstone": {
+    "has_redstone": {
       "conditions": {
         "items": [
           {
@@ -18,11 +12,17 @@
         ]
       },
       "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "oresrise:rosite_ingot"
+      },
+      "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "redstone",
+      "has_redstone",
       "has_the_recipe"
     ]
   ],

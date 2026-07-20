@@ -2,7 +2,6 @@ package net.mak.oresrise.datagen.loot;
 
 import java.util.Set;
 import net.mak.oresrise.block.ModBlocks;
-import net.mak.oresrise.block.custom.StrawberryCropBlock;
 import net.mak.oresrise.item.ModItems;
 import net.mak.oresrise.item.custom.*;
 import net.minecraft.advancements.critereon.StatePropertiesPredicate;
@@ -38,20 +37,21 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.ROSITE_BLOCK.get());
         this.dropSelf(ModBlocks.RAW_WITHERITE_BLOCK.get());
         this.dropSelf(ModBlocks.WITHERITE_BLOCK.get());
-        this.dropSelf(ModBlocks.OBLIVIONITE_BLOCK.get());
+  //      this.dropSelf(ModBlocks.OBLIVIONITE_BLOCK.get());
         this.dropSelf(ModBlocks.SOUL_BLOCK.get());
         this.dropSelf(ModBlocks.AQUAMARINE_BLOCK.get());
-        this.dropSelf(ModBlocks.ALEXANDRITE_BLOCK.get());
+    //    this.dropSelf(ModBlocks.JADE_BLOCK.get());
         this.dropSelf(ModBlocks.QUINTESSITE_BLOCK.get());
         this.dropSelf(ModBlocks.HEMOGEM_BLOCK.get());
         this.dropSelf(ModBlocks.CRYPTON_BLOCK.get());
         this.dropSelf(ModBlocks.SOUL_STEEL_BLOCK.get());
         this.dropSelf(ModBlocks.LUNARIS_BLOCK.get());
         this.dropSelf(ModBlocks.FLUXITE_BLOCK.get());
+        this.dropSelf(ModBlocks.VOLTIUM_BLOCK.get());
         this.dropSelf(ModBlocks.ONYX_BLOCK.get());
         this.dropSelf(ModBlocks.STARRITE_BLOCK.get());
-        this.dropSelf(ModBlocks.COBALT_BLOCK.get());
-        this.dropSelf(ModBlocks.RAW_COBALT_BLOCK.get());
+        // this.dropSelf(ModBlocks.COBALT_BLOCK.get());
+      //  this.dropSelf(ModBlocks.RAW_COBALT_BLOCK.get());
         this.dropSelf(ModBlocks.PLATINUM_BLOCK.get());
         this.dropSelf(ModBlocks.MALACHITE_BLOCK.get());
         this.dropSelf(ModBlocks.RAW_PLATINUM_BLOCK.get());
@@ -59,6 +59,9 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.ROSE_GOLD_BLOCK.get());
         this.dropSelf(ModBlocks.ROUGH_VIBRANIUM_BLOCK.get());
         this.dropSelf(ModBlocks.VIBRANIUM_BLOCK.get());
+        this.dropSelf(ModBlocks.STEEL_BLOCK.get());
+        this.dropSelf(ModBlocks.KEYOLITE_BLOCK.get());
+        this.dropSelf(ModBlocks.OBSIDIUM_BLOCK.get());
 
         this.add(ModBlocks.SAPPHIRE_ORE.get(), (block) ->
                 createOreDrop(block, SapphireSet.ROUGH_SAPPHIRE.get())
@@ -88,16 +91,16 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                                 .when(LootItemRandomChanceCondition.randomChance(0.1f))
                                 .add(LootItem.lootTableItem(Misc.COMPRESSED_SLAG.get()))));
 
-        this.add(ModBlocks.ALEXANDRITE_ORE.get(), (block) ->
-                createOreDrop(block, AlexandriteSet.ALEXANDRITE.get())
+        /* this.add(ModBlocks.JADE_ORE.get(), (block) ->
+                createOreDrop(block, JadeSet.JADE.get())
                         .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1.0f))
                                 .when(LootItemRandomChanceCondition.randomChance(0.1f))
                                 .add(LootItem.lootTableItem(Misc.COMPRESSED_SLAG.get()))));
-        this.add(ModBlocks.DEEPSLATE_ALEXANDRITE_ORE.get(), (block) ->
-                createOreDrop(block, AlexandriteSet.ALEXANDRITE.get())
+        this.add(ModBlocks.DEEPSLATE_JADE_ORE.get(), (block) ->
+                createOreDrop(block, JadeSet.JADE.get())
                         .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1.0f))
                                 .when(LootItemRandomChanceCondition.randomChance(0.1f))
-                                .add(LootItem.lootTableItem(Misc.COMPRESSED_SLAG.get()))));
+                                .add(LootItem.lootTableItem(Misc.COMPRESSED_SLAG.get())))); */
 
         this.add(ModBlocks.VIBRANIUM_ORE.get(), (block) ->
                 createOreDrop(block, VibraniumSet.ROUGH_VIBRANIUM.get())
@@ -120,11 +123,11 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                 createOreDrop(block, StarriteSet.STARRITE.get())
                         .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1.0f))));
 
-        this.add(ModBlocks.COBALT_ORE.get(), (block) ->
+        /* this.add(ModBlocks.COBALT_ORE.get(), (block) ->
                 createOreDrop(block, CobaltSet.RAW_COBALT.get())
                         .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1.0f))
                                 .when(LootItemRandomChanceCondition.randomChance(0.1f))
-                                .add(LootItem.lootTableItem(Misc.COMPRESSED_SLAG.get()))));
+                                .add(LootItem.lootTableItem(Misc.COMPRESSED_SLAG.get())))); */
 
         this.add(ModBlocks.PLATINUM_ORE.get(), (block) ->
                 createOreDrop(block, PlatinumSet.RAW_PLATINUM.get())
@@ -166,7 +169,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
         this.add(ModBlocks.FLUXITE_ORE.get(), (block) ->
                 createSilkTouchDispatchTable(block, this.applyExplosionDecay(block,
-                        LootItem.lootTableItem(FluxiteSet.FLUXITE.get())
+                        LootItem.lootTableItem(VoltiumSet.FLUXITE.get())
                                 .apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0f, 2.0f)))
                                 .apply(ApplyBonusCount.addOreBonusCount(Enchantments.BLOCK_FORTUNE)))));
 
@@ -174,13 +177,13 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
 
 
-        this.add(ModBlocks.OBLIVIONITE_ORE.get(), (block) ->
+        /* this.add(ModBlocks.OBLIVIONITE_ORE.get(), (block) ->
                 LootTable.lootTable()
                         .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1.0f))
                                 .add(LootItem.lootTableItem(OblivioniteSet.OBLIVIONITE_SHARD.get()))) // No fortune applied here
                         .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1.0f))
                                 .when(LootItemRandomChanceCondition.randomChance(0.1f))
-                                .add(LootItem.lootTableItem(Misc.ENDER_SLAG.get()))));
+                                .add(LootItem.lootTableItem(Misc.ENDER_SLAG.get())))); */
 
         this.add(ModBlocks.CRYPTON_ORE.get(), (block) ->
                 LootTable.lootTable()
@@ -205,39 +208,6 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                         .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1.0f))
                                 .when(LootItemRandomChanceCondition.randomChance(0.1f))
                                 .add(LootItem.lootTableItem(Misc.ENDER_SLAG.get()))));
-
-        add(ModBlocks.ICE_CRYSTAL_BLOCK.get(),
-                createSingleItemTable(Misc.ICE_CRYSTAL.get()));
-
-
-        LootItemCondition.Builder lootitemcondition$builder = LootItemBlockStatePropertyCondition
-                .hasBlockStateProperties(ModBlocks.STRAWBERRY_CROP.get())
-                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(StrawberryCropBlock.AGE, 5));
-
-        this.add(ModBlocks.STRAWBERRY_CROP.get(),
-                createCropDrops(
-                        ModBlocks.STRAWBERRY_CROP.get(),
-                        ModItems.STRAWBERRY.get(),
-                        ModItems.STRAWBERRY_SEEDS.get(),
-                        lootitemcondition$builder
-                ));
-        this.dropSelf(ModBlocks.SOUND_BLOCK.get());
-
-        this.dropSelf(ModBlocks.AMBERWOOD_LOG.get());
-        this.dropSelf(ModBlocks.AMBERWOOD_WOOD.get());
-        this.dropSelf(ModBlocks.STRIPPED_AMBERWOOD_LOG.get());
-        this.dropSelf(ModBlocks.STRIPPED_AMBERWOOD_WOOD.get());
-        this.dropSelf(ModBlocks.AMBERWOOD_PLANKS.get());
-        this.dropSelf(ModBlocks.AMBERWOOD_LEAVES.get());
-        this.dropSelf(ModBlocks.AMBERWOOD_SAPLING.get());
-
-        this.dropSelf(ModBlocks.PALESLATE.get());
-        this.dropSelf(ModBlocks.ASTRALITE.get());
-        this.dropSelf(ModBlocks.UMBROCK.get());
-
-        this.add(ModBlocks.AMBERWOOD_LEAVES.get(), block ->
-                createLeavesDrops(block, ModBlocks.AMBERWOOD_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES)); 
-
     }
 
     protected LootTable.Builder createCopperLikeOreDrops(Block pBlock, Item item) {

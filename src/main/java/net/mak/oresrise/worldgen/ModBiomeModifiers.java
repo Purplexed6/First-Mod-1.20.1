@@ -20,25 +20,19 @@ public class ModBiomeModifiers {
     public static final ResourceKey<BiomeModifier> ADD_SAPPHIRE_ORE = registerKey("add_sapphire_ore");
     public static final ResourceKey<BiomeModifier> ADD_RUBY_ORE = registerKey("add_ruby_ore");
     public static final ResourceKey<BiomeModifier> ADD_AQUAMARINE_ORE = registerKey("add_aquamarine_ore");
-    public static final ResourceKey<BiomeModifier> ADD_ALEXANDRITE_ORE = registerKey("add_alexandrite_ore");
+  //  public static final ResourceKey<BiomeModifier> ADD_JADE_ORE = registerKey("add_jade_ore");
     public static final ResourceKey<BiomeModifier> ADD_VIBRANIUM_ORE = registerKey("add_vibranium_ore");
 
-    public static final ResourceKey<BiomeModifier> ADD_WITHERITE_ORE = registerKey("add_witherite_ore");
     public static final ResourceKey<BiomeModifier> ADD_SOUL_ORE = registerKey("add_soul_ore");
     public static final ResourceKey<BiomeModifier> ADD_QUINTESSITE_ORE = registerKey("add_quintessite_ore");
     public static final ResourceKey<BiomeModifier> ADD_HEMOGEM_ORE = registerKey("add_hemogem_ore");
     public static final ResourceKey<BiomeModifier> ADD_FLUXITE_ORE = registerKey("add_fluxite_ore");
 
-    public static final ResourceKey<BiomeModifier> ADD_OBLIVIONITE_ORE = registerKey("add_oblivionite_ore");
+   // public static final ResourceKey<BiomeModifier> ADD_OBLIVIONITE_ORE = registerKey("add_oblivionite_ore");
     public static final ResourceKey<BiomeModifier> ADD_LUNARIS_ORE = registerKey("add_lunaris_ore");
     public static final ResourceKey<BiomeModifier> ADD_CRYPTON_ORE = registerKey("add_crypton_ore");
-
-    public static final ResourceKey<BiomeModifier> ADD_TREE_AMBERWOOD = registerKey("add_tree_amberwood");
-
-    public static final ResourceKey<BiomeModifier> ADD_ICE_CRYSTAL =
-            ResourceKey.create(
-                    ForgeRegistries.Keys.BIOME_MODIFIERS,
-                    new ResourceLocation(ExampleMod.MOD_ID, "add_ice_crystal"));
+    public static final ResourceKey<BiomeModifier> ADD_STARRITE_ORE = registerKey("add_starrite_ore");
+    public static final ResourceKey<BiomeModifier> ADD_STARRITE_PILLAR = registerKey("add_starrite_pillar");
 
     public static void bootstrap(BootstapContext<BiomeModifier> context) {
         var placedFeatures = context.lookup(Registries.PLACED_FEATURE);
@@ -54,20 +48,20 @@ public class ModBiomeModifiers {
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.RUBY_ORE_PLACED_KEY)),
                 GenerationStep.Decoration.UNDERGROUND_ORES));
 
+        context.register(ADD_FLUXITE_ORE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.FLUXITE_ORE_PLACED_KEY)),
+                GenerationStep.Decoration.UNDERGROUND_ORES));
+
         context.register(ADD_AQUAMARINE_ORE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
                 biomes.getOrThrow(ModBiomeTags.AQUAMARINE_BIOMES),
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.AQUAMARINE_ORE_PLACED_KEY)),
                 GenerationStep.Decoration.UNDERGROUND_ORES));
 
-        context.register(ADD_ALEXANDRITE_ORE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+        /* context.register(ADD_JADE_ORE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
                 biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
-                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.ALEXANDRITE_ORE_PLACED_KEY)),
-                GenerationStep.Decoration.UNDERGROUND_ORES));
-
-        // context.register(ADD_STARRITE_ORE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
-        //       biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
-        //       HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.STARRITE_ORE_PLACED_KEY)),
-        //       GenerationStep.Decoration.UNDERGROUND_ORES));
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.JADE_ORE_PLACED_KEY)),
+                GenerationStep.Decoration.UNDERGROUND_ORES)); */
 
         context.register(ADD_VIBRANIUM_ORE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
                 HolderSet.direct(biomes.getOrThrow(Biomes.DEEP_DARK)),
@@ -77,10 +71,6 @@ public class ModBiomeModifiers {
 
 
 
-        context.register(ADD_WITHERITE_ORE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
-                biomes.getOrThrow(BiomeTags.IS_NETHER),
-                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.WITHERITE_ORE_PLACED_KEY)),
-                GenerationStep.Decoration.UNDERGROUND_ORES));
 
         context.register(ADD_SOUL_ORE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
                 biomes.getOrThrow(BiomeTags.IS_NETHER),
@@ -97,20 +87,15 @@ public class ModBiomeModifiers {
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.HEMOGEM_ORE_PLACED_KEY)),
                 GenerationStep.Decoration.UNDERGROUND_ORES));
 
-        context.register(ADD_FLUXITE_ORE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
-                biomes.getOrThrow(BiomeTags.IS_NETHER),
-                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.FLUXITE_ORE_PLACED_KEY)),
-                GenerationStep.Decoration.UNDERGROUND_ORES));
 
 
 
 
 
-
-        context.register(ADD_OBLIVIONITE_ORE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+        /* context.register(ADD_OBLIVIONITE_ORE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
                 biomes.getOrThrow(BiomeTags.IS_END),
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.OBLIVIONITE_ORE_PLACED_KEY)),
-                GenerationStep.Decoration.UNDERGROUND_ORES));
+                GenerationStep.Decoration.UNDERGROUND_ORES)); */
 
         context.register(ADD_LUNARIS_ORE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
                 biomes.getOrThrow(BiomeTags.IS_END),
@@ -122,23 +107,13 @@ public class ModBiomeModifiers {
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.CRYPTON_ORE_PLACED_KEY)),
                 GenerationStep.Decoration.UNDERGROUND_ORES));
 
-
-
-
-
-        context.register(ADD_ICE_CRYSTAL,
+        context.register(ADD_STARRITE_PILLAR,
                 new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
-                        biomes.getOrThrow(ModBiomeTags.AQUAMARINE_BIOMES),
-                        HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.ICE_CRYSTAL_PLACED_KEY)),
-                        GenerationStep.Decoration.VEGETAL_DECORATION));
-
-
-
-
-        context.register(ADD_TREE_AMBERWOOD, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
-                biomes.getOrThrow(Tags.Biomes.IS_PLAINS),
-                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.AMBERWOOD_PLACED_KEY)),
-                GenerationStep.Decoration.VEGETAL_DECORATION));
+                        biomes.getOrThrow(BiomeTags.IS_END),
+                        HolderSet.direct(
+                                placedFeatures.getOrThrow(ModPlacedFeatures.STARRITE_PILLAR_PLACED_KEY)
+                        ),
+                        GenerationStep.Decoration.SURFACE_STRUCTURES));
     }
 
     private static ResourceKey<BiomeModifier> registerKey(String name) {

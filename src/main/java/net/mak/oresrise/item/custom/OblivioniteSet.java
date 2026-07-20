@@ -6,10 +6,10 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class OblivioniteSet {
 
-    public static final RegistryObject<Item> OBLIVIONITE_SHARD = ModItems.ITEMS.register("oblivionite_shard",
+    /* public static final RegistryObject<Item> OBLIVIONITE_SHARD = ModItems.ITEMS.register("oblivionite_shard",
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> OBLIVIONITE_CRYSTAL = ModItems.ITEMS.register("oblivionite_crystal",
-            () -> new Item(new Item.Properties()));
+            () -> new Item(new Item.Properties())); */
 
     public static void register() {}
 }

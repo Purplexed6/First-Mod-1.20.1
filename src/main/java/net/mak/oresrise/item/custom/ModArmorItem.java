@@ -21,7 +21,11 @@ public class ModArmorItem extends ArmorItem {
     private static final Map<ArmorMaterial, List<MobEffectInstance>> MATERIAL_TO_EFFECT_MAP =
             new ImmutableMap.Builder<ArmorMaterial, List<MobEffectInstance>>()
                     .put(ModArmorMaterials.RUBY, List.of(
-                            new MobEffectInstance(MobEffects.REGENERATION, 40, 1, false, false)
+                            new MobEffectInstance(MobEffects.REGENERATION, 40, 0, false, false)
+                    ))
+
+                    .put(ModArmorMaterials.SAPPHIRE, List.of(
+                            new MobEffectInstance(MobEffects.WATER_BREATHING, 40, 0, false, false)
                     ))
 
                     .put(ModArmorMaterials.HEMOGEM, List.of(
@@ -33,7 +37,7 @@ public class ModArmorItem extends ArmorItem {
                     ))
 
                     .put(ModArmorMaterials.WITHERITE, List.of(
-                            new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 0, false, false)
+                            new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 1, false, false)
                     ))
 
                     .put(ModArmorMaterials.SOUL_STEEL, List.of(
@@ -71,7 +75,7 @@ public class ModArmorItem extends ArmorItem {
             if (hasFullSuitOfArmorOn(player)) {
                 evaluateArmorEffects(player);
                 System.out.println("TICK");
-                applySpecialAbilities(player); // 👈 NEW
+                applySpecialAbilities(player);
             }
         }
     }
@@ -103,6 +107,12 @@ public class ModArmorItem extends ArmorItem {
         ));
     }
 
+
+
+
+
+
+
     // 💀 SPECIAL “ENCHANT-LIKE” LOGIC
     private void applySpecialAbilities(Player player) {
 
@@ -119,7 +129,7 @@ public class ModArmorItem extends ArmorItem {
             }
         }
 
-        if (hasCorrectArmorOn(ModArmorMaterials.SOUL_STEEL, player)) {
+        if (hasCorrectArmorOn(ModArmorMaterials.SOULFORGED, player)) {
             if (player.getBlockStateOn().is(Blocks.SOUL_SOIL)) {
                 player.addEffect(new MobEffectInstance(
                         MobEffects.MOVEMENT_SPEED,
@@ -150,6 +160,18 @@ public class ModArmorItem extends ArmorItem {
                         MobEffects.MOVEMENT_SPEED,
                         40,
                         3, // stronger than soulforged
+                        false,
+                        false
+                ));
+            }
+        }
+
+        if (hasCorrectArmorOn(ModArmorMaterials.AQUAMARINE, player)) {
+            if (player.getBlockStateOn().is(Blocks.WATER)) {
+                player.addEffect(new MobEffectInstance(
+                        MobEffects.DOLPHINS_GRACE,
+                        40,
+                        0,
                         false,
                         false
                 ));

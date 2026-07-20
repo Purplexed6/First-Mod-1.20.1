@@ -9,14 +9,9 @@
     "oresrise:ruby_ore",
     "oresrise:deepslate_ruby_ore",
     "oresrise:rosite_block",
-    "oresrise:alexandrite_ore",
-    "oresrise:deepslate_alexandrite_ore",
     "oresrise:aquamarine_ore",
     "oresrise:malachite_ore",
     "oresrise:deepslate_malachite_ore",
-    "oresrise:cobalt_block",
-    "oresrise:raw_cobalt_block",
-    "oresrise:cobalt_ore",
     "oresrise:platinum_block",
     "oresrise:raw_platinum_block",
     "oresrise:platinum_ore",
@@ -40,10 +35,6 @@
     "oresrise:crypton_block",
     "oresrise:crypton_ore",
     "oresrise:lunaris_block",
-    "oresrise:lunaris_ore",
-    "oresrise:oblivionite_block",
-    "oresrise:oblivionite_ore",
-    "oresrise:astralite",
-    "oresrise:umbrock"
+    "oresrise:lunaris_ore"
   ]
 }

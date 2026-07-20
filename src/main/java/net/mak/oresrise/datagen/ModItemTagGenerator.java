@@ -20,14 +20,6 @@ public class ModItemTagGenerator extends ItemTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider pProvider) {
-        this.tag(ItemTags.LOGS_THAT_BURN)
-                .add(ModBlocks.AMBERWOOD_LOG.get().asItem())
-                .add(ModBlocks.AMBERWOOD_WOOD.get().asItem())
-                .add(ModBlocks.STRIPPED_AMBERWOOD_LOG.get().asItem())
-                .add(ModBlocks.STRIPPED_AMBERWOOD_WOOD.get().asItem());
-
-        this.tag(ItemTags.PLANKS)
-                .add(ModBlocks.AMBERWOOD_PLANKS.get().asItem());
-
+        // Add item tags here in the future
     }
 }

@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/cube_column",
-  "textures": {
-    "end": "oresrise:block/amberwood_log_top",
-    "side": "oresrise:block/amberwood_log"
-  }
-}

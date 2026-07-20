@@ -7,6 +7,8 @@ import net.minecraftforge.registries.RegistryObject;
 public class Misc {
     public static final RegistryObject<Item> IRON_STICK = ModItems.ITEMS.register("iron_stick",
             () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> DIAMOND_STICK = ModItems.ITEMS.register("diamond_stick",
+            () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> OBSIDIAN_STICK = ModItems.ITEMS.register("obsidian_stick",
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> NETHERITE_STICK = ModItems.ITEMS.register("netherite_stick",
@@ -31,6 +33,9 @@ public class Misc {
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> ICE_CRYSTAL = ModItems.ITEMS.register("ice_crystal",
             () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> NETHERITE_NUGGET = ModItems.ITEMS.register("netherite_nugget",
+            () -> new Item(new Item.Properties()));
+
 
     public static void register() {}
 }

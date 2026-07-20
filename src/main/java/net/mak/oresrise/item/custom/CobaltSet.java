@@ -8,7 +8,7 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class CobaltSet {
 
-    public static final RegistryObject<Item> COBALT_INGOT = ModItems.ITEMS.register("cobalt_ingot",
+    /* public static final RegistryObject<Item> COBALT_INGOT = ModItems.ITEMS.register("cobalt_ingot",
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> RAW_COBALT = ModItems.ITEMS.register("raw_cobalt",
             () -> new Item(new Item.Properties()));
@@ -31,7 +31,7 @@ public class CobaltSet {
     public static final RegistryObject<Item> COBALT_LEGGINGS = ModItems.ITEMS.register("cobalt_leggings",
             () -> new ArmorItem(ModArmorMaterials.COBALT, ArmorItem.Type.LEGGINGS, new Item.Properties()));
     public static final RegistryObject<Item> COBALT_BOOTS = ModItems.ITEMS.register("cobalt_boots",
-            () -> new ArmorItem(ModArmorMaterials.COBALT, ArmorItem.Type.BOOTS, new Item.Properties()));
+            () -> new ArmorItem(ModArmorMaterials.COBALT, ArmorItem.Type.BOOTS, new Item.Properties())); */
 
     public static void register() {}
 }

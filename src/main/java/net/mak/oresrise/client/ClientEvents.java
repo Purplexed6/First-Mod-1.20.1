@@ -2,7 +2,7 @@ package net.mak.oresrise.client;
 
 import net.mak.oresrise.client.ClientShakeHandler;
 import net.mak.oresrise.client.renderer.layer.ResoniteGlowLayer;
-import net.mak.oresrise.item.custom.FluxiteSet;
+import net.mak.oresrise.item.custom.VoltiumSet;
 import net.mak.oresrise.item.custom.SoulSet;
 import net.minecraft.client.renderer.entity.EntityRenderer;
 import net.minecraft.client.renderer.entity.player.PlayerRenderer;

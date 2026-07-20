@@ -16,15 +16,21 @@ import org.jetbrains.annotations.NotNull;
 import java.util.function.Supplier;
 
 public class AddItemModifier extends LootModifier {
+
     public static final Supplier<Codec<AddItemModifier>> CODEC = Suppliers.memoize(()
-            -> RecordCodecBuilder.create(inst -> codecStart(inst).and(ForgeRegistries.ITEMS.getCodec()
-            .fieldOf("item").forGetter(m -> m.item)).apply(inst, AddItemModifier::new)));
+            -> RecordCodecBuilder.create(inst -> codecStart(inst)
+            .and(ForgeRegistries.ITEMS.getCodec()
+                    .fieldOf("item").forGetter(m -> m.item))
+            .and(Codec.INT.fieldOf("count").forGetter(m -> m.count))
+            .apply(inst, AddItemModifier::new)));
 
     private final Item item;
+    private final int count;
 
-    public AddItemModifier(LootItemCondition[] conditionsIn, Item item) {
+    public AddItemModifier(LootItemCondition[] conditionsIn, Item item, int count) {
         super(conditionsIn);
         this.item = item;
+        this.count = count;
     }
 
     @Override
@@ -35,7 +41,7 @@ public class AddItemModifier extends LootModifier {
             }
         }
 
-        generatedLoot.add(new ItemStack(this.item));
+        generatedLoot.add(new ItemStack(this.item, this.count));
 
         return generatedLoot;
     }

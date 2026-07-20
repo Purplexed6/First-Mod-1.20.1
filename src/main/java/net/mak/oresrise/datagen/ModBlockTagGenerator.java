@@ -38,17 +38,17 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
 
                         ModBlocks.ROSITE_BLOCK.get(),
 
-                        ModBlocks.ALEXANDRITE_ORE.get(),
-                        ModBlocks.DEEPSLATE_ALEXANDRITE_ORE.get(),
+                       // ModBlocks.JADE_ORE.get(),
+                      //  ModBlocks.DEEPSLATE_JADE_ORE.get(),
 
                         ModBlocks.AQUAMARINE_ORE.get(),
 
                         ModBlocks.MALACHITE_ORE.get(),
                         ModBlocks.DEEPSLATE_MALACHITE_ORE.get(),
 
-                        ModBlocks.COBALT_BLOCK.get(),
-                        ModBlocks.RAW_COBALT_BLOCK.get(),
-                        ModBlocks.COBALT_ORE.get(),
+                    //    ModBlocks.COBALT_BLOCK.get(),
+                    //    ModBlocks.RAW_COBALT_BLOCK.get(),
+                   //     ModBlocks.COBALT_ORE.get(),
 
                         ModBlocks.PLATINUM_BLOCK.get(),
                         ModBlocks.RAW_PLATINUM_BLOCK.get(),
@@ -91,13 +91,10 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.CRYPTON_ORE.get(),
 
                         ModBlocks.LUNARIS_BLOCK.get(),
-                        ModBlocks.LUNARIS_ORE.get(),
+                        ModBlocks.LUNARIS_ORE.get());
 
-                        ModBlocks.OBLIVIONITE_BLOCK.get(),
-                        ModBlocks.OBLIVIONITE_ORE.get(),
-
-                        ModBlocks.ASTRALITE.get(),
-                        ModBlocks.UMBROCK.get());
+                     //   ModBlocks.OBLIVIONITE_BLOCK.get(),
+                     //   ModBlocks.OBLIVIONITE_ORE.get());
 
 
 
@@ -114,33 +111,31 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
 
                         ModBlocks.ROSITE_BLOCK.get(),
 
-                        ModBlocks.ALEXANDRITE_ORE.get(),
-                        ModBlocks.DEEPSLATE_ALEXANDRITE_ORE.get(),
+                    //    ModBlocks.JADE_ORE.get(),
+                    //    ModBlocks.DEEPSLATE_JADE_ORE.get(),
 
                         ModBlocks.AQUAMARINE_ORE.get(),
 
                         ModBlocks.MALACHITE_ORE.get(),
                         ModBlocks.DEEPSLATE_MALACHITE_ORE.get(),
 
-                        ModBlocks.COBALT_BLOCK.get(),
-                        ModBlocks.RAW_COBALT_BLOCK.get(),
-                        ModBlocks.COBALT_ORE.get(),
+                        //ModBlocks.COBALT_BLOCK.get(),
+                     //   ModBlocks.RAW_COBALT_BLOCK.get(),
+                     //   ModBlocks.COBALT_ORE.get(),
 
                         ModBlocks.PLATINUM_BLOCK.get(),
                         ModBlocks.RAW_PLATINUM_BLOCK.get(),
                         ModBlocks.PLATINUM_ORE.get(),
 
                         ModBlocks.STARRITE_BLOCK.get(),
-                        ModBlocks.STARRITE_ORE.get(),
-
-                        ModBlocks.ASTRALITE.get(),
-                        ModBlocks.UMBROCK.get());
+                        ModBlocks.STARRITE_ORE.get());
 
 
 
         this.tag(BlockTags.NEEDS_DIAMOND_TOOL)
                 .add(ModBlocks.FLUXITE_ORE.get(),
                         ModBlocks.FLUXITE_BLOCK.get(),
+                        ModBlocks.VOLTIUM_BLOCK.get(),
 
                         ModBlocks.HEMOGEM_ORE.get(),
                         ModBlocks.HEMOGEM_BLOCK.get());
@@ -171,25 +166,17 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.CRYPTON_ORE.get(),
 
                         ModBlocks.LUNARIS_BLOCK.get(),
-                        ModBlocks.LUNARIS_ORE.get(),
+                        ModBlocks.LUNARIS_ORE.get());
 
-                        ModBlocks.OBLIVIONITE_BLOCK.get(),
-                        ModBlocks.OBLIVIONITE_ORE.get());
-
-
+                 //       ModBlocks.OBLIVIONITE_BLOCK.get(),
+                  //      ModBlocks.OBLIVIONITE_ORE.get());
 
 
 
 
 
 
-        this.tag(BlockTags.LOGS_THAT_BURN)
-                .add(ModBlocks.AMBERWOOD_LOG.get())
-                .add(ModBlocks.AMBERWOOD_WOOD.get())
-                .add(ModBlocks.STRIPPED_AMBERWOOD_LOG.get())
-                .add(ModBlocks.STRIPPED_AMBERWOOD_WOOD.get());
 
-        this.tag(BlockTags.PLANKS)
-                .add(ModBlocks.AMBERWOOD_PLANKS.get());
+
     }
 }

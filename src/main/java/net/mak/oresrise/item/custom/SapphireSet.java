@@ -7,7 +7,7 @@ import net.minecraft.world.item.*;
 import net.minecraftforge.registries.RegistryObject;
 
 public class SapphireSet {
-    // We use ModItems.ITEMS to register so everything stays in one place
+
     public static final RegistryObject<Item> SAPPHIRE = ModItems.ITEMS.register("sapphire",
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> ROUGH_SAPPHIRE = ModItems.ITEMS.register("rough_sapphire",

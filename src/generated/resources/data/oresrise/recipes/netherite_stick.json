@@ -3,15 +3,16 @@
   "category": "misc",
   "key": {
     "S": {
-      "item": "minecraft:netherite_ingot"
+      "item": "oresrise:netherite_nugget"
     }
   },
   "pattern": [
-    "S",
-    "S"
+    "  S",
+    " S ",
+    "S  "
   ],
   "result": {
-    "count": 4,
+    "count": 2,
     "item": "oresrise:netherite_stick"
   },
   "show_notification": true

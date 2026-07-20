@@ -1,13 +1,7 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_the_recipe": {
-      "conditions": {
-        "recipe": "oresrise:fireite_ingot"
-      },
-      "trigger": "minecraft:recipe_unlocked"
-    },
-    "pyrogel": {
+    "has_pyrogel": {
       "conditions": {
         "items": [
           {
@@ -18,11 +12,17 @@
         ]
       },
       "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "oresrise:fireite_ingot"
+      },
+      "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "pyrogel",
+      "has_pyrogel",
       "has_the_recipe"
     ]
   ],

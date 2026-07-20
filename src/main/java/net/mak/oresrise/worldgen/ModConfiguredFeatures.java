@@ -3,6 +3,7 @@ package net.mak.oresrise.worldgen;
 import com.mojang.blaze3d.audio.Library;
 import net.mak.oresrise.ExampleMod;
 import net.mak.oresrise.block.ModBlocks;
+import net.mak.oresrise.worldgen.feature.ModFeatures;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstapContext;
@@ -40,7 +41,7 @@ import java.util.List;
 public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> SAPPHIRE_ORE_KEY = registerKey("sapphire_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> RUBY_ORE_KEY = registerKey("ruby_ore");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> ALEXANDRITE_ORE_KEY = registerKey("alexandrite_ore");
+ //   public static final ResourceKey<ConfiguredFeature<?, ?>> JADE_ORE_KEY = registerKey("jade_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> AQUAMARINE_ORE_KEY = registerKey("aquamarine_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> VIBRANIUM_ORE_KEY = registerKey("vibranium_ore");
 
@@ -50,16 +51,11 @@ public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> HEMOGEM_ORE_KEY = registerKey("hemogem_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> FLUXITE_ORE_KEY = registerKey("fluxite_ore");
 
-    public static final ResourceKey<ConfiguredFeature<?, ?>> OBLIVIONITE_ORE_KEY = registerKey("oblivionite_ore");
+   // public static final ResourceKey<ConfiguredFeature<?, ?>> OBLIVIONITE_ORE_KEY = registerKey("oblivionite_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> LUNARIS_ORE_KEY = registerKey("lunaris_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> CRYPTON_ORE_KEY = registerKey("crypton_ore");
-    // public static final ResourceKey<ConfiguredFeature<?, ?>> STARRITE_ORE_KEY = registerKey("starrite_ore");
-
-    public static final ResourceKey<ConfiguredFeature<?, ?>> AMBERWOOD_KEY = registerKey("amberwood");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> ASTRALITE_SURFACE_KEY = registerKey("astralite_surface");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> UMBROCK_FILLER_KEY = registerKey("umbrock_filler");
-
-    public static final ResourceKey<ConfiguredFeature<?, ?>> ICE_CRYSTAL = registerKey("ice_crystal");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> STARRITE_ORE_KEY = registerKey("starrite_ore");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> STARRITE_PILLAR_KEY = registerKey("starrite_pillar");
 
     public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
         RuleTest stoneReplaceable = new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES);
@@ -67,11 +63,9 @@ public class ModConfiguredFeatures {
         RuleTest netherrackReplacables = new BlockMatchTest(Blocks.NETHERRACK);
         RuleTest blackstoneReplacables = new BlockMatchTest(Blocks.BLACKSTONE);
         RuleTest soulsoilReplacables = new BlockMatchTest(Blocks.SOUL_SOIL);
-        RuleTest basaltReplacables = new BlockMatchTest(Blocks.SMOOTH_BASALT);
-        RuleTest paleslateReplacables = new BlockMatchTest(ModBlocks.PALESLATE.get());
+        RuleTest smoothBasaltReplaceables = new BlockMatchTest(Blocks.SMOOTH_BASALT);
         RuleTest endReplaceables = new BlockMatchTest(Blocks.END_STONE);
-        RuleTest astraliteReplaceables = new BlockMatchTest(ModBlocks.ASTRALITE.get());
-        RuleTest grassReplaceable = new BlockMatchTest(Blocks.GRASS_BLOCK);
+        RuleTest obsidianReplaceables = new BlockMatchTest(Blocks.OBSIDIAN);
 
         List<OreConfiguration.TargetBlockState> overworldSapphireOres = List.of(OreConfiguration.target(stoneReplaceable,
                         ModBlocks.SAPPHIRE_ORE.get().defaultBlockState()),
@@ -79,9 +73,9 @@ public class ModConfiguredFeatures {
         List<OreConfiguration.TargetBlockState> overworldRubyOres = List.of(OreConfiguration.target(stoneReplaceable,
                         ModBlocks.RUBY_ORE.get().defaultBlockState()),
                 OreConfiguration.target(deepslateReplaceables, ModBlocks.DEEPSLATE_RUBY_ORE.get().defaultBlockState()));
-        List<OreConfiguration.TargetBlockState> overworldAlexandriteOres = List.of(OreConfiguration.target(stoneReplaceable,
-                        ModBlocks.ALEXANDRITE_ORE.get().defaultBlockState()),
-                OreConfiguration.target(deepslateReplaceables, ModBlocks.DEEPSLATE_ALEXANDRITE_ORE.get().defaultBlockState()));
+        /* List<OreConfiguration.TargetBlockState> overworldJadeOres = List.of(OreConfiguration.target(stoneReplaceable,
+                        ModBlocks.JADE_ORE.get().defaultBlockState()),
+                OreConfiguration.target(deepslateReplaceables, ModBlocks.DEEPSLATE_JADE_ORE.get().defaultBlockState())); */
 
         List<OreConfiguration.TargetBlockState> overworldAquamarineOres = List.of(
                 OreConfiguration.target(
@@ -93,65 +87,42 @@ public class ModConfiguredFeatures {
                         deepslateReplaceables,
                         ModBlocks.VIBRANIUM_ORE.get().defaultBlockState()));
 
-        List<OreConfiguration.TargetBlockState> starriteOres = List.of(
-                OreConfiguration.target(stoneReplaceable,
-                        ModBlocks.STARRITE_ORE.get().defaultBlockState())
+        List<OreConfiguration.TargetBlockState> overworldFluxiteOres = List.of(
+                OreConfiguration.target(
+                        smoothBasaltReplaceables,
+                        ModBlocks.FLUXITE_ORE.get().defaultBlockState()));
 
-        );
-        List<OreConfiguration.TargetBlockState> astraliteReplace = List.of(
-                // Target 1: Replaces Grass
-                OreConfiguration.target(grassReplaceable, ModBlocks.ASTRALITE.get().defaultBlockState()),
-                // Target 2: Replaces Dirt
-                OreConfiguration.target(new BlockMatchTest(Blocks.DIRT), ModBlocks.ASTRALITE.get().defaultBlockState()));
 
-        register(context, SAPPHIRE_ORE_KEY, Feature.ORE, new OreConfiguration(overworldSapphireOres, 8));
-        register(context, RUBY_ORE_KEY, Feature.ORE, new OreConfiguration(overworldRubyOres, 8));
-        register(context, ALEXANDRITE_ORE_KEY, Feature.ORE, new OreConfiguration(overworldAlexandriteOres, 8));
-        register(context, AQUAMARINE_ORE_KEY, Feature.ORE, new OreConfiguration(overworldAquamarineOres, 8));
+        register(context, SAPPHIRE_ORE_KEY, Feature.ORE, new OreConfiguration(overworldSapphireOres, 4, 0.5F));
+        register(context, RUBY_ORE_KEY, Feature.ORE, new OreConfiguration(overworldRubyOres, 4, 0.5F));
+     //   register(context, JADE_ORE_KEY, Feature.ORE, new OreConfiguration(overworldJadeOres, 4, 0.5F));
+        register(context, AQUAMARINE_ORE_KEY, Feature.ORE, new OreConfiguration(overworldAquamarineOres, 4, 0.5F));
         register(context, VIBRANIUM_ORE_KEY, Feature.ORE, new OreConfiguration(overworldVibraniumOres, 3));
-        // register(context, STARRITE_ORE_KEY, Feature.ORE, new OreConfiguration(starriteOres, 9));
-        register(context, ICE_CRYSTAL, Feature.SIMPLE_BLOCK,
-                new SimpleBlockConfiguration(
-                        BlockStateProvider.simple(ModBlocks.ICE_CRYSTAL_BLOCK.get())
-                ));
+        register(context, FLUXITE_ORE_KEY, Feature.ORE, new OreConfiguration(overworldFluxiteOres, 3));
 
-        register(context, WITHERITE_ORE_KEY, Feature.ORE, new OreConfiguration(paleslateReplacables,
-                ModBlocks.WITHERITE_ORE.get().defaultBlockState(), 3));
         register(context, SOUL_ORE_KEY, Feature.ORE, new OreConfiguration(soulsoilReplacables,
-                ModBlocks.SOUL_ORE.get().defaultBlockState(), 3));
-        register(context, FLUXITE_ORE_KEY, Feature.ORE, new OreConfiguration(basaltReplacables,
-                ModBlocks.FLUXITE_ORE.get().defaultBlockState(), 3));
+                ModBlocks.SOUL_ORE.get().defaultBlockState(), 7));
         register(context, QUINTESSITE_ORE_KEY, Feature.ORE, new OreConfiguration(netherrackReplacables,
-                ModBlocks.QUINTESSITE_ORE.get().defaultBlockState(), 3));
+                ModBlocks.QUINTESSITE_ORE.get().defaultBlockState(), 6));
         register(context, HEMOGEM_ORE_KEY, Feature.ORE, new OreConfiguration(blackstoneReplacables,
-                ModBlocks.HEMOGEM_ORE.get().defaultBlockState(), 3));
+                ModBlocks.HEMOGEM_ORE.get().defaultBlockState(), 6));
 
-        register(context, OBLIVIONITE_ORE_KEY, Feature.ORE, new OreConfiguration(endReplaceables,
-                ModBlocks.OBLIVIONITE_ORE.get().defaultBlockState(), 2));
+        List<OreConfiguration.TargetBlockState> starriteOres = List.of(
+                OreConfiguration.target(
+                        obsidianReplaceables,
+                        ModBlocks.STARRITE_ORE.get().defaultBlockState()));
+
+        // register(context, OBLIVIONITE_ORE_KEY, Feature.ORE, new OreConfiguration(endReplaceables,
+          //       ModBlocks.OBLIVIONITE_ORE.get().defaultBlockState(), 2));
         register(context, LUNARIS_ORE_KEY, Feature.ORE, new OreConfiguration(endReplaceables,
                 ModBlocks.LUNARIS_ORE.get().defaultBlockState(), 3));
         register(context, CRYPTON_ORE_KEY, Feature.ORE, new OreConfiguration(endReplaceables,
                 ModBlocks.CRYPTON_ORE.get().defaultBlockState(), 2));
 
-        register(context, AMBERWOOD_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
-                BlockStateProvider.simple(ModBlocks.AMBERWOOD_LOG.get()),
-                new ForkingTrunkPlacer(5, 4, 2),
-
-                BlockStateProvider.simple(ModBlocks.AMBERWOOD_LEAVES.get()),
-                new BlobFoliagePlacer(ConstantInt.of(3), ConstantInt.of(2), 3),
-
-                new TwoLayersFeatureSize(1, 0, 2)
-        ).build());
-
-        register(context, ASTRALITE_SURFACE_KEY, Feature.ORE,
-                new OreConfiguration(astraliteReplace, 64));
-
-        List<OreConfiguration.TargetBlockState> umbrockReplace = List.of(
-                OreConfiguration.target(stoneReplaceable, ModBlocks.UMBROCK.get().defaultBlockState())
-        );
-
-        register(context, UMBROCK_FILLER_KEY, Feature.ORE, new OreConfiguration(umbrockReplace, 64)); // Max size 64
-
+        register(context,
+                STARRITE_PILLAR_KEY,
+                ModFeatures.STARRITE_PILLAR.get(),
+                NoneFeatureConfiguration.INSTANCE);
     }
 
     public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name) {

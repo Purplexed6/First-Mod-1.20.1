@@ -20,6 +20,8 @@
 
   "item.oresrise.rose_gold_ingot": "Rose Gold Ingot",
 
+  "item.oresrise.rose_gold_block": "Block of Rose Gold",
+
   "item.oresrise.rose_gold_sword": "Rose Gold Sword",
   "item.oresrise.rose_gold_pickaxe": "Rose Gold Pickaxe",
   "item.oresrise.rose_gold_axe": "Rose Gold Axe",
@@ -30,6 +32,22 @@
   "item.oresrise.rose_gold_chestplate": "Rose Gold Chestplate",
   "item.oresrise.rose_gold_leggings": "Rose Gold Leggings",
   "item.oresrise.rose_gold_boots": "Rose Gold Boots",
+
+  "item.oresrise.steel_ingot": "Steel Ingot",
+  "item.oresrise.steel_nugget": "Steel Nugget",
+
+  "block.oresrise.steel_block": "Block of Steel",
+
+  "item.oresrise.steel_sword": "Steel Sword",
+  "item.oresrise.steel_pickaxe": "Steel Pickaxe",
+  "item.oresrise.steel_axe": "Steel Axe",
+  "item.oresrise.steel_shovel": "Steel Shovel",
+  "item.oresrise.steel_hoe": "Steel Hoe",
+
+  "item.oresrise.steel_helmet": "Steel Helmet",
+  "item.oresrise.steel_chestplate": "Steel Chestplate",
+  "item.oresrise.steel_leggings": "Steel Leggings",
+  "item.oresrise.steel_boots": "Steel Boots",
 
   "item.oresrise.ruby": "Ruby",
   "item.oresrise.rough_ruby": "Rough Ruby",
@@ -51,6 +69,7 @@
   "item.oresrise.ruby_boots": "Ruby Boots",
 
   "item.oresrise.rosite_ingot": "Rosite Ingot",
+  "item.oresrise.rosite_nugget": "Rosite Nugget",
 
   "block.oresrise.rosite_block": "Block of Rosite",
 
@@ -65,6 +84,11 @@
   "item.oresrise.rosite_leggings": "Rosite Leggings",
   "item.oresrise.rosite_boots": "Rosite Boots",
 
+  "item.oresrise.rosal_compound": "Rosal Compound",
+  "item.oresrise.keyolite_ingot": "Keyolite Ingot",
+  "item.oresrise.keyolite_nugget": "Keyolite Nugget",
+  "block.oresrise.keyolite_block": "Block of Keyolite",
+
   "item.oresrise.soul_steel_ingot": "Soul Steel Ingot",
   "block.oresrise.soul_steel_block": "Block of Soul Steel",
   "item.oresrise.soul_steel_sword": "Soul Steel Sword",
@@ -78,25 +102,29 @@
   "item.oresrise.soul_steel_boots": "Soul Steel Boots",
 
   "item.oresrise.fluxite": "Fluxite",
+  "item.oresrise.electric_matter": "Electric Matter",
+  "item.oresrise.voltium_ingot": "Voltium Ingot",
+  "item.oresrise.voltium_nugget": "Voltium Nugget",
   "block.oresrise.fluxite_ore": "Fluxite Ore",
   "block.oresrise.fluxite_block": "Block of Fluxite",
+  "block.oresrise.voltium_block": "Block of Voltium",
 
-  "item.oresrise.fluxite_sword": "Fluxite Sword",
-  "item.oresrise.fluxite_pickaxe": "Fluxite Pickaxe",
-  "item.oresrise.fluxite_axe": "Fluxite Axe",
-  "item.oresrise.fluxite_shovel": "Fluxite Shovel",
-  "item.oresrise.fluxite_hoe": "Fluxite Hoe",
+  "item.oresrise.fluxite_sword": "Voltium Sword",
+  "item.oresrise.fluxite_pickaxe": "Voltium Pickaxe",
+  "item.oresrise.fluxite_axe": "Voltium Axe",
+  "item.oresrise.fluxite_shovel": "Voltium Shovel",
+  "item.oresrise.fluxite_hoe": "Voltium Hoe",
 
-  "item.oresrise.fluxite_helmet": "Fluxite Helmet",
-  "item.oresrise.fluxite_chestplate": "Fluxite Chestplate",
-  "item.oresrise.fluxite_leggings": "Fluxite Leggings",
-  "item.oresrise.fluxite_boots": "Fluxite Boots",
+  "item.oresrise.fluxite_helmet": "Voltium Helmet",
+  "item.oresrise.fluxite_chestplate": "Voltium Chestplate",
+  "item.oresrise.fluxite_leggings": "Voltium Leggings",
+  "item.oresrise.fluxite_boots": "Voltium Boots",
 
-  "item.oresrise.oblivionite_crystal": "Oblivionite Crystal",
-  "item.oresrise.oblivionite_shard": "Oblivionite Shard",
+ // "item.oresrise.oblivionite_crystal": "Oblivionite Crystal",
+  //"item.oresrise.oblivionite_shard": "Oblivionite Shard",
 
-  "block.oresrise.oblivionite_block": "Block of Oblivionite",
-  "block.oresrise.oblivionite_ore": "Oblivionite Ore",
+ // "block.oresrise.oblivionite_block": "Block of Oblivionite",
+ // "block.oresrise.oblivionite_ore": "Oblivionite Ore",
 
   "item.oresrise.obsidian_shard": "Obsidian Shard",
 
@@ -110,6 +138,11 @@
   "item.oresrise.obsidian_chestplate": "Obsidian Chestplate",
   "item.oresrise.obsidian_leggings": "Obsidian Leggings",
   "item.oresrise.obsidian_boots": "Obsidian Boots",
+
+  "item.oresrise.obsidian_alloy": "Obsidian Alloy",
+  "item.oresrise.obsidium_ingot": "Obsidium Ingot",
+  "item.oresrise.obsidium_nugget": "Obsidium Nugget",
+  "block.oresrise.obsidium_block": "Block of Obsidium",
 
   "block.oresrise.witherite_block": "Block of Witherite",
   "block.oresrise.raw_witherite_block": "Block of Raw Witherite",
@@ -147,19 +180,19 @@
   "item.oresrise.soulforged_leggings": "Soulforged Leggings",
   "item.oresrise.soulforged_boots": "Soulforged Boots",
 
-  "item.oresrise.alexandrite": "Alexandrite",
-  "block.oresrise.alexandrite_block": "Block of Alexandrite",
-  "block.oresrise.alexandrite_ore": "Alexandrite Ore",
-  "block.oresrise.deepslate_alexandrite_ore": "Deepslate Alexandrite Ore",
-  "item.oresrise.alexandrite_sword": "Alexandrite Sword",
-  "item.oresrise.alexandrite_pickaxe": "Alexandrite Pickaxe",
-  "item.oresrise.alexandrite_axe": "Alexandrite Axe",
-  "item.oresrise.alexandrite_shovel": "Alexandrite Shovel",
-  "item.oresrise.alexandrite_hoe": "Alexandrite Hoe",
-  "item.oresrise.alexandrite_helmet": "Alexandrite Helmet",
-  "item.oresrise.alexandrite_chestplate": "Alexandrite Chestplate",
-  "item.oresrise.alexandrite_leggings": "Alexandrite Leggings",
-  "item.oresrise.alexandrite_boots": "Alexandrite Boots",
+  "item.oresrise.jade": "Jade",
+  "block.oresrise.jade_block": "Block of Jade",
+  "block.oresrise.jade_ore": "Jade Ore",
+  "block.oresrise.deepslate_jade_ore": "Deepslate Jade Ore",
+  "item.oresrise.jade_sword": "Jade Sword",
+  "item.oresrise.jade_pickaxe": "Jade Pickaxe",
+  "item.oresrise.jade_axe": "Jade Axe",
+  "item.oresrise.jade_shovel": "Jade Shovel",
+  "item.oresrise.jade_hoe": "Jade Hoe",
+  "item.oresrise.jade_helmet": "Jade Helmet",
+  "item.oresrise.jade_chestplate": "Jade Chestplate",
+  "item.oresrise.jade_leggings": "Jade Leggings",
+  "item.oresrise.jade_boots": "Jade Boots",
 
   "item.oresrise.quintessite": "Quintessite",
   "block.oresrise.quintessite_block": "Block of Quintessite",
@@ -216,7 +249,6 @@
   "item.oresrise.smithing_template.fireite_upgrade.additions_slot_description": "Add Fireite Ingot",
 
   "item.oresrise.ice_crystal": "Ice Crystal",
-  "item.oresrise.ice_crystal_block": "Ice Crystal",
 
   "item.oresrise.lunaris": "Lunaris",
   "block.oresrise.lunaris_block": "Block of Lunaris",
@@ -231,19 +263,18 @@
   "item.oresrise.lunaris_leggings": "Lunaris Leggings",
   "item.oresrise.lunaris_boots": "Lunaris Boots",
 
-  "item.oresrise.sugilite": "Sugilite",
-  "block.oresrise.sugilite_block": "Block of Sugilite",
-  "block.oresrise.sugilite_ore": "Sugilite Ore",
-  "block.oresrise.deepslate_sugilite_ore": "Deepslate Sugilite Ore",
-  "item.oresrise.sugilite_sword": "Sugilite Sword",
-  "item.oresrise.sugilite_pickaxe": "Sugilite Pickaxe",
-  "item.oresrise.sugilite_axe": "Sugilite Axe",
-  "item.oresrise.sugilite_shovel": "Sugilite Shovel",
-  "item.oresrise.sugilite_hoe": "Sugilite Hoe",
-  "item.oresrise.sugilite_helmet": "Sugilite Helmet",
-  "item.oresrise.sugilite_chestplate": "Sugilite Chestplate",
-  "item.oresrise.sugilite_leggings": "Sugilite Leggings",
-  "item.oresrise.sugilite_boots": "Sugilite Boots",
+  "item.oresrise.aquamarine": "Aquamarine",
+  "block.oresrise.aquamarine_block": "Block of Aquamarine",
+  "block.oresrise.aquamarine_ore": "Aquamarine Ore",
+  "item.oresrise.aquamarine_sword": "Aquamarine Sword",
+  "item.oresrise.aquamarine_pickaxe": "Aquamarine Pickaxe",
+  "item.oresrise.aquamarine_axe": "Aquamarine Axe",
+  "item.oresrise.aquamarine_shovel": "Aquamarine Shovel",
+  "item.oresrise.aquamarine_hoe": "Aquamarine Hoe",
+  "item.oresrise.aquamarine_helmet": "Aquamarine Helmet",
+  "item.oresrise.aquamarine_chestplate": "Aquamarine Chestplate",
+  "item.oresrise.aquamarine_leggings": "Aquamarine Leggings",
+  "item.oresrise.aquamarine_boots": "Aquamarine Boots",
 
   "item.oresrise.crypton": "Crypton",
   "item.oresrise.crypton_shard": "Crypton Shard",
@@ -316,21 +347,6 @@
   "item.oresrise.star_platinum_boots": "Star Platinum Boots",
   "item.oresrise.star_breaker": "Star Breaker",
 
-  "item.oresrise.raw_cobalt": "Raw Cobalt",
-  "item.oresrise.cobalt_ingot": "Cobalt Ingot",
-  "block.oresrise.cobalt_block": "Block of Cobalt",
-  "block.oresrise.cobalt_ore": "Cobalt Ore",
-  "block.oresrise.raw_cobalt_block": "Block of Raw Cobalt",
-  "item.oresrise.cobalt_sword": "Cobalt Sword",
-  "item.oresrise.cobalt_pickaxe": "Cobalt Pickaxe",
-  "item.oresrise.cobalt_axe": "Cobalt Axe",
-  "item.oresrise.cobalt_shovel": "Cobalt Shovel",
-  "item.oresrise.cobalt_hoe": "Cobalt Hoe",
-  "item.oresrise.cobalt_helmet": "Cobalt Helmet",
-  "item.oresrise.cobalt_chestplate": "Cobalt Chestplate",
-  "item.oresrise.cobalt_leggings": "Cobalt Leggings",
-  "item.oresrise.cobalt_boots": "Cobalt Boots",
-
   "item.oresrise.malachite": "Malachite",
   "block.oresrise.malachite_block": "Block of Malachite",
   "block.oresrise.malachite_ore": "Malachite Ore",
@@ -363,20 +379,6 @@
 
 
 
-  "block.oresrise.paleslate": "Paleslate",
-  "block.oresrise.astralite": "Astralite",
-  "block.oresrise.umbrock": "Umbrock",
-
-  "item.oresrise.ember_husk_spawn_egg": "Ember Husk Spawn Egg",
-  "block.oresrise.sound_block": "Sound Block",
-
-  "block.oresrise.amberwood_log": "Amberwood Log",
-  "block.oresrise.amberwood_wood": "Amberwood Wood",
-  "block.oresrise.stripped_amberwood_log": "Stripped Amberwood Log",
-  "block.oresrise.stripped_amberwood_wood": "Stripped Amberwood Wood",
-  "block.oresrise.amberwood_planks": "Amberwood Planks",
-  "block.oresrise.amberwood_leaves": "Amberwood Leaves",
-  "block.oresrise.amberwood_sapling": "Amberwood Sapling",
 
   "item.oresrise.ore_detector": "Ore Detector",
 
@@ -386,10 +388,6 @@
   "item.oresrise.cheese": "Cheese",
   "item.oresrise.cheese_wheel": "Cheese Wheel",
   "item.oresrise.soul_cookie": "Soul Cookie",
-  "item.oresrise.cheese_slice": "Cheese Slice",
-  "item.oresrise.grilled_cheese": "Grilled Cheese",
-  "item.oresrise.cheese_sandwich": "Cheese Sandwich",
-  "item.oresrise.bread_slice": "Bread Slice",
   "item.oresrise.pepper": "Pepper",
   "item.oresrise.flaming_porkchop": "Flaming Porkchop",
   "item.oresrise.flaming_steak": "Flaming Steak",
@@ -403,14 +401,13 @@
   "item.oresrise.blaze_slag": "Blazing Residue",
   "item.oresrise.wither_slag": "Withered Matter",
 
-  "item.oresrise.iron_stick": "Iron Rod",
-  "item.oresrise.obsidian_stick": "Obsidian Spine",
-  "item.oresrise.netherite_stick": "Netherite Bar",
+  "item.oresrise.iron_stick": "Iron Stick",
+  "item.oresrise.diamond_stick": "Diamond Stick",
+  "item.oresrise.obsidian_stick": "Obsidian Stick",
+  "item.oresrise.netherite_stick": "Netherite Stick",
   "item.oresrise.stardust": "Stardust",
   "item.oresrise.withered_bone": "Withered Bone",
   "item.oresrise.dough": "Dough",
-  "item.oresrise.strawberry": "Strawberry",
-  "item.oresrise.strawberry_seeds": "Strawberry Seeds",
 
   "tooltip.oresrise.crypton_sword.tooltip": "Hold RMB to charge. Release to unleash a powerful shockwave.",
   "tooltip.oresrise.onyx_sword.tooltip": "Backstabs deal bonus damage.",

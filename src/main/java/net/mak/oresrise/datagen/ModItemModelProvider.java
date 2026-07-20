@@ -56,6 +56,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         handheldItem(RubySet.RUBY_HOE);
 
         simpleItem(RositeSet.ROSITE_INGOT);
+        simpleItem(RositeSet.ROSITE_NUGGET);
         simpleItem(RositeSet.ROSITE_HELMET);
         simpleItem(RositeSet.ROSITE_CHESTPLATE);
         simpleItem(RositeSet.ROSITE_LEGGINGS);
@@ -65,6 +66,10 @@ public class ModItemModelProvider extends ItemModelProvider {
         handheldItem(RositeSet.ROSITE_AXE);
         handheldItem(RositeSet.ROSITE_SHOVEL);
         handheldItem(RositeSet.ROSITE_HOE);
+
+        simpleItem(KeyoliteSet.ROSAL_COMPOUND);
+        simpleItem(KeyoliteSet.KEYOLITE_INGOT);
+        simpleItem(KeyoliteSet.KEYOLITE_NUGGET);
 
         simpleItem(SoulSteelSet.SOUL_STEEL_INGOT);
         handheldItem(SoulSteelSet.SOUL_STEEL_SWORD);
@@ -77,8 +82,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(SoulSteelSet.SOUL_STEEL_LEGGINGS);
         simpleItem(SoulSteelSet.SOUL_STEEL_BOOTS);
 
-        simpleItem(OblivioniteSet.OBLIVIONITE_SHARD);
-        simpleItem(OblivioniteSet.OBLIVIONITE_CRYSTAL);
+        // simpleItem(OblivioniteSet.OBLIVIONITE_SHARD);
+       //  simpleItem(OblivioniteSet.OBLIVIONITE_CRYSTAL);
 
         simpleItem(WitheriteSet.WITHERITE_INGOT);
         simpleItem(WitheriteSet.RAW_WITHERITE);
@@ -113,10 +118,12 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(Misc.BLAZE_SLAG);
         simpleItem(Misc.WITHER_SLAG);
         simpleItem(Misc.IRON_STICK);
+        simpleItem(Misc.DIAMOND_STICK);
         simpleItem(Misc.OBSIDIAN_STICK);
         simpleItem(Misc.NETHERITE_STICK);
         simpleItem(Misc.DOUGH);
         simpleItem(Misc.STARDUST);
+        simpleItem(Misc.NETHERITE_NUGGET);
 
         simpleItem(ObsidianSet.OBSIDIAN_SHARD);
         simpleItem(ObsidianSet.OBSIDIAN_HELMET);
@@ -129,18 +136,28 @@ public class ModItemModelProvider extends ItemModelProvider {
         handheldItem(ObsidianSet.OBSIDIAN_SHOVEL);
         handheldItem(ObsidianSet.OBSIDIAN_HOE);
 
+        handheldItem(ObsidiumSet.OBSIDIUM_INGOT);
+        handheldItem(ObsidiumSet.OBSIDIUM_NUGGET);
+        handheldItem(ObsidiumSet.OBSIDIAN_ALLOY);
+
+        handheldItem(SteelSet.STEEL_INGOT);
+        handheldItem(SteelSet.STEEL_NUGGET);
+        simpleItem(SteelSet.STEEL_HELMET);
+        simpleItem(SteelSet.STEEL_CHESTPLATE);
+        simpleItem(SteelSet.STEEL_LEGGINGS);
+        simpleItem(SteelSet.STEEL_BOOTS);
+        handheldItem(SteelSet.STEEL_SWORD);
+        handheldItem(SteelSet.STEEL_PICKAXE);
+        handheldItem(SteelSet.STEEL_AXE);
+        handheldItem(SteelSet.STEEL_SHOVEL);
+        handheldItem(SteelSet.STEEL_HOE);
+
         simpleItem(ModItems.TOASTED_BREAD);
         simpleItem(ModItems.SAPPHIRE_APPLE);
-        simpleItem(ModItems.STRAWBERRY);
-        simpleItem(ModItems.STRAWBERRY_SEEDS);
         simpleItem(ModItems.SOUL_COOKIE);
         simpleItem(ModItems.OBSIDIAN_COOKIE);
         simpleItem(ModItems.CHEESE);
         simpleItem(ModItems.CHEESE_WHEEL);
-        simpleItem(ModItems.CHEESE_SLICE);
-        simpleItem(ModItems.CHEESE_SANDWICH);
-        simpleItem(ModItems.BREAD_SLICE);
-        simpleItem(ModItems.GRILLED_CHEESE);
         simpleItem(ModItems.PEPPER);
         simpleItem(ModItems.FLAMING_MUTTON);
         simpleItem(ModItems.FLAMING_CHICKEN);
@@ -148,16 +165,19 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.FLAMING_RABBIT);
         simpleItem(ModItems.FLAMING_STEAK);
 
-        simpleItem(FluxiteSet.FLUXITE);
-        handheldItem(FluxiteSet.FLUXITE_SWORD);
-        handheldItem(FluxiteSet.FLUXITE_PICKAXE);
-        handheldItem(FluxiteSet.FLUXITE_AXE);
-        handheldItem(FluxiteSet.FLUXITE_SHOVEL);
-        handheldItem(FluxiteSet.FLUXITE_HOE);
-        simpleItem(FluxiteSet.FLUXITE_HELMET);
-        simpleItem(FluxiteSet.FLUXITE_CHESTPLATE);
-        simpleItem(FluxiteSet.FLUXITE_LEGGINGS);
-        simpleItem(FluxiteSet.FLUXITE_BOOTS);
+        simpleItem(VoltiumSet.FLUXITE);
+        simpleItem(VoltiumSet.ELECTRIC_MATTER);
+        simpleItem(VoltiumSet.VOLTIUM_INGOT);
+        simpleItem(VoltiumSet.VOLTIUM_NUGGET);
+        handheldItem(VoltiumSet.VOLTIUM_SWORD);
+        handheldItem(VoltiumSet.VOLTIUM_PICKAXE);
+        handheldItem(VoltiumSet.VOLTIUM_AXE);
+        handheldItem(VoltiumSet.VOLTIUM_SHOVEL);
+        handheldItem(VoltiumSet.VOLTIUM_HOE);
+        simpleItem(VoltiumSet.VOLTIUM_HELMET);
+        simpleItem(VoltiumSet.VOLTIUM_CHESTPLATE);
+        simpleItem(VoltiumSet.VOLTIUM_LEGGINGS);
+        simpleItem(VoltiumSet.VOLTIUM_BOOTS);
 
         simpleItem(VibraniumSet.VIBRANIUM);
         simpleItem(VibraniumSet.ROUGH_VIBRANIUM);
@@ -191,15 +211,15 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         simpleItem(AquamarineSet.AQUAMARINE);
         simpleItem(AquamarineSet.ROUGH_AQUAMARINE);
-        // simpleItem(AquamarineSet.AQUAMARINE_HELMET);
-        // simpleItem(AquamarineSet.AQUAMARINE_CHESTPLATE);
-        // simpleItem(AquamarineSet.AQUAMARINE_LEGGINGS);
-        // simpleItem(AquamarineSet.AQUAMARINE_BOOTS);
-        // handheldItem(AquamarineSet.AQUAMARINE_SWORD);
-        // handheldItem(AquamarineSet.AQUAMARINE_PICKAXE);
-        // handheldItem(AquamarineSet.AQUAMARINE_AXE);
-        // handheldItem(AquamarineSet.AQUAMARINE_SHOVEL);
-        // handheldItem(AquamarineSet.AQUAMARINE_HOE);
+        simpleItem(AquamarineSet.AQUAMARINE_HELMET);
+        simpleItem(AquamarineSet.AQUAMARINE_CHESTPLATE);
+        simpleItem(AquamarineSet.AQUAMARINE_LEGGINGS);
+        simpleItem(AquamarineSet.AQUAMARINE_BOOTS);
+        handheldItem(AquamarineSet.AQUAMARINE_SWORD);
+        handheldItem(AquamarineSet.AQUAMARINE_PICKAXE);
+        handheldItem(AquamarineSet.AQUAMARINE_AXE);
+        handheldItem(AquamarineSet.AQUAMARINE_SHOVEL);
+        handheldItem(AquamarineSet.AQUAMARINE_HOE);
 
         simpleItem(QuintessiteSet.QUINTESSITE);
         handheldItem(QuintessiteSet.QUINTESSITE_SWORD);
@@ -223,16 +243,16 @@ public class ModItemModelProvider extends ItemModelProvider {
         handheldItem(HemoSet.HEMOGEM_SHOVEL);
         handheldItem(HemoSet.HEMOGEM_HOE);
 
-        simpleItem(AlexandriteSet.ALEXANDRITE);
-        simpleItem(AlexandriteSet.ALEXANDRITE_HELMET);
-        simpleItem(AlexandriteSet.ALEXANDRITE_CHESTPLATE);
-        simpleItem(AlexandriteSet.ALEXANDRITE_LEGGINGS);
-        simpleItem(AlexandriteSet.ALEXANDRITE_BOOTS);
-        handheldItem(AlexandriteSet.ALEXANDRITE_SWORD);
-        handheldItem(AlexandriteSet.ALEXANDRITE_PICKAXE);
-        handheldItem(AlexandriteSet.ALEXANDRITE_AXE);
-        handheldItem(AlexandriteSet.ALEXANDRITE_SHOVEL);
-        handheldItem(AlexandriteSet.ALEXANDRITE_HOE);
+        /* simpleItem(JadeSet.JADE);
+        simpleItem(JadeSet.JADE_HELMET);
+        simpleItem(JadeSet.JADE_CHESTPLATE);
+        simpleItem(JadeSet.JADE_LEGGINGS);
+        simpleItem(JadeSet.JADE_BOOTS);
+        handheldItem(JadeSet.JADE_SWORD);
+        handheldItem(JadeSet.JADE_PICKAXE);
+        handheldItem(JadeSet.JADE_AXE);
+        handheldItem(JadeSet.JADE_SHOVEL);
+        handheldItem(JadeSet.JADE_HOE); */
 
         simpleItem(LunarisSet.LUNARIS);
         simpleItem(LunarisSet.LUNARIS_HELMET);
@@ -293,14 +313,13 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(StarPlatinumSet.STAR_PLATINUM_CHESTPLATE);
         simpleItem(StarPlatinumSet.STAR_PLATINUM_LEGGINGS);
         simpleItem(StarPlatinumSet.STAR_PLATINUM_BOOTS);
-        handheldItem(StarPlatinumSet.STAR_PLATINUM_SWORD);
         handheldItem(StarPlatinumSet.STAR_PLATINUM_PICKAXE);
         handheldItem(StarPlatinumSet.STAR_PLATINUM_AXE);
         handheldItem(StarPlatinumSet.STAR_PLATINUM_SHOVEL);
         handheldItem(StarPlatinumSet.STAR_PLATINUM_HOE);
         handheldItem(StarPlatinumSet.STAR_BREAKER);
 
-        simpleItem(CobaltSet.RAW_COBALT);
+       /* simpleItem(CobaltSet.RAW_COBALT);
         simpleItem(CobaltSet.COBALT_INGOT);
         handheldItem(CobaltSet.COBALT_SWORD);
         handheldItem(CobaltSet.COBALT_PICKAXE);
@@ -310,7 +329,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(CobaltSet.COBALT_HELMET);
         simpleItem(CobaltSet.COBALT_CHESTPLATE);
         simpleItem(CobaltSet.COBALT_LEGGINGS);
-        simpleItem(CobaltSet.COBALT_BOOTS);
+        simpleItem(CobaltSet.COBALT_BOOTS); */
 
         simpleItem(AmethystSet.AMETHYST_HELMET);
         simpleItem(AmethystSet.AMETHYST_CHESTPLATE);
@@ -334,53 +353,7 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         handheldItem(ShadowSteelSet.SHADOW_DAGGER);
         handheldItem(StarriteSet.STAR_STAFF);
-
-        withExistingParent(
-                "ice_crystal_block",
-                "minecraft:item/generated"
-        ).texture(
-                "layer0",
-                modLoc("item/ice_crystal_1")
-        );
-
-        withExistingParent("astralite",
-                new ResourceLocation(ExampleMod.MOD_ID, "block/astralite"));
-
-        withExistingParent("umbrock",
-                new ResourceLocation(ExampleMod.MOD_ID, "block/umbrock"));
-
-        withExistingParent("paleslate",
-                new ResourceLocation(ExampleMod.MOD_ID, "block/paleslate"));
-
-        withExistingParent("sound_block",
-                new ResourceLocation(ExampleMod.MOD_ID, "block/sound_block"));
-
-        withExistingParent("amberwood_log",
-                new ResourceLocation(ExampleMod.MOD_ID, "block/amberwood_log"));
-        withExistingParent("amberwood_wood",
-                new ResourceLocation(ExampleMod.MOD_ID, "block/amberwood_wood"));
-        withExistingParent("stripped_amberwood_log",
-                new ResourceLocation(ExampleMod.MOD_ID, "block/stripped_amberwood_log"));
-        withExistingParent("stripped_amberwood_wood",
-                new ResourceLocation(ExampleMod.MOD_ID, "block/stripped_amberwood_wood"));
-        withExistingParent("amberwood_planks",
-                new ResourceLocation(ExampleMod.MOD_ID, "block/amberwood_planks"));
-        withExistingParent("amberwood_leaves",
-                new ResourceLocation(ExampleMod.MOD_ID, "block/amberwood_leaves"));
-
-        simpleItem(ModItems.EMBER_HUSK_SPAWN_EGG);
-
-        saplingItem(ModBlocks.AMBERWOOD_SAPLING);
-        withExistingParent(ModBlocks.AMBERWOOD_SAPLING.getId().getPath(),
-                new ResourceLocation(ExampleMod.MOD_ID, "block/amberwood_sapling"));
     }
-
-    private ItemModelBuilder saplingItem(RegistryObject<Block> item) {
-        return withExistingParent(item.getId().getPath(),
-                new ResourceLocation("item/generated")).texture("layer0",
-                new ResourceLocation(ExampleMod.MOD_ID,"block/" + item.getId().getPath()));
-    }
-
     private ItemModelBuilder handheldItem(RegistryObject<Item> item) {
         return withExistingParent(item.getId().getPath(),
                 new ResourceLocation("item/handheld")).texture("layer0",

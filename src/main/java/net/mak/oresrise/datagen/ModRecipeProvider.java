@@ -14,6 +14,7 @@ import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.ItemLike;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 
+import javax.xml.stream.events.StartElement;
 import java.util.List;
 import java.util.function.Consumer;
 
@@ -25,11 +26,22 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
             WitheriteSet.RAW_WITHERITE.get(),
             ModBlocks.WITHERITE_ORE.get());
 
-    private static final List<ItemLike> COBALT_SMELTABLES = List.of(
-            CobaltSet.RAW_COBALT.get());
+    /* private static final List<ItemLike> COBALT_SMELTABLES = List.of(
+            CobaltSet.RAW_COBALT.get(),
+            ModBlocks.COBALT_ORE.get()); */
 
     private static final List<ItemLike> PLATINUM_SMELTABLES = List.of(
-            PlatinumSet.RAW_PLATINUM.get());
+            PlatinumSet.RAW_PLATINUM.get(),
+            ModBlocks.PLATINUM_ORE.get());
+
+    private static final List<ItemLike> OBSIDIUM_SMELTABLES = List.of(
+            ObsidiumSet.OBSIDIAN_ALLOY.get());
+
+    private static final List<ItemLike> KEYOLITE_SMELTABLES = List.of(
+            KeyoliteSet.ROSAL_COMPOUND.get());
+
+    private static final List<ItemLike> VOLTIUM_SMELTABLES = List.of(
+            VoltiumSet.ELECTRIC_MATTER.get());
 
     public ModRecipeProvider(PackOutput pOutput) {
         super(pOutput);
@@ -47,14 +59,21 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_milk", has(Items.MILK_BUCKET))
                 .save(pWriter, new ResourceLocation("oresrise", "cheese_smoking"));
 
-        oreSmelting(pWriter, COBALT_SMELTABLES, RecipeCategory.MISC, CobaltSet.COBALT_INGOT.get(), 0.25f, 200, "cobalt_ingot");
-        oreBlasting(pWriter, COBALT_SMELTABLES, RecipeCategory.MISC, CobaltSet.COBALT_INGOT.get(), 0.25f, 100, "cobalt_ingot");
+        // oreSmelting(pWriter, COBALT_SMELTABLES, RecipeCategory.MISC, CobaltSet.COBALT_INGOT.get(), 0.25f, 200, "cobalt_ingot");
+      //  oreBlasting(pWriter, COBALT_SMELTABLES, RecipeCategory.MISC, CobaltSet.COBALT_INGOT.get(), 0.25f, 100, "cobalt_ingot");
 
         oreSmelting(pWriter, PLATINUM_SMELTABLES, RecipeCategory.MISC, PlatinumSet.PLATINUM_INGOT.get(), 0.25f, 200, "platinum_ingot");
         oreBlasting(pWriter, PLATINUM_SMELTABLES, RecipeCategory.MISC, PlatinumSet.PLATINUM_INGOT.get(), 0.25f, 100, "platinum_ingot");
 
         oreSmelting(pWriter, WITHERITE_SMELTABLES, RecipeCategory.MISC, WitheriteSet.WITHERITE_INGOT.get(), 0.25f, 200, "witherite_ingot");
         oreBlasting(pWriter, WITHERITE_SMELTABLES, RecipeCategory.MISC, WitheriteSet.WITHERITE_INGOT.get(), 0.25f, 100, "witherite_ingot");
+
+        oreBlasting(pWriter, OBSIDIUM_SMELTABLES, RecipeCategory.MISC, ObsidiumSet.OBSIDIUM_INGOT.get(), 0.5f, 100, "obsidium_ingot");
+
+        oreBlasting(pWriter, VOLTIUM_SMELTABLES, RecipeCategory.MISC, VoltiumSet.VOLTIUM_INGOT.get(), 0.5f, 100, "voltium_ingot");
+
+        oreSmelting(pWriter, KEYOLITE_SMELTABLES, RecipeCategory.MISC, KeyoliteSet.KEYOLITE_INGOT.get(), 0.25f, 200, "keyolite_ingot");
+        oreBlasting(pWriter, KEYOLITE_SMELTABLES, RecipeCategory.MISC, KeyoliteSet.KEYOLITE_INGOT.get(), 0.25f, 100, "keyolite_ingot");
 
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(Items.ROTTEN_FLESH), RecipeCategory.MISC,
                         Items.LEATHER, 0.35f, 200)
@@ -78,16 +97,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_bread", has(Items.BREAD))
                 .save(pWriter, new ResourceLocation("oresrise", "toast_smoking"));
 
-        SimpleCookingRecipeBuilder.smelting(Ingredient.of(ModItems.CHEESE_SANDWICH.get()), RecipeCategory.FOOD,
-                        ModItems.GRILLED_CHEESE.get(), 0.35f, 200)
-                .unlockedBy("has_cheese_sandwich", has(ModItems.CHEESE_SANDWICH.get()))
-                .save(pWriter, new ResourceLocation("oresrise", "grilled_cheese_smelting"));
-
-        SimpleCookingRecipeBuilder.smoking(Ingredient.of(ModItems.CHEESE_SANDWICH.get()), RecipeCategory.FOOD,
-                        ModItems.GRILLED_CHEESE.get(), 0.35f, 100)
-                .unlockedBy("has_cheese_sandwich", has(ModItems.CHEESE_SANDWICH.get()))
-                .save(pWriter, new ResourceLocation("oresrise", "grilled_cheese_smoking"));
-
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(Misc.DOUGH.get()), RecipeCategory.FOOD,
                         Items.BREAD, 0.35f, 200)
                 .unlockedBy("has_dough", has(Misc.DOUGH.get()))
@@ -98,28 +107,37 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_dough", has(Misc.DOUGH.get()))
                 .save(pWriter, new ResourceLocation("oresrise", "dough_to_bread_smoking"));
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Misc.IRON_STICK.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Misc.IRON_STICK.get(), 2)
                 .pattern("S")
                 .pattern("S")
                 .define('S', Items.IRON_INGOT)
                 .unlockedBy(getHasName(Items.IRON_INGOT), has(Items.IRON_INGOT))
                 .save(pWriter);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Misc.OBSIDIAN_STICK.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Misc.DIAMOND_STICK.get(), 2)
                 .pattern("S")
                 .pattern("S")
+                .define('S', Items.DIAMOND)
+                .unlockedBy(getHasName(Items.DIAMOND), has(Items.DIAMOND))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Misc.OBSIDIAN_STICK.get(), 2)
+                .pattern("  S")
+                .pattern(" S ")
+                .pattern("S  ")
                 .define('S', ObsidianSet.OBSIDIAN_SHARD.get())
                 .unlockedBy(getHasName(ObsidianSet.OBSIDIAN_SHARD.get()), has(ObsidianSet.OBSIDIAN_SHARD.get()))
                 .save(pWriter);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Misc.NETHERITE_STICK.get(), 4)
-                .pattern("S")
-                .pattern("S")
-                .define('S', Items.NETHERITE_INGOT)
-                .unlockedBy(getHasName(Items.NETHERITE_INGOT), has(Items.NETHERITE_INGOT))
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Misc.NETHERITE_STICK.get(), 2)
+                .pattern("  S")
+                .pattern(" S ")
+                .pattern("S  ")
+                .define('S', Misc.NETHERITE_NUGGET.get())
+                .unlockedBy(getHasName(Misc.NETHERITE_NUGGET.get()), has(Misc.NETHERITE_NUGGET.get()))
                 .save(pWriter);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Misc.STARDUST.get(), 3)
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Misc.STARDUST.get(), 5)
                 .requires(Items.NETHER_STAR)
                 .unlockedBy(getHasName(Items.NETHER_STAR), has(Items.NETHER_STAR))
                 .save(pWriter);
@@ -127,25 +145,174 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, RoseGoldSet.ROSE_GOLD_INGOT.get(), 2)
                 .requires(Items.GOLD_INGOT) 
                 .requires(Items.COPPER_INGOT)
-                .unlockedBy("gold_ingot", has(Items.GOLD_INGOT))
+                .unlockedBy("has_gold_ingot", has(Items.GOLD_INGOT))
                 .save(pWriter);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, RositeSet.ROSITE_INGOT.get(), 2)
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, RositeSet.ROSITE_INGOT.get(), 1)
                 .requires(Items.IRON_INGOT, 2) 
                 .requires(Items.REDSTONE, 2)
-                .unlockedBy("redstone", has(Items.REDSTONE))
+                .unlockedBy("has_redstone", has(Items.REDSTONE))
                 .save(pWriter);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, FireiteSet.PYROGEL.get(), 2)
-                .requires(Items.BLAZE_POWDER) 
-                .requires(Items.MAGMA_CREAM)
-                .unlockedBy("magma_cream", has(Items.MAGMA_CREAM))
+
+
+
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ObsidiumSet.OBSIDIAN_ALLOY.get(), 2)
+                .requires(SteelSet.STEEL_INGOT.get())
+                .requires(ObsidianSet.OBSIDIAN_SHARD.get(), 2)
+                .requires(Items.DIAMOND)
+                .unlockedBy("has_steel_ingot", has(SteelSet.STEEL_INGOT.get()))
                 .save(pWriter);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, FireiteSet.FIREITE_INGOT.get(), 1)
-                .requires(FireiteSet.PYROGEL.get()) 
-                .requires(Items.NETHERITE_INGOT)
-                .unlockedBy("pyrogel", has(FireiteSet.PYROGEL.get()))
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, VoltiumSet.ELECTRIC_MATTER.get(), 2)
+                .requires(SteelSet.STEEL_INGOT.get(), 2)
+                .requires(VoltiumSet.FLUXITE.get())
+                .requires(Items.QUARTZ)
+                .unlockedBy("has_fluxite", has(VoltiumSet.FLUXITE.get()))
+                .save(pWriter);
+
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, KeyoliteSet.ROSAL_COMPOUND.get(), 2)
+                .requires(RositeSet.ROSITE_INGOT.get(), 2)
+                .requires(Items.ENDER_PEARL)
+                .requires(Items.AMETHYST_SHARD)
+                .unlockedBy("has_rosite_ingot", has(RositeSet.ROSITE_INGOT.get()))
+                .save(pWriter);
+
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, SteelSet.STEEL_INGOT.get(), 2)
+                .requires(Items.IRON_INGOT, 2)
+                .requires(Items.COAL, 2)
+                .unlockedBy("has_iron_ingot", has(Items.IRON_INGOT))
+                .save(pWriter);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, SteelSet.STEEL_INGOT.get())
+                .requires(SteelSet.STEEL_NUGGET.get(), 9)
+                .unlockedBy("steel_nugget", has(SteelSet.STEEL_NUGGET.get()))
+                .save(pWriter, new ResourceLocation("oresrise", "steel_from_nugget"));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, SteelSet.STEEL_NUGGET.get(), 9)
+                .requires(SteelSet.STEEL_INGOT.get())
+                .unlockedBy("has_steel_ingot", has(SteelSet.STEEL_INGOT.get()))
+                .save(pWriter);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.STEEL_BLOCK.get())
+                .requires(SteelSet.STEEL_INGOT.get(), 9)
+                .unlockedBy("steel_ingot", has(SteelSet.STEEL_INGOT.get()))
+                .save(pWriter);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, SteelSet.STEEL_INGOT.get(), 9)
+                .requires(ModBlocks.STEEL_BLOCK.get())
+                .unlockedBy("has_steel_block", has(ModBlocks.STEEL_BLOCK.get()))
+                .save(pWriter, new ResourceLocation("oresrise", "steel_from_block"));
+
+
+
+
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, RositeSet.ROSITE_INGOT.get())
+                .requires(RositeSet.ROSITE_NUGGET.get(), 9)
+                .unlockedBy("rosite_nugget", has(RositeSet.ROSITE_NUGGET.get()))
+                .save(pWriter, new ResourceLocation("oresrise", "rosite_from_nugget"));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, RositeSet.ROSITE_NUGGET.get(), 9)
+                .requires(RositeSet.ROSITE_INGOT.get())
+                .unlockedBy("has_rosite_ingot", has(RositeSet.ROSITE_INGOT.get()))
+                .save(pWriter);
+
+
+
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, KeyoliteSet.KEYOLITE_INGOT.get())
+                .requires(KeyoliteSet.KEYOLITE_NUGGET.get(), 9)
+                .unlockedBy("keyolite_nugget", has(KeyoliteSet.KEYOLITE_NUGGET.get()))
+                .save(pWriter, new ResourceLocation("oresrise", "keyolite_from_nugget"));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, KeyoliteSet.KEYOLITE_NUGGET.get(), 9)
+                .requires(KeyoliteSet.KEYOLITE_INGOT.get())
+                .unlockedBy("has_keyolite_ingot", has(KeyoliteSet.KEYOLITE_INGOT.get()))
+                .save(pWriter);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.KEYOLITE_BLOCK.get())
+                .requires(KeyoliteSet.KEYOLITE_INGOT.get(), 9)
+                .unlockedBy("keyolite_ingot", has(KeyoliteSet.KEYOLITE_INGOT.get()))
+                .save(pWriter);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, KeyoliteSet.KEYOLITE_INGOT.get(), 9)
+                .requires(ModBlocks.KEYOLITE_BLOCK.get())
+                .unlockedBy("has_keyolite_block", has(ModBlocks.KEYOLITE_BLOCK.get()))
+                .save(pWriter, new ResourceLocation("oresrise", "keyolite_from_block"));
+
+
+
+
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ObsidiumSet.OBSIDIUM_INGOT.get())
+                .requires(ObsidiumSet.OBSIDIUM_NUGGET.get(), 9)
+                .unlockedBy("obsidium_nugget", has(ObsidiumSet.OBSIDIUM_NUGGET.get()))
+                .save(pWriter, new ResourceLocation("oresrise", "obsidium_from_nugget"));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ObsidiumSet.OBSIDIUM_NUGGET.get(), 9)
+                .requires(ObsidiumSet.OBSIDIUM_INGOT.get())
+                .unlockedBy("has_obsidium_ingot", has(ObsidiumSet.OBSIDIUM_INGOT.get()))
+                .save(pWriter);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.OBSIDIUM_BLOCK.get())
+                .requires(ObsidiumSet.OBSIDIUM_INGOT.get(), 9)
+                .unlockedBy("obsidium_ingot", has(ObsidiumSet.OBSIDIUM_INGOT.get()))
+                .save(pWriter);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ObsidiumSet.OBSIDIUM_INGOT.get(), 9)
+                .requires(ModBlocks.OBSIDIUM_BLOCK.get())
+                .unlockedBy("has_obsidium_block", has(ModBlocks.OBSIDIUM_BLOCK.get()))
+                .save(pWriter, new ResourceLocation("oresrise", "obsidium_from_block"));
+
+
+
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, VoltiumSet.VOLTIUM_INGOT.get())
+                .requires(VoltiumSet.VOLTIUM_NUGGET.get(), 9)
+                .unlockedBy("voltium_nugget", has(VoltiumSet.VOLTIUM_NUGGET.get()))
+                .save(pWriter, new ResourceLocation("oresrise", "voltium_from_nugget"));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, VoltiumSet.VOLTIUM_NUGGET.get(), 9)
+                .requires(VoltiumSet.VOLTIUM_INGOT.get())
+                .unlockedBy("has_voltium_ingot", has(VoltiumSet.VOLTIUM_INGOT.get()))
+                .save(pWriter);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.VOLTIUM_BLOCK.get())
+                .requires(VoltiumSet.VOLTIUM_INGOT.get(), 9)
+                .unlockedBy("voltium_ingot", has(VoltiumSet.VOLTIUM_INGOT.get()))
+                .save(pWriter);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, VoltiumSet.VOLTIUM_INGOT.get(), 9)
+                .requires(ModBlocks.VOLTIUM_BLOCK.get())
+                .unlockedBy("has_voltium_block", has(ModBlocks.VOLTIUM_BLOCK.get()))
+                .save(pWriter, new ResourceLocation("oresrise", "voltium_from_block"));
+
+
+
+
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, FireiteSet.PYROGEL.get(), 2)
+                .pattern(" S ")
+                .pattern("SCS")
+                .pattern(" S ")
+                .define('S', Items.BLAZE_POWDER)
+                .define('C', Items.MAGMA_CREAM)
+                .unlockedBy(getHasName(Items.BLAZE_POWDER), has(Items.BLAZE_POWDER))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, FireiteSet.FIREITE_INGOT.get())
+                .pattern(" S ")
+                .pattern("ECE")
+                .pattern(" S ")
+                .define('S', FireiteSet.PYROGEL.get())
+                .define('E', Items.MAGMA_BLOCK)
+                .define('C', Items.NETHERITE_INGOT)
+                .unlockedBy(getHasName(FireiteSet.PYROGEL.get()), has(FireiteSet.PYROGEL.get()))
                 .save(pWriter);
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, SoulSet.SOUL_ESSENCE.get(), 2)
@@ -205,12 +372,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("blaze_powder", has(Items.BLAZE_POWDER))
                 .save(pWriter);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.CHEESE_SANDWICH.get(), 1)
-                .requires(ModItems.BREAD_SLICE.get(), 2) 
-                .requires(ModItems.CHEESE_SLICE.get())
-                .unlockedBy("has_bread", has(ModItems.BREAD_SLICE.get()))
-                .save(pWriter);
-
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Misc.DOUGH.get(), 2)
                 .requires(Items.WHEAT, 3) 
                 .requires(Items.WATER_BUCKET)
@@ -264,16 +425,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(Items.DIAMOND)
                 .requires(Items.IRON_INGOT)
                 .unlockedBy("has_echo_shard", has(Items.ECHO_SHARD))
-                .save(pWriter);
-
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.CHEESE_SLICE.get(), 4)
-                .requires(ModItems.CHEESE.get())
-                .unlockedBy(getHasName(ModItems.CHEESE.get()), has(ModItems.CHEESE.get()))
-                .save(pWriter);
-
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.BREAD_SLICE.get(), 2)
-                .requires(Items.BREAD)
-                .unlockedBy(getHasName(Items.BREAD), has(Items.BREAD))
                 .save(pWriter);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.OBSIDIAN_COOKIE.get())
@@ -423,7 +574,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(pWriter, ExampleMod.MOD_ID + ":raw_witherite_from_block");
 
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.OBLIVIONITE_BLOCK.get())
+        /* ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.OBLIVIONITE_BLOCK.get())
                 .pattern("SSS")
                 .pattern("SSS")
                 .pattern("SSS")
@@ -434,7 +585,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, OblivioniteSet.OBLIVIONITE_CRYSTAL.get(), 9)
                 .requires(ModBlocks.OBLIVIONITE_BLOCK.get())
                 .unlockedBy(getHasName(ModBlocks.OBLIVIONITE_BLOCK.get()), has(ModBlocks.OBLIVIONITE_BLOCK.get()))
-                .save(pWriter);
+                .save(pWriter);*/
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, SoulSet.SOUL_CRYSTAL.get())
                 .pattern("SS")
@@ -461,68 +612,226 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModBlocks.SOUL_BLOCK.get()), has(ModBlocks.SOUL_BLOCK.get()))
                 .save(pWriter, ExampleMod.MOD_ID + ":soul_crystal_from_block");
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, FluxiteSet.FLUXITE_PICKAXE.get())
+
+
+
+
+
+
+
+
+
+
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, VoltiumSet.VOLTIUM_PICKAXE.get())
                 .pattern("SSS")  
                 .pattern(" # ")
                 .pattern(" # ") 
-                .define('S', FluxiteSet.FLUXITE.get())
+                .define('S', VoltiumSet.VOLTIUM_INGOT.get())
                 .define('#', Misc.IRON_STICK.get())                     
-                .unlockedBy(getHasName(FluxiteSet.FLUXITE.get()), has(FluxiteSet.FLUXITE.get()))
+                .unlockedBy(getHasName(VoltiumSet.VOLTIUM_INGOT.get()), has(VoltiumSet.VOLTIUM_INGOT.get()))
                 .save(pWriter);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, FluxiteSet.FLUXITE_SWORD.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, VoltiumSet.VOLTIUM_SWORD.get())
                 .pattern(" S ")  
                 .pattern(" S ")
                 .pattern(" # ") 
-                .define('S', FluxiteSet.FLUXITE.get())  
+                .define('S', VoltiumSet.VOLTIUM_INGOT.get())  
                 .define('#', Misc.IRON_STICK.get())                     
-                .unlockedBy(getHasName(FluxiteSet.FLUXITE.get()), has(FluxiteSet.FLUXITE.get()))
+                .unlockedBy(getHasName(VoltiumSet.VOLTIUM_INGOT.get()), has(VoltiumSet.VOLTIUM_INGOT.get()))
                 .save(pWriter);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, FluxiteSet.FLUXITE_AXE.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, VoltiumSet.VOLTIUM_AXE.get())
                 .pattern("SS ")  
                 .pattern("S# ")
                 .pattern(" # ") 
-                .define('S', FluxiteSet.FLUXITE.get())  
+                .define('S', VoltiumSet.VOLTIUM_INGOT.get())  
                 .define('#', Misc.IRON_STICK.get())                     
-                .unlockedBy(getHasName(FluxiteSet.FLUXITE.get()), has(FluxiteSet.FLUXITE.get()))
-                .save(pWriter, ExampleMod.MOD_ID + ":fluxite_axe_1");
+                .unlockedBy(getHasName(VoltiumSet.VOLTIUM_INGOT.get()), has(VoltiumSet.VOLTIUM_INGOT.get()))
+                .save(pWriter, ExampleMod.MOD_ID + ":voltium_axe_1");
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, FluxiteSet.FLUXITE_AXE.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, VoltiumSet.VOLTIUM_AXE.get())
                 .pattern(" SS")  
                 .pattern(" #S")
                 .pattern(" # ") 
-                .define('S', FluxiteSet.FLUXITE.get())  
+                .define('S', VoltiumSet.VOLTIUM_INGOT.get())  
                 .define('#', Misc.IRON_STICK.get())                     
-                .unlockedBy(getHasName(FluxiteSet.FLUXITE.get()), has(FluxiteSet.FLUXITE.get()))
-                .save(pWriter, ExampleMod.MOD_ID + ":fluxite_axe_2");
+                .unlockedBy(getHasName(VoltiumSet.VOLTIUM_INGOT.get()), has(VoltiumSet.VOLTIUM_INGOT.get()))
+                .save(pWriter, ExampleMod.MOD_ID + ":voltium_axe_2");
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, FluxiteSet.FLUXITE_SHOVEL.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, VoltiumSet.VOLTIUM_SHOVEL.get())
                 .pattern(" S ")  
                 .pattern(" # ")
                 .pattern(" # ") 
-                .define('S', FluxiteSet.FLUXITE.get())  
+                .define('S', VoltiumSet.VOLTIUM_INGOT.get())  
                 .define('#', Misc.IRON_STICK.get())                     
-                .unlockedBy(getHasName(FluxiteSet.FLUXITE.get()), has(FluxiteSet.FLUXITE.get()))
+                .unlockedBy(getHasName(VoltiumSet.VOLTIUM_INGOT.get()), has(VoltiumSet.VOLTIUM_INGOT.get()))
                 .save(pWriter);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, FluxiteSet.FLUXITE_HOE.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, VoltiumSet.VOLTIUM_HOE.get())
                 .pattern("SS ")  
                 .pattern(" # ")
                 .pattern(" # ") 
-                .define('S', FluxiteSet.FLUXITE.get())  
+                .define('S', VoltiumSet.VOLTIUM_INGOT.get())  
                 .define('#', Misc.IRON_STICK.get())                     
-                .unlockedBy(getHasName(FluxiteSet.FLUXITE.get()), has(FluxiteSet.FLUXITE.get()))
-                .save(pWriter, ExampleMod.MOD_ID + ":fluxite_hoe_1");
+                .unlockedBy(getHasName(VoltiumSet.VOLTIUM_INGOT.get()), has(VoltiumSet.VOLTIUM_INGOT.get()))
+                .save(pWriter, ExampleMod.MOD_ID + ":voltium_hoe_1");
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, FluxiteSet.FLUXITE_HOE.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, VoltiumSet.VOLTIUM_HOE.get())
                 .pattern(" SS")  
                 .pattern(" # ")
                 .pattern(" # ") 
-                .define('S', FluxiteSet.FLUXITE.get())  
+                .define('S', VoltiumSet.VOLTIUM_INGOT.get())  
                 .define('#', Misc.IRON_STICK.get())                     
-                .unlockedBy(getHasName(FluxiteSet.FLUXITE.get()), has(FluxiteSet.FLUXITE.get()))
-                .save(pWriter, ExampleMod.MOD_ID + ":fluxite_hoe_2");
+                .unlockedBy(getHasName(VoltiumSet.VOLTIUM_INGOT.get()), has(VoltiumSet.VOLTIUM_INGOT.get()))
+                .save(pWriter, ExampleMod.MOD_ID + ":voltium_hoe_2");
+        
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, VoltiumSet.VOLTIUM_HELMET.get())
+                .pattern("SSS")
+                .pattern("S S")
+                .define('S', VoltiumSet.VOLTIUM_INGOT.get())
+                .unlockedBy(getHasName(VoltiumSet.VOLTIUM_INGOT.get()), has(VoltiumSet.VOLTIUM_INGOT.get()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, VoltiumSet.VOLTIUM_CHESTPLATE.get())
+                .pattern("S S")
+                .pattern("SSS")
+                .pattern("SSS")
+                .define('S', VoltiumSet.VOLTIUM_INGOT.get())
+                .unlockedBy(getHasName(VoltiumSet.VOLTIUM_INGOT.get()), has(VoltiumSet.VOLTIUM_INGOT.get()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, VoltiumSet.VOLTIUM_LEGGINGS.get())
+                .pattern("SSS")
+                .pattern("S S")
+                .pattern("S S")
+                .define('S', VoltiumSet.VOLTIUM_INGOT.get())
+                .unlockedBy(getHasName(VoltiumSet.VOLTIUM_INGOT.get()), has(VoltiumSet.VOLTIUM_INGOT.get()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, VoltiumSet.VOLTIUM_BOOTS.get())
+                .pattern("S S")
+                .pattern("S S")
+                .define('S', VoltiumSet.VOLTIUM_INGOT.get())
+                .unlockedBy(getHasName(VoltiumSet.VOLTIUM_INGOT.get()), has(VoltiumSet.VOLTIUM_INGOT.get()))
+                .save(pWriter);
+
+
+
+
+
+
+
+
+
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, RubySet.RUBY_PICKAXE.get())
+                .pattern("SSS")
+                .pattern(" # ")
+                .pattern(" # ")
+                .define('S', RubySet.RUBY.get())
+                .define('#', Items.STICK)
+                .unlockedBy(getHasName(RubySet.RUBY.get()), has(RubySet.RUBY.get()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, RubySet.RUBY_SWORD.get())
+                .pattern(" S ")
+                .pattern(" S ")
+                .pattern(" # ")
+                .define('S', RubySet.RUBY.get())
+                .define('#', Items.STICK)
+                .unlockedBy(getHasName(RubySet.RUBY.get()), has(RubySet.RUBY.get()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, RubySet.RUBY_AXE.get())
+                .pattern("SS ")
+                .pattern("S# ")
+                .pattern(" # ")
+                .define('S', RubySet.RUBY.get())
+                .define('#', Items.STICK)
+                .unlockedBy(getHasName(RubySet.RUBY.get()), has(RubySet.RUBY.get()))
+                .save(pWriter, ExampleMod.MOD_ID + ":ruby_axe_1");
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, RubySet.RUBY_AXE.get())
+                .pattern(" SS")
+                .pattern(" #S")
+                .pattern(" # ")
+                .define('S', RubySet.RUBY.get())
+                .define('#', Items.STICK)
+                .unlockedBy(getHasName(RubySet.RUBY.get()), has(RubySet.RUBY.get()))
+                .save(pWriter, ExampleMod.MOD_ID + ":ruby_axe_2");
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, RubySet.RUBY_SHOVEL.get())
+                .pattern(" S ")
+                .pattern(" # ")
+                .pattern(" # ")
+                .define('S', RubySet.RUBY.get())
+                .define('#', Items.STICK)
+                .unlockedBy(getHasName(RubySet.RUBY.get()), has(RubySet.RUBY.get()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, RubySet.RUBY_HOE.get())
+                .pattern("SS ")
+                .pattern(" # ")
+                .pattern(" # ")
+                .define('S', RubySet.RUBY.get())
+                .define('#', Items.STICK)
+                .unlockedBy(getHasName(RubySet.RUBY.get()), has(RubySet.RUBY.get()))
+                .save(pWriter, ExampleMod.MOD_ID + ":ruby_hoe_1");
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, RubySet.RUBY_HOE.get())
+                .pattern(" SS")
+                .pattern(" # ")
+                .pattern(" # ")
+                .define('S', RubySet.RUBY.get())
+                .define('#', Items.STICK)
+                .unlockedBy(getHasName(RubySet.RUBY.get()), has(RubySet.RUBY.get()))
+                .save(pWriter, ExampleMod.MOD_ID + ":ruby_hoe_2");
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, RubySet.RUBY_HELMET.get())
+                .pattern("SSS")
+                .pattern("S S")
+                .define('S', RubySet.RUBY.get())
+                .unlockedBy(getHasName(RubySet.RUBY.get()), has(RubySet.RUBY.get()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, RubySet.RUBY_CHESTPLATE.get())
+                .pattern("S S")
+                .pattern("SSS")
+                .pattern("SSS")
+                .define('S', RubySet.RUBY.get())
+                .unlockedBy(getHasName(RubySet.RUBY.get()), has(RubySet.RUBY.get()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, RubySet.RUBY_LEGGINGS.get())
+                .pattern("SSS")
+                .pattern("S S")
+                .pattern("S S")
+                .define('S', RubySet.RUBY.get())
+                .unlockedBy(getHasName(RubySet.RUBY.get()), has(RubySet.RUBY.get()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, RubySet.RUBY_BOOTS.get())
+                .pattern("S S")
+                .pattern("S S")
+                .define('S', RubySet.RUBY.get())
+                .unlockedBy(getHasName(RubySet.RUBY.get()), has(RubySet.RUBY.get()))
+                .save(pWriter);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
 
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, SapphireSet.SAPPHIRE_PICKAXE.get())
                 .pattern("SSS")  
@@ -617,35 +926,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(SapphireSet.SAPPHIRE.get()), has(SapphireSet.SAPPHIRE.get()))
                 .save(pWriter);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, FluxiteSet.FLUXITE_HELMET.get())
-                .pattern("SSS")
-                .pattern("S S")
-                .define('S', FluxiteSet.FLUXITE.get())
-                .unlockedBy(getHasName(FluxiteSet.FLUXITE.get()), has(FluxiteSet.FLUXITE.get()))
-                .save(pWriter);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, FluxiteSet.FLUXITE_CHESTPLATE.get())
-                .pattern("S S")
-                .pattern("SSS")
-                .pattern("SSS")
-                .define('S', FluxiteSet.FLUXITE.get())
-                .unlockedBy(getHasName(FluxiteSet.FLUXITE.get()), has(FluxiteSet.FLUXITE.get()))
-                .save(pWriter);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, FluxiteSet.FLUXITE_LEGGINGS.get())
-                .pattern("SSS")
-                .pattern("S S")
-                .pattern("S S")
-                .define('S', FluxiteSet.FLUXITE.get())
-                .unlockedBy(getHasName(FluxiteSet.FLUXITE.get()), has(FluxiteSet.FLUXITE.get()))
-                .save(pWriter);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, FluxiteSet.FLUXITE_BOOTS.get())
-                .pattern("S S")
-                .pattern("S S")
-                .define('S', FluxiteSet.FLUXITE.get())
-                .unlockedBy(getHasName(FluxiteSet.FLUXITE.get()), has(FluxiteSet.FLUXITE.get()))
-                .save(pWriter);
+        
+        
+        
+        
+        
+        
+        
+        
 
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ObsidianSet.OBSIDIAN_HELMET.get())
                 .pattern("SAS")
@@ -805,7 +1093,53 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('A', RoseGoldSet.ROSE_GOLD_INGOT.get())  
                 .define('#', Items.STICK)                     
                 .unlockedBy(getHasName(RoseGoldSet.ROSE_GOLD_INGOT.get()), has(RoseGoldSet.ROSE_GOLD_INGOT.get()))
+                .save(pWriter, ExampleMod.MOD_ID + ":rose_gold_axe_1");
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, RoseGoldSet.ROSE_GOLD_AXE.get())
+                .pattern(" AA")
+                .pattern(" #A")
+                .pattern(" # ")
+                .define('A', RoseGoldSet.ROSE_GOLD_INGOT.get())
+                .define('#', Items.STICK)
+                .unlockedBy(getHasName(RoseGoldSet.ROSE_GOLD_INGOT.get()), has(RoseGoldSet.ROSE_GOLD_INGOT.get()))
+                .save(pWriter, ExampleMod.MOD_ID + ":rose_gold_axe_2");
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, RoseGoldSet.ROSE_GOLD_HOE.get())
+                .pattern("AA ")
+                .pattern(" # ")
+                .pattern(" # ")
+                .define('A', RoseGoldSet.ROSE_GOLD_INGOT.get())
+                .define('#', Items.STICK)
+                .unlockedBy(getHasName(RoseGoldSet.ROSE_GOLD_INGOT.get()), has(RoseGoldSet.ROSE_GOLD_INGOT.get()))
+                .save(pWriter, ExampleMod.MOD_ID + ":rose_gold_hoe_1");
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, RoseGoldSet.ROSE_GOLD_HOE.get())
+                .pattern(" AA")
+                .pattern(" # ")
+                .pattern(" # ")
+                .define('A', RoseGoldSet.ROSE_GOLD_INGOT.get())
+                .define('#', Items.STICK)
+                .unlockedBy(getHasName(RoseGoldSet.ROSE_GOLD_INGOT.get()), has(RoseGoldSet.ROSE_GOLD_INGOT.get()))
+                .save(pWriter, ExampleMod.MOD_ID + ":rose_gold_hoe_2");
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, RoseGoldSet.ROSE_GOLD_SHOVEL.get())
+                .pattern(" A ")
+                .pattern(" # ")
+                .pattern(" # ")
+                .define('A', RoseGoldSet.ROSE_GOLD_INGOT.get())
+                .define('#', Items.STICK)
+                .unlockedBy(getHasName(RoseGoldSet.ROSE_GOLD_INGOT.get()), has(RoseGoldSet.ROSE_GOLD_INGOT.get()))
                 .save(pWriter);
+
+
+
+
+
+
+
+
+
+
 
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.AQUAMARINE_BLOCK.get())
                 .pattern("SSS")
@@ -820,18 +1154,18 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModBlocks.AQUAMARINE_BLOCK.get()), has(ModBlocks.AQUAMARINE_BLOCK.get()))
                 .save(pWriter);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ALEXANDRITE_BLOCK.get())
+      /*  ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.JADE_BLOCK.get())
                 .pattern("SSS")
                 .pattern("SSS")
                 .pattern("SSS")
-                .define('S', AlexandriteSet.ALEXANDRITE.get())
-                .unlockedBy(getHasName(AlexandriteSet.ALEXANDRITE.get()), has(AlexandriteSet.ALEXANDRITE.get()))
+                .define('S', JadeSet.JADE.get())
+                .unlockedBy(getHasName(JadeSet.JADE.get()), has(JadeSet.JADE.get()))
                 .save(pWriter);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, AlexandriteSet.ALEXANDRITE.get(), 9)
-                .requires(ModBlocks.ALEXANDRITE_BLOCK.get())
-                .unlockedBy(getHasName(ModBlocks.ALEXANDRITE_BLOCK.get()), has(ModBlocks.ALEXANDRITE_BLOCK.get()))
-                .save(pWriter);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, JadeSet.JADE.get(), 9)
+                .requires(ModBlocks.JADE_BLOCK.get())
+                .unlockedBy(getHasName(ModBlocks.JADE_BLOCK.get()), has(ModBlocks.JADE_BLOCK.get()))
+                .save(pWriter); */
 
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.QUINTESSITE_BLOCK.get())
                 .pattern("SSS")
@@ -902,11 +1236,11 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("SSS")
                 .pattern("SSS")
                 .pattern("SSS")
-                .define('S', FluxiteSet.FLUXITE.get())
-                .unlockedBy(getHasName(FluxiteSet.FLUXITE.get()), has(FluxiteSet.FLUXITE.get()))
+                .define('S', VoltiumSet.FLUXITE.get())
+                .unlockedBy(getHasName(VoltiumSet.FLUXITE.get()), has(VoltiumSet.FLUXITE.get()))
                 .save(pWriter);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, FluxiteSet.FLUXITE.get(), 9)
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, VoltiumSet.FLUXITE.get(), 9)
                 .requires(ModBlocks.FLUXITE_BLOCK.get())
                 .unlockedBy(getHasName(ModBlocks.FLUXITE_BLOCK.get()), has(ModBlocks.FLUXITE_BLOCK.get()))
                 .save(pWriter);
@@ -937,7 +1271,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModBlocks.STARRITE_BLOCK.get()), has(ModBlocks.STARRITE_BLOCK.get()))
                 .save(pWriter);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.COBALT_BLOCK.get())
+       /* ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.COBALT_BLOCK.get())
                 .pattern("SSS")
                 .pattern("SSS")
                 .pattern("SSS")
@@ -948,7 +1282,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, CobaltSet.COBALT_INGOT.get(), 9)
                 .requires(ModBlocks.COBALT_BLOCK.get())
                 .unlockedBy(getHasName(ModBlocks.COBALT_BLOCK.get()), has(ModBlocks.COBALT_BLOCK.get()))
-                .save(pWriter, ExampleMod.MOD_ID + ":cobalt_ingot_from_block");
+                .save(pWriter, ExampleMod.MOD_ID + ":cobalt_ingot_from_block"); */
 
 
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ROSE_GOLD_BLOCK.get())
@@ -991,7 +1325,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModBlocks.STAR_PLATINUM_BLOCK.get()), has(ModBlocks.STAR_PLATINUM_BLOCK.get()))
                 .save(pWriter, ExampleMod.MOD_ID + ":star_platinum_ingot_from_block");
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.RAW_COBALT_BLOCK.get())
+       /* ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.RAW_COBALT_BLOCK.get())
                 .pattern("SSS")
                 .pattern("SSS")
                 .pattern("SSS")
@@ -1002,7 +1336,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, CobaltSet.RAW_COBALT.get(), 9)
                 .requires(ModBlocks.RAW_COBALT_BLOCK.get())
                 .unlockedBy(getHasName(ModBlocks.RAW_COBALT_BLOCK.get()), has(ModBlocks.RAW_COBALT_BLOCK.get()))
-                .save(pWriter, ExampleMod.MOD_ID + ":raw_cobalt_from_block");
+                .save(pWriter, ExampleMod.MOD_ID + ":raw_cobalt_from_block"); */
 
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.RAW_PLATINUM_BLOCK.get())
                 .pattern("SSS")
@@ -1530,7 +1864,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
 
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, CobaltSet.COBALT_HELMET.get())
+        /* ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, CobaltSet.COBALT_HELMET.get())
                 .pattern("SSS")
                 .pattern("S S")
                 .define('S', CobaltSet.COBALT_INGOT.get())
@@ -1621,7 +1955,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('S', CobaltSet.COBALT_INGOT.get())  
                 .define('#', Items.STICK)                    
                 .unlockedBy(getHasName(CobaltSet.COBALT_INGOT.get()), has(CobaltSet.COBALT_INGOT.get()))
-                .save(pWriter, ExampleMod.MOD_ID + ":cobalt_hoe_2");
+                .save(pWriter, ExampleMod.MOD_ID + ":cobalt_hoe_2"); */
 
 
 
@@ -1975,15 +2309,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern(" # ") 
                 .define('S', StarPlatinumSet.STAR_PLATINUM_INGOT.get())  
                 .define('#', Misc.IRON_STICK.get())                        
-                .unlockedBy(getHasName(StarPlatinumSet.STAR_PLATINUM_INGOT.get()), has(StarPlatinumSet.STAR_PLATINUM_INGOT.get()))
-                .save(pWriter);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, StarPlatinumSet.STAR_PLATINUM_SWORD.get())
-                .pattern(" S ")  
-                .pattern(" S ")
-                .pattern(" # ") 
-                .define('S', StarPlatinumSet.STAR_PLATINUM_INGOT.get())  
-                .define('#', Misc.IRON_STICK.get())                  
                 .unlockedBy(getHasName(StarPlatinumSet.STAR_PLATINUM_INGOT.get()), has(StarPlatinumSet.STAR_PLATINUM_INGOT.get()))
                 .save(pWriter);
 
@@ -2576,6 +2901,98 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
 
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, SteelSet.STEEL_HELMET.get())
+                .pattern("AAA")
+                .pattern("A A")
+                .define('A', SteelSet.STEEL_INGOT.get())
+                .unlockedBy(getHasName(SteelSet.STEEL_INGOT.get()), has(SteelSet.STEEL_INGOT.get()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, SteelSet.STEEL_CHESTPLATE.get())
+                .pattern("A A")
+                .pattern("AAA")
+                .pattern("AAA")
+                .define('A', SteelSet.STEEL_INGOT.get())
+                .unlockedBy(getHasName(SteelSet.STEEL_INGOT.get()), has(SteelSet.STEEL_INGOT.get()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, SteelSet.STEEL_LEGGINGS.get())
+                .pattern("AAA")
+                .pattern("A A")
+                .pattern("A A")
+                .define('A', SteelSet.STEEL_INGOT.get())
+                .unlockedBy(getHasName(SteelSet.STEEL_INGOT.get()), has(SteelSet.STEEL_INGOT.get()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, SteelSet.STEEL_BOOTS.get())
+                .pattern("A A")
+                .pattern("A A")
+                .define('A', SteelSet.STEEL_INGOT.get())
+                .unlockedBy(getHasName(SteelSet.STEEL_INGOT.get()), has(SteelSet.STEEL_INGOT.get()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, SteelSet.STEEL_PICKAXE.get())
+                .pattern("AAA")
+                .pattern(" # ")
+                .pattern(" # ")
+                .define('A', SteelSet.STEEL_INGOT.get())
+                .define('#', Items.STICK)
+                .unlockedBy(getHasName(SteelSet.STEEL_INGOT.get()), has(SteelSet.STEEL_INGOT.get()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, SteelSet.STEEL_SWORD.get())
+                .pattern(" A ")
+                .pattern(" A ")
+                .pattern(" # ")
+                .define('A', SteelSet.STEEL_INGOT.get())
+                .define('#', Items.STICK)
+                .unlockedBy(getHasName(SteelSet.STEEL_INGOT.get()), has(SteelSet.STEEL_INGOT.get()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, SteelSet.STEEL_AXE.get())
+                .pattern("AA ")
+                .pattern("A# ")
+                .pattern(" # ")
+                .define('A', SteelSet.STEEL_INGOT.get())
+                .define('#', Items.STICK)
+                .unlockedBy(getHasName(SteelSet.STEEL_INGOT.get()), has(SteelSet.STEEL_INGOT.get()))
+                .save(pWriter, ExampleMod.MOD_ID + ":steel_axe_1");
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, SteelSet.STEEL_AXE.get())
+                .pattern(" AA")
+                .pattern(" #A")
+                .pattern(" # ")
+                .define('A', SteelSet.STEEL_INGOT.get())
+                .define('#', Items.STICK)
+                .unlockedBy(getHasName(SteelSet.STEEL_INGOT.get()), has(SteelSet.STEEL_INGOT.get()))
+                .save(pWriter, ExampleMod.MOD_ID + ":steel_axe_2");
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, SteelSet.STEEL_HOE.get())
+                .pattern("AA ")
+                .pattern(" # ")
+                .pattern(" # ")
+                .define('A', SteelSet.STEEL_INGOT.get())
+                .define('#', Items.STICK)
+                .unlockedBy(getHasName(SteelSet.STEEL_INGOT.get()), has(SteelSet.STEEL_INGOT.get()))
+                .save(pWriter, ExampleMod.MOD_ID + ":steel_hoe_1");
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, SteelSet.STEEL_HOE.get())
+                .pattern(" AA")
+                .pattern(" # ")
+                .pattern(" # ")
+                .define('A', SteelSet.STEEL_INGOT.get())
+                .define('#', Items.STICK)
+                .unlockedBy(getHasName(SteelSet.STEEL_INGOT.get()), has(SteelSet.STEEL_INGOT.get()))
+                .save(pWriter, ExampleMod.MOD_ID + ":steel_hoe_2");
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, SteelSet.STEEL_SHOVEL.get())
+                .pattern(" A ")
+                .pattern(" # ")
+                .pattern(" # ")
+                .define('A', SteelSet.STEEL_INGOT.get())
+                .define('#', Items.STICK)
+                .unlockedBy(getHasName(SteelSet.STEEL_INGOT.get()), has(SteelSet.STEEL_INGOT.get()))
+                .save(pWriter);
 
 
 
@@ -2586,7 +3003,18 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
 
 
-            // 1. The Smithing Upgrade Recipe
+
+
+
+
+
+
+
+
+
+
+
+        // 1. The Smithing Upgrade Recipe
             SmithingTransformRecipeBuilder.smithing(
                             Ingredient.of(FireiteSet.FIREITE_UPGRADE_SMITHING_TEMPLATE.get()), // Your template
                             Ingredient.of(Items.DIAMOND_SWORD),                    // Base item

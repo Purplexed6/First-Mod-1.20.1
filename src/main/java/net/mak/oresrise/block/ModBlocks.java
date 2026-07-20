@@ -3,17 +3,11 @@ package net.mak.oresrise.block;
 import net.mak.oresrise.ExampleMod;
 import net.mak.oresrise.block.custom.*;
 import net.mak.oresrise.item.ModItems;
-import net.mak.oresrise.sound.ModSounds;
-import net.mak.oresrise.worldgen.tree.AmberwoodTreeGrower;
-import net.minecraft.core.BlockPos;
-import net.minecraft.core.Direction;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -58,11 +52,11 @@ public class ModBlocks {
             () -> new VibraniumOreBlock(BlockBehaviour.Properties.copy(Blocks.DIAMOND_ORE)
                     .requiresCorrectToolForDrops(), UniformInt.of(4, 8)));
 
-    public static final RegistryObject<Block> OBLIVIONITE_BLOCK = registerBlock("oblivionite_block",
+    /* public static final RegistryObject<Block> OBLIVIONITE_BLOCK = registerBlock("oblivionite_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).sound(SoundType.AMETHYST)));
     public static final RegistryObject<Block> OBLIVIONITE_ORE = registerBlock("oblivionite_ore",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.DIAMOND_ORE)
-                    .requiresCorrectToolForDrops(), UniformInt.of(15, 20)));
+                    .requiresCorrectToolForDrops(), UniformInt.of(15, 20))); */
 
     public static final RegistryObject<Block> WITHERITE_BLOCK = registerBlock("witherite_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).sound(SoundType.STONE)));
@@ -90,14 +84,14 @@ public class ModBlocks {
             () -> new HemogemOreBlock(BlockBehaviour.Properties.copy(Blocks.DIAMOND_ORE)
                     .requiresCorrectToolForDrops(), UniformInt.of(4, 8)));
 
-    public static final RegistryObject<Block> ALEXANDRITE_BLOCK = registerBlock("alexandrite_block",
+    /* public static final RegistryObject<Block> JADE_BLOCK = registerBlock("jade_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).sound(SoundType.AMETHYST)));
-    public static final RegistryObject<Block> ALEXANDRITE_ORE = registerBlock("alexandrite_ore",
+    public static final RegistryObject<Block> JADE_ORE = registerBlock("jade_ore",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.DIAMOND_ORE)
                     .requiresCorrectToolForDrops(), UniformInt.of(4, 8)));
-    public static final RegistryObject<Block> DEEPSLATE_ALEXANDRITE_ORE = registerBlock("deepslate_alexandrite_ore",
+    public static final RegistryObject<Block> DEEPSLATE_JADE_ORE = registerBlock("deepslate_jade_ore",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_DIAMOND_ORE)
-                    .requiresCorrectToolForDrops(), UniformInt.of(4, 8)));
+                    .requiresCorrectToolForDrops(), UniformInt.of(4, 8))); */
 
     public static final RegistryObject<Block> QUINTESSITE_BLOCK = registerBlock("quintessite_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).sound(SoundType.AMETHYST)));
@@ -122,6 +116,8 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> FLUXITE_BLOCK = registerBlock("fluxite_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).sound(SoundType.AMETHYST)));
+    public static final RegistryObject<Block> VOLTIUM_BLOCK = registerBlock("voltium_block",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).sound(SoundType.STONE)));
     public static final RegistryObject<Block> FLUXITE_ORE = registerBlock("fluxite_ore",
             () -> new FluxiteOreBlock(BlockBehaviour.Properties.copy(Blocks.DIAMOND_ORE)
                     .requiresCorrectToolForDrops(), UniformInt.of(4, 8)));
@@ -149,13 +145,13 @@ public class ModBlocks {
     public static final RegistryObject<Block> STAR_PLATINUM_BLOCK = registerBlock("star_platinum_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).sound(SoundType.STONE)));
 
-    public static final RegistryObject<Block> COBALT_BLOCK = registerBlock("cobalt_block",
+    /* public static final RegistryObject<Block> COBALT_BLOCK = registerBlock("cobalt_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).sound(SoundType.STONE)));
     public static final RegistryObject<Block> RAW_COBALT_BLOCK = registerBlock("raw_cobalt_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.RAW_GOLD_BLOCK).sound(SoundType.STONE)));
     public static final RegistryObject<Block> COBALT_ORE = registerBlock("cobalt_ore",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.IRON_ORE)
-                    .requiresCorrectToolForDrops(), UniformInt.of(5, 7)));
+                    .requiresCorrectToolForDrops(), UniformInt.of(5, 7))); */
 
     public static final RegistryObject<Block> MALACHITE_BLOCK = registerBlock("malachite_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).sound(SoundType.AMETHYST)));
@@ -169,62 +165,15 @@ public class ModBlocks {
     public static final RegistryObject<Block> ROSE_GOLD_BLOCK = registerBlock("rose_gold_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.STONE)));
 
-    public static final RegistryObject<Block> ICE_CRYSTAL_BLOCK = registerBlock("ice_crystal_block",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.AMETHYST_CLUSTER)
-                    .sound(SoundType.GLASS)
-                    .strength(0.3f)
-                    .lightLevel(state -> 5)));
+    public static final RegistryObject<Block> STEEL_BLOCK = registerBlock("steel_block",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.STONE)));
 
-    public static final RegistryObject<Block> STRAWBERRY_CROP = BLOCKS.register("strawberry_crop",
-            () -> new StrawberryCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));
-    public static final RegistryObject<Block> SOUND_BLOCK = registerBlock("sound_block",
-            () -> new SoundBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(ModSounds.SOUND_BLOCK_SOUNDS)));
+    public static final RegistryObject<Block> KEYOLITE_BLOCK = registerBlock("keyolite_block",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.STONE)));
 
-    public static final RegistryObject<Block> AMBERWOOD_LOG = BLOCKS.register("amberwood_log",
-            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
-    public static final RegistryObject<Block> AMBERWOOD_WOOD = BLOCKS.register("amberwood_wood",
-            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)));
-    public static final RegistryObject<Block> STRIPPED_AMBERWOOD_LOG = BLOCKS.register("stripped_amberwood_log",
-            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)));
-    public static final RegistryObject<Block> STRIPPED_AMBERWOOD_WOOD = BLOCKS.register("stripped_amberwood_wood",
-            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)));
+    public static final RegistryObject<Block> OBSIDIUM_BLOCK = registerBlock("obsidium_block",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.OBSIDIAN).sound(SoundType.STONE)));
 
-    public static final RegistryObject<Block> AMBERWOOD_PLANKS = BLOCKS.register("amberwood_planks",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)) {
-                @Override
-                public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
-                    return true;}
-                @Override
-                public int getFlammability(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
-                    return 20;}
-                @Override
-                public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
-                    return 5;}});
-    public static final RegistryObject<Block> AMBERWOOD_LEAVES = BLOCKS.register("amberwood_leaves",
-            () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)) {
-                @Override
-                public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
-                    return true;}
-                @Override
-                public int getFlammability(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
-                    return 60;}
-                @Override
-                public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
-                    return 30;}});
-
-    public static final RegistryObject<Block> AMBERWOOD_SAPLING = BLOCKS.register("amberwood_sapling",
-            () -> new SaplingBlock(new AmberwoodTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
-
-    public static final RegistryObject<Block> PALESLATE = BLOCKS.register("paleslate",
-            () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.BASALT)));
-
-    public static final RegistryObject<Block> ASTRALITE = BLOCKS.register("astralite",
-            () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STONE)));
-    public static final RegistryObject<Block> UMBROCK = BLOCKS.register("umbrock",
-            () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE)));
-
-    public static final RegistryObject<Block> MOD_PORTAL = registerBlock("mod_portal",
-            () -> new ModPortalBlock(BlockBehaviour.Properties.copy(Blocks.STONE).noLootTable().noOcclusion().noCollission()));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

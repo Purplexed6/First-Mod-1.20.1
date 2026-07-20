@@ -13,5 +13,6 @@
       "condition": "minecraft:random_chance"
     }
   ],
+  "count": 1,
   "item": "oresrise:ender_slag"
 }
