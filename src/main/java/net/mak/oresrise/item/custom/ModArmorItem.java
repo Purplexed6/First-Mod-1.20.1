@@ -17,7 +17,6 @@ import java.util.Map;
 
 public class ModArmorItem extends ArmorItem {
 
-    // 💎 NORMAL EFFECTS (like regen)
     private static final Map<ArmorMaterial, List<MobEffectInstance>> MATERIAL_TO_EFFECT_MAP =
             new ImmutableMap.Builder<ArmorMaterial, List<MobEffectInstance>>()
 

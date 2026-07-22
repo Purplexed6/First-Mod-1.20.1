@@ -1,4 +1,4 @@
-// 1.20.1	2026-07-22T17:25:34.100009	Recipes
+// 1.20.1	2026-07-22T19:48:06.5624095	Recipes
 a69c0ce42fcfc8087d7e752ab01ef269ca37ee87 data/minecraft/advancements/recipes/misc/coal.json
 c91e83cd9531e22927b7032b2f0cf4f773090c13 data/minecraft/recipes/coal.json
 f226ae18ed38f45759c139d1e15e7e06a29f876c data/oresrise/advancements/recipes/building_blocks/aquamarine_block.json
@@ -580,7 +580,7 @@ d332a9886dbababad675310f401c9554766fa6b8 data/oresrise/recipes/rosite_from_nugge
 235b7b87416d9349cd83febba90b61eca94d82b4 data/oresrise/recipes/rosite_helmet.json
 9dabd36f5b4fba33a7899fead4cb8c7576fd717a data/oresrise/recipes/rosite_hoe_1.json
 fc1faee6d9ef922ffb15f6a2c646fa23524f075f data/oresrise/recipes/rosite_hoe_2.json
-f53e91741e93db4c328f1ac44dfbbeaada013799 data/oresrise/recipes/rosite_ingot.json
+ac4cebd60de7ef68ab7315764098cd55b58bc7a6 data/oresrise/recipes/rosite_ingot.json
 e8f5d6f6a9a648d3a392b3ccd37ee66079438d72 data/oresrise/recipes/rosite_leggings.json
 6801dcc5645102816907179ea474e63510193c7f data/oresrise/recipes/rosite_nugget.json
 fed3a590ceae184eb109e0ae50d5adc6c000a600 data/oresrise/recipes/rosite_pickaxe.json
