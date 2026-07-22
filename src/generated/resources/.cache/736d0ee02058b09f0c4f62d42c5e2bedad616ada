@@ -1,10 +1,7 @@
-// 1.20.1	2026-07-18T20:39:26.3101599	Global Loot Modifiers : oresrise
-2c2c591dbd1984da4e18d99b17adc5a9d17c5514 data/forge/loot_modifiers/global_loot_modifiers.json
+// 1.20.1	2026-07-22T17:25:34.1048771	Global Loot Modifiers : oresrise
+48b0f669af9fbb0f6c1c2152238e2e698a6d1783 data/forge/loot_modifiers/global_loot_modifiers.json
 b61325071ce91fd03ca0229f1c64924de91f4ae2 data/oresrise/loot_modifiers/blaze_slag_from_blaze.json
 d6d7f50247717ed9812a8e0118b30af3a7574595 data/oresrise/loot_modifiers/end_slag_from_enderman.json
-85868cfc4966e0d5f07c38a4b526b5f593fb7118 data/oresrise/loot_modifiers/ice_crystal_from_igloos.json
-331673485e1c677637628bad7f20dea7008a4027 data/oresrise/loot_modifiers/ice_crystal_from_snowy_village.json
-9066c2445e82354a8646a04bb862ede7263e4b31 data/oresrise/loot_modifiers/ice_crystal_from_stray.json
 f066414629c3cda4c4ae50a99dda87d0ddf9a4bb data/oresrise/loot_modifiers/metal_detector_from_jungle_temples.json
 e34358f7814d767660c7e49c88ffe3fe95fcc063 data/oresrise/loot_modifiers/raw_witherite_from_wither.json
 62ebbac5e20b2d63ac66b0955421466bdd5383d5 data/oresrise/loot_modifiers/witherite_from_wither_skeleton.json

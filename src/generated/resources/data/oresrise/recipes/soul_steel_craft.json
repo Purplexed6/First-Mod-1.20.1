@@ -6,9 +6,6 @@
       "item": "oresrise:soul_crystal"
     },
     {
-      "item": "oresrise:soul_crystal"
-    },
-    {
       "item": "oresrise:soul_essence"
     },
     {
@@ -18,13 +15,16 @@
       "item": "minecraft:netherite_ingot"
     },
     {
-      "item": "minecraft:netherite_ingot"
+      "item": "minecraft:diamond"
     },
     {
-      "item": "minecraft:netherite_ingot"
+      "item": "minecraft:netherite_scrap"
     },
     {
-      "item": "minecraft:netherite_ingot"
+      "item": "minecraft:netherite_scrap"
+    },
+    {
+      "item": "minecraft:netherite_scrap"
     },
     {
       "item": "oresrise:stardust"

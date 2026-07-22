@@ -38,10 +38,13 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
 
                         ModBlocks.ROSITE_BLOCK.get(),
 
+                        ModBlocks.OBSIDIUM_BLOCK.get(),
+
                        // ModBlocks.JADE_ORE.get(),
                       //  ModBlocks.DEEPSLATE_JADE_ORE.get(),
 
                         ModBlocks.AQUAMARINE_ORE.get(),
+                        ModBlocks.AQUAMARINE_BLOCK.get(),
 
                         ModBlocks.MALACHITE_ORE.get(),
                         ModBlocks.DEEPSLATE_MALACHITE_ORE.get(),
@@ -59,6 +62,10 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.STARRITE_BLOCK.get(),
                         ModBlocks.STARRITE_ORE.get(),
 
+                        ModBlocks.VIBRANIUM_ORE.get(),
+                        ModBlocks.VIBRANIUM_BLOCK.get(),
+                        ModBlocks.ROUGH_VIBRANIUM_BLOCK.get(),
+
 
 
 
@@ -71,6 +78,7 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
 
                         ModBlocks.FLUXITE_ORE.get(),
                         ModBlocks.FLUXITE_BLOCK.get(),
+                        ModBlocks.VOLTIUM_BLOCK.get(),
 
                         ModBlocks.WITHERITE_BLOCK.get(),
                         ModBlocks.RAW_WITHERITE_BLOCK.get(),
@@ -136,6 +144,8 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.FLUXITE_ORE.get(),
                         ModBlocks.FLUXITE_BLOCK.get(),
                         ModBlocks.VOLTIUM_BLOCK.get(),
+
+                        ModBlocks.AQUAMARINE_BLOCK.get(),
 
                         ModBlocks.HEMOGEM_ORE.get(),
                         ModBlocks.HEMOGEM_BLOCK.get());

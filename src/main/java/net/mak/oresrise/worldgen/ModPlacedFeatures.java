@@ -51,7 +51,7 @@ public class ModPlacedFeatures {
                                 VerticalAnchor.absolute(16))));
 
         register(context, FLUXITE_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.FLUXITE_ORE_KEY),
-                ModOrePlacement.commonOrePlacement(4,
+                ModOrePlacement.commonOrePlacement(100,
                         HeightRangePlacement.uniform(
                                 VerticalAnchor.absolute(-64),
                                 VerticalAnchor.absolute(256))));

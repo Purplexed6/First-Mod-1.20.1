@@ -6,6 +6,8 @@ import net.mak.oresrise.item.ModToolTiers;
 import net.minecraft.world.item.*;
 import net.minecraftforge.registries.RegistryObject;
 
+import static net.mak.oresrise.item.ModItems.ITEMS;
+
 public class LunarisSet {
 
     public static final RegistryObject<Item> LUNARIS = ModItems.ITEMS.register("lunaris",
@@ -30,6 +32,9 @@ public class LunarisSet {
             () -> new ArmorItem(ModArmorMaterials.LUNARIS, ArmorItem.Type.LEGGINGS, new Item.Properties()));
     public static final RegistryObject<Item> LUNARIS_BOOTS = ModItems.ITEMS.register("lunaris_boots",
             () -> new ArmorItem(ModArmorMaterials.LUNARIS, ArmorItem.Type.BOOTS, new Item.Properties()));
+
+    public static final RegistryObject<Item> LUNARIS_UPGRADE_SMITHING_TEMPLATE = ITEMS.register("smithing_template.lunaris_upgrade",
+            ModSmithingTemplateItem::createLunarisUpgradeTemplate);
 
     public static void register() {}
 }

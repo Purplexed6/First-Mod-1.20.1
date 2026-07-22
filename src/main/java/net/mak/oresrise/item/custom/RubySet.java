@@ -25,7 +25,7 @@ public class RubySet {
             () -> new HoeItem(ModToolTiers.RUBY, -3, -0.0f, new Item.Properties()));
 
     public static final RegistryObject<Item> RUBY_HELMET = ModItems.ITEMS.register("ruby_helmet",
-            () -> new ArmorItem(ModArmorMaterials.RUBY, ArmorItem.Type.HELMET, new Item.Properties()));
+            () -> new ModArmorItem(ModArmorMaterials.RUBY, ArmorItem.Type.HELMET, new Item.Properties()));
     public static final RegistryObject<Item> RUBY_CHESTPLATE = ModItems.ITEMS.register("ruby_chestplate",
             () -> new ArmorItem(ModArmorMaterials.RUBY, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
     public static final RegistryObject<Item> RUBY_LEGGINGS = ModItems.ITEMS.register("ruby_leggings",

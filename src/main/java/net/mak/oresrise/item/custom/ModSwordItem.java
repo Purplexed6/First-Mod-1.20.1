@@ -185,6 +185,18 @@ public class ModSwordItem extends SwordItem {
             ));
         }
 
+        if (this.getTier() == ModToolTiers.KEYOLITE) {
+
+            target.addEffect(new MobEffectInstance(
+                    MobEffects.LEVITATION,
+                    20,
+                    4,
+                    false,
+                    false,
+                    false
+            ));
+        }
+
         if (this.getTier() == ModToolTiers.STAR_PLATINUM && attacker instanceof Player player) {
 
             var id = player.getUUID();

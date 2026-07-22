@@ -36,7 +36,7 @@ public class ModGlobalLootModifiersProvider extends GlobalLootModifierProvider {
         add("metal_detector_from_jungle_temples", new AddItemModifier(new LootItemCondition[] {
                 new LootTableIdCondition.Builder(ResourceLocation.fromNamespaceAndPath("minecraft", "chests/jungle_temple")).build() }, ModItems.ORE_DETECTOR.get(), 1));
 
-        add("ice_crystal_from_igloos", new AddItemModifier(new LootItemCondition[] {
+        /*add("ice_crystal_from_igloos", new AddItemModifier(new LootItemCondition[] {
                 new LootTableIdCondition.Builder(
                         ResourceLocation.fromNamespaceAndPath("minecraft", "chests/igloo")
                 ).build(),
@@ -48,7 +48,7 @@ public class ModGlobalLootModifiersProvider extends GlobalLootModifierProvider {
                         ResourceLocation.fromNamespaceAndPath("minecraft", "chests/village/village_snowy_house")
                 ).build(),
                 LootItemRandomChanceCondition.randomChance(0.2f).build()
-        }, Misc.ICE_CRYSTAL.get(), 1));
+        }, Misc.ICE_CRYSTAL.get(), 1)); */
 
         add("blaze_slag_from_blaze", new AddItemModifier(new LootItemCondition[] {
                 LootItemEntityPropertyCondition.hasProperties(LootContext.EntityTarget.THIS,
@@ -68,11 +68,11 @@ public class ModGlobalLootModifiersProvider extends GlobalLootModifierProvider {
                 LootItemRandomChanceCondition.randomChance(0.2f).build()
         }, WitheriteSet.RAW_WITHERITE.get(), 1));
 
-        add("ice_crystal_from_stray", new AddItemModifier(new LootItemCondition[] {
+        /*add("ice_crystal_from_stray", new AddItemModifier(new LootItemCondition[] {
                 LootItemEntityPropertyCondition.hasProperties(LootContext.EntityTarget.THIS,
                         EntityPredicate.Builder.entity().of(EntityType.STRAY)).build(),
                 LootItemRandomChanceCondition.randomChance(0.2f).build()
-        }, Misc.ICE_CRYSTAL.get(), 1));
+        }, Misc.ICE_CRYSTAL.get(), 1));*/
 
         add("end_slag_from_enderman", new AddItemModifier(new LootItemCondition[] {
                 LootItemEntityPropertyCondition.hasProperties(LootContext.EntityTarget.THIS,

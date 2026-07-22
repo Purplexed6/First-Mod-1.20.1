@@ -1,4 +1,4 @@
-// 1.20.1	2026-07-20T20:38:13.2385886	Registries
+// 1.20.1	2026-07-21T22:02:30.6127823	Registries
 19b7033fcdaf7f131e5b681a9c7408e8ef938c57 data/oresrise/forge/biome_modifier/add_aquamarine_ore.json
 824c4f836a30320eff60c6e96bba1f99d5a011f6 data/oresrise/forge/biome_modifier/add_crypton_ore.json
 6a5e3274c867db1fb29865deb730b63ea27caed3 data/oresrise/forge/biome_modifier/add_fluxite_ore.json
@@ -12,7 +12,7 @@ dba5984246e14105701c07e629a8f936ede8780b data/oresrise/forge/biome_modifier/add_
 34b152dc9abc21277cab805de6f198bb417bd3f0 data/oresrise/forge/biome_modifier/add_vibranium_ore.json
 6ec5e64b0e6012de6c5322b261f73a7d208746dd data/oresrise/worldgen/configured_feature/aquamarine_ore.json
 e634a67a202614e0510d517144634c9142129e64 data/oresrise/worldgen/configured_feature/crypton_ore.json
-3218e53dd8d53d54a1ab08366e29c7b98483cf89 data/oresrise/worldgen/configured_feature/fluxite_ore.json
+5340d197609f09a553f286ac8ba6cb837226a6ad data/oresrise/worldgen/configured_feature/fluxite_ore.json
 77f9eacbba2542c8103799d343be653ca72724c6 data/oresrise/worldgen/configured_feature/hemogem_ore.json
 c03a95fd65a7cb1a82963f34054eef72e0f1d617 data/oresrise/worldgen/configured_feature/lunaris_ore.json
 1b197dee297fea89c56596a72c06ffa4e1f67400 data/oresrise/worldgen/configured_feature/quintessite_ore.json
@@ -23,7 +23,7 @@ f486f2bcbdcef2d783545cfc2c6c84da95590b72 data/oresrise/worldgen/configured_featu
 fe19d17773dc858190bb113e5b0cc48992d1d3cf data/oresrise/worldgen/configured_feature/vibranium_ore.json
 aee073d3997529d325679d910064f519fd399d42 data/oresrise/worldgen/placed_feature/aquamarine_ore_placed.json
 91b76d97019ebb8d14857647cf54c5d659d78f73 data/oresrise/worldgen/placed_feature/crypton_ore_placed.json
-c1c34fa94cbbca0a6231c1504aa0984a2c6ca0da data/oresrise/worldgen/placed_feature/fluxite_ore_placed.json
+fd29cd14df400021a1ccdb5c1bdfea304da76d36 data/oresrise/worldgen/placed_feature/fluxite_ore_placed.json
 d03c9aa84acb6a7b927c6e2cd3e71afb76694ed1 data/oresrise/worldgen/placed_feature/hemogem_ore_placed.json
 9a3bcc7be079b7848255201757346c4ee14c0b68 data/oresrise/worldgen/placed_feature/lunaris_ore_placed.json
 97bf0d9e5b0d911ce1beec0b3adb4e8973bc1e4d data/oresrise/worldgen/placed_feature/quintessite_ore_placed.json

@@ -22,12 +22,13 @@ public class ModTags {
        // public static final TagKey<Block> NEEDS_JADE_TOOL = tag("needs_jade_tool");
         public static final TagKey<Block> NEEDS_AQUAMARINE_TOOL = tag("needs_aquamarine_tool");
         public static final TagKey<Block> NEEDS_PLATINUM_TOOL = tag("needs_platinum_tool");
-        public static final TagKey<Block> NEEDS_OBSIDIAN_TOOL = tag("needs_obsidian_tool");
+        public static final TagKey<Block> NEEDS_OBSIDIUM_TOOL = tag("needs_obsidium_tool");
         public static final TagKey<Block> NEEDS_STARRITE_TOOL = tag("needs_starrite_tool");
         public static final TagKey<Block> NEEDS_RESONITE_TOOL = tag("needs_resonite_tool");
         public static final TagKey<Block> NEEDS_STAR_PLATINUM_TOOL = tag("needs_star_platinum_tool");
-        public static final TagKey<Block> NEEDS_VOLTIUM_TOOL = tag("needs_fluxite_tool");
-        public static final TagKey<Block> NEEDS_FIREITE_TOOL = tag("needs_fireite_tool");
+        public static final TagKey<Block> NEEDS_VOLTIUM_TOOL = tag("needs_voltium_tool");
+        public static final TagKey<Block> NEEDS_KEYOLITE_TOOL = tag("needs_keyolite_tool");
+       // public static final TagKey<Block> NEEDS_FIREITE_TOOL = tag("needs_fireite_tool");
         public static final TagKey<Block> NEEDS_HEMOGEM_TOOL = tag("needs_hemogem_tool");
         public static final TagKey<Block> NEEDS_QUINTESSITE_TOOL = tag("needs_quintessite_tool");
         public static final TagKey<Block> NEEDS_WITHERITE_TOOL = tag("needs_witherite_tool");

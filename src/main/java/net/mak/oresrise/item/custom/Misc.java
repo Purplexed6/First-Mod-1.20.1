@@ -31,8 +31,8 @@ public class Misc {
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> WITHERED_BONE = ModItems.ITEMS.register("withered_bone",
             () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> ICE_CRYSTAL = ModItems.ITEMS.register("ice_crystal",
-            () -> new Item(new Item.Properties()));
+    //public static final RegistryObject<Item> ICE_CRYSTAL = ModItems.ITEMS.register("ice_crystal",
+     //       () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> NETHERITE_NUGGET = ModItems.ITEMS.register("netherite_nugget",
             () -> new Item(new Item.Properties()));
 

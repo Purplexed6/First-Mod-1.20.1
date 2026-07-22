@@ -25,7 +25,7 @@ public class AquamarineSet {
             () -> new HoeItem(ModToolTiers.AQUAMARINE, -3, 0, new Item.Properties()));
 
     public static final RegistryObject<Item> AQUAMARINE_HELMET = ModItems.ITEMS.register("aquamarine_helmet",
-            () -> new ArmorItem(ModArmorMaterials.AQUAMARINE, ArmorItem.Type.HELMET, new Item.Properties()));
+            () -> new ModArmorItem(ModArmorMaterials.AQUAMARINE, ArmorItem.Type.HELMET, new Item.Properties()));
     public static final RegistryObject<Item> AQUAMARINE_CHESTPLATE = ModItems.ITEMS.register("aquamarine_chestplate",
             () -> new ArmorItem(ModArmorMaterials.AQUAMARINE, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
     public static final RegistryObject<Item> AQUAMARINE_LEGGINGS = ModItems.ITEMS.register("aquamarine_leggings",

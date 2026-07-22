@@ -3,7 +3,7 @@
   "category": "equipment",
   "key": {
     "#": {
-      "item": "minecraft:stick"
+      "item": "oresrise:obsidian_stick"
     },
     "S": {
       "item": "oresrise:starrite"

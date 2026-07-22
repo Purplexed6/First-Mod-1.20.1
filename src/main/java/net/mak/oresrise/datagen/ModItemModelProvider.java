@@ -70,6 +70,15 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(KeyoliteSet.ROSAL_COMPOUND);
         simpleItem(KeyoliteSet.KEYOLITE_INGOT);
         simpleItem(KeyoliteSet.KEYOLITE_NUGGET);
+        simpleItem(KeyoliteSet.KEYOLITE_HELMET);
+        simpleItem(KeyoliteSet.KEYOLITE_CHESTPLATE);
+        simpleItem(KeyoliteSet.KEYOLITE_LEGGINGS);
+        simpleItem(KeyoliteSet.KEYOLITE_BOOTS);
+        handheldItem(KeyoliteSet.KEYOLITE_SWORD);
+        handheldItem(KeyoliteSet.KEYOLITE_PICKAXE);
+        handheldItem(KeyoliteSet.KEYOLITE_AXE);
+        handheldItem(KeyoliteSet.KEYOLITE_SHOVEL);
+        handheldItem(KeyoliteSet.KEYOLITE_HOE);
 
         simpleItem(SoulSteelSet.SOUL_STEEL_INGOT);
         handheldItem(SoulSteelSet.SOUL_STEEL_SWORD);
@@ -125,16 +134,16 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(Misc.STARDUST);
         simpleItem(Misc.NETHERITE_NUGGET);
 
-        simpleItem(ObsidianSet.OBSIDIAN_SHARD);
-        simpleItem(ObsidianSet.OBSIDIAN_HELMET);
-        simpleItem(ObsidianSet.OBSIDIAN_CHESTPLATE);
-        simpleItem(ObsidianSet.OBSIDIAN_LEGGINGS);
-        simpleItem(ObsidianSet.OBSIDIAN_BOOTS);
-        handheldItem(ObsidianSet.OBSIDIAN_SWORD);
-        handheldItem(ObsidianSet.OBSIDIAN_PICKAXE);
-        handheldItem(ObsidianSet.OBSIDIAN_AXE);
-        handheldItem(ObsidianSet.OBSIDIAN_SHOVEL);
-        handheldItem(ObsidianSet.OBSIDIAN_HOE);
+        simpleItem(ObsidiumSet.OBSIDIAN_SHARD);
+        simpleItem(ObsidiumSet.OBSIDIUM_HELMET);
+        simpleItem(ObsidiumSet.OBSIDIUM_CHESTPLATE);
+        simpleItem(ObsidiumSet.OBSIDIUM_LEGGINGS);
+        simpleItem(ObsidiumSet.OBSIDIUM_BOOTS);
+        handheldItem(ObsidiumSet.OBSIDIUM_SWORD);
+        handheldItem(ObsidiumSet.OBSIDIUM_PICKAXE);
+        handheldItem(ObsidiumSet.OBSIDIUM_AXE);
+        handheldItem(ObsidiumSet.OBSIDIUM_SHOVEL);
+        handheldItem(ObsidiumSet.OBSIDIUM_HOE);
 
         handheldItem(ObsidiumSet.OBSIDIUM_INGOT);
         handheldItem(ObsidiumSet.OBSIDIUM_NUGGET);
@@ -264,6 +273,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         handheldItem(LunarisSet.LUNARIS_AXE);
         handheldItem(LunarisSet.LUNARIS_SHOVEL);
         handheldItem(LunarisSet.LUNARIS_HOE);
+        basicItem(LunarisSet.LUNARIS_UPGRADE_SMITHING_TEMPLATE.get());
 
         simpleItem(OnyxSet.ONYX);
         handheldItem(OnyxSet.ONYX_SWORD);
@@ -289,12 +299,11 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         simpleItem(MalachiteSet.MALACHITE);
 
-        simpleItem(FireiteSet.PYROGEL);
-        simpleItem(FireiteSet.FIREITE_INGOT);
-        handheldItem(FireiteSet.FIREITE_BLADE);
-        basicItem(FireiteSet.FIREITE_UPGRADE_SMITHING_TEMPLATE.get());
+        // simpleItem(FireiteSet.PYROGEL);
+        // simpleItem(FireiteSet.FIREITE_INGOT);
+       // handheldItem(FireiteSet.FIREITE_BLADE);
 
-        simpleItem(Misc.ICE_CRYSTAL);
+        //simpleItem(Misc.ICE_CRYSTAL);
 
         simpleItem(PlatinumSet.RAW_PLATINUM);
         simpleItem(PlatinumSet.PLATINUM_INGOT);

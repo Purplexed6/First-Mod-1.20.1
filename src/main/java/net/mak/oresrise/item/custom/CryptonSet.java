@@ -20,9 +20,9 @@ public class CryptonSet {
     public static final RegistryObject<Item> CRYPTON_AXE = ModItems.ITEMS.register("crypton_axe",
             () -> new AxeItem(ModToolTiers.CRYPTON, 6, -2.9f, new Item.Properties()));
     public static final RegistryObject<Item> CRYPTON_SHOVEL = ModItems.ITEMS.register("crypton_shovel",
-            () -> new AxeItem(ModToolTiers.CRYPTON, 1, -3.0f, new Item.Properties()));
+            () -> new ShovelItem(ModToolTiers.CRYPTON, 1, -3.0f, new Item.Properties()));
     public static final RegistryObject<Item> CRYPTON_HOE = ModItems.ITEMS.register("crypton_hoe",
-            () -> new AxeItem(ModToolTiers.CRYPTON, -3, 0.0f, new Item.Properties()));
+            () -> new HoeItem(ModToolTiers.CRYPTON, -3, 0.0f, new Item.Properties()));
 
     public static final RegistryObject<Item> CRYPTON_HELMET = ModItems.ITEMS.register("crypton_helmet",
             () -> new ArmorItem(ModArmorMaterials.CRYPTON, ArmorItem.Type.HELMET, new Item.Properties()));

@@ -68,7 +68,6 @@ public class ModItems {
         SapphireSet.register();
         SoulSet.register();
         Misc.register();
-        ObsidianSet.register();
         WitheriteSet.register();
         SoulSteelSet.register();
         RositeSet.register();

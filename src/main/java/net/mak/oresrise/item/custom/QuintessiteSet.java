@@ -18,9 +18,9 @@ public class QuintessiteSet {
     public static final RegistryObject<Item> QUINTESSITE_AXE = ModItems.ITEMS.register("quintessite_axe",
             () -> new AxeItem(ModToolTiers.QUINTESSITE, 6, -2.9f, new Item.Properties()));
     public static final RegistryObject<Item> QUINTESSITE_SHOVEL = ModItems.ITEMS.register("quintessite_shovel",
-            () -> new AxeItem(ModToolTiers.QUINTESSITE, 1, -3.0f, new Item.Properties()));
+            () -> new ShovelItem(ModToolTiers.QUINTESSITE, 1, -3.0f, new Item.Properties()));
     public static final RegistryObject<Item> QUINTESSITE_HOE = ModItems.ITEMS.register("quintessite_hoe",
-            () -> new AxeItem(ModToolTiers.QUINTESSITE, -3, 0.0f, new Item.Properties()));
+            () -> new HoeItem(ModToolTiers.QUINTESSITE, -3, 0.0f, new Item.Properties()));
 
     public static final RegistryObject<Item> QUINTESSITE_HELMET = ModItems.ITEMS.register("quintessite_helmet",
             () -> new ModArmorItem(ModArmorMaterials.QUINTESSITE, ArmorItem.Type.HELMET, new Item.Properties()));

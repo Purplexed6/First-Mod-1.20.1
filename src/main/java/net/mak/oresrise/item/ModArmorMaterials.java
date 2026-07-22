@@ -9,20 +9,21 @@ import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 
+import java.security.Key;
 import java.util.function.Supplier;
 
 public enum ModArmorMaterials implements ArmorMaterial {
 
-    SOULFORGED("soulforged", 40, new int[]{ 4, 9, 7, 4 }, 18,
+    SOULFORGED("soulforged", 40, new int[]{ 4, 8, 6, 4 }, 15,
             SoundEvents.ARMOR_EQUIP_DIAMOND, 2.8f, 0.1f, () -> Ingredient.of(SoulSet.SOUL_CRYSTAL.get())),
 
     HEMOGEM("hemogem", 30, new int[]{ 3, 8, 6, 3 }, 15,
             SoundEvents.ARMOR_EQUIP_GOLD,
             2.3f, // toughness (slightly above diamond, below netherite)
-            0.05f, // knockback resistance (small bonus)
+            0.01f, // knockback resistance (small bonus)
             () -> Ingredient.of(HemoSet.HEMOGEM.get())),
 
-    STEEL("steel", 30, new int[]{ 2, 7, 5, 2 }, 18,
+    STEEL("steel", 30, new int[]{ 2, 7, 5, 2 }, 9,
             SoundEvents.ARMOR_EQUIP_IRON,
             1.0f,   // toughness (+1 over iron)
             0.05f,   // no knockback resistance
@@ -30,7 +31,7 @@ public enum ModArmorMaterials implements ArmorMaterial {
 
     QUINTESSITE("quintessite", 40,
             new int[]{ 4, 9, 7, 4 }, // strong but not insane
-            20,
+            15,
             SoundEvents.ARMOR_EQUIP_NETHERITE,
             3.0f,   // toughness (high)
             0.25f,  // knockback resistance (very stable)
@@ -45,7 +46,7 @@ public enum ModArmorMaterials implements ArmorMaterial {
             0.2f, // knockback resistance (feels heavy/powerful)
             () -> Ingredient.of(OnyxSet.ONYX.get())),
 
-    SOUL_STEEL("soul_steel", 42, new int[]{ 4, 9, 7, 4 }, 15,
+    SOUL_STEEL("soul_steel", 42, new int[]{ 4, 9, 7, 4 }, 17,
             SoundEvents.ARMOR_EQUIP_NETHERITE,
             3.3f,
             0.12f,
@@ -60,50 +61,53 @@ public enum ModArmorMaterials implements ArmorMaterial {
             0.15f,                  // knockback resistance (light, agile feel)
             () -> Ingredient.of(CryptonSet.CRYPTON.get())),
 
-    STAR_PLATINUM("star_platinum", 44, new int[]{ 4, 9, 7, 4 }, 17,
+    STAR_PLATINUM("star_platinum", 44, new int[]{ 3, 8, 6, 3 }, 18,
             SoundEvents.ARMOR_EQUIP_DIAMOND,
             3.6f,
             0.15f,
             () -> Ingredient.of(StarPlatinumSet.STAR_PLATINUM_INGOT.get())),
 
-    WITHERITE("witherite", 40, new int[]{ 4, 9, 7, 4 }, 18,
+    WITHERITE("witherite", 40, new int[]{ 3, 8, 6, 3 }, 8,
             SoundEvents.ARMOR_EQUIP_DIAMOND, 3f, 0.2f, () -> Ingredient.of(WitheriteSet.WITHERITE_INGOT.get())),
 
-    VOLTIUM("voltium", 37, new int[]{ 3, 8, 6, 3 }, 15,
+    KEYOLITE("keyolite", 37, new int[]{ 3, 8, 6, 3 }, 19,
+            SoundEvents.ARMOR_EQUIP_GOLD, 3f, 0.1f, () -> Ingredient.of(KeyoliteSet.KEYOLITE_INGOT.get())),
+
+    VOLTIUM("voltium", 37, new int[]{ 3, 8, 6, 3 }, 18,
             SoundEvents.ARMOR_EQUIP_NETHERITE, 3f, 0.1f, () -> Ingredient.of(VoltiumSet.VOLTIUM_INGOT.get())),
 
-    PLATINUM("platinum", 30, new int[]{ 3, 8, 6, 3 }, 15,
+    PLATINUM("platinum", 30, new int[]{ 3, 8, 6, 3 }, 12,
             SoundEvents.ARMOR_EQUIP_DIAMOND,
             2.5f, // toughness (slightly above diamond, below netherite)
             0.05f, // knockback resistance (small bonus)
             () -> Ingredient.of(PlatinumSet.PLATINUM_INGOT.get())),
 
-    STARRITE("starrite", 30, new int[]{ 3, 8, 6, 3 }, 18,
+    STARRITE("starrite", 30, new int[]{ 3, 8, 6, 3 }, 19,
             SoundEvents.ARMOR_EQUIP_DIAMOND,
             2.2f, // slightly above diamond (2)
             0.02f, // very small knockback resist
             () -> Ingredient.of(StarriteSet.STARRITE.get())),
 
-    RESONITE("resonite", 40, new int[]{3, 8, 6, 3}, 18,
+    RESONITE("resonite", 40, new int[]{3, 8, 6, 3}, 15,
             SoundEvents.ARMOR_EQUIP_DIAMOND,
             2.0f, // ⬅ decent toughness (diamond = 2, netherite = 3)
             0.0f, // ⬅ no knockback resistance
             () -> Ingredient.of(ResoniteSet.RESONITE_INGOT.get())),
 
-    ROSITE("rosite", 15, new int[]{ 2, 6, 5, 2 }, 10,
+    ROSITE("rosite", 15, new int[]{ 2, 6, 5, 2 }, 18,
             SoundEvents.ARMOR_EQUIP_DIAMOND, 0f, 0f, () -> Ingredient.of(RositeSet.ROSITE_INGOT.get())),
 
-    ROSE_GOLD_INGOT("rose_gold_ingot", 15, new int[]{ 2, 6, 5, 2 }, 14,
+    ROSE_GOLD_INGOT("rose_gold_ingot", 15, new int[]{ 2, 6, 5, 2 }, 12,
             SoundEvents.ARMOR_EQUIP_GOLD, 0f, 0f, () -> Ingredient.of(RoseGoldSet.ROSE_GOLD_INGOT.get())),
 
     AMETHYST("amethyst", 18, new int[]{ 2, 6, 5, 2 }, 18,
             SoundEvents.AMETHYST_BLOCK_PLACE, 0f, 0f, () -> Ingredient.of(Items.AMETHYST_SHARD)),
 
-    EMERALD("emerald", 25, new int[]{ 3, 8, 6, 3 }, 20,
+    EMERALD("emerald", 25, new int[]{ 3, 8, 6, 3 }, 10,
             SoundEvents.ARMOR_EQUIP_GENERIC, 0f, 0f, () -> Ingredient.of(Items.EMERALD)),
 
-    OBSIDIAN("obsidian", 50, new int[]{ 3, 8, 6, 3 }, 16,
-            SoundEvents.ARMOR_EQUIP_DIAMOND, 3f, 0.2f, () -> Ingredient.of(Items.OBSIDIAN)),
+    OBSIDIUM("obsidium", 50, new int[]{ 3, 8, 6, 3 }, 9,
+            SoundEvents.ARMOR_EQUIP_DIAMOND, 3f, 0.2f, () -> Ingredient.of(ObsidiumSet.OBSIDIUM_INGOT.get())),
 
    // COBALT("cobalt", 33, new int[]{ 3, 8, 6, 3 }, 10,
    //         SoundEvents.ARMOR_EQUIP_DIAMOND, 2f, 0f, () -> Ingredient.of(CobaltSet.COBALT_INGOT.get())),

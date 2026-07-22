@@ -25,7 +25,7 @@ public class SteelSet {
             () -> new HoeItem(ModToolTiers.STEEL, -3, 0.0f, new Item.Properties()));
 
     public static final RegistryObject<Item> STEEL_HELMET = ModItems.ITEMS.register("steel_helmet",
-            () -> new ModArmorItem(ModArmorMaterials.STEEL, ArmorItem.Type.HELMET, new Item.Properties()));
+            () -> new ArmorItem(ModArmorMaterials.STEEL, ArmorItem.Type.HELMET, new Item.Properties()));
     public static final RegistryObject<Item> STEEL_CHESTPLATE = ModItems.ITEMS.register("steel_chestplate",
             () -> new ArmorItem(ModArmorMaterials.STEEL, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
     public static final RegistryObject<Item> STEEL_LEGGINGS = ModItems.ITEMS.register("steel_leggings",

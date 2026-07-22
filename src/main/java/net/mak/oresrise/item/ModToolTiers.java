@@ -22,7 +22,7 @@ public class ModToolTiers {
                     250,
                     12f,
                     2f,
-                    14, // Level 2 is Iron level
+                    10, // Level 2 is Iron level
                     ModTags.Blocks.NEEDS_ROSE_GOLD_TOOL, // Use the Vanilla BlockTag
                     () -> Ingredient.of(RoseGoldSet.ROSE_GOLD_INGOT.get())
             ),
@@ -33,10 +33,10 @@ public class ModToolTiers {
     public static final Tier ROSITE = TierSortingRegistry.registerTier(        //SAME AS IRON
             new ForgeTier(
                     2,                      // ⬅ mining level
-                    250,                    // ⬅ durability
-                    6f,                    // ⬅ mining speed
-                    2f,                     // ⬅ attack damage bonus
-                    14,                     // ⬅ enchantability
+                    400,                    // ⬅ durability
+                    7f,                    // ⬅ mining speed
+                    2.3f,                     // ⬅ attack damage bonus
+                    18,                     // ⬅ enchantability
                     ModTags.Blocks.NEEDS_ROSITE_TOOL, // ⬅ what blocks it can mine
                     () -> Ingredient.of(RositeSet.ROSITE_INGOT.get()) // ⬅ repair item
             ),
@@ -47,10 +47,10 @@ public class ModToolTiers {
     public static final Tier STEEL = TierSortingRegistry.registerTier(
             new ForgeTier(
                     2,      // mining level (Iron)
-                    700,    // durability (~2.8x Iron)
-                    7.5f,   // mining speed
-                    3.0f,   // attack damage bonus (+1 over Iron)
-                    18,     // enchantability
+                    600,    // durability (~2.8x Iron)
+                    8f,   // mining speed
+                    2.5f,   // attack damage bonus (+1 over Iron)
+                    10,     // enchantability
                     ModTags.Blocks.NEEDS_STEEL_TOOL,
                     () -> Ingredient.of(SteelSet.STEEL_INGOT.get())
             ),
@@ -78,7 +78,7 @@ public class ModToolTiers {
                     600, // ⬅ low durability (fragile crystal)
                     10f, // ⬅ VERY fast mining
                     2f, // ⬅ lower damage
-                    18, // ⬅ high enchantability
+                    20, // ⬅ high enchantability
                     ModTags.Blocks.NEEDS_AMETHYST_TOOL,
                     () -> Ingredient.of(Items.AMETHYST_SHARD)
             ),
@@ -92,7 +92,7 @@ public class ModToolTiers {
                     900, // ⬅ durability (lower than diamond)
                     7f, // ⬅ mining speed (slightly slower)
                     2.5f, // ⬅ attack damage
-                    20, // ⬅ VERY high enchantability (main strength)
+                    15, // ⬅ VERY high enchantability (main strength)
                     ModTags.Blocks.NEEDS_EMERALD_TOOL,
                     () -> Ingredient.of(Items.EMERALD)
             ),
@@ -160,7 +160,7 @@ public class ModToolTiers {
             new ForgeTier(
                     3, // ⬅ mining level (Diamond is 3, so same)
                     1800, // ⬅ durability (Diamond = 1561, Netherite = 2031)
-                    9f, // ⬅ mining speed (Diamond = 8, Netherite = 9)
+                    8f, // ⬅ mining speed (Diamond = 8, Netherite = 9)
                     3.5f, // ⬅ attack damage bonus (between diamond 3 and netherite 4)
                     15, // ⬅ enchantability (better than diamond)
                     ModTags.Blocks.NEEDS_PLATINUM_TOOL,
@@ -170,18 +170,32 @@ public class ModToolTiers {
             List.of(ModToolTiers.SAPPHIRE),   // ⬅ weaker than platinum
             List.of());  // ⬅ stronger than platinum
 
-    public static final Tier OBSIDIAN = TierSortingRegistry.registerTier(
+    public static final Tier OBSIDIUM = TierSortingRegistry.registerTier(
             new ForgeTier(
                     3,                      // ⬅ mining level
                     2300,                    // ⬅ durability
                     8f,                    // ⬅ mining speed
                     3f,                     // ⬅ attack damage bonus
                     16,                     // ⬅ enchantability
-                    ModTags.Blocks.NEEDS_OBSIDIAN_TOOL, // ⬅ what blocks it can mine
-                    () -> Ingredient.of(ObsidianSet.OBSIDIAN_SHARD.get())
+                    ModTags.Blocks.NEEDS_OBSIDIUM_TOOL, // ⬅ what blocks it can mine
+                    () -> Ingredient.of(ObsidiumSet.OBSIDIUM_INGOT.get())
             ),
             ResourceLocation.fromNamespaceAndPath(ExampleMod.MOD_ID, "obsidian"),
             List.of(ModToolTiers.PLATINUM),
+            List.of());
+
+    public static final Tier KEYOLITE = TierSortingRegistry.registerTier(
+            new ForgeTier(
+                    4, // mining level
+                    2031, // durability
+                    10f, // mining speed
+                    4f, // attack damage bonus
+                    20, // enchantability
+                    ModTags.Blocks.NEEDS_KEYOLITE_TOOL,
+                    () -> Ingredient.of(KeyoliteSet.KEYOLITE_INGOT.get())
+            ),
+            ResourceLocation.fromNamespaceAndPath(ExampleMod.MOD_ID, "keyolite"),
+            List.of(ModToolTiers.OBSIDIUM),
             List.of());
 
     public static final Tier VOLTIUM = TierSortingRegistry.registerTier(
@@ -195,10 +209,10 @@ public class ModToolTiers {
                     () -> Ingredient.of(VoltiumSet.VOLTIUM_INGOT.get())
             ),
             ResourceLocation.fromNamespaceAndPath(ExampleMod.MOD_ID, "fluxite"),
-            List.of(ModToolTiers.OBSIDIAN),
+            List.of(ModToolTiers.KEYOLITE),
             List.of());
 
-    public static final Tier FIREITE = TierSortingRegistry.registerTier(
+    /*public static final Tier FIREITE = TierSortingRegistry.registerTier(
             new ForgeTier(
                     4, // mining level
                     2031, // durability
@@ -210,7 +224,7 @@ public class ModToolTiers {
             ),
             ResourceLocation.fromNamespaceAndPath(ExampleMod.MOD_ID, "fireite"),
             List.of(ModToolTiers.VOLTIUM),
-            List.of());
+            List.of());*/
 
     public static final Tier SOULFORGED = TierSortingRegistry.registerTier(
             new ForgeTier(5,

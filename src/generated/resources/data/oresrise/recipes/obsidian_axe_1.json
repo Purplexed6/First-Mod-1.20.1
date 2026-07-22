@@ -9,7 +9,7 @@
       "item": "minecraft:obsidian"
     },
     "S": {
-      "item": "oresrise:obsidian_shard"
+      "item": "oresrise:obsidium_ingot"
     }
   },
   "pattern": [
@@ -18,7 +18,7 @@
     " # "
   ],
   "result": {
-    "item": "oresrise:obsidian_axe"
+    "item": "oresrise:obsidium_axe"
   },
   "show_notification": true
 }

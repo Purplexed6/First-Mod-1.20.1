@@ -1,14 +1,11 @@
 {
   "entries": [
     "oresrise:witherite_ingot_from_wither",
-    "oresrise:ice_crystal_from_snowy_village",
     "oresrise:wither_slag_from_wither_skeleton",
     "oresrise:metal_detector_from_jungle_temples",
     "oresrise:raw_witherite_from_wither",
     "oresrise:end_slag_from_enderman",
-    "oresrise:ice_crystal_from_igloos",
     "oresrise:blaze_slag_from_blaze",
-    "oresrise:ice_crystal_from_stray",
     "oresrise:witherite_from_wither_skeleton"
   ],
   "replace": false

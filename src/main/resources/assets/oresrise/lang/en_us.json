@@ -1,33 +1,27 @@
 {
   "item.oresrise.sapphire": "Sapphire",
   "item.oresrise.rough_sapphire": "Rough Sapphire",
-
   "block.oresrise.sapphire_block": "Block of Sapphire",
   "block.oresrise.rough_sapphire_block": "Block of Rough Sapphire",
   "block.oresrise.sapphire_ore": "Sapphire Ore",
   "block.oresrise.deepslate_sapphire_ore": "Deepslate Sapphire Ore",
-
   "item.oresrise.sapphire_sword": "Sapphire Sword",
   "item.oresrise.sapphire_pickaxe": "Sapphire Pickaxe",
   "item.oresrise.sapphire_axe": "Sapphire Axe",
   "item.oresrise.sapphire_shovel": "Sapphire Shovel",
   "item.oresrise.sapphire_hoe": "Sapphire Hoe",
-
   "item.oresrise.sapphire_helmet": "Sapphire Helmet",
   "item.oresrise.sapphire_chestplate": "Sapphire Chestplate",
   "item.oresrise.sapphire_leggings": "Sapphire Leggings",
   "item.oresrise.sapphire_boots": "Sapphire Boots",
 
   "item.oresrise.rose_gold_ingot": "Rose Gold Ingot",
-
   "item.oresrise.rose_gold_block": "Block of Rose Gold",
-
   "item.oresrise.rose_gold_sword": "Rose Gold Sword",
   "item.oresrise.rose_gold_pickaxe": "Rose Gold Pickaxe",
   "item.oresrise.rose_gold_axe": "Rose Gold Axe",
   "item.oresrise.rose_gold_shovel": "Rose Gold Shovel",
   "item.oresrise.rose_gold_hoe": "Rose Gold Hoe",
-
   "item.oresrise.rose_gold_helmet": "Rose Gold Helmet",
   "item.oresrise.rose_gold_chestplate": "Rose Gold Chestplate",
   "item.oresrise.rose_gold_leggings": "Rose Gold Leggings",
@@ -35,15 +29,12 @@
 
   "item.oresrise.steel_ingot": "Steel Ingot",
   "item.oresrise.steel_nugget": "Steel Nugget",
-
   "block.oresrise.steel_block": "Block of Steel",
-
   "item.oresrise.steel_sword": "Steel Sword",
   "item.oresrise.steel_pickaxe": "Steel Pickaxe",
   "item.oresrise.steel_axe": "Steel Axe",
   "item.oresrise.steel_shovel": "Steel Shovel",
   "item.oresrise.steel_hoe": "Steel Hoe",
-
   "item.oresrise.steel_helmet": "Steel Helmet",
   "item.oresrise.steel_chestplate": "Steel Chestplate",
   "item.oresrise.steel_leggings": "Steel Leggings",
@@ -52,17 +43,14 @@
   "item.oresrise.ruby": "Ruby",
   "item.oresrise.rough_ruby": "Rough Ruby",
   "block.oresrise.ruby_block": "Block of Ruby",
-
   "block.oresrise.rough_ruby_block": "Block of Rough Ruby",
   "block.oresrise.ruby_ore": "Ruby Ore",
   "block.oresrise.deepslate_ruby_ore": "Deepslate Ruby Ore",
-
   "item.oresrise.ruby_sword": "Ruby Sword",
   "item.oresrise.ruby_pickaxe": "Ruby Pickaxe",
   "item.oresrise.ruby_axe": "Ruby Axe",
   "item.oresrise.ruby_shovel": "Ruby Shovel",
   "item.oresrise.ruby_hoe": "Ruby Hoe",
-
   "item.oresrise.ruby_helmet": "Ruby Helmet",
   "item.oresrise.ruby_chestplate": "Ruby Chestplate",
   "item.oresrise.ruby_leggings": "Ruby Leggings",
@@ -70,15 +58,12 @@
 
   "item.oresrise.rosite_ingot": "Rosite Ingot",
   "item.oresrise.rosite_nugget": "Rosite Nugget",
-
   "block.oresrise.rosite_block": "Block of Rosite",
-
   "item.oresrise.rosite_sword": "Rosite Sword",
   "item.oresrise.rosite_pickaxe": "Rosite Pickaxe",
   "item.oresrise.rosite_axe": "Rosite Axe",
   "item.oresrise.rosite_shovel": "Rosite Shovel",
   "item.oresrise.rosite_hoe": "Rosite Hoe",
-
   "item.oresrise.rosite_helmet": "Rosite Helmet",
   "item.oresrise.rosite_chestplate": "Rosite Chestplate",
   "item.oresrise.rosite_leggings": "Rosite Leggings",
@@ -87,6 +72,15 @@
   "item.oresrise.rosal_compound": "Rosal Compound",
   "item.oresrise.keyolite_ingot": "Keyolite Ingot",
   "item.oresrise.keyolite_nugget": "Keyolite Nugget",
+  "item.oresrise.keyolite_sword": "Keyolite Sword",
+  "item.oresrise.keyolite_pickaxe": "Keyolite Pickaxe",
+  "item.oresrise.keyolite_axe": "Keyolite Axe",
+  "item.oresrise.keyolite_shovel": "Keyolite Shovel",
+  "item.oresrise.keyolite_hoe": "Keyolite Hoe",
+  "item.oresrise.keyolite_helmet": "Keyolite Helmet",
+  "item.oresrise.keyolite_chestplate": "Keyolite Chestplate",
+  "item.oresrise.keyolite_leggings": "Keyolite Leggings",
+  "item.oresrise.keyolite_boots": "Keyolite Boots",
   "block.oresrise.keyolite_block": "Block of Keyolite",
 
   "item.oresrise.soul_steel_ingot": "Soul Steel Ingot",
@@ -114,7 +108,6 @@
   "item.oresrise.fluxite_axe": "Voltium Axe",
   "item.oresrise.fluxite_shovel": "Voltium Shovel",
   "item.oresrise.fluxite_hoe": "Voltium Hoe",
-
   "item.oresrise.fluxite_helmet": "Voltium Helmet",
   "item.oresrise.fluxite_chestplate": "Voltium Chestplate",
   "item.oresrise.fluxite_leggings": "Voltium Leggings",
@@ -127,18 +120,15 @@
  // "block.oresrise.oblivionite_ore": "Oblivionite Ore",
 
   "item.oresrise.obsidian_shard": "Obsidian Shard",
-
-  "item.oresrise.obsidian_sword": "Obsidian Sword",
-  "item.oresrise.obsidian_pickaxe": "Obsidian Pickaxe",
-  "item.oresrise.obsidian_axe": "Obsidian Axe",
-  "item.oresrise.obsidian_shovel": "Obsidian Shovel",
-  "item.oresrise.obsidian_hoe": "Obsidian Hoe",
-
-  "item.oresrise.obsidian_helmet": "Obsidian Helmet",
-  "item.oresrise.obsidian_chestplate": "Obsidian Chestplate",
-  "item.oresrise.obsidian_leggings": "Obsidian Leggings",
-  "item.oresrise.obsidian_boots": "Obsidian Boots",
-
+  "item.oresrise.obsidium_sword": "Obsidium Sword",
+  "item.oresrise.obsidium_pickaxe": "Obsidium Pickaxe",
+  "item.oresrise.obsidium_axe": "Obsidium Axe",
+  "item.oresrise.obsidium_shovel": "Obsidium Shovel",
+  "item.oresrise.obsidium_hoe": "Obsidium Hoe",
+  "item.oresrise.obsidium_helmet": "Obsidium Helmet",
+  "item.oresrise.obsidium_chestplate": "Obsidium Chestplate",
+  "item.oresrise.obsidium_leggings": "Obsidium Leggings",
+  "item.oresrise.obsidium_boots": "Obsidium Boots",
   "item.oresrise.obsidian_alloy": "Obsidian Alloy",
   "item.oresrise.obsidium_ingot": "Obsidium Ingot",
   "item.oresrise.obsidium_nugget": "Obsidium Nugget",
@@ -147,16 +137,13 @@
   "block.oresrise.witherite_block": "Block of Witherite",
   "block.oresrise.raw_witherite_block": "Block of Raw Witherite",
   "block.oresrise.witherite_ore": "Witherite Ore",
-
   "item.oresrise.raw_witherite": "Raw Witherite",
   "item.oresrise.witherite_ingot": "Witherite Ingot",
-
   "item.oresrise.witherite_sword": "Witherite Sword",
   "item.oresrise.witherite_pickaxe": "Witherite Pickaxe",
   "item.oresrise.witherite_axe": "Witherite Axe",
   "item.oresrise.witherite_shovel": "Witherite Shovel",
   "item.oresrise.witherite_hoe": "Witherite Hoe",
-
   "item.oresrise.witherite_helmet": "Witherite Helmet",
   "item.oresrise.witherite_chestplate": "Witherite Chestplate",
   "item.oresrise.witherite_leggings": "Witherite Leggings",
@@ -164,7 +151,6 @@
 
   "block.oresrise.soul_ore": "Spectral Ore",
   "block.oresrise.soul_block": "Block of Spectral Gems",
-
   "item.oresrise.soul_fragment": "Spectral Fragment",
   "item.oresrise.soul_crystal": "Spectral Gem",
   "item.oresrise.soul_powder": "Spectral Powder",
@@ -242,11 +228,6 @@
   "item.oresrise.pyrogel": "Pyrogel",
   "item.oresrise.fireite_ingot": "Fireite Ingot",
   "item.oresrise.fireite_blade": "Pyrefury",
-  "item.oresrise.smithing_template.fireite_upgrade": "Fireite Upgrade Template",
-  "item.oresrise.smithing_template.fireite_upgrade.applies_to": "Applies to: Diamond Equipment",
-  "item.oresrise.smithing_template.fireite_upgrade.ingredients": "Ingredients: Fireite Ingot",
-  "item.oresrise.smithing_template.fireite_upgrade.base_slot_description": "Add diamond weapon, tool, or armor",
-  "item.oresrise.smithing_template.fireite_upgrade.additions_slot_description": "Add Fireite Ingot",
 
   "item.oresrise.ice_crystal": "Ice Crystal",
 
@@ -262,6 +243,11 @@
   "item.oresrise.lunaris_chestplate": "Lunaris Chestplate",
   "item.oresrise.lunaris_leggings": "Lunaris Leggings",
   "item.oresrise.lunaris_boots": "Lunaris Boots",
+  "item.oresrise.smithing_template.lunaris_upgrade": "Lunaris Upgrade Template",
+  "item.oresrise.smithing_template.lunaris_upgrade.applies_to": "Applies to: Keyolite Equipment",
+  "item.oresrise.smithing_template.lunaris_upgrade.ingredients": "Ingredients: Lunaris",
+  "item.oresrise.smithing_template.lunaris_upgrade.base_slot_description": "Add keyolite weapon, tool, or armor",
+  "item.oresrise.smithing_template.lunaris_upgrade.additions_slot_description": "Add Lunaris",
 
   "item.oresrise.aquamarine": "Aquamarine",
   "block.oresrise.aquamarine_block": "Block of Aquamarine",
@@ -280,7 +266,7 @@
   "item.oresrise.crypton_shard": "Crypton Shard",
   "block.oresrise.crypton_block": "Block of Crypton",
   "block.oresrise.crypton_ore": "Crypton Ore",
-  "item.oresrise.crypton_sword": "Crypton Sword",
+  "item.oresrise.crypton_sword": "Riftbreaker",
   "item.oresrise.crypton_pickaxe": "Crypton Pickaxe",
   "item.oresrise.crypton_axe": "Crypton Axe",
   "item.oresrise.crypton_shovel": "Crypton Shovel",
@@ -293,7 +279,7 @@
   "item.oresrise.onyx": "Onyx",
   "block.oresrise.onyx_ore": "Onyx Ore",
   "block.oresrise.onyx_block": "Block of Onyx",
-  "item.oresrise.onyx_sword": "Onyx Sword",
+  "item.oresrise.onyx_sword": "Nightfang",
   "item.oresrise.onyx_pickaxe": "Onyx Pickaxe",
   "item.oresrise.onyx_axe": "Onyx Axe",
   "item.oresrise.onyx_shovel": "Onyx Shovel",
@@ -306,7 +292,6 @@
   "item.oresrise.starrite": "Starrite",
   "block.oresrise.starrite_ore": "Starrite Ore",
   "block.oresrise.starrite_block": "Block of Starrite",
-
   "item.oresrise.starrite_sword": "Starrite Sword",
   "item.oresrise.starrite_pickaxe": "Starrite Pickaxe",
   "item.oresrise.starrite_axe": "Starrite Axe",
@@ -322,7 +307,6 @@
   "block.oresrise.platinum_block": "Block of Platinum",
   "block.oresrise.raw_platinum_block": "Block of Raw Platinum",
   "block.oresrise.platinum_ore": "Platinum Ore",
-
   "item.oresrise.platinum_sword": "Platinum Sword",
   "item.oresrise.platinum_pickaxe": "Platinum Pickaxe",
   "item.oresrise.platinum_axe": "Platinum Axe",
@@ -335,7 +319,6 @@
 
   "item.oresrise.star_platinum_ingot": "Star Platinum Ingot",
   "block.oresrise.star_platinum_block": "Block of Star Platinum",
-
   "item.oresrise.star_platinum_sword": "Star Platinum Sword",
   "item.oresrise.star_platinum_pickaxe": "Star Platinum Pickaxe",
   "item.oresrise.star_platinum_axe": "Star Platinum Axe",
@@ -408,6 +391,7 @@
   "item.oresrise.stardust": "Stardust",
   "item.oresrise.withered_bone": "Withered Bone",
   "item.oresrise.dough": "Dough",
+  "item.oresrise.netherite_nugget": "Netherite Nugget",
 
   "tooltip.oresrise.crypton_sword.tooltip": "Hold RMB to charge. Release to unleash a powerful shockwave.",
   "tooltip.oresrise.onyx_sword.tooltip": "Backstabs deal bonus damage.",

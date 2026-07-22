@@ -27,7 +27,7 @@ public class RoseGoldSet {
     public static final RegistryObject<Item> ROSE_GOLD_AXE = ModItems.ITEMS.register("rose_gold_axe",
             () -> new AxeItem(ModToolTiers.ROSE_GOLD_INGOT, 5, -3.1f, new Item.Properties()));
     public static final RegistryObject<Item> ROSE_GOLD_SHOVEL = ModItems.ITEMS.register("rose_gold_shovel",
-            () -> new PickaxeItem(ModToolTiers.ROSE_GOLD_INGOT, 1, -2.8f, new Item.Properties()));
+            () -> new ShovelItem(ModToolTiers.ROSE_GOLD_INGOT, 1, -2.8f, new Item.Properties()));
     public static final RegistryObject<Item> ROSE_GOLD_HOE = ModItems.ITEMS.register("rose_gold_hoe",
             () -> new AxeItem(ModToolTiers.ROSE_GOLD_INGOT, -3, -0.0f, new Item.Properties()));
 

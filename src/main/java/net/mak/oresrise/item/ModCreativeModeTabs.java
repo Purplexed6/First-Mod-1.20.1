@@ -71,16 +71,26 @@ public class ModCreativeModeTabs {
                         pOutput.accept(KeyoliteSet.KEYOLITE_INGOT.get());
                         pOutput.accept(KeyoliteSet.KEYOLITE_NUGGET.get());
 
-                        pOutput.accept(ObsidianSet.OBSIDIAN_SHARD.get());
-                        pOutput.accept(ObsidianSet.OBSIDIAN_HELMET.get());
-                        pOutput.accept(ObsidianSet.OBSIDIAN_CHESTPLATE.get());
-                        pOutput.accept(ObsidianSet.OBSIDIAN_LEGGINGS.get());
-                        pOutput.accept(ObsidianSet.OBSIDIAN_BOOTS.get());
-                        pOutput.accept(ObsidianSet.OBSIDIAN_SWORD.get());
-                        pOutput.accept(ObsidianSet.OBSIDIAN_PICKAXE.get());
-                        pOutput.accept(ObsidianSet.OBSIDIAN_AXE.get());
-                        pOutput.accept(ObsidianSet.OBSIDIAN_SHOVEL.get());
-                        pOutput.accept(ObsidianSet.OBSIDIAN_HOE.get());
+                        pOutput.accept(KeyoliteSet.KEYOLITE_HELMET.get());
+                        pOutput.accept(KeyoliteSet.KEYOLITE_CHESTPLATE.get());
+                        pOutput.accept(KeyoliteSet.KEYOLITE_LEGGINGS.get());
+                        pOutput.accept(KeyoliteSet.KEYOLITE_BOOTS.get());
+                        pOutput.accept(KeyoliteSet.KEYOLITE_SWORD.get());
+                        pOutput.accept(KeyoliteSet.KEYOLITE_PICKAXE.get());
+                        pOutput.accept(KeyoliteSet.KEYOLITE_AXE.get());
+                        pOutput.accept(KeyoliteSet.KEYOLITE_SHOVEL.get());
+                        pOutput.accept(KeyoliteSet.KEYOLITE_HOE.get());
+
+                        pOutput.accept(ObsidiumSet.OBSIDIAN_SHARD.get());
+                        pOutput.accept(ObsidiumSet.OBSIDIUM_HELMET.get());
+                        pOutput.accept(ObsidiumSet.OBSIDIUM_CHESTPLATE.get());
+                        pOutput.accept(ObsidiumSet.OBSIDIUM_LEGGINGS.get());
+                        pOutput.accept(ObsidiumSet.OBSIDIUM_BOOTS.get());
+                        pOutput.accept(ObsidiumSet.OBSIDIUM_SWORD.get());
+                        pOutput.accept(ObsidiumSet.OBSIDIUM_PICKAXE.get());
+                        pOutput.accept(ObsidiumSet.OBSIDIUM_AXE.get());
+                        pOutput.accept(ObsidiumSet.OBSIDIUM_SHOVEL.get());
+                        pOutput.accept(ObsidiumSet.OBSIDIUM_HOE.get());
 
                         pOutput.accept(ObsidiumSet.OBSIDIUM_INGOT.get());
                         pOutput.accept(ObsidiumSet.OBSIDIUM_NUGGET.get());
@@ -197,6 +207,7 @@ public class ModCreativeModeTabs {
                         pOutput.accept(LunarisSet.LUNARIS_CHESTPLATE.get());
                         pOutput.accept(LunarisSet.LUNARIS_LEGGINGS.get());
                         pOutput.accept(LunarisSet.LUNARIS_BOOTS.get());
+                        pOutput.accept(LunarisSet.LUNARIS_UPGRADE_SMITHING_TEMPLATE.get());
 
                         pOutput.accept(HemoSet.HEMOGEM.get());
                         pOutput.accept(HemoSet.HEMOGEM_SWORD.get());
@@ -209,12 +220,11 @@ public class ModCreativeModeTabs {
                         pOutput.accept(HemoSet.HEMOGEM_LEGGINGS.get());
                         pOutput.accept(HemoSet.HEMOGEM_BOOTS.get());
 
-                        pOutput.accept(FireiteSet.PYROGEL.get());
-                        pOutput.accept(FireiteSet.FIREITE_INGOT.get());
-                        pOutput.accept(FireiteSet.FIREITE_BLADE.get());
-                        pOutput.accept(FireiteSet.FIREITE_UPGRADE_SMITHING_TEMPLATE.get());
+                       // pOutput.accept(FireiteSet.PYROGEL.get());
+                      //  pOutput.accept(FireiteSet.FIREITE_INGOT.get());
+                       // pOutput.accept(FireiteSet.FIREITE_BLADE.get());
 
-                        pOutput.accept(Misc.ICE_CRYSTAL.get());
+                     //   pOutput.accept(Misc.ICE_CRYSTAL.get());
 
                         pOutput.accept(SteelSet.STEEL_INGOT.get());
                         pOutput.accept(SteelSet.STEEL_NUGGET.get());

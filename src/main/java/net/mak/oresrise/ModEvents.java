@@ -5,6 +5,7 @@ import net.mak.oresrise.item.custom.*;
 import net.mak.oresrise.item.ModArmorMaterials;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
@@ -18,6 +19,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -44,7 +46,7 @@ public class ModEvents {
                 processGrind(event, level, pos, player, stack, new ItemStack(SapphireSet.SAPPHIRE.get()));
             }
             else if (stack.is(Items.OBSIDIAN)) {
-                processGrind(event, level, pos, player, stack, new ItemStack(ObsidianSet.OBSIDIAN_SHARD.get()));
+                processGrind(event, level, pos, player, stack, new ItemStack(ObsidiumSet.OBSIDIAN_SHARD.get()));
             }
             else if (stack.is(VibraniumSet.ROUGH_VIBRANIUM.get())) {
                 processGrind(event, level, pos, player, stack, new ItemStack(VibraniumSet.VIBRANIUM.get()));
@@ -205,6 +207,29 @@ public class ModEvents {
             stack.shrink(1);
             player.addItem(result);
             level.playSound(null, pos, SoundEvents.GRINDSTONE_USE, SoundSource.BLOCKS, 1.0F, 1.0F);
+        }
+    }
+
+
+
+
+
+    private static final String GIVEN_BOOK = "OresRiseGuideGiven";
+
+    @SubscribeEvent
+    public static void onPlayerJoin(PlayerEvent.PlayerLoggedInEvent event) {
+
+        Player player = event.getEntity();
+
+        CompoundTag data = player.getPersistentData();
+
+        if (!data.getBoolean(GIVEN_BOOK)) {
+
+            ItemStack book = GuideBook.createBook();
+
+            player.getInventory().add(book);
+
+            data.putBoolean(GIVEN_BOOK, true);
         }
     }
 }

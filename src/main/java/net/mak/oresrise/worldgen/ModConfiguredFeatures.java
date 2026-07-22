@@ -98,7 +98,7 @@ public class ModConfiguredFeatures {
      //   register(context, JADE_ORE_KEY, Feature.ORE, new OreConfiguration(overworldJadeOres, 4, 0.5F));
         register(context, AQUAMARINE_ORE_KEY, Feature.ORE, new OreConfiguration(overworldAquamarineOres, 4, 0.5F));
         register(context, VIBRANIUM_ORE_KEY, Feature.ORE, new OreConfiguration(overworldVibraniumOres, 3));
-        register(context, FLUXITE_ORE_KEY, Feature.ORE, new OreConfiguration(overworldFluxiteOres, 3));
+        register(context, FLUXITE_ORE_KEY, Feature.ORE, new OreConfiguration(overworldFluxiteOres, 6));
 
         register(context, SOUL_ORE_KEY, Feature.ORE, new OreConfiguration(soulsoilReplacables,
                 ModBlocks.SOUL_ORE.get().defaultBlockState(), 7));

@@ -14,15 +14,15 @@ public class RositeSet {
             () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> ROSITE_SWORD = ModItems.ITEMS.register("rosite_sword",
-            () -> new SwordItem(ModToolTiers.ROSITE, 3, -2.4f, new Item.Properties()));
+            () -> new RositeSwordItem(ModToolTiers.ROSITE, 3, -2.4f, new Item.Properties()));
     public static final RegistryObject<Item> ROSITE_PICKAXE = ModItems.ITEMS.register("rosite_pickaxe",
-            () -> new PickaxeItem(ModToolTiers.ROSITE, 1, -2.8f, new Item.Properties()));
+            () -> new RositePickaxeItem(ModToolTiers.ROSITE, 1, -2.8f, new Item.Properties()));
     public static final RegistryObject<Item> ROSITE_AXE = ModItems.ITEMS.register("rosite_axe",
-            () -> new AxeItem(ModToolTiers.ROSITE, 6.0f, -3.1f, new Item.Properties()));
+            () -> new RositeAxeItem(ModToolTiers.ROSITE, 6.0f, -3.1f, new Item.Properties()));
     public static final RegistryObject<Item> ROSITE_SHOVEL = ModItems.ITEMS.register("rosite_shovel",
-            () -> new ShovelItem(ModToolTiers.ROSITE, 1.5f, -3.0f, new Item.Properties()));
+            () -> new RositeShovelItem(ModToolTiers.ROSITE, 1.5f, -3.0f, new Item.Properties()));
     public static final RegistryObject<Item> ROSITE_HOE = ModItems.ITEMS.register("rosite_hoe",
-            () -> new HoeItem(ModToolTiers.ROSITE, -2, -0.0f, new Item.Properties()));
+            () -> new RositeAxeItem(ModToolTiers.ROSITE, -2, -0.0f, new Item.Properties()));
 
     public static final RegistryObject<Item> ROSITE_HELMET = ModItems.ITEMS.register("rosite_helmet",
             () -> new ArmorItem(ModArmorMaterials.ROSITE, ArmorItem.Type.HELMET, new Item.Properties()));
