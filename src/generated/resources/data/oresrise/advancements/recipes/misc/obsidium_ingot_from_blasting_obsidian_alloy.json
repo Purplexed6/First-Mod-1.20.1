@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_obsidian_alloy": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "oresrise:obsidian_alloy"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "oresrise:obsidium_ingot_from_blasting_obsidian_alloy"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_obsidian_alloy",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "oresrise:obsidium_ingot_from_blasting_obsidian_alloy"
+    ]
+  },
+  "sends_telemetry_event": false
+}

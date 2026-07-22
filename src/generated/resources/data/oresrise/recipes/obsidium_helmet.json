@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "A": {
+      "item": "minecraft:obsidian"
+    },
+    "S": {
+      "item": "oresrise:obsidium_ingot"
+    }
+  },
+  "pattern": [
+    "SAS",
+    "S S"
+  ],
+  "result": {
+    "item": "oresrise:obsidium_helmet"
+  },
+  "show_notification": true
+}

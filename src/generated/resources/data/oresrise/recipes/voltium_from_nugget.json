@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "oresrise:voltium_nugget"
+    },
+    {
+      "item": "oresrise:voltium_nugget"
+    },
+    {
+      "item": "oresrise:voltium_nugget"
+    },
+    {
+      "item": "oresrise:voltium_nugget"
+    },
+    {
+      "item": "oresrise:voltium_nugget"
+    },
+    {
+      "item": "oresrise:voltium_nugget"
+    },
+    {
+      "item": "oresrise:voltium_nugget"
+    },
+    {
+      "item": "oresrise:voltium_nugget"
+    },
+    {
+      "item": "oresrise:voltium_nugget"
+    }
+  ],
+  "result": {
+    "item": "oresrise:voltium_ingot"
+  }
+}

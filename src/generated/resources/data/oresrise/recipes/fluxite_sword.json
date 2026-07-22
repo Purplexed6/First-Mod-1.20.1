@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "oresrise:obsidian_stick"
+    },
+    "S": {
+      "item": "oresrise:voltium_ingot"
+    }
+  },
+  "pattern": [
+    " S ",
+    " S ",
+    " # "
+  ],
+  "result": {
+    "item": "oresrise:fluxite_sword"
+  },
+  "show_notification": true
+}

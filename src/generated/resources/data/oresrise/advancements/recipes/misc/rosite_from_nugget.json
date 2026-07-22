@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "oresrise:rosite_from_nugget"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "rosite_nugget": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "oresrise:rosite_nugget"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "rosite_nugget",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "oresrise:rosite_from_nugget"
+    ]
+  },
+  "sends_telemetry_event": false
+}

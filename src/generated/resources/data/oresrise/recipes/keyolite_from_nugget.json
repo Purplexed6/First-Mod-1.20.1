@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "oresrise:keyolite_nugget"
+    },
+    {
+      "item": "oresrise:keyolite_nugget"
+    },
+    {
+      "item": "oresrise:keyolite_nugget"
+    },
+    {
+      "item": "oresrise:keyolite_nugget"
+    },
+    {
+      "item": "oresrise:keyolite_nugget"
+    },
+    {
+      "item": "oresrise:keyolite_nugget"
+    },
+    {
+      "item": "oresrise:keyolite_nugget"
+    },
+    {
+      "item": "oresrise:keyolite_nugget"
+    },
+    {
+      "item": "oresrise:keyolite_nugget"
+    }
+  ],
+  "result": {
+    "item": "oresrise:keyolite_ingot"
+  }
+}

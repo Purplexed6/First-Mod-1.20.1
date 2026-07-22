@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "oresrise:lunaris"
+  },
+  "base": {
+    "item": "oresrise:keyolite_sword"
+  },
+  "result": {
+    "item": "oresrise:lunaris_sword"
+  },
+  "template": {
+    "item": "oresrise:smithing_template.lunaris_upgrade"
+  }
+}

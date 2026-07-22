@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "oresrise:obsidium_block"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "obsidium_ingot": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "oresrise:obsidium_ingot"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "obsidium_ingot",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "oresrise:obsidium_block"
+    ]
+  },
+  "sends_telemetry_event": false
+}

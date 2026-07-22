@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "oresrise:item/smithing_template.lunaris_upgrade"
+  }
+}

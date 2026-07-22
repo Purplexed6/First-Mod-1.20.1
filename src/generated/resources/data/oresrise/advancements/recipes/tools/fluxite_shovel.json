@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "oresrise:fluxite_shovel"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_voltium_ingot": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "oresrise:voltium_ingot"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_voltium_ingot",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "oresrise:fluxite_shovel"
+    ]
+  },
+  "sends_telemetry_event": false
+}

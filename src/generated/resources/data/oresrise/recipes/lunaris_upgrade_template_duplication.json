@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:purpur_block"
+    },
+    "D": {
+      "item": "minecraft:diamond"
+    },
+    "T": {
+      "item": "oresrise:smithing_template.lunaris_upgrade"
+    }
+  },
+  "pattern": [
+    "D#D",
+    "DTD",
+    "DDD"
+  ],
+  "result": {
+    "count": 2,
+    "item": "oresrise:smithing_template.lunaris_upgrade"
+  },
+  "show_notification": true
+}

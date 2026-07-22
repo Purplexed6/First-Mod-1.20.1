@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "oresrise:iron_stick"
+    },
+    "A": {
+      "item": "minecraft:obsidian"
+    },
+    "S": {
+      "item": "oresrise:obsidium_ingot"
+    }
+  },
+  "pattern": [
+    " S ",
+    " A ",
+    " # "
+  ],
+  "result": {
+    "item": "oresrise:obsidium_sword"
+  },
+  "show_notification": true
+}

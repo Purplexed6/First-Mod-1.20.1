@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "oresrise:keyolite_block"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "keyolite_ingot": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "oresrise:keyolite_ingot"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "keyolite_ingot",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "oresrise:keyolite_block"
+    ]
+  },
+  "sends_telemetry_event": false
+}

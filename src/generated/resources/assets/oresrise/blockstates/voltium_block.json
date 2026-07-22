@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "oresrise:block/voltium_block"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "type": "oresrise:add_item",
+  "conditions": [
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "type": "minecraft:wither_skeleton"
+      }
+    },
+    {
+      "chance": 0.2,
+      "condition": "minecraft:random_chance"
+    }
+  ],
+  "count": 1,
+  "item": "oresrise:raw_witherite"
+}

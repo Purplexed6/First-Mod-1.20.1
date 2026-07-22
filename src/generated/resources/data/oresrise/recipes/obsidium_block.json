@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "oresrise:obsidium_ingot"
+    },
+    {
+      "item": "oresrise:obsidium_ingot"
+    },
+    {
+      "item": "oresrise:obsidium_ingot"
+    },
+    {
+      "item": "oresrise:obsidium_ingot"
+    },
+    {
+      "item": "oresrise:obsidium_ingot"
+    },
+    {
+      "item": "oresrise:obsidium_ingot"
+    },
+    {
+      "item": "oresrise:obsidium_ingot"
+    },
+    {
+      "item": "oresrise:obsidium_ingot"
+    },
+    {
+      "item": "oresrise:obsidium_ingot"
+    }
+  ],
+  "result": {
+    "item": "oresrise:obsidium_block"
+  }
+}

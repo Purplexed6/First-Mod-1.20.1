@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "A": {
+      "item": "oresrise:steel_ingot"
+    }
+  },
+  "pattern": [
+    "AAA",
+    " # ",
+    " # "
+  ],
+  "result": {
+    "item": "oresrise:steel_pickaxe"
+  },
+  "show_notification": true
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "A": {
+      "item": "minecraft:obsidian"
+    },
+    "S": {
+      "item": "oresrise:obsidium_ingot"
+    }
+  },
+  "pattern": [
+    "SAS",
+    "S S",
+    "S S"
+  ],
+  "result": {
+    "item": "oresrise:obsidium_leggings"
+  },
+  "show_notification": true
+}

@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "oresrise:steel_ingot"
+    },
+    {
+      "item": "oresrise:steel_ingot"
+    },
+    {
+      "item": "oresrise:fluxite"
+    },
+    {
+      "item": "minecraft:quartz"
+    }
+  ],
+  "result": {
+    "count": 2,
+    "item": "oresrise:electric_matter"
+  }
+}

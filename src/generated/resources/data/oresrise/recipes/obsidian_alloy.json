@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "oresrise:steel_ingot"
+    },
+    {
+      "item": "oresrise:obsidian_shard"
+    },
+    {
+      "item": "oresrise:obsidian_shard"
+    },
+    {
+      "item": "minecraft:diamond"
+    }
+  ],
+  "result": {
+    "count": 2,
+    "item": "oresrise:obsidian_alloy"
+  }
+}

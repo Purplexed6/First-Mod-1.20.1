@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "oresrise:steel_ingot"
+    },
+    {
+      "item": "oresrise:steel_ingot"
+    },
+    {
+      "item": "oresrise:steel_ingot"
+    },
+    {
+      "item": "oresrise:steel_ingot"
+    },
+    {
+      "item": "oresrise:steel_ingot"
+    },
+    {
+      "item": "oresrise:steel_ingot"
+    },
+    {
+      "item": "oresrise:steel_ingot"
+    },
+    {
+      "item": "oresrise:steel_ingot"
+    },
+    {
+      "item": "oresrise:steel_ingot"
+    }
+  ],
+  "result": {
+    "item": "oresrise:steel_block"
+  }
+}

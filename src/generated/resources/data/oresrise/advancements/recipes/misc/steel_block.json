@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "oresrise:steel_block"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "steel_ingot": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "oresrise:steel_ingot"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "steel_ingot",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "oresrise:steel_block"
+    ]
+  },
+  "sends_telemetry_event": false
+}

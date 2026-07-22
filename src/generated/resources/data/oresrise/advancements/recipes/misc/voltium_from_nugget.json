@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "oresrise:voltium_from_nugget"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "voltium_nugget": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "oresrise:voltium_nugget"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "voltium_nugget",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "oresrise:voltium_from_nugget"
+    ]
+  },
+  "sends_telemetry_event": false
+}

@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "oresrise:obsidium_from_nugget"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "obsidium_nugget": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "oresrise:obsidium_nugget"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "obsidium_nugget",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "oresrise:obsidium_from_nugget"
+    ]
+  },
+  "sends_telemetry_event": false
+}

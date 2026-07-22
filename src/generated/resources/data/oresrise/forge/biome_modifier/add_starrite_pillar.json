@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#minecraft:is_end",
+  "features": "oresrise:starrite_pillar_placed",
+  "step": "surface_structures"
+}

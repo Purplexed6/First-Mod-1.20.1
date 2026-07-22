@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "oresrise:soul_essence"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "soul_crystal": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "oresrise:soul_crystal"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "soul_crystal",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "oresrise:soul_essence"
+    ]
+  },
+  "sends_telemetry_event": false
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "oresrise:keyolite_ingot"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "oresrise:keyolite_nugget"
+  }
+}

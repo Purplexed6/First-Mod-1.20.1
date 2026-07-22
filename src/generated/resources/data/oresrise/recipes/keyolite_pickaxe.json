@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "oresrise:obsidian_stick"
+    },
+    "S": {
+      "item": "oresrise:keyolite_ingot"
+    }
+  },
+  "pattern": [
+    "SSS",
+    " # ",
+    " # "
+  ],
+  "result": {
+    "item": "oresrise:keyolite_pickaxe"
+  },
+  "show_notification": true
+}

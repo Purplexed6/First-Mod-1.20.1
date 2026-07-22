@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "minecraft:deep_dark",
+  "features": "oresrise:vibranium_ore_placed",
+  "step": "underground_ores"
+}
