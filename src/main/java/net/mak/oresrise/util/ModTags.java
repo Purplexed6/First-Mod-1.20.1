@@ -30,11 +30,11 @@ public class ModTags {
         public static final TagKey<Block> NEEDS_KEYOLITE_TOOL = tag("needs_keyolite_tool");
        // public static final TagKey<Block> NEEDS_FIREITE_TOOL = tag("needs_fireite_tool");
         public static final TagKey<Block> NEEDS_HEMOGEM_TOOL = tag("needs_hemogem_tool");
-        public static final TagKey<Block> NEEDS_QUINTESSITE_TOOL = tag("needs_quintessite_tool");
+        //public static final TagKey<Block> NEEDS_QUINTESSITE_TOOL = tag("needs_quintessite_tool");
         public static final TagKey<Block> NEEDS_WITHERITE_TOOL = tag("needs_witherite_tool");
         public static final TagKey<Block> NEEDS_SOULFORGED_TOOL = tag("needs_soulforged_tool");
         public static final TagKey<Block> NEEDS_SHADOW_STEEL_TOOL = tag("needs_shadow_steel_tool");
-        public static final TagKey<Block> NEEDS_SOUL_STEEL_TOOL = tag("needs_soul_steel_tool");
+        public static final TagKey<Block> NEEDS_DREADSTEEL_TOOL = tag("needs_dreadsteel_tool");
         public static final TagKey<Block> NEEDS_ONYX_TOOL = tag("needs_onyx_tool");
         public static final TagKey<Block> NEEDS_LUNARIS_TOOL = tag("needs_lunaris_tool");
         public static final TagKey<Block> NEEDS_CRYPTON_TOOL = tag("needs_crypton_tool");

@@ -16,11 +16,11 @@ public class CryptonSet {
     public static final RegistryObject<Item> CRYPTON_SWORD = ModItems.ITEMS.register("crypton_sword",
             () -> new ChargedSwordItem(ModToolTiers.CRYPTON, 4, -2.0f, new Item.Properties()));
     public static final RegistryObject<Item> CRYPTON_PICKAXE = ModItems.ITEMS.register("crypton_pickaxe",
-            () -> new PickaxeItem(ModToolTiers.CRYPTON, 1, -2.8f, new Item.Properties()));
+            () -> new CryptonPickaxeItem(ModToolTiers.CRYPTON, 1, -2.8f, new Item.Properties()));
     public static final RegistryObject<Item> CRYPTON_AXE = ModItems.ITEMS.register("crypton_axe",
-            () -> new AxeItem(ModToolTiers.CRYPTON, 6, -2.9f, new Item.Properties()));
+            () -> new CryptonAxeItem(ModToolTiers.CRYPTON, 6, -2.9f, new Item.Properties()));
     public static final RegistryObject<Item> CRYPTON_SHOVEL = ModItems.ITEMS.register("crypton_shovel",
-            () -> new ShovelItem(ModToolTiers.CRYPTON, 1, -3.0f, new Item.Properties()));
+            () -> new CryptonShovelItem(ModToolTiers.CRYPTON, 1, -3.0f, new Item.Properties()));
     public static final RegistryObject<Item> CRYPTON_HOE = ModItems.ITEMS.register("crypton_hoe",
             () -> new HoeItem(ModToolTiers.CRYPTON, -3, 0.0f, new Item.Properties()));
 

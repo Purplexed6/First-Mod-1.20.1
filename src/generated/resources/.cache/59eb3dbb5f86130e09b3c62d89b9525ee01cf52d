@@ -1,4 +1,4 @@
-// 1.20.1	2026-07-20T19:15:08.5690797	Loot Tables
+// 1.20.1	2026-07-24T01:14:37.9590715	Loot Tables
 49792a66d747591a28f4268126f84026c10537ce data/oresrise/loot_tables/blocks/aquamarine_block.json
 58109f4d3dfd1310fbf0e602131e5c6665bc2a26 data/oresrise/loot_tables/blocks/aquamarine_ore.json
 f66bad5bc060334b67e1198c91330b7fc489ab06 data/oresrise/loot_tables/blocks/crypton_block.json
@@ -6,6 +6,7 @@ e6f8b0f40d8a55c8d9fc1437edf2e00900c7e5e1 data/oresrise/loot_tables/blocks/crypto
 5875b88aa5c183f33055d54c0394c178da92fa56 data/oresrise/loot_tables/blocks/deepslate_malachite_ore.json
 62b4bc0b0a97dd48fb5c35a7294c72a56ad5ad22 data/oresrise/loot_tables/blocks/deepslate_ruby_ore.json
 3b34e95f9b3566a753bc97273eb8b02bcef4a2ed data/oresrise/loot_tables/blocks/deepslate_sapphire_ore.json
+7550c915758614cdf9056cbe595b0946c76ec14e data/oresrise/loot_tables/blocks/dreadsteel_block.json
 907129810c72b14149c7d39f369f53735bc8a134 data/oresrise/loot_tables/blocks/fluxite_block.json
 c2ae0a4c9c24c4bdd20ac1d88769acc0298cd125 data/oresrise/loot_tables/blocks/fluxite_ore.json
 33abe2b9a4302e054eb51671abb4054b945f8d39 data/oresrise/loot_tables/blocks/hemogem_block.json
@@ -20,8 +21,6 @@ cf33c3a02a14e0cfcab58e580562a52f87fd144b data/oresrise/loot_tables/blocks/onyx_b
 7dae69d7f81b6e24d4d3ccaeab15db7077f4b622 data/oresrise/loot_tables/blocks/onyx_ore.json
 f075b4cc4c131475ca797ec284d3b43f6d62b6de data/oresrise/loot_tables/blocks/platinum_block.json
 04d5cbef82f5a64892831c488c5cc34bac4c171c data/oresrise/loot_tables/blocks/platinum_ore.json
-782f5440ec1ec3c155ac6b01b09b2a1cbb449e6e data/oresrise/loot_tables/blocks/quintessite_block.json
-e935eff9b13dddc6cc40a3f7b266e7b9fc67c3c0 data/oresrise/loot_tables/blocks/quintessite_ore.json
 0daaddcbfc5a9b788546a39763748bba3ea1743d data/oresrise/loot_tables/blocks/raw_platinum_block.json
 dbeb3dcb4e24d8e9f6736a332211bcaa211b7923 data/oresrise/loot_tables/blocks/raw_witherite_block.json
 6e032590e3331a995d13a0501baf788cb70b858e data/oresrise/loot_tables/blocks/rose_gold_block.json
@@ -35,7 +34,6 @@ b432ad2f32b133022cf1dabf2e2171ef6bd0233b data/oresrise/loot_tables/blocks/sapphi
 c9499d0fbd5df57e9bc240e4848416765520b286 data/oresrise/loot_tables/blocks/sapphire_ore.json
 00f706bad9041d8e39a20cf873da86bc39835acc data/oresrise/loot_tables/blocks/soul_block.json
 72d532d4d7a14dd53be81b26ab360cc7302edb75 data/oresrise/loot_tables/blocks/soul_ore.json
-33a68a03d48f6d9f7ec88d987f14b72aa8957cde data/oresrise/loot_tables/blocks/soul_steel_block.json
 d2685ff0430e7ffb13316af6c7fbf407dd619041 data/oresrise/loot_tables/blocks/starrite_block.json
 b5c2e0560c432c8d50b5b07366354663404d0bf0 data/oresrise/loot_tables/blocks/starrite_ore.json
 415798b29a3967ae8c1764c52679965636c64d08 data/oresrise/loot_tables/blocks/star_platinum_block.json

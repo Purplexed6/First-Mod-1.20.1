@@ -90,14 +90,23 @@ public class ModSwordItem extends SwordItem {
             }
         }
 
-        if (this.getTier() == ModToolTiers.SOUL_STEEL) {
+        if (this.getTier() == ModToolTiers.DREADSTEEL) {
 
             attacker.heal(1f);
 
             target.addEffect(new MobEffectInstance(
                     MobEffects.WEAKNESS,
                     100,
-                    1,
+                    0,
+                    false,
+                    false,
+                    false
+            ));
+
+            target.addEffect(new MobEffectInstance(
+                    MobEffects.MOVEMENT_SLOWDOWN,
+                    100,
+                    0,
                     false,
                     false,
                     false
@@ -109,7 +118,7 @@ public class ModSwordItem extends SwordItem {
                         target.getX(),
                         target.getY() + 1,
                         target.getZ(),
-                        20,
+                        5,
                         0.2, 0.5, 0.2,
                         0.01
                 );
@@ -183,6 +192,14 @@ public class ModSwordItem extends SwordItem {
                     false,
                     false
             ));
+            target.addEffect(new MobEffectInstance(
+                    MobEffects.LEVITATION,
+                    20,
+                    5,
+                    false,
+                    false,
+                    false
+            ));
         }
 
         if (this.getTier() == ModToolTiers.KEYOLITE) {
@@ -190,7 +207,7 @@ public class ModSwordItem extends SwordItem {
             target.addEffect(new MobEffectInstance(
                     MobEffects.LEVITATION,
                     20,
-                    4,
+                    3,
                     false,
                     false,
                     false

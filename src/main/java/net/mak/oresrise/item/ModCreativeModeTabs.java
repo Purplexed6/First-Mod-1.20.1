@@ -139,16 +139,17 @@ public class ModCreativeModeTabs {
                         pOutput.accept(WitheriteSet.WITHERITE_LEGGINGS.get());
                         pOutput.accept(WitheriteSet.WITHERITE_BOOTS.get());
 
-                        pOutput.accept(SoulSteelSet.SOUL_STEEL_INGOT.get());
-                        pOutput.accept(SoulSteelSet.SOUL_STEEL_SWORD.get());
-                        pOutput.accept(SoulSteelSet.SOUL_STEEL_PICKAXE.get());
-                        pOutput.accept(SoulSteelSet.SOUL_STEEL_AXE.get());
-                        pOutput.accept(SoulSteelSet.SOUL_STEEL_SHOVEL.get());
-                        pOutput.accept(SoulSteelSet.SOUL_STEEL_HOE.get());
-                        pOutput.accept(SoulSteelSet.SOUL_STEEL_HELMET.get());
-                        pOutput.accept(SoulSteelSet.SOUL_STEEL_CHESTPLATE.get());
-                        pOutput.accept(SoulSteelSet.SOUL_STEEL_LEGGINGS.get());
-                        pOutput.accept(SoulSteelSet.SOUL_STEEL_BOOTS.get());
+                        pOutput.accept(DreadsteelSet.DREADSTEEL_INGOT.get());
+                        pOutput.accept(DreadsteelSet.DREADSTEEL_SWORD.get());
+                        pOutput.accept(DreadsteelSet.DREADSTEEL_PICKAXE.get());
+                        pOutput.accept(DreadsteelSet.DREADSTEEL_AXE.get());
+                        pOutput.accept(DreadsteelSet.DREADSTEEL_SHOVEL.get());
+                        pOutput.accept(DreadsteelSet.DREADSTEEL_HOE.get());
+                        pOutput.accept(DreadsteelSet.DREADSTEEL_HELMET.get());
+                        pOutput.accept(DreadsteelSet.DREADSTEEL_CHESTPLATE.get());
+                        pOutput.accept(DreadsteelSet.DREADSTEEL_LEGGINGS.get());
+                        pOutput.accept(DreadsteelSet.DREADSTEEL_BOOTS.get());
+                        pOutput.accept(DreadsteelSet.DREADSTEEL_UPGRADE_SMITHING_TEMPLATE.get());
 
                         pOutput.accept(AquamarineSet.AQUAMARINE.get());
                         pOutput.accept(AquamarineSet.AQUAMARINE_SWORD.get());
@@ -186,7 +187,7 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ResoniteSet.RESONITE_LEGGINGS.get());
                         pOutput.accept(ResoniteSet.RESONITE_BOOTS.get());
 
-                        pOutput.accept(QuintessiteSet.QUINTESSITE.get());
+                        /*pOutput.accept(QuintessiteSet.QUINTESSITE.get());
                         pOutput.accept(QuintessiteSet.QUINTESSITE_SWORD.get());
                         pOutput.accept(QuintessiteSet.QUINTESSITE_PICKAXE.get());
                         pOutput.accept(QuintessiteSet.QUINTESSITE_AXE.get());
@@ -195,7 +196,7 @@ public class ModCreativeModeTabs {
                         pOutput.accept(QuintessiteSet.QUINTESSITE_HELMET.get());
                         pOutput.accept(QuintessiteSet.QUINTESSITE_CHESTPLATE.get());
                         pOutput.accept(QuintessiteSet.QUINTESSITE_LEGGINGS.get());
-                        pOutput.accept(QuintessiteSet.QUINTESSITE_BOOTS.get());
+                        pOutput.accept(QuintessiteSet.QUINTESSITE_BOOTS.get());*/
 
                         pOutput.accept(LunarisSet.LUNARIS.get());
                         pOutput.accept(LunarisSet.LUNARIS_SWORD.get());
@@ -421,8 +422,8 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.SOUL_ORE.get());
                         pOutput.accept(ModBlocks.SOUL_BLOCK.get());
 
-                        pOutput.accept(ModBlocks.QUINTESSITE_BLOCK.get());
-                        pOutput.accept(ModBlocks.QUINTESSITE_ORE.get());
+                       // pOutput.accept(ModBlocks.QUINTESSITE_BLOCK.get());
+                       // pOutput.accept(ModBlocks.QUINTESSITE_ORE.get());
 
                         pOutput.accept(ModBlocks.WITHERITE_BLOCK.get());
                         pOutput.accept(ModBlocks.WITHERITE_ORE.get());
@@ -430,7 +431,7 @@ public class ModCreativeModeTabs {
 
                         pOutput.accept(ModBlocks.STAR_PLATINUM_BLOCK.get());
 
-                        pOutput.accept(ModBlocks.SOUL_STEEL_BLOCK.get());
+                        pOutput.accept(ModBlocks.DREADSTEEL_BLOCK.get());
 
                         pOutput.accept(ModBlocks.LUNARIS_BLOCK.get());
                         pOutput.accept(ModBlocks.LUNARIS_ORE.get());

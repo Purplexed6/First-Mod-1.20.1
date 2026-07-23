@@ -15,7 +15,7 @@ import java.util.function.Supplier;
 public enum ModArmorMaterials implements ArmorMaterial {
 
     SOULFORGED("soulforged", 40, new int[]{ 4, 8, 6, 4 }, 15,
-            SoundEvents.ARMOR_EQUIP_DIAMOND, 2.8f, 0.1f, () -> Ingredient.of(SoulSet.SOUL_CRYSTAL.get())),
+            SoundEvents.ARMOR_EQUIP_DIAMOND, 2.8f, 0.05f, () -> Ingredient.of(SoulSet.SOUL_CRYSTAL.get())),
 
     HEMOGEM("hemogem", 30, new int[]{ 3, 8, 6, 3 }, 15,
             SoundEvents.ARMOR_EQUIP_GOLD,
@@ -26,16 +26,16 @@ public enum ModArmorMaterials implements ArmorMaterial {
     STEEL("steel", 30, new int[]{ 2, 7, 5, 2 }, 9,
             SoundEvents.ARMOR_EQUIP_IRON,
             1.0f,   // toughness (+1 over iron)
-            0.05f,   // no knockback resistance
+            0.02f,   // no knockback resistance
             () -> Ingredient.of(SteelSet.STEEL_INGOT.get())),
 
-    QUINTESSITE("quintessite", 40,
+    /*QUINTESSITE("quintessite", 40,
             new int[]{ 4, 9, 7, 4 }, // strong but not insane
             15,
             SoundEvents.ARMOR_EQUIP_NETHERITE,
             3.0f,   // toughness (high)
             0.25f,  // knockback resistance (very stable)
-            () -> Ingredient.of(QuintessiteSet.QUINTESSITE.get())),
+            () -> Ingredient.of(QuintessiteSet.QUINTESSITE.get())),*/
 
     LUNARIS("lunaris", 40, new int[]{ 4, 9, 7, 4 }, 18,
             SoundEvents.ARMOR_EQUIP_DIAMOND, 3f, 0.2f, () -> Ingredient.of(LunarisSet.LUNARIS.get())),
@@ -43,18 +43,18 @@ public enum ModArmorMaterials implements ArmorMaterial {
     ONYX("onyx", 42, new int[]{ 4, 9, 7, 4 }, 17,
             SoundEvents.ARMOR_EQUIP_NETHERITE,
             3.2f, // toughness
-            0.2f, // knockback resistance (feels heavy/powerful)
+            0.15f, // knockback resistance (feels heavy/powerful)
             () -> Ingredient.of(OnyxSet.ONYX.get())),
 
-    SOUL_STEEL("soul_steel", 42, new int[]{ 4, 9, 7, 4 }, 17,
+    DREADSTEEL("dreadsteel", 42, new int[]{ 3, 8, 6, 3 }, 17,
             SoundEvents.ARMOR_EQUIP_NETHERITE,
             3.3f,
-            0.12f,
-            () -> Ingredient.of(SoulSteelSet.SOUL_STEEL_INGOT.get())),
+            0.15f,
+            () -> Ingredient.of(DreadsteelSet.DREADSTEEL_INGOT.get())),
 
     CRYPTON("crypton",
             45,                     // durability multiplier (strong but below quintessite)
-            new int[]{ 5, 9, 8, 5 },// balanced protection (slightly below top tiers)
+            new int[]{ 4, 9, 7, 4 },// balanced protection (slightly below top tiers)
             22,                     // enchantability (high)
             SoundEvents.ARMOR_EQUIP_NETHERITE,
             4.0f,                   // toughness (solid)
@@ -68,13 +68,13 @@ public enum ModArmorMaterials implements ArmorMaterial {
             () -> Ingredient.of(StarPlatinumSet.STAR_PLATINUM_INGOT.get())),
 
     WITHERITE("witherite", 40, new int[]{ 3, 8, 6, 3 }, 8,
-            SoundEvents.ARMOR_EQUIP_DIAMOND, 3f, 0.2f, () -> Ingredient.of(WitheriteSet.WITHERITE_INGOT.get())),
+            SoundEvents.ARMOR_EQUIP_DIAMOND, 3f, 0.05f, () -> Ingredient.of(WitheriteSet.WITHERITE_INGOT.get())),
 
     KEYOLITE("keyolite", 37, new int[]{ 3, 8, 6, 3 }, 19,
-            SoundEvents.ARMOR_EQUIP_GOLD, 3f, 0.1f, () -> Ingredient.of(KeyoliteSet.KEYOLITE_INGOT.get())),
+            SoundEvents.ARMOR_EQUIP_GOLD, 3f, 0.05f, () -> Ingredient.of(KeyoliteSet.KEYOLITE_INGOT.get())),
 
     VOLTIUM("voltium", 37, new int[]{ 3, 8, 6, 3 }, 18,
-            SoundEvents.ARMOR_EQUIP_NETHERITE, 3f, 0.1f, () -> Ingredient.of(VoltiumSet.VOLTIUM_INGOT.get())),
+            SoundEvents.ARMOR_EQUIP_NETHERITE, 3f, 0.05f, () -> Ingredient.of(VoltiumSet.VOLTIUM_INGOT.get())),
 
     PLATINUM("platinum", 30, new int[]{ 3, 8, 6, 3 }, 12,
             SoundEvents.ARMOR_EQUIP_DIAMOND,
@@ -107,7 +107,7 @@ public enum ModArmorMaterials implements ArmorMaterial {
             SoundEvents.ARMOR_EQUIP_GENERIC, 0f, 0f, () -> Ingredient.of(Items.EMERALD)),
 
     OBSIDIUM("obsidium", 50, new int[]{ 3, 8, 6, 3 }, 9,
-            SoundEvents.ARMOR_EQUIP_DIAMOND, 3f, 0.2f, () -> Ingredient.of(ObsidiumSet.OBSIDIUM_INGOT.get())),
+            SoundEvents.ARMOR_EQUIP_DIAMOND, 3f, 0.15f, () -> Ingredient.of(ObsidiumSet.OBSIDIUM_INGOT.get())),
 
    // COBALT("cobalt", 33, new int[]{ 3, 8, 6, 3 }, 10,
    //         SoundEvents.ARMOR_EQUIP_DIAMOND, 2f, 0f, () -> Ingredient.of(CobaltSet.COBALT_INGOT.get())),

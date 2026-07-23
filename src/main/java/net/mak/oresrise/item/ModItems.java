@@ -69,7 +69,7 @@ public class ModItems {
         SoulSet.register();
         Misc.register();
         WitheriteSet.register();
-        SoulSteelSet.register();
+        DreadsteelSet.register();
         RositeSet.register();
         RoseGoldSet.register();
         LunarisSet.register();

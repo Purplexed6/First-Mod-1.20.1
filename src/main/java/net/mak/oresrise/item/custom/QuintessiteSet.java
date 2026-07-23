@@ -8,7 +8,7 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class QuintessiteSet {
 
-    public static final RegistryObject<Item> QUINTESSITE = ModItems.ITEMS.register("quintessite",
+    /*public static final RegistryObject<Item> QUINTESSITE = ModItems.ITEMS.register("quintessite",
             () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> QUINTESSITE_SWORD = ModItems.ITEMS.register("quintessite_sword",
@@ -29,7 +29,7 @@ public class QuintessiteSet {
     public static final RegistryObject<Item> QUINTESSITE_LEGGINGS = ModItems.ITEMS.register("quintessite_leggings",
             () -> new ArmorItem(ModArmorMaterials.QUINTESSITE, ArmorItem.Type.LEGGINGS, new Item.Properties()));
     public static final RegistryObject<Item> QUINTESSITE_BOOTS = ModItems.ITEMS.register("quintessite_boots",
-            () -> new ArmorItem(ModArmorMaterials.QUINTESSITE, ArmorItem.Type.BOOTS, new Item.Properties()));
+            () -> new ArmorItem(ModArmorMaterials.QUINTESSITE, ArmorItem.Type.BOOTS, new Item.Properties()));*/
 
     public static void register() {}
 }

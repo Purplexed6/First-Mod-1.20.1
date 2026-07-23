@@ -1,4 +1,4 @@
-// 1.20.1	2026-07-20T19:15:08.5680758	Block States: oresrise
+// 1.20.1	2026-07-24T01:14:37.9567434	Block States: oresrise
 bff0e2ee36ae8f4bffe4fff9fc10cf427b62d83b assets/oresrise/blockstates/aquamarine_block.json
 c7d391b9e51ae6b4e74b6d979a34e73dc534122f assets/oresrise/blockstates/aquamarine_ore.json
 a0fc1ca54c502fa7fee138ae9779c72f9b6b8a72 assets/oresrise/blockstates/crypton_block.json
@@ -6,6 +6,7 @@ b131f7613321b2558ed37904882a7eb3aabb20db assets/oresrise/blockstates/crypton_ore
 f714c7952219236b6062d9e43a134775d5b427c0 assets/oresrise/blockstates/deepslate_malachite_ore.json
 26a028f2eb7dd683024083f1ac9168ff750fb7be assets/oresrise/blockstates/deepslate_ruby_ore.json
 42d0fae8458e4d1520222e9aa21f13e8e26722fe assets/oresrise/blockstates/deepslate_sapphire_ore.json
+e17335c67bf17692a9a3158fae9ce2a2513410ab assets/oresrise/blockstates/dreadsteel_block.json
 95cb6b11d780e4ac5e690280f49edc6a448d8cc1 assets/oresrise/blockstates/fluxite_block.json
 ea460f4fde1dd1dd567a29fe4f2bc64e0027a007 assets/oresrise/blockstates/fluxite_ore.json
 732d8900c7a8106d113def6c794b4a8fb65d50d5 assets/oresrise/blockstates/hemogem_block.json
@@ -20,8 +21,6 @@ bab166a90587e899c16c91c2b2823d1e3bc5bbc5 assets/oresrise/blockstates/obsidium_bl
 7be734538b530e1eb047611ffb887803d2442280 assets/oresrise/blockstates/onyx_ore.json
 6677731c97220bae5aace80c69f6bee725f6a7e2 assets/oresrise/blockstates/platinum_block.json
 bcd3532a7345510f3471beb435342a078ee65ef3 assets/oresrise/blockstates/platinum_ore.json
-4ae659220114c19ebe0239ceb71bbc6fe54b0f45 assets/oresrise/blockstates/quintessite_block.json
-7fff7038b7aeb17992c960c694e6e9b2d4fcae8f assets/oresrise/blockstates/quintessite_ore.json
 ff5f1af378d0502c1c54ba95f36760669417b36c assets/oresrise/blockstates/raw_platinum_block.json
 37a2a47751f52f3d5cf5ac3226013140aea4910a assets/oresrise/blockstates/raw_witherite_block.json
 36413bae25efe6b8ac78b135b75bed45774fccb8 assets/oresrise/blockstates/rose_gold_block.json
@@ -35,7 +34,6 @@ a05cd4678da4013eeb9fc8931f5a7736e0c64947 assets/oresrise/blockstates/ruby_block.
 f6a243b87e7468836d8abc375c5bf2771392d240 assets/oresrise/blockstates/sapphire_ore.json
 097e214dbce728a6a6bbd65cc8aac3319e2504ca assets/oresrise/blockstates/soul_block.json
 7f26a10d07ab787568915108efb75bf059905c69 assets/oresrise/blockstates/soul_ore.json
-0c99e28ca48d49c4b7326568a6a76209882495bf assets/oresrise/blockstates/soul_steel_block.json
 2b00f775fce14f2da152569c918ba8efac59f3d5 assets/oresrise/blockstates/starrite_block.json
 d24ce4dd72615876571ba9814deff44caa328f91 assets/oresrise/blockstates/starrite_ore.json
 101202f86a1b932d4b66e33fa746eb7d56299edd assets/oresrise/blockstates/star_platinum_block.json
@@ -52,6 +50,7 @@ a5923fd541172c13c1813908047071c3b1cdfed5 assets/oresrise/models/block/aquamarine
 e44ef342c7a23571d4c09a8cd56211cd05c53927 assets/oresrise/models/block/deepslate_malachite_ore.json
 cea3d6b4e2e75fb6307fb28269857f31e004017e assets/oresrise/models/block/deepslate_ruby_ore.json
 f7cc7d3dd1d4847807e4f19abbc8265fcb7de109 assets/oresrise/models/block/deepslate_sapphire_ore.json
+3f3e9501128e1104455927304ef0a90bf7d4d7fa assets/oresrise/models/block/dreadsteel_block.json
 37e65c0a9c7952fa22d7635bea316b0a95fd5257 assets/oresrise/models/block/fluxite_block.json
 a96253fac2ac2c2ac9f84593265eb3b52eb84b68 assets/oresrise/models/block/fluxite_ore.json
 3da39722c49a19793697e0af2d25ec98bb897849 assets/oresrise/models/block/hemogem_block.json
@@ -66,8 +65,6 @@ ec63d9cb43d1f02a55b49c0dd6cc396bcda76a81 assets/oresrise/models/block/onyx_block
 0f184ce47ac88e82be8267ba009a8f292bab8d74 assets/oresrise/models/block/onyx_ore.json
 943deb9e2781e41a08041bf40331c4cfcf2635da assets/oresrise/models/block/platinum_block.json
 971845e0f05388430041ee5871f98b493544b176 assets/oresrise/models/block/platinum_ore.json
-e2676cb2f7ddeb72bf00d78ee169c0257106b999 assets/oresrise/models/block/quintessite_block.json
-6ef629c82ba3b5bd7426a3778a67e61de4e6ac26 assets/oresrise/models/block/quintessite_ore.json
 58a5190e22c9c8d918eba909ad4244bdb6a89a5b assets/oresrise/models/block/raw_platinum_block.json
 2a85a1e2e46fe5820ee167784b0e03ac3e620607 assets/oresrise/models/block/raw_witherite_block.json
 02674d6da73b23a2ca5d9732affc894e1e895c7c assets/oresrise/models/block/rose_gold_block.json
@@ -81,7 +78,6 @@ e2676cb2f7ddeb72bf00d78ee169c0257106b999 assets/oresrise/models/block/quintessit
 b1fe022e7896a02b8a91ff22912cdd467ef5c1ac assets/oresrise/models/block/sapphire_ore.json
 d807ed8d79787626d947b71d214a0c882262550a assets/oresrise/models/block/soul_block.json
 4b49fc0a2eb4ff89086a6d949e86fb8e448972fb assets/oresrise/models/block/soul_ore.json
-79ea9e46d255469e528ea1c883155c9e5d904953 assets/oresrise/models/block/soul_steel_block.json
 549b98d85373b94fd7cd691fea4aa90f41d84833 assets/oresrise/models/block/starrite_block.json
 3c42dcd760e428d1ec54842d7491b57460d1e539 assets/oresrise/models/block/starrite_ore.json
 8b4437838896949458e16a81f690e6bda27acc42 assets/oresrise/models/block/star_platinum_block.json
@@ -98,6 +94,7 @@ dad99a9a6d65f6735f2ed9ba251eb28d4b772050 assets/oresrise/models/item/aquamarine_
 e7b76f74578ce9066c5d9cf43e1b4f427fc5ea5f assets/oresrise/models/item/deepslate_malachite_ore.json
 dc9c15d56df1a67e470ae81e2b4e39290b7a2f57 assets/oresrise/models/item/deepslate_ruby_ore.json
 432d7c53ccfcf051bc2d104509594ba60ebe58ba assets/oresrise/models/item/deepslate_sapphire_ore.json
+ab0e8451f3d1e4b5aeb9b27b0d358c645d00f8c4 assets/oresrise/models/item/dreadsteel_block.json
 6c533d5cba8a4b50772ed0efba46661d988ee550 assets/oresrise/models/item/fluxite_block.json
 b7cc3de59b8a20eda80b8ce860b157d840060241 assets/oresrise/models/item/fluxite_ore.json
 c04487e0a2922164ad799e8dcccf12c3c6758035 assets/oresrise/models/item/hemogem_block.json
@@ -112,8 +109,6 @@ fc29e71fe3f3db582d2ee2552916b0b41dbf683b assets/oresrise/models/item/obsidium_bl
 75d6cdbb789d7e325848bd6772ee7566fc7a573f assets/oresrise/models/item/onyx_ore.json
 caa96d69d5fcbfdb22b97a7dfda7c85feb827610 assets/oresrise/models/item/platinum_block.json
 6f5454b4b2f62d017a24c18a1774fac88302b2d5 assets/oresrise/models/item/platinum_ore.json
-127d260ca11c4bdfd55f5d03c49f872c54836da0 assets/oresrise/models/item/quintessite_block.json
-89b195ea71410355aa19096e8317ab62276b225a assets/oresrise/models/item/quintessite_ore.json
 b42fd9107ca4e7860586a9baa6bf1263061f0191 assets/oresrise/models/item/raw_platinum_block.json
 4911e1f5e026e584a002da1d686825b8c2091b9a assets/oresrise/models/item/raw_witherite_block.json
 688132d4f2cac2601f6f9686a844c2fe6b3dfdaf assets/oresrise/models/item/rose_gold_block.json
@@ -127,7 +122,6 @@ c5905eccc8f70682eb3839970cf65cac7ed858d5 assets/oresrise/models/item/ruby_block.
 89d5c2e7967397b26c5b8a2bf39f90df064360f3 assets/oresrise/models/item/sapphire_ore.json
 743a25cb85778cfcab7f85467560fe655ac7fe06 assets/oresrise/models/item/soul_block.json
 35aeb9d81649c89b0c8a8c105a3cb488ec7a4013 assets/oresrise/models/item/soul_ore.json
-64886fecb0ec9890bf6956754d47d1c48948967d assets/oresrise/models/item/soul_steel_block.json
 c49edc66ecd8893f86f49cd3e2df7c337aaf6c91 assets/oresrise/models/item/starrite_block.json
 49c3ea18a4ec9d590291ea5d77f82f2230b04c8b assets/oresrise/models/item/starrite_ore.json
 db446619be82ffdefe0280998f7125a202183a6e assets/oresrise/models/item/star_platinum_block.json

@@ -2,7 +2,8 @@ package net.mak.oresrise.item.custom;
 
 import com.google.common.collect.ImmutableMap;
 import net.mak.oresrise.item.ModArmorMaterials;
-import net.minecraft.tags.BlockTags;
+import net.minecraft.world.item.enchantment.EnchantmentHelper;
+import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.player.Player;
@@ -37,7 +38,7 @@ public class ModArmorItem extends ArmorItem {
                     ))
 
                     .put(ModArmorMaterials.LUNARIS, List.of(
-                            new MobEffectInstance(MobEffects.JUMP, 40, 1, false, false)
+                            new MobEffectInstance(MobEffects.JUMP, 40, 0, false, false)
                     ))
 
                     .put(ModArmorMaterials.KEYOLITE, List.of(
@@ -48,9 +49,8 @@ public class ModArmorItem extends ArmorItem {
                             new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 1, false, false)
                     ))
 
-                    .put(ModArmorMaterials.SOUL_STEEL, List.of(
-                            new MobEffectInstance(MobEffects.REGENERATION, 40, 1, false, false),
-                            new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 0, false, false)
+                    .put(ModArmorMaterials.DREADSTEEL, List.of(
+                            new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 0, false, false)
                     ))
 
                     .put(ModArmorMaterials.STAR_PLATINUM, List.of(
@@ -59,15 +59,8 @@ public class ModArmorItem extends ArmorItem {
                     ))
 
                     .put(ModArmorMaterials.ONYX, List.of(
-                            new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 0, false, false)
-                    ))
-
-                    .put(ModArmorMaterials.QUINTESSITE, List.of(
                             new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 0, false, false),
-                            new MobEffectInstance(MobEffects.DIG_SPEED, 40, 0, false, false),
-                            new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 0, false, false),
-                            new MobEffectInstance(MobEffects.HEALTH_BOOST, 40, 0, false, false),
-                            new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 0, false, false)
+                            new MobEffectInstance(MobEffects.NIGHT_VISION, 40, 0, false, false)
                     ))
 
                     .build();
@@ -149,35 +142,32 @@ public class ModArmorItem extends ArmorItem {
             }
         }
 
-        // 👻 SOUL STEEL (stronger version)
-        if (hasCorrectArmorOn(ModArmorMaterials.SOUL_STEEL, player)) {
-            if (player.getBlockStateOn().is(Blocks.SOUL_SAND)) {
-                player.addEffect(new MobEffectInstance(
-                        MobEffects.MOVEMENT_SPEED,
-                        40,
-                        7, // stronger than soulforged
-                        false,
-                        false
-                ));
-            }
+        if (hasCorrectArmorOn(ModArmorMaterials.LUNARIS, player)) {
+            player.fallDistance = 0;
         }
 
-        if (hasCorrectArmorOn(ModArmorMaterials.SOUL_STEEL, player)) {
-            if (player.getBlockStateOn().is(Blocks.SOUL_SOIL)) {
-                player.addEffect(new MobEffectInstance(
-                        MobEffects.MOVEMENT_SPEED,
-                        40,
-                        3, // stronger than soulforged
-                        false,
-                        false
-                ));
+        // 🔥 DREADSTEEL SOUL SPEED II
+        if (hasCorrectArmorOn(ModArmorMaterials.DREADSTEEL, player)) {
+
+            ItemStack boots = player.getInventory().getArmor(0);
+
+            var enchantments = EnchantmentHelper.getEnchantments(boots);
+
+            if (enchantments.getOrDefault(Enchantments.SOUL_SPEED, 0) < 2) {
+
+                enchantments.put(Enchantments.SOUL_SPEED, 2);
+
+                EnchantmentHelper.setEnchantments(
+                        enchantments,
+                        boots
+                );
             }
         }
 
         // 🖤 ONYX → Crushing Aura
         if (hasCorrectArmorOn(ModArmorMaterials.ONYX, player)) {
 
-            if (player.tickCount % 40 == 0) { // every 2 seconds
+            if (player.tickCount % 20 == 0) { // every 2 seconds
 
                 for (var entity : player.level().getEntities(player, player.getBoundingBox().inflate(3))) {
 

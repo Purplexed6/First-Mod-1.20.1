@@ -105,7 +105,7 @@ public class ModEvents {
             }
 
             // Cosmetic particles
-            if (player.tickCount % 6 == 0) {
+            if (player.tickCount % 13 == 0) {
                 ((ServerLevel) player.level()).sendParticles(
                         ParticleTypes.SOUL,
                         player.getX(),

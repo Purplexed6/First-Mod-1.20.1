@@ -24,14 +24,13 @@ public class ModBiomeModifiers {
     public static final ResourceKey<BiomeModifier> ADD_VIBRANIUM_ORE = registerKey("add_vibranium_ore");
 
     public static final ResourceKey<BiomeModifier> ADD_SOUL_ORE = registerKey("add_soul_ore");
-    public static final ResourceKey<BiomeModifier> ADD_QUINTESSITE_ORE = registerKey("add_quintessite_ore");
+    //public static final ResourceKey<BiomeModifier> ADD_QUINTESSITE_ORE = registerKey("add_quintessite_ore");
     public static final ResourceKey<BiomeModifier> ADD_HEMOGEM_ORE = registerKey("add_hemogem_ore");
     public static final ResourceKey<BiomeModifier> ADD_FLUXITE_ORE = registerKey("add_fluxite_ore");
 
    // public static final ResourceKey<BiomeModifier> ADD_OBLIVIONITE_ORE = registerKey("add_oblivionite_ore");
     public static final ResourceKey<BiomeModifier> ADD_LUNARIS_ORE = registerKey("add_lunaris_ore");
     public static final ResourceKey<BiomeModifier> ADD_CRYPTON_ORE = registerKey("add_crypton_ore");
-    public static final ResourceKey<BiomeModifier> ADD_STARRITE_ORE = registerKey("add_starrite_ore");
     public static final ResourceKey<BiomeModifier> ADD_STARRITE_PILLAR = registerKey("add_starrite_pillar");
 
     public static void bootstrap(BootstapContext<BiomeModifier> context) {
@@ -77,10 +76,10 @@ public class ModBiomeModifiers {
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.SOUL_ORE_PLACED_KEY)),
                 GenerationStep.Decoration.UNDERGROUND_ORES));
 
-        context.register(ADD_QUINTESSITE_ORE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+        /*context.register(ADD_QUINTESSITE_ORE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
                 biomes.getOrThrow(BiomeTags.IS_NETHER),
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.QUINTESSITE_ORE_PLACED_KEY)),
-                GenerationStep.Decoration.UNDERGROUND_ORES));
+                GenerationStep.Decoration.UNDERGROUND_ORES));*/
 
         context.register(ADD_HEMOGEM_ORE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
                 biomes.getOrThrow(BiomeTags.IS_NETHER),

@@ -47,14 +47,13 @@ public class ModConfiguredFeatures {
 
     public static final ResourceKey<ConfiguredFeature<?, ?>> WITHERITE_ORE_KEY = registerKey("witherite_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> SOUL_ORE_KEY = registerKey("soul_ore");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> QUINTESSITE_ORE_KEY = registerKey("quintessite_ore");
+   // public static final ResourceKey<ConfiguredFeature<?, ?>> QUINTESSITE_ORE_KEY = registerKey("quintessite_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> HEMOGEM_ORE_KEY = registerKey("hemogem_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> FLUXITE_ORE_KEY = registerKey("fluxite_ore");
 
    // public static final ResourceKey<ConfiguredFeature<?, ?>> OBLIVIONITE_ORE_KEY = registerKey("oblivionite_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> LUNARIS_ORE_KEY = registerKey("lunaris_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> CRYPTON_ORE_KEY = registerKey("crypton_ore");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> STARRITE_ORE_KEY = registerKey("starrite_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> STARRITE_PILLAR_KEY = registerKey("starrite_pillar");
 
     public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
@@ -102,8 +101,8 @@ public class ModConfiguredFeatures {
 
         register(context, SOUL_ORE_KEY, Feature.ORE, new OreConfiguration(soulsoilReplacables,
                 ModBlocks.SOUL_ORE.get().defaultBlockState(), 7));
-        register(context, QUINTESSITE_ORE_KEY, Feature.ORE, new OreConfiguration(netherrackReplacables,
-                ModBlocks.QUINTESSITE_ORE.get().defaultBlockState(), 6));
+        /*register(context, QUINTESSITE_ORE_KEY, Feature.ORE, new OreConfiguration(netherrackReplacables,
+                ModBlocks.QUINTESSITE_ORE.get().defaultBlockState(), 6));*/
         register(context, HEMOGEM_ORE_KEY, Feature.ORE, new OreConfiguration(blackstoneReplacables,
                 ModBlocks.HEMOGEM_ORE.get().defaultBlockState(), 6));
 

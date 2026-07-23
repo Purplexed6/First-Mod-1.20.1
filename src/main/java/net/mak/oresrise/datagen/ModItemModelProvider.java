@@ -80,16 +80,17 @@ public class ModItemModelProvider extends ItemModelProvider {
         handheldItem(KeyoliteSet.KEYOLITE_SHOVEL);
         handheldItem(KeyoliteSet.KEYOLITE_HOE);
 
-        simpleItem(SoulSteelSet.SOUL_STEEL_INGOT);
-        handheldItem(SoulSteelSet.SOUL_STEEL_SWORD);
-        handheldItem(SoulSteelSet.SOUL_STEEL_PICKAXE);
-        handheldItem(SoulSteelSet.SOUL_STEEL_AXE);
-        handheldItem(SoulSteelSet.SOUL_STEEL_SHOVEL);
-        handheldItem(SoulSteelSet.SOUL_STEEL_HOE);
-        simpleItem(SoulSteelSet.SOUL_STEEL_HELMET);
-        simpleItem(SoulSteelSet.SOUL_STEEL_CHESTPLATE);
-        simpleItem(SoulSteelSet.SOUL_STEEL_LEGGINGS);
-        simpleItem(SoulSteelSet.SOUL_STEEL_BOOTS);
+        simpleItem(DreadsteelSet.DREADSTEEL_INGOT);
+        handheldItem(DreadsteelSet.DREADSTEEL_SWORD);
+        handheldItem(DreadsteelSet.DREADSTEEL_PICKAXE);
+        handheldItem(DreadsteelSet.DREADSTEEL_AXE);
+        handheldItem(DreadsteelSet.DREADSTEEL_SHOVEL);
+        handheldItem(DreadsteelSet.DREADSTEEL_HOE);
+        simpleItem(DreadsteelSet.DREADSTEEL_HELMET);
+        simpleItem(DreadsteelSet.DREADSTEEL_CHESTPLATE);
+        simpleItem(DreadsteelSet.DREADSTEEL_LEGGINGS);
+        simpleItem(DreadsteelSet.DREADSTEEL_BOOTS);
+        basicItem(DreadsteelSet.DREADSTEEL_UPGRADE_SMITHING_TEMPLATE.get());
 
         // simpleItem(OblivioniteSet.OBLIVIONITE_SHARD);
        //  simpleItem(OblivioniteSet.OBLIVIONITE_CRYSTAL);
@@ -230,7 +231,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         handheldItem(AquamarineSet.AQUAMARINE_SHOVEL);
         handheldItem(AquamarineSet.AQUAMARINE_HOE);
 
-        simpleItem(QuintessiteSet.QUINTESSITE);
+        /*simpleItem(QuintessiteSet.QUINTESSITE);
         handheldItem(QuintessiteSet.QUINTESSITE_SWORD);
         handheldItem(QuintessiteSet.QUINTESSITE_PICKAXE);
         handheldItem(QuintessiteSet.QUINTESSITE_AXE);
@@ -239,7 +240,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(QuintessiteSet.QUINTESSITE_HELMET);
         simpleItem(QuintessiteSet.QUINTESSITE_CHESTPLATE);
         simpleItem(QuintessiteSet.QUINTESSITE_LEGGINGS);
-        simpleItem(QuintessiteSet.QUINTESSITE_BOOTS);
+        simpleItem(QuintessiteSet.QUINTESSITE_BOOTS);*/
 
         simpleItem(HemoSet.HEMOGEM);
         simpleItem(HemoSet.HEMOGEM_HELMET);

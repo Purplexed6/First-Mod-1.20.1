@@ -41,10 +41,10 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.SOUL_BLOCK.get());
         this.dropSelf(ModBlocks.AQUAMARINE_BLOCK.get());
     //    this.dropSelf(ModBlocks.JADE_BLOCK.get());
-        this.dropSelf(ModBlocks.QUINTESSITE_BLOCK.get());
+        //this.dropSelf(ModBlocks.QUINTESSITE_BLOCK.get());
         this.dropSelf(ModBlocks.HEMOGEM_BLOCK.get());
         this.dropSelf(ModBlocks.CRYPTON_BLOCK.get());
-        this.dropSelf(ModBlocks.SOUL_STEEL_BLOCK.get());
+        this.dropSelf(ModBlocks.DREADSTEEL_BLOCK.get());
         this.dropSelf(ModBlocks.LUNARIS_BLOCK.get());
         this.dropSelf(ModBlocks.FLUXITE_BLOCK.get());
         this.dropSelf(ModBlocks.VOLTIUM_BLOCK.get());
@@ -152,14 +152,14 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                                 .apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0f, 2.0f)))
                                 .apply(ApplyBonusCount.addOreBonusCount(Enchantments.BLOCK_FORTUNE)))));
 
-        this.add(ModBlocks.QUINTESSITE_ORE.get(), (block) ->
+        /*this.add(ModBlocks.QUINTESSITE_ORE.get(), (block) ->
                 createSilkTouchDispatchTable(block, this.applyExplosionDecay(block,
                         LootItem.lootTableItem(QuintessiteSet.QUINTESSITE.get())
                                 .apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0f, 2.0f)))
                                 .apply(ApplyBonusCount.addOreBonusCount(Enchantments.BLOCK_FORTUNE))))
                         .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1.0f))
                                 .when(LootItemRandomChanceCondition.randomChance(0.1f))
-                                .add(LootItem.lootTableItem(Misc.NETHER_SLAG.get()))));
+                                .add(LootItem.lootTableItem(Misc.NETHER_SLAG.get()))));*/
 
         this.add(ModBlocks.HEMOGEM_ORE.get(), (block) ->
                 createSilkTouchDispatchTable(block, this.applyExplosionDecay(block,

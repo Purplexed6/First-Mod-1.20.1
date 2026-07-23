@@ -25,7 +25,7 @@ public class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> VIBRANIUM_ORE_PLACED_KEY = registerKey("vibranium_ore_placed");
 
     public static final ResourceKey<PlacedFeature> SOUL_ORE_PLACED_KEY = registerKey("soul_ore_placed");
-    public static final ResourceKey<PlacedFeature> QUINTESSITE_ORE_PLACED_KEY = registerKey("quintessite_ore_placed");
+  //  public static final ResourceKey<PlacedFeature> QUINTESSITE_ORE_PLACED_KEY = registerKey("quintessite_ore_placed");
     public static final ResourceKey<PlacedFeature> HEMOGEM_ORE_PLACED_KEY = registerKey("hemogem_ore_placed");
     public static final ResourceKey<PlacedFeature> FLUXITE_ORE_PLACED_KEY = registerKey("fluxite_ore_placed");
 
@@ -80,11 +80,11 @@ public class ModPlacedFeatures {
                         HeightRangePlacement.uniform(
                                 VerticalAnchor.absolute(10),
                                 VerticalAnchor.absolute(120))));
-        register(context, QUINTESSITE_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.QUINTESSITE_ORE_KEY),
+        /*register(context, QUINTESSITE_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.QUINTESSITE_ORE_KEY),
                 ModOrePlacement.commonOrePlacement(6,
                         HeightRangePlacement.uniform(
                                 VerticalAnchor.absolute(10),
-                                VerticalAnchor.absolute(120))));
+                                VerticalAnchor.absolute(120))));*/
         register(context, HEMOGEM_ORE_PLACED_KEY,
                 configuredFeatures.getOrThrow(ModConfiguredFeatures.HEMOGEM_ORE_KEY),
                 ModOrePlacement.commonOrePlacement(6,

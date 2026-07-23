@@ -93,13 +93,13 @@ public class ModBlocks {
             () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_DIAMOND_ORE)
                     .requiresCorrectToolForDrops(), UniformInt.of(4, 8))); */
 
-    public static final RegistryObject<Block> QUINTESSITE_BLOCK = registerBlock("quintessite_block",
+    /*public static final RegistryObject<Block> QUINTESSITE_BLOCK = registerBlock("quintessite_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).sound(SoundType.AMETHYST)));
     public static final RegistryObject<Block> QUINTESSITE_ORE = registerBlock("quintessite_ore",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.DIAMOND_ORE)
-                    .requiresCorrectToolForDrops(), UniformInt.of(4, 8)));
+                    .requiresCorrectToolForDrops(), UniformInt.of(4, 8)));*/
 
-    public static final RegistryObject<Block> SOUL_STEEL_BLOCK = registerBlock("soul_steel_block",
+    public static final RegistryObject<Block> DREADSTEEL_BLOCK = registerBlock("dreadsteel_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).sound(SoundType.STONE)));
 
     public static final RegistryObject<Block> LUNARIS_BLOCK = registerBlock("lunaris_block",

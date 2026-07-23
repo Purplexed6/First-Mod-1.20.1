@@ -56,7 +56,7 @@ public class ModToolTiers {
             ),
             ResourceLocation.fromNamespaceAndPath(ExampleMod.MOD_ID, "steel"),
             List.of(ModToolTiers.ROSITE),
-            List.of());
+            List.of(Tiers.DIAMOND));
 
     /* public static final Tier COBALT = TierSortingRegistry.registerTier(        //SAME AS IRON
             new ForgeTier(
@@ -76,7 +76,7 @@ public class ModToolTiers {
             new ForgeTier(
                     2, // ⬅ iron level
                     600, // ⬅ low durability (fragile crystal)
-                    10f, // ⬅ VERY fast mining
+                    9f, // ⬅ VERY fast mining
                     2f, // ⬅ lower damage
                     20, // ⬅ high enchantability
                     ModTags.Blocks.NEEDS_AMETHYST_TOOL,
@@ -92,7 +92,7 @@ public class ModToolTiers {
                     900, // ⬅ durability (lower than diamond)
                     7f, // ⬅ mining speed (slightly slower)
                     2.5f, // ⬅ attack damage
-                    15, // ⬅ VERY high enchantability (main strength)
+                    13, // ⬅ VERY high enchantability (main strength)
                     ModTags.Blocks.NEEDS_EMERALD_TOOL,
                     () -> Ingredient.of(Items.EMERALD)
             ),
@@ -186,10 +186,10 @@ public class ModToolTiers {
 
     public static final Tier KEYOLITE = TierSortingRegistry.registerTier(
             new ForgeTier(
-                    4, // mining level
-                    2031, // durability
-                    10f, // mining speed
-                    4f, // attack damage bonus
+                    3, // mining level
+                    1600, // durability
+                    8f, // mining speed
+                    3f, // attack damage bonus
                     20, // enchantability
                     ModTags.Blocks.NEEDS_KEYOLITE_TOOL,
                     () -> Ingredient.of(KeyoliteSet.KEYOLITE_INGOT.get())
@@ -200,7 +200,7 @@ public class ModToolTiers {
 
     public static final Tier VOLTIUM = TierSortingRegistry.registerTier(
             new ForgeTier(
-                    4, // mining level
+                    3, // mining level
                     2031, // durability
                     9f, // mining speed
                     4f, // attack damage bonus
@@ -227,7 +227,7 @@ public class ModToolTiers {
             List.of());*/
 
     public static final Tier SOULFORGED = TierSortingRegistry.registerTier(
-            new ForgeTier(5,
+            new ForgeTier(4,
                     2600,
                     10f,
                     5f,
@@ -292,17 +292,17 @@ public class ModToolTiers {
             List.of(ModToolTiers.RESONITE),
             List.of());
 
-    public static final Tier SOUL_STEEL = TierSortingRegistry.registerTier(
+    public static final Tier DREADSTEEL = TierSortingRegistry.registerTier(
             new ForgeTier(
                     5, // new tier above netherite
-                    2300, // not too high (leave room)
-                    10f, // small upgrade
+                    2500, // not too high (leave room)
+                    10.5f, // small upgrade
                     4.5f, // slight damage boost
-                    15, // decent enchantability
-                    ModTags.Blocks.NEEDS_SOUL_STEEL_TOOL,
-                    () -> Ingredient.of(SoulSteelSet.SOUL_STEEL_INGOT.get())
+                    18, // decent enchantability
+                    ModTags.Blocks.NEEDS_DREADSTEEL_TOOL,
+                    () -> Ingredient.of(DreadsteelSet.DREADSTEEL_INGOT.get())
             ),
-            ResourceLocation.fromNamespaceAndPath(ExampleMod.MOD_ID, "soul_steel"),
+            ResourceLocation.fromNamespaceAndPath(ExampleMod.MOD_ID, "dreadsteel"),
             List.of(ModToolTiers.STARRITE),
             List.of());
 
@@ -334,7 +334,7 @@ public class ModToolTiers {
             List.of(ModToolTiers.STAR_PLATINUM),
             List.of());
 
-    public static final Tier QUINTESSITE = TierSortingRegistry.registerTier(
+    /*public static final Tier QUINTESSITE = TierSortingRegistry.registerTier(
             new ForgeTier(
                     5,
                     3500, // very high durability
@@ -346,14 +346,14 @@ public class ModToolTiers {
             ),
             ResourceLocation.fromNamespaceAndPath(ExampleMod.MOD_ID, "quintessite"),
             List.of(ModToolTiers.HEMOGEM),
-            List.of());
+            List.of()); */
 
     public static final Tier LUNARIS = TierSortingRegistry.registerTier(
             new ForgeTier(
-                    4, // same as netherite
+                    5, // same as netherite
                     2400, // ⬇ slightly less than before (not insane)
                     8.5f, // ⬇ slower than netherite (heavy feel)
-                    5f, // ⬆ strong hits
+                    4.5f, // ⬆ strong hits
                     18, // ⬇ lower enchantability (not magic-focused)
                     ModTags.Blocks.NEEDS_LUNARIS_TOOL,
                     () -> Ingredient.of(LunarisSet.LUNARIS.get())
@@ -367,7 +367,7 @@ public class ModToolTiers {
                     5, // above netherite
                     3000, // high durability (end-tier feel)
                     10.5f, // fast but not insane
-                    5.5f, // strong hits
+                    5f, // strong hits
                     17, // decent enchantability
                     ModTags.Blocks.NEEDS_ONYX_TOOL,
                     () -> Ingredient.of(OnyxSet.ONYX.get())

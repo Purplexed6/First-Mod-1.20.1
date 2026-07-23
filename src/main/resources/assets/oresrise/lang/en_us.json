@@ -83,17 +83,22 @@
   "item.oresrise.keyolite_boots": "Keyolite Boots",
   "block.oresrise.keyolite_block": "Block of Keyolite",
 
-  "item.oresrise.soul_steel_ingot": "Soul Steel Ingot",
-  "block.oresrise.soul_steel_block": "Block of Soul Steel",
-  "item.oresrise.soul_steel_sword": "Soul Steel Sword",
-  "item.oresrise.soul_steel_pickaxe": "Soul Steel Pickaxe",
-  "item.oresrise.soul_steel_axe": "Soul Steel Axe",
-  "item.oresrise.soul_steel_shovel": "Soul Steel Shovel",
-  "item.oresrise.soul_steel_hoe": "Soul Steel Hoe",
-  "item.oresrise.soul_steel_helmet": "Soul Steel Helmet",
-  "item.oresrise.soul_steel_chestplate": "Soul Steel Chestplate",
-  "item.oresrise.soul_steel_leggings": "Soul Steel Leggings",
-  "item.oresrise.soul_steel_boots": "Soul Steel Boots",
+  "item.oresrise.dreadsteel_ingot": "Dreadsteel Ingot",
+  "block.oresrise.dreadsteel_block": "Block of Dreadsteel",
+  "item.oresrise.dreadsteel_sword": "Dreadsteel Sword",
+  "item.oresrise.dreadsteel_pickaxe": "Dreadsteel Pickaxe",
+  "item.oresrise.dreadsteel_axe": "Dreadsteel Axe",
+  "item.oresrise.dreadsteel_shovel": "Dreadsteel Shovel",
+  "item.oresrise.dreadsteel_hoe": "Dreadsteel Hoe",
+  "item.oresrise.dreadsteel_helmet": "Dreadsteel Helmet",
+  "item.oresrise.dreadsteel_chestplate": "Dreadsteel Chestplate",
+  "item.oresrise.dreadsteel_leggings": "Dreadsteel Leggings",
+  "item.oresrise.dreadsteel_boots": "Dreadsteel Boots",
+  "item.oresrise.smithing_template.dreadsteel_upgrade": "Dreadsteel Upgrade Template",
+  "item.oresrise.smithing_template.dreadsteel_upgrade.applies_to": "Applies to: Soulforged Equipment",
+  "item.oresrise.smithing_template.dreadsteel_upgrade.ingredients": "Ingredients: Dreadsteel",
+  "item.oresrise.smithing_template.dreadsteel_upgrade.base_slot_description": "Add soulforged weapon, tool, or armor",
+  "item.oresrise.smithing_template.dreadsteel_upgrade.additions_slot_description": "Add Dreadsteel Ingot",
 
   "item.oresrise.fluxite": "Fluxite",
   "item.oresrise.electric_matter": "Electric Matter",
@@ -113,11 +118,11 @@
   "item.oresrise.fluxite_leggings": "Voltium Leggings",
   "item.oresrise.fluxite_boots": "Voltium Boots",
 
- // "item.oresrise.oblivionite_crystal": "Oblivionite Crystal",
-  //"item.oresrise.oblivionite_shard": "Oblivionite Shard",
+  /*"item.oresrise.oblivionite_crystal": "Oblivionite Crystal",
+  "item.oresrise.oblivionite_shard": "Oblivionite Shard",
 
- // "block.oresrise.oblivionite_block": "Block of Oblivionite",
- // "block.oresrise.oblivionite_ore": "Oblivionite Ore",
+  "block.oresrise.oblivionite_block": "Block of Oblivionite",
+  "block.oresrise.oblivionite_ore": "Oblivionite Ore",*/
 
   "item.oresrise.obsidian_shard": "Obsidian Shard",
   "item.oresrise.obsidium_sword": "Obsidium Sword",
@@ -180,7 +185,7 @@
   "item.oresrise.jade_leggings": "Jade Leggings",
   "item.oresrise.jade_boots": "Jade Boots",
 
-  "item.oresrise.quintessite": "Quintessite",
+  /*"item.oresrise.quintessite": "Quintessite",
   "block.oresrise.quintessite_block": "Block of Quintessite",
   "block.oresrise.quintessite_ore": "Quintessite Ore",
   "item.oresrise.quintessite_sword": "Quintessite Sword",
@@ -191,7 +196,7 @@
   "item.oresrise.quintessite_helmet": "Quintessite Helmet",
   "item.oresrise.quintessite_chestplate": "Quintessite Chestplate",
   "item.oresrise.quintessite_leggings": "Quintessite Leggings",
-  "item.oresrise.quintessite_boots": "Quintessite Boots",
+  "item.oresrise.quintessite_boots": "Quintessite Boots",*/
 
   "item.oresrise.vibranium": "Vibranium",
   "item.oresrise.rough_vibranium": "Rough Vibranium",

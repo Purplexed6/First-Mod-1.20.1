@@ -37,9 +37,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.SOUL_BLOCK);
         blockWithItem(ModBlocks.AQUAMARINE_BLOCK);
      //   blockWithItem(ModBlocks.JADE_BLOCK);
-        blockWithItem(ModBlocks.QUINTESSITE_BLOCK);
+        //blockWithItem(ModBlocks.QUINTESSITE_BLOCK);
         blockWithItem(ModBlocks.HEMOGEM_BLOCK);
-        blockWithItem(ModBlocks.SOUL_STEEL_BLOCK);
+        blockWithItem(ModBlocks.DREADSTEEL_BLOCK);
         blockWithItem(ModBlocks.CRYPTON_BLOCK);
         blockWithItem(ModBlocks.LUNARIS_BLOCK);
         blockWithItem(ModBlocks.FLUXITE_BLOCK);
@@ -68,7 +68,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.AQUAMARINE_ORE);
      //   blockWithItem(ModBlocks.JADE_ORE);
      //   blockWithItem(ModBlocks.DEEPSLATE_JADE_ORE);
-        blockWithItem(ModBlocks.QUINTESSITE_ORE);
+       // blockWithItem(ModBlocks.QUINTESSITE_ORE);
         blockWithItem(ModBlocks.HEMOGEM_ORE);
         blockWithItem(ModBlocks.LUNARIS_ORE);
         blockWithItem(ModBlocks.CRYPTON_ORE);

@@ -27,6 +27,24 @@ public class ModSmithingTemplateItem extends SmithingTemplateItem {
     private static final Component LUNARIS_UPGRADE_ADDITIONS_SLOT_DESCRIPTION = Component.translatable(
             Util.makeDescriptionId("item", new ResourceLocation(ExampleMod.MOD_ID, "smithing_template.lunaris_upgrade.additions_slot_description")));
 
+
+
+
+    private static final Component DREADSTEEL_UPGRADE = Component.translatable(
+                    Util.makeDescriptionId("item", new ResourceLocation(ExampleMod.MOD_ID, "smithing_template.dreadsteel_upgrade")))
+            .withStyle(TITLE_FORMAT);
+    private static final Component DREADSTEEL_UPGRADE_APPLIES_TO = Component.translatable(
+                    Util.makeDescriptionId("item", new ResourceLocation(ExampleMod.MOD_ID, "smithing_template.dreadsteel_upgrade.applies_to")))
+            .withStyle(DESCRIPTION_FORMAT);
+    private static final Component DREADSTEEL_UPGRADE_INGREDIENTS = Component.translatable(
+                    Util.makeDescriptionId("item", new ResourceLocation(ExampleMod.MOD_ID, "smithing_template.dreadsteel_upgrade.ingredients")))
+            .withStyle(DESCRIPTION_FORMAT);
+    private static final Component DREADSTEEL_UPGRADE_BASE_SLOT_DESCRIPTION = Component.translatable(
+            Util.makeDescriptionId("item", new ResourceLocation(ExampleMod.MOD_ID, "smithing_template.dreadsteel_upgrade.base_slot_description")));
+    private static final Component DREADSTEEL_UPGRADE_ADDITIONS_SLOT_DESCRIPTION = Component.translatable(
+            Util.makeDescriptionId("item", new ResourceLocation(ExampleMod.MOD_ID, "smithing_template.dreadsteel_upgrade.additions_slot_description")));
+
+
     private static final ResourceLocation EMPTY_SLOT_INGOT = new ResourceLocation("minecraft", "item/empty_slot_ingot");
     private static final ResourceLocation EMPTY_SLOT_HOE = new ResourceLocation("minecraft", "item/empty_slot_hoe");
     private static final ResourceLocation EMPTY_SLOT_SHOVEL = new ResourceLocation("minecraft", "item/empty_slot_shovel");
@@ -44,15 +62,21 @@ public class ModSmithingTemplateItem extends SmithingTemplateItem {
 
     public static SmithingTemplateItem createLunarisUpgradeTemplate() {
         return new SmithingTemplateItem(LUNARIS_UPGRADE_APPLIES_TO, LUNARIS_UPGRADE_INGREDIENTS, LUNARIS_UPGRADE, LUNARIS_UPGRADE_BASE_SLOT_DESCRIPTION,
-                LUNARIS_UPGRADE_ADDITIONS_SLOT_DESCRIPTION, createLunarisUpgradeIconList(), createLunarisUpgradeMaterialList());
-    }
-
+                LUNARIS_UPGRADE_ADDITIONS_SLOT_DESCRIPTION, createLunarisUpgradeIconList(), createLunarisUpgradeMaterialList());}
     private static List<ResourceLocation> createLunarisUpgradeIconList() {
         return List.of(EMPTY_SLOT_SWORD, EMPTY_SLOT_PICKAXE, EMPTY_SLOT_AXE, EMPTY_SLOT_HOE, EMPTY_SLOT_SHOVEL, EMPTY_SLOT_HELMET, EMPTY_SLOT_CHESTPLATE,
-                EMPTY_SLOT_LEGGINGS, EMPTY_SLOT_BOOTS);
-    }
+                EMPTY_SLOT_LEGGINGS, EMPTY_SLOT_BOOTS);}
 
     private static List<ResourceLocation> createLunarisUpgradeMaterialList() {
-        return List.of(EMPTY_SLOT_INGOT);
-    }
+        return List.of(EMPTY_SLOT_INGOT);}
+
+    public static SmithingTemplateItem createDreadsteelUpgradeTemplate() {
+        return new SmithingTemplateItem(DREADSTEEL_UPGRADE_APPLIES_TO, DREADSTEEL_UPGRADE_INGREDIENTS, DREADSTEEL_UPGRADE, DREADSTEEL_UPGRADE_BASE_SLOT_DESCRIPTION,
+                DREADSTEEL_UPGRADE_ADDITIONS_SLOT_DESCRIPTION, createDreadsteelUpgradeIconList(), createDreadsteelUpgradeMaterialList());}
+    private static List<ResourceLocation> createDreadsteelUpgradeIconList() {
+        return List.of(EMPTY_SLOT_SWORD, EMPTY_SLOT_PICKAXE, EMPTY_SLOT_AXE, EMPTY_SLOT_HOE, EMPTY_SLOT_SHOVEL, EMPTY_SLOT_HELMET, EMPTY_SLOT_CHESTPLATE,
+                EMPTY_SLOT_LEGGINGS, EMPTY_SLOT_BOOTS);}
+
+    private static List<ResourceLocation> createDreadsteelUpgradeMaterialList() {
+        return List.of(EMPTY_SLOT_INGOT);}
 }
