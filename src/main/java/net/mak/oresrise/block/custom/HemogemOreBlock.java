@@ -50,7 +50,7 @@ public class HemogemOreBlock extends DropExperienceBlock {
         }
 
         level.addParticle(
-                new DustParticleOptions(new Vector3f(1.0f, 0.0f, 0.518f), 1.0f),
+                new DustParticleOptions(new Vector3f(1.0f, 0.0f, 0.0f), 1.0f),
                 x, y, z,
                 0.0D, 0.02D, 0.0D
         );

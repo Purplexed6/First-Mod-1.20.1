@@ -1,15 +1,16 @@
 {
+  "parent": "oresrise:ruby",
   "display": {
     "icon": {
       "item": "oresrise:hemogem"
     },
     "title": {
-      "text": "BLOOD IS FUEL."
+      "text": "Blood is Fuel"
     },
     "description": {
-      "text": "MANKIND IS DEAD. HELL IS FULL."
+      "text": "Obtain a Hemogem"
     },
-    "frame": "goal",
+    "frame": "task",
     "show_toast": true,
     "announce_to_chat": true,
     "hidden": false

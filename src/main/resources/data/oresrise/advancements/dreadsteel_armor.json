@@ -1,0 +1,56 @@
+{
+  "parent": "oresrise:dreadsteel_ingot",
+  "criteria": {
+    "dreadsteel_armor": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "oresrise:dreadsteel_helmet"
+            ]
+          },
+          {
+            "items": [
+              "oresrise:dreadsteel_chestplate"
+            ]
+          },
+          {
+            "items": [
+              "oresrise:dreadsteel_leggings"
+            ]
+          },
+          {
+            "items": [
+              "oresrise:dreadsteel_boots"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "text": "Get a full suit of Dreadsteel armor"
+    },
+    "frame": "challenge",
+    "hidden": false,
+    "icon": {
+      "item": "oresrise:dreadsteel_chestplate"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Cover Me in Dread"
+    }
+  },
+  "requirements": [
+    [
+      "dreadsteel_armor"
+    ]
+  ],
+  "rewards": {
+    "experience": 300
+  },
+  "sends_telemetry_event": true
+}

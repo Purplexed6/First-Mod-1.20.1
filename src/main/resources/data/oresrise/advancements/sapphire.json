@@ -1,0 +1,33 @@
+{
+  "parent": "oresrise:oresrise",
+  "display": {
+    "icon": {
+      "item": "oresrise:sapphire"
+    },
+    "title": {
+      "text": "Blue Raspberry Flavor"
+    },
+    "description": {
+      "text": "Please don't eat it"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "get_sapphire": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["oresrise:sapphire"]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    ["get_sapphire"]
+  ]
+}

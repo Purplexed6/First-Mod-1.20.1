@@ -14,11 +14,11 @@ public class SoulSet {
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> SOUL_POWDER = ModItems.ITEMS.register("soul_powder",
             () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> SOUL_ESSENCE = ModItems.ITEMS.register("soul_essence",
+    public static final RegistryObject<Item> SOUL_PRISM = ModItems.ITEMS.register("soul_prism",
             () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> SOULFORGED_SWORD = ModItems.ITEMS.register("soulforged_sword",
-            () -> new ModSwordItem(ModToolTiers.SOULFORGED, 4, -2.3f, new Item.Properties()));
+            () -> new SoulforgedSwordItem(ModToolTiers.SOULFORGED, 4, -2.3f, new Item.Properties()));
     public static final RegistryObject<Item> SOULFORGED_PICKAXE = ModItems.ITEMS.register("soulforged_pickaxe",
             () -> new PickaxeItem(ModToolTiers.SOULFORGED, 1, -2.8f, new Item.Properties()));
     public static final RegistryObject<Item> SOULFORGED_AXE = ModItems.ITEMS.register("soulforged_axe",
@@ -29,7 +29,7 @@ public class SoulSet {
             () -> new HoeItem(ModToolTiers.SOULFORGED, -3, 0.0f, new Item.Properties()));
 
     public static final RegistryObject<Item> SOULFORGED_HELMET = ModItems.ITEMS.register("soulforged_helmet",
-            () -> new ModArmorItem(ModArmorMaterials.SOULFORGED, ArmorItem.Type.HELMET, new Item.Properties()));
+            () -> new ArmorItem(ModArmorMaterials.SOULFORGED, ArmorItem.Type.HELMET, new Item.Properties()));
     public static final RegistryObject<Item> SOULFORGED_CHESTPLATE = ModItems.ITEMS.register("soulforged_chestplate",
             () -> new ArmorItem(ModArmorMaterials.SOULFORGED, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
     public static final RegistryObject<Item> SOULFORGED_LEGGINGS = ModItems.ITEMS.register("soulforged_leggings",

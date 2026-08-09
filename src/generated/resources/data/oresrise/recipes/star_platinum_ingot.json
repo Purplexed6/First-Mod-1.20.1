@@ -3,10 +3,10 @@
   "category": "misc",
   "ingredients": [
     {
-      "item": "oresrise:platinum_ingot"
+      "item": "oresrise:rageite_ingot"
     },
     {
-      "item": "oresrise:starrite"
+      "item": "oresrise:phasmite"
     }
   ],
   "result": {

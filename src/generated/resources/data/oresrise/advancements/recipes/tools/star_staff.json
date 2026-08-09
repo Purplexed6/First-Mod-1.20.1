@@ -1,28 +1,28 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_starrite": {
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "oresrise:starrite"
-            ]
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
     "has_the_recipe": {
       "conditions": {
         "recipe": "oresrise:star_staff"
       },
       "trigger": "minecraft:recipe_unlocked"
+    },
+    "phasmite": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "oresrise:phasmite"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
     }
   },
   "requirements": [
     [
-      "has_starrite",
+      "phasmite",
       "has_the_recipe"
     ]
   ],

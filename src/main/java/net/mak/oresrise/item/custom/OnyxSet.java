@@ -12,9 +12,9 @@ public class OnyxSet {
             () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> ONYX_SWORD = ModItems.ITEMS.register("onyx_sword",
-            () -> new OnyxSwordItem(ModToolTiers.ONYX, 4, -2.4f, new Item.Properties()));
+            () -> new OnyxSwordItem(ModToolTiers.ONYX, 5, -2.4f, new Item.Properties()));
     public static final RegistryObject<Item> ONYX_PICKAXE = ModItems.ITEMS.register("onyx_pickaxe",
-            () -> new PickaxeItem(ModToolTiers.ONYX, 1, -2.8f, new Item.Properties()));
+            () -> new OnyxPickaxeItem(ModToolTiers.ONYX, 1, -2.8f, new Item.Properties()));
     public static final RegistryObject<Item> ONYX_AXE = ModItems.ITEMS.register("onyx_axe",
             () -> new AxeItem(ModToolTiers.ONYX, 5, -3.0f, new Item.Properties()));
     public static final RegistryObject<Item> ONYX_SHOVEL = ModItems.ITEMS.register("onyx_shovel",

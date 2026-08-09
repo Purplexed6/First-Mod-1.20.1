@@ -1,7 +1,13 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_netherite_nugget": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "oresrise:netherite_stick"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "netherite_nugget": {
       "conditions": {
         "items": [
           {
@@ -12,17 +18,11 @@
         ]
       },
       "trigger": "minecraft:inventory_changed"
-    },
-    "has_the_recipe": {
-      "conditions": {
-        "recipe": "oresrise:netherite_stick"
-      },
-      "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_netherite_nugget",
+      "netherite_nugget",
       "has_the_recipe"
     ]
   ],

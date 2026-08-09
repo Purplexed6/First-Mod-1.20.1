@@ -1,0 +1,28 @@
+{
+  "parent": "oresrise:type_o_positive",
+  "display": {
+    "icon": {
+      "item": "oresrise:hemogem_sword"
+    },
+    "title": {
+      "text": "Blood Brothers"
+    },
+    "description": {
+      "text": "Establish a Blood Pact"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "blood_pact": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "blood_pact"
+    ]
+  ]
+}

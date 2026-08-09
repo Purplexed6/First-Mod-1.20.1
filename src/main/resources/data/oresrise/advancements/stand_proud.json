@@ -1,4 +1,5 @@
 {
+  "parent": "oresrise:stars",
   "display": {
     "icon": {
       "item": "oresrise:star_platinum_ingot"

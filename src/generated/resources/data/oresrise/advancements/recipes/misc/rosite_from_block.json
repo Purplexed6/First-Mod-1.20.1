@@ -1,7 +1,13 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_rosite_block": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "oresrise:rosite_from_block"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "rosite_block": {
       "conditions": {
         "items": [
           {
@@ -12,17 +18,11 @@
         ]
       },
       "trigger": "minecraft:inventory_changed"
-    },
-    "has_the_recipe": {
-      "conditions": {
-        "recipe": "oresrise:rosite_from_block"
-      },
-      "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_rosite_block",
+      "rosite_block",
       "has_the_recipe"
     ]
   ],

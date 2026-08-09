@@ -33,17 +33,16 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.DEEPSLATE_RUBY_ORE.get(),
                         // ModBlocks.JADE_ORE.get(),
                         //  ModBlocks.DEEPSLATE_JADE_ORE.get(),
-                        ModBlocks.AQUAMARINE_ORE.get(),
-                        ModBlocks.MALACHITE_ORE.get(),
-                        ModBlocks.DEEPSLATE_MALACHITE_ORE.get(),
+                        ModBlocks.HYDRIC_ORE.get(),
+                    //    ModBlocks.MALACHITE_ORE.get(),
+                      //  ModBlocks.DEEPSLATE_MALACHITE_ORE.get(),
                         //     ModBlocks.COBALT_ORE.get(),
-                        ModBlocks.PLATINUM_ORE.get(),
-                        ModBlocks.STARRITE_ORE.get(),
+                        ModBlocks.RAGING_ORE.get(),
+                        ModBlocks.PHASMIC_ORE.get(),
                         ModBlocks.VIBRANIUM_ORE.get(),
                         ModBlocks.SOUL_ORE.get(),
                         ModBlocks.FLUXITE_ORE.get(),
-                        ModBlocks.WITHERITE_ORE.get(),
-                        ModBlocks.HEMOGEM_ORE.get(),
+                        ModBlocks.SANGUINE_ORE.get(),
                         //   ModBlocks.QUINTESSITE_ORE.get(),
                         ModBlocks.ONYX_ORE.get(),
                         ModBlocks.CRYPTON_ORE.get(),
@@ -69,24 +68,23 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                        // ModBlocks.JADE_ORE.get(),
                       //  ModBlocks.DEEPSLATE_JADE_ORE.get(),
 
-                        ModBlocks.AQUAMARINE_ORE.get(),
-                        ModBlocks.AQUAMARINE_BLOCK.get(),
+                        ModBlocks.HYDRIC_ORE.get(),
+                        ModBlocks.HYDROGEM_BLOCK.get(),
 
-                        ModBlocks.MALACHITE_ORE.get(),
-                        ModBlocks.DEEPSLATE_MALACHITE_ORE.get(),
+                    //    ModBlocks.MALACHITE_ORE.get(),
+                      //  ModBlocks.DEEPSLATE_MALACHITE_ORE.get(),
 
                     //    ModBlocks.COBALT_BLOCK.get(),
                     //    ModBlocks.RAW_COBALT_BLOCK.get(),
                    //     ModBlocks.COBALT_ORE.get(),
 
-                        ModBlocks.PLATINUM_BLOCK.get(),
-                        ModBlocks.RAW_PLATINUM_BLOCK.get(),
-                        ModBlocks.PLATINUM_ORE.get(),
+                        ModBlocks.RAGEITE_BLOCK.get(),
+                        ModBlocks.RAGING_ORE.get(),
 
                         ModBlocks.STAR_PLATINUM_BLOCK.get(),
 
-                        ModBlocks.STARRITE_BLOCK.get(),
-                        ModBlocks.STARRITE_ORE.get(),
+                        ModBlocks.PHASMITE_BLOCK.get(),
+                        ModBlocks.PHASMIC_ORE.get(),
 
                         ModBlocks.VIBRANIUM_ORE.get(),
                         ModBlocks.VIBRANIUM_BLOCK.get(),
@@ -96,7 +94,8 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
 
 
 
-
+                        ModBlocks.WAILING_ORE.get(),
+                        ModBlocks.STARDUST_ORE.get(),
                         ModBlocks.SOUL_ORE.get(),
                         ModBlocks.SOUL_BLOCK.get(),
 
@@ -108,9 +107,8 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
 
                         ModBlocks.WITHERITE_BLOCK.get(),
                         ModBlocks.RAW_WITHERITE_BLOCK.get(),
-                        ModBlocks.WITHERITE_ORE.get(),
 
-                        ModBlocks.HEMOGEM_ORE.get(),
+                        ModBlocks.SANGUINE_ORE.get(),
                         ModBlocks.HEMOGEM_BLOCK.get(),
 
                      //   ModBlocks.QUINTESSITE_ORE.get(),
@@ -148,21 +146,22 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                     //    ModBlocks.JADE_ORE.get(),
                     //    ModBlocks.DEEPSLATE_JADE_ORE.get(),
 
-                        ModBlocks.AQUAMARINE_ORE.get(),
+                        ModBlocks.HYDRIC_ORE.get(),
 
-                        ModBlocks.MALACHITE_ORE.get(),
-                        ModBlocks.DEEPSLATE_MALACHITE_ORE.get(),
+                        ModBlocks.WAILING_ORE.get(),
+
+                        //ModBlocks.MALACHITE_ORE.get(),
+                      //  ModBlocks.DEEPSLATE_MALACHITE_ORE.get(),
 
                         //ModBlocks.COBALT_BLOCK.get(),
                      //   ModBlocks.RAW_COBALT_BLOCK.get(),
                      //   ModBlocks.COBALT_ORE.get(),
 
-                        ModBlocks.PLATINUM_BLOCK.get(),
-                        ModBlocks.RAW_PLATINUM_BLOCK.get(),
-                        ModBlocks.PLATINUM_ORE.get(),
+                        ModBlocks.RAGEITE_BLOCK.get(),
+                        ModBlocks.RAGING_ORE.get(),
 
-                        ModBlocks.STARRITE_BLOCK.get(),
-                        ModBlocks.STARRITE_ORE.get());
+                        ModBlocks.PHASMITE_BLOCK.get(),
+                        ModBlocks.PHASMIC_ORE.get());
 
 
 
@@ -171,9 +170,10 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.FLUXITE_BLOCK.get(),
                         ModBlocks.VOLTIUM_BLOCK.get(),
 
-                        ModBlocks.AQUAMARINE_BLOCK.get(),
+                        ModBlocks.HYDRIC_ORE.get(),
+                        ModBlocks.HYDROGEM_BLOCK.get(),
 
-                        ModBlocks.HEMOGEM_ORE.get(),
+                        ModBlocks.SANGUINE_ORE.get(),
                         ModBlocks.HEMOGEM_BLOCK.get());
 
 
@@ -185,7 +185,8 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
 
                         ModBlocks.WITHERITE_BLOCK.get(),
                         ModBlocks.RAW_WITHERITE_BLOCK.get(),
-                        ModBlocks.WITHERITE_ORE.get(),
+
+                        ModBlocks.STARDUST_ORE.get(),
 
                       //  ModBlocks.QUINTESSITE_ORE.get(),
                        // ModBlocks.QUINTESSITE_BLOCK.get(),

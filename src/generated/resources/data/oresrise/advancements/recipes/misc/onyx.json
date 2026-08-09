@@ -1,7 +1,13 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_onyx_block": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "oresrise:onyx"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "onyx_block": {
       "conditions": {
         "items": [
           {
@@ -12,17 +18,11 @@
         ]
       },
       "trigger": "minecraft:inventory_changed"
-    },
-    "has_the_recipe": {
-      "conditions": {
-        "recipe": "oresrise:onyx"
-      },
-      "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_onyx_block",
+      "onyx_block",
       "has_the_recipe"
     ]
   ],

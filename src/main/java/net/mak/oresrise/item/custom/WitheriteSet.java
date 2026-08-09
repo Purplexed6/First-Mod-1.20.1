@@ -14,7 +14,7 @@ public class WitheriteSet {
             () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> WITHERITE_SWORD = ModItems.ITEMS.register("witherite_sword",
-            () -> new ModSwordItem(ModToolTiers.WITHERITE, 4, -2.2f, new Item.Properties()));
+            () -> new WitheriteSwordItem(ModToolTiers.WITHERITE, 4, -2.2f, new Item.Properties()));
     public static final RegistryObject<Item> WITHERITE_PICKAXE = ModItems.ITEMS.register("witherite_pickaxe",
             () -> new PickaxeItem(ModToolTiers.WITHERITE, 1, -2.7f, new Item.Properties()));
     public static final RegistryObject<Item> WITHERITE_AXE = ModItems.ITEMS.register("witherite_axe",

@@ -5,13 +5,13 @@
     "#": {
       "item": "minecraft:stick"
     },
-    "S": {
+    "P": {
       "item": "minecraft:amethyst_shard"
     }
   },
   "pattern": [
-    " SS",
-    " #S",
+    " PP",
+    " #P",
     " # "
   ],
   "result": {

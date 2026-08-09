@@ -1,7 +1,13 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_star_platinum_ingot": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "oresrise:star_platinum_leggings"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "star_platinum_ingot": {
       "conditions": {
         "items": [
           {
@@ -12,17 +18,11 @@
         ]
       },
       "trigger": "minecraft:inventory_changed"
-    },
-    "has_the_recipe": {
-      "conditions": {
-        "recipe": "oresrise:star_platinum_leggings"
-      },
-      "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_star_platinum_ingot",
+      "star_platinum_ingot",
       "has_the_recipe"
     ]
   ],

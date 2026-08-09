@@ -1,0 +1,56 @@
+{
+  "parent": "oresrise:soul_essence",
+  "criteria": {
+    "soulforged_armor": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "oresrise:soulforged_helmet"
+            ]
+          },
+          {
+            "items": [
+              "oresrise:soulforged_chestplate"
+            ]
+          },
+          {
+            "items": [
+              "oresrise:soulforged_leggings"
+            ]
+          },
+          {
+            "items": [
+              "oresrise:soulforged_boots"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "text": "Get a full suit of Soulforged armor"
+    },
+    "frame": "challenge",
+    "hidden": false,
+    "icon": {
+      "item": "oresrise:soulforged_chestplate"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Cover Me in Souls"
+    }
+  },
+  "requirements": [
+    [
+      "soulforged_armor"
+    ]
+  ],
+  "rewards": {
+    "experience": 200
+  },
+  "sends_telemetry_event": true
+}

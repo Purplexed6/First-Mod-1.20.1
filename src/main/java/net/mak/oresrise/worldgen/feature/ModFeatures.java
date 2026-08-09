@@ -10,11 +10,24 @@ import net.minecraftforge.registries.RegistryObject;
 public class ModFeatures {
 
     public static final DeferredRegister<Feature<?>> FEATURES =
-            DeferredRegister.create(Registries.FEATURE, ExampleMod.MOD_ID);
+            DeferredRegister.create(
+                    Registries.FEATURE,
+                    ExampleMod.MOD_ID
+            );
 
-    public static final RegistryObject<Feature<NoneFeatureConfiguration>> STARRITE_PILLAR =
+    public static final RegistryObject<Feature<NoneFeatureConfiguration>>
+            PHASMITE_PILLAR =
             FEATURES.register(
-                    "starrite_pillar",
-                    () -> new StarritePillarFeature(NoneFeatureConfiguration.CODEC)
+                    "phasmite_pillar",
+                    () -> new StarritePillarFeature(
+                            NoneFeatureConfiguration.CODEC
+                    )
+            );
+
+    public static final RegistryObject<Feature<NoneFeatureConfiguration>>
+            NETHER_BURIED_TREASURE =
+            FEATURES.register(
+                    "nether_buried_treasure",
+                    NetherBuriedTreasureFeature::new
             );
 }

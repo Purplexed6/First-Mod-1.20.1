@@ -6,8 +6,8 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class MalachiteSet {
 
-    public static final RegistryObject<Item> MALACHITE = ModItems.ITEMS.register("malachite",
-            () -> new Item(new Item.Properties()));
+   // public static final RegistryObject<Item> MALACHITE = ModItems.ITEMS.register("malachite",
+  //          () -> new Item(new Item.Properties()));
 
     public static void register() {}
 }

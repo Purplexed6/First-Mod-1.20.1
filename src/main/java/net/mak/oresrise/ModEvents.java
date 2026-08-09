@@ -3,10 +3,15 @@ package net.mak.oresrise;
 import net.mak.oresrise.combat.ComboManager;
 import net.mak.oresrise.item.custom.*;
 import net.mak.oresrise.item.ModArmorMaterials;
+import net.minecraft.advancements.Advancement;
+import net.minecraft.advancements.AdvancementProgress;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.LivingEntity;
@@ -19,9 +24,12 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.LayeredCauldronBlock;
+import net.minecraftforge.event.entity.living.LivingAttackEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.event.TickEvent;
+import net.minecraftforge.event.entity.player.PlayerSleepInBedEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
@@ -50,6 +58,9 @@ public class ModEvents {
             }
             else if (stack.is(VibraniumSet.ROUGH_VIBRANIUM.get())) {
                 processGrind(event, level, pos, player, stack, new ItemStack(VibraniumSet.VIBRANIUM.get()));
+            }
+            else if (stack.is(Misc.STARDUST_FRAGMENT.get())) {
+                processGrind(event, level, pos, player, stack, new ItemStack(Misc.STARDUST.get()));
             }
             else if (stack.is(SoulSet.SOUL_FRAGMENT.get())) {
                 ItemStack output = new ItemStack(SoulSet.SOUL_POWDER.get());
@@ -166,10 +177,28 @@ public class ModEvents {
         // 💀 SOULFORGED → Soul particles
         if (hasFullSet(player, ModArmorMaterials.SOULFORGED)) {
 
-            if (player.tickCount % 6 == 0) {
+            if (player.tickCount % 9 == 0) {
 
                 ((ServerLevel) player.level()).sendParticles(
                         ParticleTypes.SOUL,
+                        player.getX(),
+                        player.getY() + 1.0,
+                        player.getZ(),
+                        1,          // particle count
+                        0.35,       // X spread
+                        0.5,        // Y spread
+                        0.35,       // Z spread
+                        0.01        // speed
+                );
+            }
+        }
+
+        if (hasFullSet(player, ModArmorMaterials.HYDROGEM)) {
+
+            if (player.tickCount % 6 == 0) {
+
+                ((ServerLevel) player.level()).sendParticles(
+                        ParticleTypes.BUBBLE,
                         player.getX(),
                         player.getY() + 1.0,
                         player.getZ(),
@@ -183,6 +212,73 @@ public class ModEvents {
         }
     }
 
+    @SubscribeEvent
+    public static void onMoltenIronWaterCauldron(PlayerInteractEvent.RightClickBlock event) {
+
+        Level level = event.getLevel();
+        Player player = event.getEntity();
+
+        // Server only
+        if (level.isClientSide()) {
+            return;
+        }
+
+        // Get the item in the hand being used
+        ItemStack stack = player.getItemInHand(event.getHand());
+
+        // Must be holding Molten Iron
+        if (!stack.is(Misc.MOLTEN_IRON_INGOT.get())) {
+            return;
+        }
+
+        BlockPos pos = event.getPos();
+
+        // Must be a water-filled cauldron
+        if (!level.getBlockState(pos).is(Blocks.WATER_CAULDRON)) {
+            return;
+        }
+
+        // Get current water level (1-3)
+        int waterLevel = level.getBlockState(pos)
+                .getValue(LayeredCauldronBlock.LEVEL);
+
+        // Remove 1 molten iron
+        stack.shrink(1);
+
+        // Give 1 normal iron ingot
+        ItemStack iron = new ItemStack(Items.IRON_INGOT);
+
+        if (!player.getInventory().add(iron)) {
+            player.drop(iron, false);
+        }
+
+        // Remove exactly ONE level of water
+        if (waterLevel <= 1) {
+
+            // Cauldron becomes empty
+            level.setBlock(
+                    pos,
+                    Blocks.CAULDRON.defaultBlockState(),
+                    3
+            );
+
+        } else {
+
+            // Reduce water level by 1
+            level.setBlock(
+                    pos,
+                    Blocks.WATER_CAULDRON.defaultBlockState()
+                            .setValue(
+                                    LayeredCauldronBlock.LEVEL,
+                                    waterLevel - 1
+                            ),
+                    3
+            );
+        }
+
+        // Stop normal cauldron interaction
+        event.setCanceled(true);
+    }
 
     private static boolean hasFullSet(Player player, ArmorMaterial material) {
 
@@ -221,15 +317,44 @@ public class ModEvents {
 
         Player player = event.getEntity();
 
-        CompoundTag data = player.getPersistentData();
+        if (!(player instanceof ServerPlayer serverPlayer)) {
+            return;
+        }
 
-        if (!data.getBoolean(GIVEN_BOOK)) {
+
+        Advancement advancement =
+                serverPlayer.server.getAdvancements()
+                        .getAdvancement(
+                                new ResourceLocation("oresrise", "oresrise")
+                        );
+
+
+        if (advancement == null) {
+            return;
+        }
+
+
+        AdvancementProgress progress =
+                serverPlayer.getAdvancements()
+                        .getOrStartProgress(advancement);
+
+
+        // Give the book only once
+        if (!progress.isDone()) {
+
 
             ItemStack book = GuideBook.createBook();
 
             player.getInventory().add(book);
 
-            data.putBoolean(GIVEN_BOOK, true);
+
+            // Complete the root advancement silently
+            for (String criterion : progress.getRemainingCriteria()) {
+
+                serverPlayer.getAdvancements()
+                        .award(advancement, criterion);
+
+            }
         }
     }
 }

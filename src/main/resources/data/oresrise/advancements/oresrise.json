@@ -1,0 +1,22 @@
+{
+  "display": {
+    "icon": {
+      "item": "oresrise:stardust_fragment"
+    },
+    "title": {
+      "text": "The Rise of Ores"
+    },
+    "description": {
+      "text": "Discover the forgotten materials of the world"
+    },
+    "background": "oresrise:textures/block/raw_platinum_block.png",
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+
+  "criteria": {
+    "book_given": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

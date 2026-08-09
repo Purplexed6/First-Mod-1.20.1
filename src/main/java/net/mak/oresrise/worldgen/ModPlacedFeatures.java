@@ -21,19 +21,26 @@ public class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> SAPPHIRE_ORE_PLACED_KEY = registerKey("sapphire_ore_placed");
     public static final ResourceKey<PlacedFeature> RUBY_ORE_PLACED_KEY = registerKey("ruby_ore_placed");
   //  public static final ResourceKey<PlacedFeature> JADE_ORE_PLACED_KEY = registerKey("jade_ore_placed");
-    public static final ResourceKey<PlacedFeature> AQUAMARINE_ORE_PLACED_KEY = registerKey("aquamarine_ore_placed");
+    public static final ResourceKey<PlacedFeature> HYDRIC_ORE_PLACED_KEY = registerKey("hydric_ore_placed");
     public static final ResourceKey<PlacedFeature> VIBRANIUM_ORE_PLACED_KEY = registerKey("vibranium_ore_placed");
+    public static final ResourceKey<PlacedFeature> RAGING_ORE_PLACED_KEY = registerKey("platinum_ore_placed");
+    public static final ResourceKey<PlacedFeature> FLUXITE_ORE_PLACED_KEY = registerKey("fluxite_ore_placed");
 
     public static final ResourceKey<PlacedFeature> SOUL_ORE_PLACED_KEY = registerKey("soul_ore_placed");
   //  public static final ResourceKey<PlacedFeature> QUINTESSITE_ORE_PLACED_KEY = registerKey("quintessite_ore_placed");
-    public static final ResourceKey<PlacedFeature> HEMOGEM_ORE_PLACED_KEY = registerKey("hemogem_ore_placed");
-    public static final ResourceKey<PlacedFeature> FLUXITE_ORE_PLACED_KEY = registerKey("fluxite_ore_placed");
+    public static final ResourceKey<PlacedFeature> SANGUINE_ORE_PLACED_KEY = registerKey("sanguine_ore_placed");
+    public static final ResourceKey<PlacedFeature> WAILING_ORE_PLACED_KEY = registerKey("wailing_ore_placed");
+    public static final ResourceKey<PlacedFeature> STARDUST_ORE_PLACED_KEY = registerKey("stardust_ore_placed");
 
    // public static final ResourceKey<PlacedFeature> OBLIVIONITE_ORE_PLACED_KEY = registerKey("oblivionite_ore_placed");
     public static final ResourceKey<PlacedFeature> CRYPTON_ORE_PLACED_KEY = registerKey("crypton_ore_placed");
     public static final ResourceKey<PlacedFeature> LUNARIS_ORE_PLACED_KEY = registerKey("lunaris_ore_placed");
-    public static final ResourceKey<PlacedFeature> STARRITE_ORE_PLACED_KEY = registerKey("starrite_ore_placed");
-    public static final ResourceKey<PlacedFeature> STARRITE_PILLAR_PLACED_KEY = registerKey("starrite_pillar_placed");
+
+    public static final ResourceKey<PlacedFeature> PHASMIC_ORE_PLACED_KEY = registerKey("phasmic_ore_placed");
+    public static final ResourceKey<PlacedFeature> PHASMITE_PILLAR_PLACED_KEY = registerKey("phasmite_pillar_placed");
+
+    public static final ResourceKey<PlacedFeature> NETHER_BURIED_TREASURE =
+            registerKey("nether_buried_treasure");
 
     public static void bootstrap(BootstapContext<PlacedFeature> context) {
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
@@ -62,35 +69,56 @@ public class ModPlacedFeatures {
                                 VerticalAnchor.absolute(-64),
                                 VerticalAnchor.absolute(16)))); */
 
-        register(context, AQUAMARINE_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.AQUAMARINE_ORE_KEY),
-                ModOrePlacement.commonOrePlacement(3,
+        register(context, HYDRIC_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.HYDRIC_ORE_KEY),
+                ModOrePlacement.commonOrePlacement(6,
                         HeightRangePlacement.triangle(
                                 VerticalAnchor.absolute(-64),
-                                VerticalAnchor.absolute(16))));
+                                VerticalAnchor.absolute(256))));
+
         register(context, VIBRANIUM_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.VIBRANIUM_ORE_KEY),
-                ModOrePlacement.commonOrePlacement(2,
+                ModOrePlacement.commonOrePlacement(6,
                         HeightRangePlacement.uniform(
                                 VerticalAnchor.absolute(-64),
                                 VerticalAnchor.absolute(0))));
 
+        register(context, RAGING_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.RAGING_ORE_KEY),
+                ModOrePlacement.commonOrePlacement(75,
+                        HeightRangePlacement.triangle(
+                                VerticalAnchor.absolute(-64),
+                                VerticalAnchor.absolute(256))));
+
 
 
         register(context, SOUL_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.SOUL_ORE_KEY),
-                ModOrePlacement.commonOrePlacement(10,
+                ModOrePlacement.commonOrePlacement(6,
                         HeightRangePlacement.uniform(
-                                VerticalAnchor.absolute(10),
+                                VerticalAnchor.absolute(5),
                                 VerticalAnchor.absolute(120))));
         /*register(context, QUINTESSITE_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.QUINTESSITE_ORE_KEY),
                 ModOrePlacement.commonOrePlacement(6,
                         HeightRangePlacement.uniform(
-                                VerticalAnchor.absolute(10),
+                                VerticalAnchor.absolute(5),
                                 VerticalAnchor.absolute(120))));*/
-        register(context, HEMOGEM_ORE_PLACED_KEY,
-                configuredFeatures.getOrThrow(ModConfiguredFeatures.HEMOGEM_ORE_KEY),
-                ModOrePlacement.commonOrePlacement(6,
+        register(context, SANGUINE_ORE_PLACED_KEY,
+                configuredFeatures.getOrThrow(ModConfiguredFeatures.SANGUINE_ORE_KEY),
+                ModOrePlacement.commonOrePlacement(12,
                         HeightRangePlacement.uniform(
-                                VerticalAnchor.absolute(10),
+                                VerticalAnchor.absolute(5),
                                 VerticalAnchor.absolute(120))));
+
+        register(context, WAILING_ORE_PLACED_KEY,
+                configuredFeatures.getOrThrow(ModConfiguredFeatures.WAILING_ORE_KEY),
+                ModOrePlacement.commonOrePlacement(20,
+                        HeightRangePlacement.uniform(
+                                VerticalAnchor.absolute(50),
+                                VerticalAnchor.absolute(120))));
+
+        register(context, STARDUST_ORE_PLACED_KEY,
+                configuredFeatures.getOrThrow(ModConfiguredFeatures.STARDUST_ORE_KEY),
+                ModOrePlacement.commonOrePlacement(75,
+                        HeightRangePlacement.uniform(
+                                VerticalAnchor.absolute(5),
+                                VerticalAnchor.absolute(80))));
 
 
 
@@ -104,17 +132,37 @@ public class ModPlacedFeatures {
                 ModOrePlacement.commonOrePlacement(3,
                         HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(100))));
 
-        register(context,
-                STARRITE_PILLAR_PLACED_KEY,
-                configuredFeatures.getOrThrow(ModConfiguredFeatures.STARRITE_PILLAR_KEY),
+
+        register(
+                context,
+                NETHER_BURIED_TREASURE,
+                configuredFeatures.getOrThrow(
+                        ModConfiguredFeatures.NETHER_BURIED_TREASURE
+                ),
                 List.of(
-                        CountPlacement.of(5),
+                        RarityFilter.onAverageOnceEvery(4),
+                        InSquarePlacement.spread(),
+                        HeightRangePlacement.uniform(
+                                VerticalAnchor.absolute(20),
+                                VerticalAnchor.absolute(90)
+                        ),
+                        BiomeFilter.biome()
+                )
+        );
+
+        register(context,
+                PHASMITE_PILLAR_PLACED_KEY,
+                configuredFeatures.getOrThrow(ModConfiguredFeatures.PHASMITE_PILLAR_KEY),
+                List.of(
+                        CountPlacement.of(3),
                         HeightRangePlacement.uniform(
                                 VerticalAnchor.absolute(0),
                                 VerticalAnchor.absolute(100)
                         ),
                         BiomeFilter.biome()
                 ));
+
+
     }
 
 

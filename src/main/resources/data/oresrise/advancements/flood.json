@@ -1,0 +1,33 @@
+{
+  "parent": "oresrise:sapphire",
+  "display": {
+    "icon": {
+      "item": "oresrise:hydrogem"
+    },
+    "title": {
+      "text": "Floods"
+    },
+    "description": {
+      "text": "Obtain a Hydrogem"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "get_hydrogem": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["oresrise:hydrogem"]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    ["get_hydrogem"]
+  ]
+}

@@ -5,8 +5,11 @@ import net.mak.oresrise.item.ModToolTiers;
 import net.mak.oresrise.network.ModNetwork;
 import net.mak.oresrise.network.ShakePacket;
 import net.mak.oresrise.sound.ModSounds;
+import net.minecraft.advancements.Advancement;
 import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
@@ -31,64 +34,6 @@ public class ModSwordItem extends SwordItem {
 
     @Override
     public boolean hurtEnemy(ItemStack stack, LivingEntity target, LivingEntity attacker) {
-
-        if (this.getTier() == ModToolTiers.WITHERITE) {
-
-            target.addEffect(new MobEffectInstance(
-                    MobEffects.WITHER,
-                    100,
-                    1,
-                    false,
-                    false,
-                    false
-            ));
-
-            if (!target.level().isClientSide) {
-                ((ServerLevel) target.level()).sendParticles(
-                        ParticleTypes.SMOKE,
-                        target.getX(),
-                        target.getY() + 1,
-                        target.getZ(),
-                        20,
-                        0.2, 0.5, 0.2,
-                        0.01
-                );
-            }
-        }
-
-        if (this.getTier() == ModToolTiers.SOULFORGED) {
-
-            attacker.heal(0.5f);
-
-            if (!target.level().isClientSide) {
-                ((ServerLevel) target.level()).sendParticles(
-                        ParticleTypes.SOUL,
-                        target.getX(),
-                        target.getY() + 1,
-                        target.getZ(),
-                        20,
-                        0.2, 0.5, 0.2,
-                        0.01
-                );
-            }
-        }
-
-        if (this.getTier() == ModToolTiers.HEMOGEM) {
-
-            attacker.heal(1f);
-
-            if (!target.level().isClientSide) {
-                ((ServerLevel) target.level()).sendParticles(
-                        ParticleTypes.HEART,
-                        target.getX(),
-                        target.getY() + 1,
-                        target.getZ(),
-                        5,
-                        0.2, 0.5, 0.2,
-                        0.1
-                );
-            }
-        }
 
         if (this.getTier() == ModToolTiers.DREADSTEEL) {
 
@@ -125,7 +70,7 @@ public class ModSwordItem extends SwordItem {
             }
         }
 
-        if (this.getTier() == ModToolTiers.STARRITE) {
+        if (this.getTier() == ModToolTiers.PHASMITE) {
 
             if (attacker.getRandom().nextFloat() < 0.2f) {
 
@@ -195,7 +140,7 @@ public class ModSwordItem extends SwordItem {
             target.addEffect(new MobEffectInstance(
                     MobEffects.LEVITATION,
                     20,
-                    5,
+                    9,
                     false,
                     false,
                     false
@@ -206,7 +151,7 @@ public class ModSwordItem extends SwordItem {
 
             target.addEffect(new MobEffectInstance(
                     MobEffects.LEVITATION,
-                    20,
+                    15,
                     3,
                     false,
                     false,
@@ -266,7 +211,7 @@ public class ModSwordItem extends SwordItem {
 
                 ModNetwork.CHANNEL.send(
                         PacketDistributor.TRACKING_ENTITY_AND_SELF.with(() -> attacker),
-                        new ShakePacket(4f, 30)
+                        new ShakePacket(1.5f, 15)
                 );
             }
         }

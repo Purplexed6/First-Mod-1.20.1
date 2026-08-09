@@ -1,0 +1,28 @@
+{
+  "parent": "oresrise:ashes_of_a_god",
+  "display": {
+    "icon": {
+      "item": "oresrise:witherite_sword"
+    },
+    "title": {
+      "text": "Blackened"
+    },
+    "description": {
+      "text": "Feel the wrath of the Grimwake"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "blackened": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "blackened"
+    ]
+  ]
+}

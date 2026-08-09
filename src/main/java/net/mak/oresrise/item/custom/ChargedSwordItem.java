@@ -57,7 +57,7 @@ public class ChargedSwordItem extends SwordItem {
         if (power > 2.0f) {
             ModNetwork.CHANNEL.send(
                     PacketDistributor.TRACKING_ENTITY_AND_SELF.with(() -> player),
-                    new ShakePacket(2f + power, (int)(10 + power * 10))
+                    new ShakePacket(1.0f + power, (int)(10 + power * 10))
             );
         }
 

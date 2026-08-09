@@ -1,6 +1,7 @@
 package net.mak.oresrise.datagen;
 
 import net.mak.oresrise.ExampleMod;
+import net.mak.oresrise.datagen.recipes.ModRecipeProvider;
 import net.mak.oresrise.worldgen.ModConfiguredFeatures;
 import net.mak.oresrise.worldgen.ModPlacedFeatures;
 import net.minecraft.core.HolderLookup;

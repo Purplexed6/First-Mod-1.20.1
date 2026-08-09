@@ -99,7 +99,7 @@ public class ModCreativeModeTabs {
                         pOutput.accept(SoulSet.SOUL_FRAGMENT.get());
                         pOutput.accept(SoulSet.SOUL_CRYSTAL.get());
                         pOutput.accept(SoulSet.SOUL_POWDER.get());
-                        pOutput.accept(SoulSet.SOUL_ESSENCE.get());
+                        pOutput.accept(SoulSet.SOUL_PRISM.get());
                         pOutput.accept(SoulSet.SOULFORGED_SWORD.get());
                         pOutput.accept(SoulSet.SOULFORGED_PICKAXE.get());
                         pOutput.accept(SoulSet.SOULFORGED_AXE.get());
@@ -151,16 +151,17 @@ public class ModCreativeModeTabs {
                         pOutput.accept(DreadsteelSet.DREADSTEEL_BOOTS.get());
                         pOutput.accept(DreadsteelSet.DREADSTEEL_UPGRADE_SMITHING_TEMPLATE.get());
 
-                        pOutput.accept(AquamarineSet.AQUAMARINE.get());
-                        pOutput.accept(AquamarineSet.AQUAMARINE_SWORD.get());
-                        pOutput.accept(AquamarineSet.AQUAMARINE_PICKAXE.get());
-                        pOutput.accept(AquamarineSet.AQUAMARINE_AXE.get());
-                        pOutput.accept(AquamarineSet.AQUAMARINE_SHOVEL.get());
-                        pOutput.accept(AquamarineSet.AQUAMARINE_HOE.get());
-                        pOutput.accept(AquamarineSet.AQUAMARINE_HELMET.get());
-                        pOutput.accept(AquamarineSet.AQUAMARINE_CHESTPLATE.get());
-                        pOutput.accept(AquamarineSet.AQUAMARINE_LEGGINGS.get());
-                        pOutput.accept(AquamarineSet.AQUAMARINE_BOOTS.get());
+                        pOutput.accept(HydroSet.HYDRIC_FRAGMENT.get());
+                        pOutput.accept(HydroSet.HYDROGEM.get());
+                        pOutput.accept(HydroSet.HYDROGEM_SWORD.get());
+                        pOutput.accept(HydroSet.HYDROGEM_PICKAXE.get());
+                        pOutput.accept(HydroSet.HYDROGEM_AXE.get());
+                        pOutput.accept(HydroSet.HYDROGEM_SHOVEL.get());
+                        pOutput.accept(HydroSet.HYDROGEM_HOE.get());
+                        pOutput.accept(HydroSet.HYDROGEM_HELMET.get());
+                        pOutput.accept(HydroSet.HYDROGEM_CHESTPLATE.get());
+                        pOutput.accept(HydroSet.HYDROGEM_LEGGINGS.get());
+                        pOutput.accept(HydroSet.HYDROGEM_BOOTS.get());
 
                       /*  pOutput.accept(JadeSet.JADE.get());
                         pOutput.accept(JadeSet.JADE_SWORD.get());
@@ -210,6 +211,7 @@ public class ModCreativeModeTabs {
                         pOutput.accept(LunarisSet.LUNARIS_BOOTS.get());
                         pOutput.accept(LunarisSet.LUNARIS_UPGRADE_SMITHING_TEMPLATE.get());
 
+                        pOutput.accept(HemoSet.SANGUINE_FRAGMENT.get());
                         pOutput.accept(HemoSet.HEMOGEM.get());
                         pOutput.accept(HemoSet.HEMOGEM_SWORD.get());
                         pOutput.accept(HemoSet.HEMOGEM_PICKAXE.get());
@@ -262,30 +264,33 @@ public class ModCreativeModeTabs {
                         pOutput.accept(OnyxSet.ONYX_LEGGINGS.get());
                         pOutput.accept(OnyxSet.ONYX_BOOTS.get());
 
-                        pOutput.accept(StarriteSet.STARRITE.get());
-                        pOutput.accept(StarriteSet.STARRITE_SWORD.get());
-                        pOutput.accept(StarriteSet.STARRITE_PICKAXE.get());
-                        pOutput.accept(StarriteSet.STARRITE_AXE.get());
-                        pOutput.accept(StarriteSet.STARRITE_SHOVEL.get());
-                        pOutput.accept(StarriteSet.STARRITE_HOE.get());
-                        pOutput.accept(StarriteSet.STARRITE_HELMET.get());
-                        pOutput.accept(StarriteSet.STARRITE_CHESTPLATE.get());
-                        pOutput.accept(StarriteSet.STARRITE_LEGGINGS.get());
-                        pOutput.accept(StarriteSet.STARRITE_BOOTS.get());
+                        pOutput.accept(PhasmiteSet.PHASMIC_SHARD.get());
+                        pOutput.accept(PhasmiteSet.PHASMITE.get());
+                        pOutput.accept(PhasmiteSet.PHASMITE_SWORD.get());
+                        pOutput.accept(PhasmiteSet.PHASMITE_PICKAXE.get());
+                        pOutput.accept(PhasmiteSet.PHASMITE_AXE.get());
+                        pOutput.accept(PhasmiteSet.PHASMITE_SHOVEL.get());
+                        pOutput.accept(PhasmiteSet.PHASMITE_HOE.get());
+                        pOutput.accept(PhasmiteSet.PHASMITE_HELMET.get());
+                        pOutput.accept(PhasmiteSet.PHASMITE_CHESTPLATE.get());
+                        pOutput.accept(PhasmiteSet.PHASMITE_LEGGINGS.get());
+                        pOutput.accept(PhasmiteSet.PHASMITE_BOOTS.get());
 
-                        pOutput.accept(MalachiteSet.MALACHITE.get());
+                    //    pOutput.accept(MalachiteSet.MALACHITE.get());
 
-                        pOutput.accept(PlatinumSet.PLATINUM_INGOT.get());
-                        pOutput.accept(PlatinumSet.RAW_PLATINUM.get());
-                        pOutput.accept(PlatinumSet.PLATINUM_SWORD.get());
-                        pOutput.accept(PlatinumSet.PLATINUM_PICKAXE.get());
-                        pOutput.accept(PlatinumSet.PLATINUM_AXE.get());
-                        pOutput.accept(PlatinumSet.PLATINUM_SHOVEL.get());
-                        pOutput.accept(PlatinumSet.PLATINUM_HOE.get());
-                        pOutput.accept(PlatinumSet.PLATINUM_HELMET.get());
-                        pOutput.accept(PlatinumSet.PLATINUM_CHESTPLATE.get());
-                        pOutput.accept(PlatinumSet.PLATINUM_LEGGINGS.get());
-                        pOutput.accept(PlatinumSet.PLATINUM_BOOTS.get());
+                        pOutput.accept(RageiteSet.RAGING_FRAGMENT.get());
+                        pOutput.accept(RageiteSet.RAGEITE_INGOT.get());
+                        pOutput.accept(RageiteSet.RAGEITE_NUGGET.get());
+                        pOutput.accept(RageiteSet.RAGING_COMPOUND.get());
+                        pOutput.accept(RageiteSet.RAGEITE_SWORD.get());
+                        pOutput.accept(RageiteSet.RAGEITE_PICKAXE.get());
+                        pOutput.accept(RageiteSet.RAGEITE_AXE.get());
+                        pOutput.accept(RageiteSet.RAGEITE_SHOVEL.get());
+                        pOutput.accept(RageiteSet.RAGEITE_HOE.get());
+                        pOutput.accept(RageiteSet.RAGEITE_HELMET.get());
+                        pOutput.accept(RageiteSet.RAGEITE_CHESTPLATE.get());
+                        pOutput.accept(RageiteSet.RAGEITE_LEGGINGS.get());
+                        pOutput.accept(RageiteSet.RAGEITE_BOOTS.get());
 
                         pOutput.accept(StarPlatinumSet.STAR_PLATINUM_INGOT.get());
                         pOutput.accept(StarPlatinumSet.STAR_PLATINUM_PICKAXE.get());
@@ -331,21 +336,15 @@ public class ModCreativeModeTabs {
                         pOutput.accept(EmeraldSet.EMERALD_BOOTS.get());
 
                         pOutput.accept(ShadowSteelSet.SHADOW_DAGGER.get());
-                        pOutput.accept(StarriteSet.STAR_STAFF.get());
+                        pOutput.accept(PhasmiteSet.STAR_STAFF.get());
+                        pOutput.accept(VoltiumSet.FLUXITE_STAFF.get());
 
                         pOutput.accept(ModItems.ORE_DETECTOR.get());
                         pOutput.accept(ModItems.TOASTED_BREAD.get());
                         pOutput.accept(ModItems.SAPPHIRE_APPLE.get());
-                        pOutput.accept(ModItems.OBSIDIAN_COOKIE.get());
-                        pOutput.accept(ModItems.SOUL_COOKIE.get());
                         pOutput.accept(ModItems.CHEESE.get());
                         pOutput.accept(ModItems.CHEESE_WHEEL.get());
                         pOutput.accept(ModItems.PEPPER.get());
-                        pOutput.accept(ModItems.FLAMING_MUTTON.get());
-                        pOutput.accept(ModItems.FLAMING_CHICKEN.get());
-                        pOutput.accept(ModItems.FLAMING_PORKCHOP.get());
-                        pOutput.accept(ModItems.FLAMING_STEAK.get());
-                        pOutput.accept(ModItems.FLAMING_RABBIT.get());
                         pOutput.accept(Misc.DOUGH.get());
                         pOutput.accept(Misc.COMPRESSED_SLAG.get());
                         pOutput.accept(Misc.NETHER_SLAG.get());
@@ -357,8 +356,13 @@ public class ModCreativeModeTabs {
                         pOutput.accept(Misc.OBSIDIAN_STICK.get());
                         pOutput.accept(Misc.NETHERITE_STICK.get());
                         pOutput.accept(Misc.STARDUST.get());
+                        pOutput.accept(Misc.STARDUST_FRAGMENT.get());
                         pOutput.accept(Misc.WITHERED_BONE.get());
                         pOutput.accept(Misc.NETHERITE_NUGGET.get());
+                        pOutput.accept(Misc.NETHERITE_MESH.get());
+                        pOutput.accept(Misc.WEEPING_BIT.get());
+                        pOutput.accept(Misc.MOLTEN_IRON_INGOT.get());
+                        pOutput.accept(VoltiumSet.FLUXITE_ARROW.get());
                     })
                     .build());
 
@@ -374,9 +378,9 @@ public class ModCreativeModeTabs {
 
                         pOutput.accept(ModBlocks.KEYOLITE_BLOCK.get());
 
-                        pOutput.accept(ModBlocks.MALACHITE_BLOCK.get());
+                        /*pOutput.accept(ModBlocks.MALACHITE_BLOCK.get());
                         pOutput.accept(ModBlocks.MALACHITE_ORE.get());
-                        pOutput.accept(ModBlocks.DEEPSLATE_MALACHITE_ORE.get());
+                        pOutput.accept(ModBlocks.DEEPSLATE_MALACHITE_ORE.get());*/
 
                         pOutput.accept(ModBlocks.RUBY_BLOCK.get());
                         pOutput.accept(ModBlocks.ROUGH_RUBY_BLOCK.get());
@@ -396,16 +400,15 @@ public class ModCreativeModeTabs {
                        // pOutput.accept(ModBlocks.JADE_ORE.get());
                        // pOutput.accept(ModBlocks.DEEPSLATE_JADE_ORE.get());
 
-                        pOutput.accept(ModBlocks.AQUAMARINE_BLOCK.get());
-                        pOutput.accept(ModBlocks.AQUAMARINE_ORE.get());
+                        pOutput.accept(ModBlocks.HYDROGEM_BLOCK.get());
+                        pOutput.accept(ModBlocks.HYDRIC_ORE.get());
 
                         pOutput.accept(ModBlocks.VIBRANIUM_BLOCK.get());
                         pOutput.accept(ModBlocks.VIBRANIUM_ORE.get());
                         pOutput.accept(ModBlocks.ROUGH_VIBRANIUM_BLOCK.get());
 
-                        pOutput.accept(ModBlocks.PLATINUM_BLOCK.get());
-                        pOutput.accept(ModBlocks.RAW_PLATINUM_BLOCK.get());
-                        pOutput.accept(ModBlocks.PLATINUM_ORE.get());
+                        pOutput.accept(ModBlocks.RAGEITE_BLOCK.get());
+                        pOutput.accept(ModBlocks.RAGING_ORE.get());
 
                         pOutput.accept(ModBlocks.FLUXITE_BLOCK.get());
                         pOutput.accept(ModBlocks.FLUXITE_ORE.get());
@@ -413,11 +416,13 @@ public class ModCreativeModeTabs {
 
                         pOutput.accept(ModBlocks.OBSIDIUM_BLOCK.get());
 
-                        pOutput.accept(ModBlocks.STARRITE_ORE.get());
-                        pOutput.accept(ModBlocks.STARRITE_BLOCK.get());
+                        pOutput.accept(ModBlocks.PHASMIC_ORE.get());
+                        pOutput.accept(ModBlocks.PHASMITE_BLOCK.get());
 
                         pOutput.accept(ModBlocks.HEMOGEM_BLOCK.get());
-                        pOutput.accept(ModBlocks.HEMOGEM_ORE.get());
+                        pOutput.accept(ModBlocks.SANGUINE_ORE.get());
+
+                        pOutput.accept(ModBlocks.WAILING_ORE.get());
 
                         pOutput.accept(ModBlocks.SOUL_ORE.get());
                         pOutput.accept(ModBlocks.SOUL_BLOCK.get());
@@ -426,7 +431,6 @@ public class ModCreativeModeTabs {
                        // pOutput.accept(ModBlocks.QUINTESSITE_ORE.get());
 
                         pOutput.accept(ModBlocks.WITHERITE_BLOCK.get());
-                        pOutput.accept(ModBlocks.WITHERITE_ORE.get());
                         pOutput.accept(ModBlocks.RAW_WITHERITE_BLOCK.get());
 
                         pOutput.accept(ModBlocks.STAR_PLATINUM_BLOCK.get());

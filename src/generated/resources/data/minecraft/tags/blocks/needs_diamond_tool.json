@@ -3,8 +3,9 @@
     "oresrise:fluxite_ore",
     "oresrise:fluxite_block",
     "oresrise:voltium_block",
-    "oresrise:aquamarine_block",
-    "oresrise:hemogem_ore",
+    "oresrise:hydric_ore",
+    "oresrise:hydrogem_block",
+    "oresrise:sanguine_ore",
     "oresrise:hemogem_block"
   ]
 }

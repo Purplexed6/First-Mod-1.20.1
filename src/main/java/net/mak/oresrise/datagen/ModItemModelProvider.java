@@ -110,7 +110,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(SoulSet.SOUL_FRAGMENT);
         simpleItem(SoulSet.SOUL_CRYSTAL);
         simpleItem(SoulSet.SOUL_POWDER);
-        simpleItem(SoulSet.SOUL_ESSENCE);
+        simpleItem(SoulSet.SOUL_PRISM);
         simpleItem(SoulSet.SOULFORGED_HELMET);
         simpleItem(SoulSet.SOULFORGED_CHESTPLATE);
         simpleItem(SoulSet.SOULFORGED_LEGGINGS);
@@ -120,20 +120,6 @@ public class ModItemModelProvider extends ItemModelProvider {
         handheldItem(SoulSet.SOULFORGED_AXE);
         handheldItem(SoulSet.SOULFORGED_SHOVEL);
         handheldItem(SoulSet.SOULFORGED_HOE);
-
-        simpleItem(ModItems.ORE_DETECTOR);
-        simpleItem(Misc.COMPRESSED_SLAG);
-        simpleItem(Misc.NETHER_SLAG);
-        simpleItem(Misc.ENDER_SLAG);
-        simpleItem(Misc.BLAZE_SLAG);
-        simpleItem(Misc.WITHER_SLAG);
-        simpleItem(Misc.IRON_STICK);
-        simpleItem(Misc.DIAMOND_STICK);
-        simpleItem(Misc.OBSIDIAN_STICK);
-        simpleItem(Misc.NETHERITE_STICK);
-        simpleItem(Misc.DOUGH);
-        simpleItem(Misc.STARDUST);
-        simpleItem(Misc.NETHERITE_NUGGET);
 
         simpleItem(ObsidiumSet.OBSIDIAN_SHARD);
         simpleItem(ObsidiumSet.OBSIDIUM_HELMET);
@@ -164,16 +150,9 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         simpleItem(ModItems.TOASTED_BREAD);
         simpleItem(ModItems.SAPPHIRE_APPLE);
-        simpleItem(ModItems.SOUL_COOKIE);
-        simpleItem(ModItems.OBSIDIAN_COOKIE);
         simpleItem(ModItems.CHEESE);
         simpleItem(ModItems.CHEESE_WHEEL);
         simpleItem(ModItems.PEPPER);
-        simpleItem(ModItems.FLAMING_MUTTON);
-        simpleItem(ModItems.FLAMING_CHICKEN);
-        simpleItem(ModItems.FLAMING_PORKCHOP);
-        simpleItem(ModItems.FLAMING_RABBIT);
-        simpleItem(ModItems.FLAMING_STEAK);
 
         simpleItem(VoltiumSet.FLUXITE);
         simpleItem(VoltiumSet.ELECTRIC_MATTER);
@@ -188,6 +167,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(VoltiumSet.VOLTIUM_CHESTPLATE);
         simpleItem(VoltiumSet.VOLTIUM_LEGGINGS);
         simpleItem(VoltiumSet.VOLTIUM_BOOTS);
+        simpleItem(VoltiumSet.FLUXITE_STAFF);
 
         simpleItem(VibraniumSet.VIBRANIUM);
         simpleItem(VibraniumSet.ROUGH_VIBRANIUM);
@@ -219,17 +199,17 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(CryptonSet.CRYPTON_LEGGINGS);
         simpleItem(CryptonSet.CRYPTON_BOOTS);
 
-        simpleItem(AquamarineSet.AQUAMARINE);
-        simpleItem(AquamarineSet.ROUGH_AQUAMARINE);
-        simpleItem(AquamarineSet.AQUAMARINE_HELMET);
-        simpleItem(AquamarineSet.AQUAMARINE_CHESTPLATE);
-        simpleItem(AquamarineSet.AQUAMARINE_LEGGINGS);
-        simpleItem(AquamarineSet.AQUAMARINE_BOOTS);
-        handheldItem(AquamarineSet.AQUAMARINE_SWORD);
-        handheldItem(AquamarineSet.AQUAMARINE_PICKAXE);
-        handheldItem(AquamarineSet.AQUAMARINE_AXE);
-        handheldItem(AquamarineSet.AQUAMARINE_SHOVEL);
-        handheldItem(AquamarineSet.AQUAMARINE_HOE);
+        simpleItem(HydroSet.HYDROGEM);
+        simpleItem(HydroSet.HYDRIC_FRAGMENT);
+        simpleItem(HydroSet.HYDROGEM_HELMET);
+        simpleItem(HydroSet.HYDROGEM_CHESTPLATE);
+        simpleItem(HydroSet.HYDROGEM_LEGGINGS);
+        simpleItem(HydroSet.HYDROGEM_BOOTS);
+        handheldItem(HydroSet.HYDROGEM_SWORD);
+        handheldItem(HydroSet.HYDROGEM_PICKAXE);
+        handheldItem(HydroSet.HYDROGEM_AXE);
+        handheldItem(HydroSet.HYDROGEM_SHOVEL);
+        handheldItem(HydroSet.HYDROGEM_HOE);
 
         /*simpleItem(QuintessiteSet.QUINTESSITE);
         handheldItem(QuintessiteSet.QUINTESSITE_SWORD);
@@ -243,6 +223,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(QuintessiteSet.QUINTESSITE_BOOTS);*/
 
         simpleItem(HemoSet.HEMOGEM);
+        simpleItem(HemoSet.SANGUINE_FRAGMENT);
         simpleItem(HemoSet.HEMOGEM_HELMET);
         simpleItem(HemoSet.HEMOGEM_CHESTPLATE);
         simpleItem(HemoSet.HEMOGEM_LEGGINGS);
@@ -287,18 +268,19 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(OnyxSet.ONYX_LEGGINGS);
         simpleItem(OnyxSet.ONYX_BOOTS);
 
-        simpleItem(StarriteSet.STARRITE);
-        simpleItem(StarriteSet.STARRITE_HELMET);
-        simpleItem(StarriteSet.STARRITE_CHESTPLATE);
-        simpleItem(StarriteSet.STARRITE_LEGGINGS);
-        simpleItem(StarriteSet.STARRITE_BOOTS);
-        handheldItem(StarriteSet.STARRITE_SWORD);
-        handheldItem(StarriteSet.STARRITE_PICKAXE);
-        handheldItem(StarriteSet.STARRITE_AXE);
-        handheldItem(StarriteSet.STARRITE_SHOVEL);
-        handheldItem(StarriteSet.STARRITE_HOE);
+        simpleItem(PhasmiteSet.PHASMITE);
+        simpleItem(PhasmiteSet.PHASMIC_SHARD);
+        simpleItem(PhasmiteSet.PHASMITE_HELMET);
+        simpleItem(PhasmiteSet.PHASMITE_CHESTPLATE);
+        simpleItem(PhasmiteSet.PHASMITE_LEGGINGS);
+        simpleItem(PhasmiteSet.PHASMITE_BOOTS);
+        handheldItem(PhasmiteSet.PHASMITE_SWORD);
+        handheldItem(PhasmiteSet.PHASMITE_PICKAXE);
+        handheldItem(PhasmiteSet.PHASMITE_AXE);
+        handheldItem(PhasmiteSet.PHASMITE_SHOVEL);
+        handheldItem(PhasmiteSet.PHASMITE_HOE);
 
-        simpleItem(MalachiteSet.MALACHITE);
+        //simpleItem(MalachiteSet.MALACHITE);
 
         // simpleItem(FireiteSet.PYROGEL);
         // simpleItem(FireiteSet.FIREITE_INGOT);
@@ -306,17 +288,19 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         //simpleItem(Misc.ICE_CRYSTAL);
 
-        simpleItem(PlatinumSet.RAW_PLATINUM);
-        simpleItem(PlatinumSet.PLATINUM_INGOT);
-        simpleItem(PlatinumSet.PLATINUM_HELMET);
-        simpleItem(PlatinumSet.PLATINUM_CHESTPLATE);
-        simpleItem(PlatinumSet.PLATINUM_LEGGINGS);
-        simpleItem(PlatinumSet.PLATINUM_BOOTS);
-        handheldItem(PlatinumSet.PLATINUM_SWORD);
-        handheldItem(PlatinumSet.PLATINUM_PICKAXE);
-        handheldItem(PlatinumSet.PLATINUM_AXE);
-        handheldItem(PlatinumSet.PLATINUM_SHOVEL);
-        handheldItem(PlatinumSet.PLATINUM_HOE);
+        simpleItem(RageiteSet.RAGEITE_INGOT);
+        simpleItem(RageiteSet.RAGING_FRAGMENT);
+        simpleItem(RageiteSet.RAGEITE_NUGGET);
+        simpleItem(RageiteSet.RAGING_COMPOUND);
+        simpleItem(RageiteSet.RAGEITE_HELMET);
+        simpleItem(RageiteSet.RAGEITE_CHESTPLATE);
+        simpleItem(RageiteSet.RAGEITE_LEGGINGS);
+        simpleItem(RageiteSet.RAGEITE_BOOTS);
+        handheldItem(RageiteSet.RAGEITE_SWORD);
+        handheldItem(RageiteSet.RAGEITE_PICKAXE);
+        handheldItem(RageiteSet.RAGEITE_AXE);
+        handheldItem(RageiteSet.RAGEITE_SHOVEL);
+        handheldItem(RageiteSet.RAGEITE_HOE);
 
         simpleItem(StarPlatinumSet.STAR_PLATINUM_INGOT);
         simpleItem(StarPlatinumSet.STAR_PLATINUM_HELMET);
@@ -362,7 +346,27 @@ public class ModItemModelProvider extends ItemModelProvider {
         handheldItem(EmeraldSet.EMERALD_HOE);
 
         handheldItem(ShadowSteelSet.SHADOW_DAGGER);
-        handheldItem(StarriteSet.STAR_STAFF);
+        handheldItem(PhasmiteSet.STAR_STAFF);
+        handheldItem(VoltiumSet.FLUXITE_STAFF);
+        handheldItem(VoltiumSet.FLUXITE_ARROW);
+
+        simpleItem(ModItems.ORE_DETECTOR);
+        simpleItem(Misc.COMPRESSED_SLAG);
+        simpleItem(Misc.NETHER_SLAG);
+        simpleItem(Misc.ENDER_SLAG);
+        simpleItem(Misc.BLAZE_SLAG);
+        simpleItem(Misc.WITHER_SLAG);
+        simpleItem(Misc.IRON_STICK);
+        simpleItem(Misc.DIAMOND_STICK);
+        simpleItem(Misc.OBSIDIAN_STICK);
+        simpleItem(Misc.NETHERITE_STICK);
+        simpleItem(Misc.DOUGH);
+        simpleItem(Misc.STARDUST);
+        simpleItem(Misc.STARDUST_FRAGMENT);
+        simpleItem(Misc.NETHERITE_NUGGET);
+        simpleItem(Misc.NETHERITE_MESH);
+        simpleItem(Misc.WEEPING_BIT);
+        simpleItem(Misc.MOLTEN_IRON_INGOT);
     }
     private ItemModelBuilder handheldItem(RegistryObject<Item> item) {
         return withExistingParent(item.getId().getPath(),

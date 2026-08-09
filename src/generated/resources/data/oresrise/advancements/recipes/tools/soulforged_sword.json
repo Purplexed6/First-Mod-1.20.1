@@ -1,28 +1,28 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_soul_essence": {
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "oresrise:soul_essence"
-            ]
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
     "has_the_recipe": {
       "conditions": {
         "recipe": "oresrise:soulforged_sword"
       },
       "trigger": "minecraft:recipe_unlocked"
+    },
+    "soul_prism": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "oresrise:soul_prism"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
     }
   },
   "requirements": [
     [
-      "has_soul_essence",
+      "soul_prism",
       "has_the_recipe"
     ]
   ],

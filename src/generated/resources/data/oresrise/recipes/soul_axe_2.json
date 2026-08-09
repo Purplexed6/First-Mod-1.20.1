@@ -3,10 +3,10 @@
   "category": "equipment",
   "key": {
     "#": {
-      "item": "oresrise:obsidian_stick"
+      "item": "oresrise:netherite_stick"
     },
     "S": {
-      "item": "oresrise:soul_essence"
+      "item": "oresrise:soul_prism"
     }
   },
   "pattern": [

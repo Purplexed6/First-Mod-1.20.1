@@ -5,12 +5,12 @@
     "#": {
       "item": "oresrise:iron_stick"
     },
-    "A": {
-      "item": "minecraft:obsidian"
+    "P": {
+      "item": "oresrise:obsidium_ingot"
     }
   },
   "pattern": [
-    " A ",
+    " P ",
     " # ",
     " # "
   ],

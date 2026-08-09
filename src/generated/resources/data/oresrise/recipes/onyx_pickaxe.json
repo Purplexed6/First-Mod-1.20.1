@@ -5,12 +5,12 @@
     "#": {
       "item": "oresrise:netherite_stick"
     },
-    "S": {
+    "P": {
       "item": "oresrise:onyx"
     }
   },
   "pattern": [
-    "SSS",
+    "PPP",
     " # ",
     " # "
   ],

@@ -1,7 +1,13 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_rough_sapphire": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "oresrise:rough_sapphire_block"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "rough_sapphire": {
       "conditions": {
         "items": [
           {
@@ -12,17 +18,11 @@
         ]
       },
       "trigger": "minecraft:inventory_changed"
-    },
-    "has_the_recipe": {
-      "conditions": {
-        "recipe": "oresrise:rough_sapphire_block"
-      },
-      "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_rough_sapphire",
+      "rough_sapphire",
       "has_the_recipe"
     ]
   ],

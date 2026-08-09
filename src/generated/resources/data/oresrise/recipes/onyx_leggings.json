@@ -2,14 +2,14 @@
   "type": "minecraft:crafting_shaped",
   "category": "equipment",
   "key": {
-    "S": {
+    "P": {
       "item": "oresrise:onyx"
     }
   },
   "pattern": [
-    "SSS",
-    "S S",
-    "S S"
+    "PPP",
+    "P P",
+    "P P"
   ],
   "result": {
     "item": "oresrise:onyx_leggings"

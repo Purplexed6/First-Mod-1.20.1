@@ -2,7 +2,7 @@
   "type": "minecraft:blasting",
   "category": "misc",
   "cookingtime": 100,
-  "experience": 0.25,
+  "experience": 0.5,
   "group": "witherite_ingot",
   "ingredient": {
     "item": "oresrise:raw_witherite"

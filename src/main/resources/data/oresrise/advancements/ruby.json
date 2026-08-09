@@ -1,0 +1,33 @@
+{
+  "parent": "oresrise:oresrise",
+  "display": {
+    "icon": {
+      "item": "oresrise:ruby"
+    },
+    "title": {
+      "text": "Strawberry Flavor"
+    },
+    "description": {
+      "text": "It's not edible"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "get_ruby": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["oresrise:ruby"]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    ["get_ruby"]
+  ]
+}

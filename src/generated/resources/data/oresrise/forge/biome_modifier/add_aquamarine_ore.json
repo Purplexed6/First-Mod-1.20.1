@@ -1,6 +1,0 @@
-{
-  "type": "forge:add_features",
-  "biomes": "#oresrise:aquamarine_biomes",
-  "features": "oresrise:aquamarine_ore_placed",
-  "step": "underground_ores"
-}

@@ -1,0 +1,34 @@
+{
+  "parent": "oresrise:battery",
+  "display": {
+    "icon": {
+      "item": "oresrise:voltium_ingot"
+    },
+    "title": {
+      "text": "Ride the Lightning!",
+      "color": "gold"
+    },
+    "description": {
+      "text": "Craft a Voltium Ingot"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "get_voltium_ingot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["oresrise:voltium_ingot"]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    ["get_voltium_ingot"]
+  ]
+}

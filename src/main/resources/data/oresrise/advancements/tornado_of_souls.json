@@ -1,0 +1,28 @@
+{
+  "parent": "oresrise:soul_prism",
+  "display": {
+    "icon": {
+      "item": "oresrise:soulforged_sword"
+    },
+    "title": {
+      "text": "Tornado of Souls"
+    },
+    "description": {
+      "text": "Unleash a storm of souls upon your enemies"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "tornado_of_souls": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "tornado_of_souls"
+    ]
+  ]
+}

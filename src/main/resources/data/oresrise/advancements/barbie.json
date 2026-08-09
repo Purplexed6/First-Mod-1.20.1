@@ -1,0 +1,33 @@
+{
+  "parent": "oresrise:oresrise",
+  "display": {
+    "icon": {
+      "item": "oresrise:rose_gold_pickaxe"
+    },
+    "title": {
+      "text": "Barbie's First Pickaxe"
+    },
+    "description": {
+      "text": "Craft a Rose Gold Pickaxe"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "get_rose_gold_pickaxe": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["oresrise:rose_gold_pickaxe"]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    ["get_rose_gold_pickaxe"]
+  ]
+}

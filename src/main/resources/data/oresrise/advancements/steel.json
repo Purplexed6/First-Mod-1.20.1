@@ -1,0 +1,33 @@
+{
+  "parent": "oresrise:oresrise",
+  "display": {
+    "icon": {
+      "item": "oresrise:steel_ingot"
+    },
+    "title": {
+      "text": "The Cooler Iron"
+    },
+    "description": {
+      "text": "Craft a Steel Ingot"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "get_steel_ingot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["oresrise:steel_ingot"]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    ["get_steel_ingot"]
+  ]
+}

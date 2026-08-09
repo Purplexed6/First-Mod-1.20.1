@@ -2,14 +2,14 @@
   "type": "minecraft:crafting_shaped",
   "category": "equipment",
   "key": {
-    "A": {
+    "P": {
       "item": "minecraft:emerald"
     }
   },
   "pattern": [
-    "A A",
-    "AAA",
-    "AAA"
+    "P P",
+    "PPP",
+    "PPP"
   ],
   "result": {
     "item": "oresrise:emerald_chestplate"

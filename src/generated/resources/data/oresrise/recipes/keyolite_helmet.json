@@ -2,12 +2,15 @@
   "type": "minecraft:crafting_shaped",
   "category": "equipment",
   "key": {
+    "O": {
+      "item": "oresrise:obsidian_shard"
+    },
     "S": {
       "item": "oresrise:keyolite_ingot"
     }
   },
   "pattern": [
-    "SSS",
+    "OSO",
     "S S"
   ],
   "result": {

@@ -7,12 +7,12 @@
       },
       "trigger": "minecraft:recipe_unlocked"
     },
-    "platinum_ingot": {
+    "rageite_ingot": {
       "conditions": {
         "items": [
           {
             "items": [
-              "oresrise:platinum_ingot"
+              "oresrise:rageite_ingot"
             ]
           }
         ]
@@ -22,7 +22,7 @@
   },
   "requirements": [
     [
-      "platinum_ingot",
+      "rageite_ingot",
       "has_the_recipe"
     ]
   ],

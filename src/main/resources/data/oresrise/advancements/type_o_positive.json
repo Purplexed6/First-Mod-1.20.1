@@ -1,0 +1,28 @@
+{
+  "parent": "oresrise:blood",
+  "display": {
+    "icon": {
+      "item": "oresrise:hemogem_sword"
+    },
+    "title": {
+      "text": "Type O Positive"
+    },
+    "description": {
+      "text": "Strike an enemy with the Carnage"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "hemogem_sword_strike": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "hemogem_sword_strike"
+    ]
+  ]
+}

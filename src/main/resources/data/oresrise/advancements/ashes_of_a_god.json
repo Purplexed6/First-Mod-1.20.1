@@ -1,4 +1,5 @@
 {
+  "parent": "oresrise:oresrise",
   "display": {
     "icon": {
       "item": "oresrise:witherite_ingot"

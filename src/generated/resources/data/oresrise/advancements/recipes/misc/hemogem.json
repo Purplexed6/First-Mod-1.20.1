@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_hemogem_block": {
+    "has_sanguine_fragment": {
       "conditions": {
         "items": [
           {
             "items": [
-              "oresrise:hemogem_block"
+              "oresrise:sanguine_fragment"
             ]
           }
         ]
@@ -22,7 +22,7 @@
   },
   "requirements": [
     [
-      "has_hemogem_block",
+      "has_sanguine_fragment",
       "has_the_recipe"
     ]
   ],

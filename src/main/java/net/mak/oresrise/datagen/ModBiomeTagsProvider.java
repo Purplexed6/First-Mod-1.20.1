@@ -17,7 +17,7 @@ public class ModBiomeTagsProvider extends TagsProvider<Biome> {
 
     @Override
     protected void addTags(HolderLookup.Provider provider) {
-        tag(ModBiomeTags.AQUAMARINE_BIOMES)
+        tag(ModBiomeTags.HYDROGEM_BIOMES)
                 .add(
                         Biomes.FROZEN_OCEAN,
                         Biomes.DEEP_FROZEN_OCEAN,

@@ -18,10 +18,7 @@ public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, ExampleMod.MOD_ID);
 
-    public static final RegistryObject<Item> SOUL_COOKIE = ITEMS.register("soul_cookie",
-            () -> new Item(new Item.Properties().food(ModFoods.SOUL_COOKIE)));
-    public static final RegistryObject<Item> OBSIDIAN_COOKIE = ITEMS.register("obsidian_cookie",
-            () -> new Item(new Item.Properties().food(ModFoods.OBSIDIAN_COOKIE)));
+
     public static final RegistryObject<Item> SAPPHIRE_APPLE = ITEMS.register("sapphire_apple",
             () -> new Item(new Item.Properties().food(ModFoods.SAPPHIRE_APPLE)));
     public static final RegistryObject<Item> TOASTED_BREAD = ITEMS.register("toasted_bread",
@@ -32,16 +29,6 @@ public class ModItems {
             () -> new Item(new Item.Properties().stacksTo(16)));
     public static final RegistryObject<Item> PEPPER = ITEMS.register("pepper",
             () -> new Item(new Item.Properties().food(ModFoods.PEPPER)));
-    public static final RegistryObject<Item> FLAMING_PORKCHOP = ITEMS.register("flaming_porkchop",
-            () -> new Item(new Item.Properties().food(ModFoods.FLAMING_PORKCHOP)));
-    public static final RegistryObject<Item> FLAMING_STEAK = ITEMS.register("flaming_steak",
-            () -> new Item(new Item.Properties().food(ModFoods.FLAMING_STEAK)));
-    public static final RegistryObject<Item> FLAMING_RABBIT = ITEMS.register("flaming_rabbit",
-            () -> new Item(new Item.Properties().food(ModFoods.FLAMING_RABBIT)));
-    public static final RegistryObject<Item> FLAMING_CHICKEN = ITEMS.register("flaming_chicken",
-            () -> new Item(new Item.Properties().food(ModFoods.FLAMING_CHICKEN)));
-    public static final RegistryObject<Item> FLAMING_MUTTON = ITEMS.register("flaming_mutton",
-            () -> new Item(new Item.Properties().food(ModFoods.FLAMING_MUTTON)));
 
 
 
@@ -78,10 +65,10 @@ public class ModItems {
         JadeSet.register();
         ResoniteSet.register();
         QuintessiteSet.register();
-        AquamarineSet.register();
+        HydroSet.register();
         OnyxSet.register();
-        StarriteSet.register();
-        PlatinumSet.register();
+        PhasmiteSet.register();
+        RageiteSet.register();
         StarPlatinumSet.register();
         CobaltSet.register();
         AmethystSet.register();

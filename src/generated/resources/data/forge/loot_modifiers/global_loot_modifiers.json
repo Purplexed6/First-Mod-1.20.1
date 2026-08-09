@@ -1,12 +1,26 @@
 {
   "entries": [
     "oresrise:witherite_ingot_from_wither",
-    "oresrise:wither_slag_from_wither_skeleton",
+    "oresrise:witherite_from_fortresses",
+    "oresrise:weeping_bit_from_ghast",
     "oresrise:metal_detector_from_jungle_temples",
-    "oresrise:raw_witherite_from_wither",
+    "oresrise:witherite_from_bastions",
+    "oresrise:witherite_from_bastions1",
+    "oresrise:witherite_from_bastions2",
+    "oresrise:witherite_from_bastions3",
     "oresrise:end_slag_from_enderman",
+    "oresrise:extra_witherite_from_bastions",
+    "oresrise:dreadsteel_template_from_bastions",
+    "oresrise:extra_witherite_from_bastions1",
+    "oresrise:extra_witherite_from_fortresses",
+    "oresrise:extra_witherite_from_bastions2",
+    "oresrise:dreadsteel_template_from_fortresses",
+    "oresrise:extra_witherite_from_bastions3",
+    "oresrise:witherite_from_wither_skeleton",
+    "oresrise:wither_slag_from_wither_skeleton",
+    "oresrise:raw_witherite_from_wither",
     "oresrise:blaze_slag_from_blaze",
-    "oresrise:witherite_from_wither_skeleton"
+    "oresrise:dreadsteel_template_from_bastions2"
   ],
   "replace": false
 }

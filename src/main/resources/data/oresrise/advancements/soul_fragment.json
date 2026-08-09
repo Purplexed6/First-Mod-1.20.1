@@ -1,0 +1,33 @@
+{
+  "parent": "oresrise:oresrise",
+  "display": {
+    "icon": {
+      "item": "oresrise:soul_fragment"
+    },
+    "title": {
+      "text": "The Voices.."
+    },
+    "description": {
+      "text": "Acquire a Spectral Fragment"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "get_soul_fragment": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["oresrise:soul_fragment"]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    ["get_soul_fragment"]
+  ]
+}

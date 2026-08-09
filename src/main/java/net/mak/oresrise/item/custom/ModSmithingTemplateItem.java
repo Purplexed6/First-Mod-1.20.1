@@ -51,10 +51,10 @@ public class ModSmithingTemplateItem extends SmithingTemplateItem {
     private static final ResourceLocation EMPTY_SLOT_AXE = new ResourceLocation("minecraft", "item/empty_slot_axe");
     private static final ResourceLocation EMPTY_SLOT_SWORD = new ResourceLocation("minecraft", "item/empty_slot_sword");
     private static final ResourceLocation EMPTY_SLOT_PICKAXE = new ResourceLocation("minecraft", "item/empty_slot_pickaxe");
-    private static final ResourceLocation EMPTY_SLOT_HELMET = new ResourceLocation("minecraft", "item/empty_slot_helmet");
-    private static final ResourceLocation EMPTY_SLOT_CHESTPLATE = new ResourceLocation("minecraft", "item/empty_slot_chestplate");
-    private static final ResourceLocation EMPTY_SLOT_LEGGINGS = new ResourceLocation("minecraft", "item/empty_slot_leggings");
-    private static final ResourceLocation EMPTY_SLOT_BOOTS = new ResourceLocation("minecraft", "item/empty_slot_boots");
+    private static final ResourceLocation EMPTY_SLOT_HELMET = new ResourceLocation("minecraft", "item/empty_armor_slot_helmet");
+    private static final ResourceLocation EMPTY_SLOT_CHESTPLATE = new ResourceLocation("minecraft", "item/empty_armor_slot_chestplate");
+    private static final ResourceLocation EMPTY_SLOT_LEGGINGS = new ResourceLocation("minecraft", "item/empty_armor_slot_leggings");
+    private static final ResourceLocation EMPTY_SLOT_BOOTS = new ResourceLocation("minecraft", "item/empty_armor_slot_boots");
 
     public ModSmithingTemplateItem(Component pAppliesTo, Component pIngredients, Component pUpgradeDescription, Component pBaseSlotDescription, Component pAdditionsSlotDescription, List<ResourceLocation> pBaseSlotEmptyIcons, List<ResourceLocation> pAdditionalSlotEmptyIcons) {
         super(pAppliesTo, pIngredients, pUpgradeDescription, pBaseSlotDescription, pAdditionsSlotDescription, pBaseSlotEmptyIcons, pAdditionalSlotEmptyIcons);

@@ -11,8 +11,7 @@
   },
   "pattern": [
     " S ",
-    "SAS",
-    " S "
+    " A "
   ],
   "result": {
     "item": "oresrise:sapphire_apple"

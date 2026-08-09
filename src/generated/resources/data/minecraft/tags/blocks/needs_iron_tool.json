@@ -9,13 +9,11 @@
     "oresrise:ruby_ore",
     "oresrise:deepslate_ruby_ore",
     "oresrise:rosite_block",
-    "oresrise:aquamarine_ore",
-    "oresrise:malachite_ore",
-    "oresrise:deepslate_malachite_ore",
-    "oresrise:platinum_block",
-    "oresrise:raw_platinum_block",
-    "oresrise:platinum_ore",
-    "oresrise:starrite_block",
-    "oresrise:starrite_ore"
+    "oresrise:hydric_ore",
+    "oresrise:wailing_ore",
+    "oresrise:rageite_block",
+    "oresrise:raging_ore",
+    "oresrise:phasmite_block",
+    "oresrise:phasmic_ore"
   ]
 }

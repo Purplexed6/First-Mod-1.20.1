@@ -6,17 +6,10 @@
       "item": "minecraft:iron_ingot"
     },
     {
-      "item": "minecraft:iron_ingot"
-    },
-    {
-      "item": "minecraft:redstone"
-    },
-    {
       "item": "minecraft:redstone"
     }
   ],
   "result": {
-    "count": 2,
     "item": "oresrise:rosite_ingot"
   }
 }

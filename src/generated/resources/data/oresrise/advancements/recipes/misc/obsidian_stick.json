@@ -1,7 +1,13 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_obsidian_shard": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "oresrise:obsidian_stick"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "obsidian_shard": {
       "conditions": {
         "items": [
           {
@@ -12,17 +18,11 @@
         ]
       },
       "trigger": "minecraft:inventory_changed"
-    },
-    "has_the_recipe": {
-      "conditions": {
-        "recipe": "oresrise:obsidian_stick"
-      },
-      "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_obsidian_shard",
+      "obsidian_shard",
       "has_the_recipe"
     ]
   ],

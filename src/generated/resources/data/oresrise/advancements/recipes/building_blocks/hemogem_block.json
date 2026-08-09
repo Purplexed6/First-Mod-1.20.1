@@ -1,7 +1,13 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_hemogem": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "oresrise:hemogem_block"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "hemogem": {
       "conditions": {
         "items": [
           {
@@ -12,17 +18,11 @@
         ]
       },
       "trigger": "minecraft:inventory_changed"
-    },
-    "has_the_recipe": {
-      "conditions": {
-        "recipe": "oresrise:hemogem_block"
-      },
-      "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_hemogem",
+      "hemogem",
       "has_the_recipe"
     ]
   ],

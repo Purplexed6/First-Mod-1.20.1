@@ -14,7 +14,7 @@ public class LunarisSet {
             () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> LUNARIS_SWORD = ModItems.ITEMS.register("lunaris_sword",
-            () -> new ModSwordItem(ModToolTiers.LUNARIS, 4, -2.3f, new Item.Properties()));
+            () -> new LunarisSwordItem(ModToolTiers.LUNARIS, 4, -2.3f, new Item.Properties()));
     public static final RegistryObject<Item> LUNARIS_PICKAXE = ModItems.ITEMS.register("lunaris_pickaxe",
             () -> new LunarisPickaxeItem(ModToolTiers.LUNARIS, 1, -2.8f, new Item.Properties()));
     public static final RegistryObject<Item> LUNARIS_AXE = ModItems.ITEMS.register("lunaris_axe",

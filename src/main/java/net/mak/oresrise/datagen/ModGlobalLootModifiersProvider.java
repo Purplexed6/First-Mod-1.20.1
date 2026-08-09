@@ -2,6 +2,7 @@ package net.mak.oresrise.datagen;
 
 import net.mak.oresrise.ExampleMod;
 import net.mak.oresrise.item.ModItems;
+import net.mak.oresrise.item.custom.DreadsteelSet;
 import net.mak.oresrise.item.custom.Misc;
 import net.mak.oresrise.item.custom.WitheriteSet;
 import net.mak.oresrise.loot.AddItemModifier;
@@ -35,6 +36,108 @@ public class ModGlobalLootModifiersProvider extends GlobalLootModifierProvider {
 
         add("metal_detector_from_jungle_temples", new AddItemModifier(new LootItemCondition[] {
                 new LootTableIdCondition.Builder(ResourceLocation.fromNamespaceAndPath("minecraft", "chests/jungle_temple")).build() }, ModItems.ORE_DETECTOR.get(), 1));
+
+
+
+
+        add("witherite_from_bastions", new AddItemModifier(new LootItemCondition[] {
+                new LootTableIdCondition.Builder(ResourceLocation.fromNamespaceAndPath("minecraft", "chests/bastion_bridge")).build()
+        }, WitheriteSet.RAW_WITHERITE.get(), 1));
+        add("extra_witherite_from_bastions", new AddItemModifier(new LootItemCondition[] {
+                new LootTableIdCondition.Builder(ResourceLocation.fromNamespaceAndPath("minecraft", "chests/bastion_bridge")).build(),
+                LootItemRandomChanceCondition.randomChance(0.35f).build()
+        }, WitheriteSet.RAW_WITHERITE.get(), 1));
+
+        add("witherite_from_bastions1", new AddItemModifier(new LootItemCondition[] {
+                new LootTableIdCondition.Builder(ResourceLocation.fromNamespaceAndPath("minecraft", "chests/bastion_hoglin_stable")).build()
+        }, WitheriteSet.RAW_WITHERITE.get(), 1));
+        add("extra_witherite_from_bastions1", new AddItemModifier(new LootItemCondition[] {
+                new LootTableIdCondition.Builder(ResourceLocation.fromNamespaceAndPath("minecraft", "chests/bastion_hoglin_stable")).build(),
+                LootItemRandomChanceCondition.randomChance(0.35f).build()
+        }, WitheriteSet.RAW_WITHERITE.get(), 1));
+
+        add("witherite_from_bastions2", new AddItemModifier(new LootItemCondition[] {
+                new LootTableIdCondition.Builder(ResourceLocation.fromNamespaceAndPath("minecraft", "chests/bastion_other")).build()
+        }, WitheriteSet.RAW_WITHERITE.get(), 1));
+        add("extra_witherite_from_bastions2", new AddItemModifier(new LootItemCondition[] {
+                new LootTableIdCondition.Builder(ResourceLocation.fromNamespaceAndPath("minecraft", "chests/bastion_other")).build(),
+                LootItemRandomChanceCondition.randomChance(0.35f).build()
+        }, WitheriteSet.RAW_WITHERITE.get(), 1));
+
+        add("witherite_from_bastions3", new AddItemModifier(new LootItemCondition[] {
+                new LootTableIdCondition.Builder(ResourceLocation.fromNamespaceAndPath("minecraft", "chests/bastion_treasure")).build()
+        }, WitheriteSet.RAW_WITHERITE.get(), 1));
+        add("extra_witherite_from_bastions3", new AddItemModifier(new LootItemCondition[] {
+                new LootTableIdCondition.Builder(ResourceLocation.fromNamespaceAndPath("minecraft", "chests/bastion_treasure")).build(),
+                LootItemRandomChanceCondition.randomChance(0.35f).build()
+        }, WitheriteSet.RAW_WITHERITE.get(), 1));
+
+
+
+
+
+
+
+
+
+        add("witherite_from_fortresses", new AddItemModifier(new LootItemCondition[] {
+                new LootTableIdCondition.Builder(ResourceLocation.fromNamespaceAndPath("minecraft", "chests/nether_bridge")).build()
+        }, WitheriteSet.RAW_WITHERITE.get(), 1));
+        add("extra_witherite_from_fortresses", new AddItemModifier(new LootItemCondition[] {
+                new LootTableIdCondition.Builder(ResourceLocation.fromNamespaceAndPath("minecraft", "chests/nether_bridge")).build(),
+                LootItemRandomChanceCondition.randomChance(0.35f).build()
+        }, WitheriteSet.RAW_WITHERITE.get(), 1));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        add("dreadsteel_template_from_bastions", new AddItemModifier(new LootItemCondition[] {
+                new LootTableIdCondition.Builder(ResourceLocation.fromNamespaceAndPath("minecraft", "chests/bastion_treasure")).build(),
+                LootItemRandomChanceCondition.randomChance(0.3f).build()
+        }, DreadsteelSet.DREADSTEEL_UPGRADE_SMITHING_TEMPLATE.get(), 1));
+
+        add("dreadsteel_template_from_bastions", new AddItemModifier(new LootItemCondition[] {
+                new LootTableIdCondition.Builder(ResourceLocation.fromNamespaceAndPath("minecraft", "chests/bastion_bridge")).build(),
+                LootItemRandomChanceCondition.randomChance(0.3f).build()
+        }, DreadsteelSet.DREADSTEEL_UPGRADE_SMITHING_TEMPLATE.get(), 1));
+
+        add("dreadsteel_template_from_bastions", new AddItemModifier(new LootItemCondition[] {
+                new LootTableIdCondition.Builder(ResourceLocation.fromNamespaceAndPath("minecraft", "chests/bastion_stable")).build(),
+                LootItemRandomChanceCondition.randomChance(0.3f).build()
+        }, DreadsteelSet.DREADSTEEL_UPGRADE_SMITHING_TEMPLATE.get(), 1));
+
+        add("dreadsteel_template_from_bastions2", new AddItemModifier(new LootItemCondition[] {
+                new LootTableIdCondition.Builder(ResourceLocation.fromNamespaceAndPath("minecraft", "chests/bastion_other")).build(),
+                LootItemRandomChanceCondition.randomChance(0.3f).build()
+        }, DreadsteelSet.DREADSTEEL_UPGRADE_SMITHING_TEMPLATE.get(), 1));
+
+
+        add("dreadsteel_template_from_fortresses", new AddItemModifier(new LootItemCondition[] {
+                new LootTableIdCondition.Builder(ResourceLocation.fromNamespaceAndPath("minecraft", "chests/nether_bridge")).build(),
+                LootItemRandomChanceCondition.randomChance(0.3f).build()
+        }, DreadsteelSet.DREADSTEEL_UPGRADE_SMITHING_TEMPLATE.get(), 1));
+
+
+
+
+
 
         /*add("ice_crystal_from_igloos", new AddItemModifier(new LootItemCondition[] {
                 new LootTableIdCondition.Builder(
@@ -77,7 +180,13 @@ public class ModGlobalLootModifiersProvider extends GlobalLootModifierProvider {
         add("end_slag_from_enderman", new AddItemModifier(new LootItemCondition[] {
                 LootItemEntityPropertyCondition.hasProperties(LootContext.EntityTarget.THIS,
                         EntityPredicate.Builder.entity().of(EntityType.ENDERMAN)).build(),
-                LootItemRandomChanceCondition.randomChance(0.1f).build()
+                LootItemRandomChanceCondition.randomChance(0.2f).build()
         }, Misc.ENDER_SLAG.get(), 1));
+
+        add("weeping_bit_from_ghast", new AddItemModifier(new LootItemCondition[] {
+                LootItemEntityPropertyCondition.hasProperties(LootContext.EntityTarget.THIS,
+                        EntityPredicate.Builder.entity().of(EntityType.GHAST)).build(),
+                LootItemRandomChanceCondition.randomChance(0.5f).build()
+        }, Misc.WEEPING_BIT.get(), 2));
     }
 }

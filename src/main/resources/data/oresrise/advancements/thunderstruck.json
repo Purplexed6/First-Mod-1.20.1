@@ -1,0 +1,29 @@
+{
+  "parent": "oresrise:lightning",
+  "display": {
+    "icon": {
+      "item": "oresrise:fluxite_staff"
+    },
+    "title": {
+      "text": "Thunderstruck",
+      "color": "yellow"
+    },
+    "description": {
+      "text": "Call down lightning upon your enemies with the Fluxite Stormcaller"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "fluxite_staff_strike": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "fluxite_staff_strike"
+    ]
+  ]
+}

@@ -3,13 +3,13 @@
   "category": "equipment",
   "key": {
     "#": {
-      "item": "oresrise:obsidian_stick"
+      "item": "oresrise:netherite_stick"
     },
     "A": {
       "item": "minecraft:spectral_arrow"
     },
     "S": {
-      "item": "oresrise:starrite"
+      "item": "oresrise:phasmite"
     }
   },
   "pattern": [

@@ -5,12 +5,12 @@
     "#": {
       "item": "minecraft:stick"
     },
-    "S": {
+    "P": {
       "item": "minecraft:emerald"
     }
   },
   "pattern": [
-    "SSS",
+    "PPP",
     " # ",
     " # "
   ],

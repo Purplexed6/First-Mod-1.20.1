@@ -1,4 +1,5 @@
 {
+  "parent": "oresrise:absolution",
   "display": {
     "icon": {
       "item": "oresrise:pepper"

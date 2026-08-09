@@ -1,10 +1,12 @@
 {
+  "parent": "oresrise:steel",
   "display": {
     "icon": {
       "item": "oresrise:fluxite"
     },
     "title": {
-      "text": "Cannot Kill The Battery!"
+      "text": "Cannot Kill The Battery!",
+      "color": "yellow"
     },
     "description": {
       "text": "Mine Fluxite Ore"

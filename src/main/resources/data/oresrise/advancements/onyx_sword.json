@@ -1,0 +1,27 @@
+{
+  "parent": "oresrise:oresrise",
+  "display": {
+    "icon": {
+      "item": "oresrise:onyx_sword"
+    },
+    "title": {
+      "text": "Nothing Personal, Kid"
+    },
+    "description": {
+      "text": "Backstab an enemy with the Nightfang"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "criteria": {
+    "backstab": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "backstab"
+    ]
+  ]
+}

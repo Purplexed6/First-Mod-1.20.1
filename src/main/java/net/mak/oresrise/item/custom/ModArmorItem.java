@@ -29,7 +29,7 @@ public class ModArmorItem extends ArmorItem {
                             new MobEffectInstance(MobEffects.WATER_BREATHING, 40, 0, false, false)
                     ))
 
-                    .put(ModArmorMaterials.AQUAMARINE, List.of(
+                    .put(ModArmorMaterials.HYDROGEM, List.of(
                             new MobEffectInstance(MobEffects.DOLPHINS_GRACE, 40, 0, false, false)
                     ))
 
@@ -46,11 +46,15 @@ public class ModArmorItem extends ArmorItem {
                     ))
 
                     .put(ModArmorMaterials.WITHERITE, List.of(
-                            new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 1, false, false)
+                            new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 0, false, false)
                     ))
 
                     .put(ModArmorMaterials.DREADSTEEL, List.of(
                             new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 0, false, false)
+                    ))
+
+                    .put(ModArmorMaterials.VOLTIUM, List.of(
+                            new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 0, false, false)
                     ))
 
                     .put(ModArmorMaterials.STAR_PLATINUM, List.of(
@@ -59,8 +63,7 @@ public class ModArmorItem extends ArmorItem {
                     ))
 
                     .put(ModArmorMaterials.ONYX, List.of(
-                            new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 0, false, false),
-                            new MobEffectInstance(MobEffects.NIGHT_VISION, 40, 0, false, false)
+                            new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 1, false, false)
                     ))
 
                     .build();
@@ -117,51 +120,8 @@ public class ModArmorItem extends ArmorItem {
     // 💀 SPECIAL “ENCHANT-LIKE” LOGIC
     private void applySpecialAbilities(Player player) {
 
-        // 🔥 SOULFORGED
-        if (hasCorrectArmorOn(ModArmorMaterials.SOULFORGED, player)) {
-            if (player.getBlockStateOn().is(Blocks.SOUL_SAND)) {
-                player.addEffect(new MobEffectInstance(
-                        MobEffects.MOVEMENT_SPEED,
-                        40,
-                        5,
-                        false,
-                        false
-                ));
-            }
-        }
-
-        if (hasCorrectArmorOn(ModArmorMaterials.SOULFORGED, player)) {
-            if (player.getBlockStateOn().is(Blocks.SOUL_SOIL)) {
-                player.addEffect(new MobEffectInstance(
-                        MobEffects.MOVEMENT_SPEED,
-                        40,
-                        1, // stronger than soulforged
-                        false,
-                        false
-                ));
-            }
-        }
-
         if (hasCorrectArmorOn(ModArmorMaterials.LUNARIS, player)) {
             player.fallDistance = 0;
-        }
-
-        // 🔥 DREADSTEEL SOUL SPEED II
-        if (hasCorrectArmorOn(ModArmorMaterials.DREADSTEEL, player)) {
-
-            ItemStack boots = player.getInventory().getArmor(0);
-
-            var enchantments = EnchantmentHelper.getEnchantments(boots);
-
-            if (enchantments.getOrDefault(Enchantments.SOUL_SPEED, 0) < 2) {
-
-                enchantments.put(Enchantments.SOUL_SPEED, 2);
-
-                EnchantmentHelper.setEnchantments(
-                        enchantments,
-                        boots
-                );
-            }
         }
 
         // 🖤 ONYX → Crushing Aura

@@ -17,9 +17,9 @@ public class VoltiumSet {
             () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> VOLTIUM_SWORD = ModItems.ITEMS.register("fluxite_sword",
-            () -> new SwordItem(ModToolTiers.VOLTIUM, 4, -2.4f, new Item.Properties()));
+            () -> new VoltiumSwordItem(ModToolTiers.VOLTIUM, 4, -2.4f, new Item.Properties()));
     public static final RegistryObject<Item> VOLTIUM_PICKAXE = ModItems.ITEMS.register("fluxite_pickaxe",
-            () -> new PickaxeItem(ModToolTiers.VOLTIUM, 1, -2.8f, new Item.Properties()));
+            () -> new VoltiumPickaxeItem(ModToolTiers.VOLTIUM, 1, -2.8f, new Item.Properties()));
     public static final RegistryObject<Item> VOLTIUM_AXE = ModItems.ITEMS.register("fluxite_axe",
             () -> new AxeItem(ModToolTiers.VOLTIUM, 5, -3.0f, new Item.Properties()));
     public static final RegistryObject<Item> VOLTIUM_SHOVEL = ModItems.ITEMS.register("fluxite_shovel",
@@ -28,13 +28,19 @@ public class VoltiumSet {
             () -> new HoeItem(ModToolTiers.VOLTIUM, -3, 0, new Item.Properties()));
 
     public static final RegistryObject<Item> VOLTIUM_HELMET = ModItems.ITEMS.register("fluxite_helmet",
-            () -> new ArmorItem(ModArmorMaterials.VOLTIUM, ArmorItem.Type.HELMET, new Item.Properties()));
+            () -> new VoltiumArmorItem(ModArmorMaterials.VOLTIUM, ArmorItem.Type.HELMET, new Item.Properties()));
     public static final RegistryObject<Item> VOLTIUM_CHESTPLATE = ModItems.ITEMS.register("fluxite_chestplate",
             () -> new ArmorItem(ModArmorMaterials.VOLTIUM, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
     public static final RegistryObject<Item> VOLTIUM_LEGGINGS = ModItems.ITEMS.register("fluxite_leggings",
             () -> new ArmorItem(ModArmorMaterials.VOLTIUM, ArmorItem.Type.LEGGINGS, new Item.Properties()));
     public static final RegistryObject<Item> VOLTIUM_BOOTS = ModItems.ITEMS.register("fluxite_boots",
             () -> new ArmorItem(ModArmorMaterials.VOLTIUM, ArmorItem.Type.BOOTS, new Item.Properties()));
+
+    public static final RegistryObject<Item> FLUXITE_STAFF = ModItems.ITEMS.register("fluxite_staff",
+            () -> new FluxiteStaffItem(new Item.Properties().stacksTo(1).durability(128)));
+
+    public static final RegistryObject<Item> FLUXITE_ARROW = ModItems.ITEMS.register("fluxite_arrow",
+            () -> new FluxiteArrowItem(new Item.Properties()));
 
     public static void register() {}
 }

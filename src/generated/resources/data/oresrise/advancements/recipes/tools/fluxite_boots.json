@@ -7,7 +7,7 @@
       },
       "trigger": "minecraft:recipe_unlocked"
     },
-    "has_voltium_ingot": {
+    "voltium_ingot": {
       "conditions": {
         "items": [
           {
@@ -22,7 +22,7 @@
   },
   "requirements": [
     [
-      "has_voltium_ingot",
+      "voltium_ingot",
       "has_the_recipe"
     ]
   ],

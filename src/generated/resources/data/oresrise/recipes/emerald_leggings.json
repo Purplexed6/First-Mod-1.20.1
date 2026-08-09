@@ -2,14 +2,14 @@
   "type": "minecraft:crafting_shaped",
   "category": "equipment",
   "key": {
-    "A": {
+    "P": {
       "item": "minecraft:emerald"
     }
   },
   "pattern": [
-    "AAA",
-    "A A",
-    "A A"
+    "PPP",
+    "P P",
+    "P P"
   ],
   "result": {
     "item": "oresrise:emerald_leggings"

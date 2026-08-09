@@ -34,7 +34,7 @@ public class StarritePillarFeature extends Feature<NoneFeatureConfiguration> {
 
                         level.setBlock(
                                 pos,
-                                ModBlocks.STARRITE_ORE.get().defaultBlockState(),
+                                ModBlocks.PHASMIC_ORE.get().defaultBlockState(),
                                 2
                         );
                     }

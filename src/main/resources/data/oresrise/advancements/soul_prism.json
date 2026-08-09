@@ -1,0 +1,34 @@
+{
+  "parent": "oresrise:soul_crystal",
+  "display": {
+    "icon": {
+      "item": "oresrise:soul_prism",
+      "color": "aqua"
+    },
+    "title": {
+      "text": "They Are One"
+    },
+    "description": {
+      "text": "Acquire a Spectral Prism"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "get_soul_prism": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["oresrise:soul_prism"]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    ["get_soul_prism"]
+  ]
+}

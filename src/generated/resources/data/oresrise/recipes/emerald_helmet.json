@@ -2,13 +2,13 @@
   "type": "minecraft:crafting_shaped",
   "category": "equipment",
   "key": {
-    "A": {
+    "P": {
       "item": "minecraft:emerald"
     }
   },
   "pattern": [
-    "AAA",
-    "A A"
+    "PPP",
+    "P P"
   ],
   "result": {
     "item": "oresrise:emerald_helmet"

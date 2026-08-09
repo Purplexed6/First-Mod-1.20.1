@@ -1,0 +1,33 @@
+{
+  "parent": "oresrise:soulforged_armor",
+  "display": {
+    "icon": {
+      "item": "oresrise:dreadsteel_ingot"
+    },
+    "title": {
+      "text": "Beyond Netherite"
+    },
+    "description": {
+      "text": "Craft your first Dreadsteel Ingot"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "get_dreadsteel_ingot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["oresrise:dreadsteel_ingot"]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    ["get_dreadsteel_ingot"]
+  ]
+}

@@ -8,13 +8,15 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class HemoSet {
 
+    public static final RegistryObject<Item> SANGUINE_FRAGMENT = ModItems.ITEMS.register("sanguine_fragment",
+            () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> HEMOGEM = ModItems.ITEMS.register("hemogem",
             () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> HEMOGEM_SWORD = ModItems.ITEMS.register("hemogem_sword",
-            () -> new ModSwordItem(ModToolTiers.HEMOGEM, 4, -2.3f, new Item.Properties()));
+            () -> new HemogemSwordItem(ModToolTiers.HEMOGEM, 4, -2.3f, new Item.Properties()));
     public static final RegistryObject<Item> HEMOGEM_PICKAXE = ModItems.ITEMS.register("hemogem_pickaxe",
-            () -> new PickaxeItem(ModToolTiers.HEMOGEM, 1, -2.8f, new Item.Properties()));
+            () -> new HemogemPickaxeItem(ModToolTiers.HEMOGEM, 1, -2.8f, new Item.Properties()));
     public static final RegistryObject<Item> HEMOGEM_AXE = ModItems.ITEMS.register("hemogem_axe",
             () -> new AxeItem(ModToolTiers.HEMOGEM, 5.5f, -3.0f, new Item.Properties()));
     public static final RegistryObject<Item> HEMOGEM_SHOVEL = ModItems.ITEMS.register("hemogem_shovel",

@@ -8,7 +8,7 @@ import net.minecraft.world.level.biome.Biome;
 
 public class ModBiomeTags {
 
-    public static final TagKey<Biome> AQUAMARINE_BIOMES =
+    public static final TagKey<Biome> HYDROGEM_BIOMES =
             TagKey.create(
                     Registries.BIOME,
                     new ResourceLocation(ExampleMod.MOD_ID, "aquamarine_biomes")

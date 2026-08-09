@@ -1,0 +1,33 @@
+{
+  "parent": "oresrise:dreadsteel_armor",
+  "display": {
+    "icon": {
+      "item": "oresrise:dreadsteel_hoe"
+    },
+    "title": {
+      "text": "Serious Dreadication"
+    },
+    "description": {
+      "text": "Use a Dreadsteel Ingot to upgrade a Soulforged Hoe, and rethink every decision that has led you here"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "get_dreadsteel_hoe": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["oresrise:dreadsteel_hoe"]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    ["get_dreadsteel_hoe"]
+  ]
+}

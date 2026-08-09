@@ -39,22 +39,21 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.WITHERITE_BLOCK.get());
   //      this.dropSelf(ModBlocks.OBLIVIONITE_BLOCK.get());
         this.dropSelf(ModBlocks.SOUL_BLOCK.get());
-        this.dropSelf(ModBlocks.AQUAMARINE_BLOCK.get());
     //    this.dropSelf(ModBlocks.JADE_BLOCK.get());
         //this.dropSelf(ModBlocks.QUINTESSITE_BLOCK.get());
         this.dropSelf(ModBlocks.HEMOGEM_BLOCK.get());
+        this.dropSelf(ModBlocks.HYDROGEM_BLOCK.get());
         this.dropSelf(ModBlocks.CRYPTON_BLOCK.get());
         this.dropSelf(ModBlocks.DREADSTEEL_BLOCK.get());
         this.dropSelf(ModBlocks.LUNARIS_BLOCK.get());
         this.dropSelf(ModBlocks.FLUXITE_BLOCK.get());
         this.dropSelf(ModBlocks.VOLTIUM_BLOCK.get());
         this.dropSelf(ModBlocks.ONYX_BLOCK.get());
-        this.dropSelf(ModBlocks.STARRITE_BLOCK.get());
+        this.dropSelf(ModBlocks.PHASMITE_BLOCK.get());
         // this.dropSelf(ModBlocks.COBALT_BLOCK.get());
       //  this.dropSelf(ModBlocks.RAW_COBALT_BLOCK.get());
-        this.dropSelf(ModBlocks.PLATINUM_BLOCK.get());
-        this.dropSelf(ModBlocks.MALACHITE_BLOCK.get());
-        this.dropSelf(ModBlocks.RAW_PLATINUM_BLOCK.get());
+        this.dropSelf(ModBlocks.RAGEITE_BLOCK.get());
+        //this.dropSelf(ModBlocks.MALACHITE_BLOCK.get());
         this.dropSelf(ModBlocks.STAR_PLATINUM_BLOCK.get());
         this.dropSelf(ModBlocks.ROSE_GOLD_BLOCK.get());
         this.dropSelf(ModBlocks.ROUGH_VIBRANIUM_BLOCK.get());
@@ -64,29 +63,44 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.OBSIDIUM_BLOCK.get());
 
         this.add(ModBlocks.SAPPHIRE_ORE.get(), (block) ->
-                createOreDrop(block, SapphireSet.ROUGH_SAPPHIRE.get())
+                createSilkTouchDispatchTable(block, this.applyExplosionDecay(block,
+                        LootItem.lootTableItem(SapphireSet.ROUGH_SAPPHIRE.get())
+                                .apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0f, 2.0f)))
+                                .apply(ApplyBonusCount.addOreBonusCount(Enchantments.BLOCK_FORTUNE))))
                         .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1.0f))
                                 .when(LootItemRandomChanceCondition.randomChance(0.1f))
                                 .add(LootItem.lootTableItem(Misc.COMPRESSED_SLAG.get()))));
         this.add(ModBlocks.DEEPSLATE_SAPPHIRE_ORE.get(), (block) ->
-                createOreDrop(block, SapphireSet.ROUGH_SAPPHIRE.get())
+                createSilkTouchDispatchTable(block, this.applyExplosionDecay(block,
+                        LootItem.lootTableItem(SapphireSet.ROUGH_SAPPHIRE.get())
+                                .apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0f, 2.0f)))
+                                .apply(ApplyBonusCount.addOreBonusCount(Enchantments.BLOCK_FORTUNE))))
                         .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1.0f))
                                 .when(LootItemRandomChanceCondition.randomChance(0.1f))
                                 .add(LootItem.lootTableItem(Misc.COMPRESSED_SLAG.get()))));
 
         this.add(ModBlocks.RUBY_ORE.get(), (block) ->
-                createOreDrop(block, RubySet.ROUGH_RUBY.get())
+                createSilkTouchDispatchTable(block, this.applyExplosionDecay(block,
+                        LootItem.lootTableItem(RubySet.ROUGH_RUBY.get())
+                                .apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0f, 2.0f)))
+                                .apply(ApplyBonusCount.addOreBonusCount(Enchantments.BLOCK_FORTUNE))))
                         .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1.0f))
                                 .when(LootItemRandomChanceCondition.randomChance(0.1f))
                                 .add(LootItem.lootTableItem(Misc.COMPRESSED_SLAG.get()))));
         this.add(ModBlocks.DEEPSLATE_RUBY_ORE.get(), (block) ->
-                createOreDrop(block, RubySet.ROUGH_RUBY.get())
+                createSilkTouchDispatchTable(block, this.applyExplosionDecay(block,
+                        LootItem.lootTableItem(RubySet.ROUGH_RUBY.get())
+                                .apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0f, 2.0f)))
+                                .apply(ApplyBonusCount.addOreBonusCount(Enchantments.BLOCK_FORTUNE))))
                         .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1.0f))
                                 .when(LootItemRandomChanceCondition.randomChance(0.1f))
                                 .add(LootItem.lootTableItem(Misc.COMPRESSED_SLAG.get()))));
 
-        this.add(ModBlocks.AQUAMARINE_ORE.get(), (block) ->
-                createOreDrop(block, AquamarineSet.ROUGH_AQUAMARINE.get())
+        this.add(ModBlocks.HYDRIC_ORE.get(), (block) ->
+                createSilkTouchDispatchTable(block, this.applyExplosionDecay(block,
+                        LootItem.lootTableItem(HydroSet.HYDRIC_FRAGMENT.get())
+                                .apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0f, 2.0f)))
+                                .apply(ApplyBonusCount.addOreBonusCount(Enchantments.BLOCK_FORTUNE))))
                         .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1.0f))
                                 .when(LootItemRandomChanceCondition.randomChance(0.1f))
                                 .add(LootItem.lootTableItem(Misc.COMPRESSED_SLAG.get()))));
@@ -103,12 +117,15 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                                 .add(LootItem.lootTableItem(Misc.COMPRESSED_SLAG.get())))); */
 
         this.add(ModBlocks.VIBRANIUM_ORE.get(), (block) ->
-                createOreDrop(block, VibraniumSet.ROUGH_VIBRANIUM.get())
+                createSilkTouchDispatchTable(block, this.applyExplosionDecay(block,
+                        LootItem.lootTableItem(VibraniumSet.ROUGH_VIBRANIUM.get())
+                                .apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0f, 2.0f)))
+                                .apply(ApplyBonusCount.addOreBonusCount(Enchantments.BLOCK_FORTUNE))))
                         .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1.0f))
                                 .when(LootItemRandomChanceCondition.randomChance(0.1f))
                                 .add(LootItem.lootTableItem(Misc.COMPRESSED_SLAG.get()))));
 
-        this.add(ModBlocks.MALACHITE_ORE.get(), (block) ->
+        /*this.add(ModBlocks.MALACHITE_ORE.get(), (block) ->
                 createOreDrop(block, MalachiteSet.MALACHITE.get())
                         .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1.0f))
                                 .when(LootItemRandomChanceCondition.randomChance(0.1f))
@@ -117,11 +134,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                 createOreDrop(block, MalachiteSet.MALACHITE.get())
                         .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1.0f))
                                 .when(LootItemRandomChanceCondition.randomChance(0.1f))
-                                .add(LootItem.lootTableItem(Misc.COMPRESSED_SLAG.get()))));
-
-        this.add(ModBlocks.STARRITE_ORE.get(), (block) ->
-                createOreDrop(block, StarriteSet.STARRITE.get())
-                        .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1.0f))));
+                                .add(LootItem.lootTableItem(Misc.COMPRESSED_SLAG.get()))));*/
 
         /* this.add(ModBlocks.COBALT_ORE.get(), (block) ->
                 createOreDrop(block, CobaltSet.RAW_COBALT.get())
@@ -129,8 +142,8 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                                 .when(LootItemRandomChanceCondition.randomChance(0.1f))
                                 .add(LootItem.lootTableItem(Misc.COMPRESSED_SLAG.get())))); */
 
-        this.add(ModBlocks.PLATINUM_ORE.get(), (block) ->
-                createOreDrop(block, PlatinumSet.RAW_PLATINUM.get())
+        this.add(ModBlocks.RAGING_ORE.get(), (block) ->
+                createOreDrop(block, RageiteSet.RAGING_FRAGMENT.get())
                         .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1.0f))
                                 .when(LootItemRandomChanceCondition.randomChance(0.1f))
                                 .add(LootItem.lootTableItem(Misc.COMPRESSED_SLAG.get()))));
@@ -140,11 +153,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
 
 
-        this.add(ModBlocks.WITHERITE_ORE.get(), (block) ->
-                createSilkTouchDispatchTable(block, this.applyExplosionDecay(block,
-                        LootItem.lootTableItem(WitheriteSet.RAW_WITHERITE.get())
-                                .apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0f, 2.0f)))
-                                .apply(ApplyBonusCount.addOreBonusCount(Enchantments.BLOCK_FORTUNE)))));
+
 
         this.add(ModBlocks.SOUL_ORE.get(), (block) ->
                 createSilkTouchDispatchTable(block, this.applyExplosionDecay(block,
@@ -161,9 +170,9 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                                 .when(LootItemRandomChanceCondition.randomChance(0.1f))
                                 .add(LootItem.lootTableItem(Misc.NETHER_SLAG.get()))));*/
 
-        this.add(ModBlocks.HEMOGEM_ORE.get(), (block) ->
+        this.add(ModBlocks.SANGUINE_ORE.get(), (block) ->
                 createSilkTouchDispatchTable(block, this.applyExplosionDecay(block,
-                        LootItem.lootTableItem(HemoSet.HEMOGEM.get())
+                        LootItem.lootTableItem(HemoSet.SANGUINE_FRAGMENT.get())
                                 .apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0f, 2.0f)))
                                 .apply(ApplyBonusCount.addOreBonusCount(Enchantments.BLOCK_FORTUNE)))));
 
@@ -173,6 +182,20 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                                 .apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0f, 2.0f)))
                                 .apply(ApplyBonusCount.addOreBonusCount(Enchantments.BLOCK_FORTUNE)))));
 
+        this.add(ModBlocks.WAILING_ORE.get(), (block) ->
+                createSilkTouchDispatchTable(block, this.applyExplosionDecay(block,
+                        LootItem.lootTableItem(Misc.WEEPING_BIT.get())
+                                .apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0f, 2.0f)))
+                                .apply(ApplyBonusCount.addOreBonusCount(Enchantments.BLOCK_FORTUNE))))
+                        .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1.0f))
+                                .when(LootItemRandomChanceCondition.randomChance(0.1f))
+                                .add(LootItem.lootTableItem(Misc.NETHER_SLAG.get()))));
+
+        this.add(ModBlocks.STARDUST_ORE.get(), (block) ->
+                createSilkTouchDispatchTable(block, this.applyExplosionDecay(block,
+                        LootItem.lootTableItem(Misc.STARDUST_FRAGMENT.get())
+                                .apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0f, 2.0f)))
+                                .apply(ApplyBonusCount.addOreBonusCount(Enchantments.BLOCK_FORTUNE)))));
 
 
 
@@ -208,6 +231,10 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                         .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1.0f))
                                 .when(LootItemRandomChanceCondition.randomChance(0.1f))
                                 .add(LootItem.lootTableItem(Misc.ENDER_SLAG.get()))));
+
+        this.add(ModBlocks.PHASMIC_ORE.get(), (block) ->
+                createOreDrop(block, PhasmiteSet.PHASMITE_CHESTPLATE.get())
+                        .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1.0f))));
     }
 
     protected LootTable.Builder createCopperLikeOreDrops(Block pBlock, Item item) {

@@ -14,7 +14,7 @@ public class DreadsteelSet {
             () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> DREADSTEEL_SWORD = ModItems.ITEMS.register("dreadsteel_sword",
-            () -> new ModSwordItem(ModToolTiers.DREADSTEEL, 5, -2.3f, new Item.Properties()));
+            () -> new DreadsteelSwordItem(ModToolTiers.DREADSTEEL, 4, -2.3f, new Item.Properties()));
     public static final RegistryObject<Item> DREADSTEEL_PICKAXE = ModItems.ITEMS.register("dreadsteel_pickaxe",
             () -> new PickaxeItem(ModToolTiers.DREADSTEEL, 1, -2.8f, new Item.Properties()));
     public static final RegistryObject<Item> DREADSTEEL_AXE = ModItems.ITEMS.register("dreadsteel_axe",

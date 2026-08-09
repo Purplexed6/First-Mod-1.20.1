@@ -35,7 +35,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.WITHERITE_BLOCK);
         blockWithItem(ModBlocks.RAW_WITHERITE_BLOCK);
         blockWithItem(ModBlocks.SOUL_BLOCK);
-        blockWithItem(ModBlocks.AQUAMARINE_BLOCK);
+        blockWithItem(ModBlocks.HYDROGEM_BLOCK);
      //   blockWithItem(ModBlocks.JADE_BLOCK);
         //blockWithItem(ModBlocks.QUINTESSITE_BLOCK);
         blockWithItem(ModBlocks.HEMOGEM_BLOCK);
@@ -45,12 +45,11 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.FLUXITE_BLOCK);
         blockWithItem(ModBlocks.VOLTIUM_BLOCK);
         blockWithItem(ModBlocks.ONYX_BLOCK);
-        blockWithItem(ModBlocks.STARRITE_BLOCK);
+        blockWithItem(ModBlocks.PHASMITE_BLOCK);
       //  blockWithItem(ModBlocks.COBALT_BLOCK);
-        blockWithItem(ModBlocks.MALACHITE_BLOCK);
+        //blockWithItem(ModBlocks.MALACHITE_BLOCK);
       //  blockWithItem(ModBlocks.RAW_COBALT_BLOCK);
-        blockWithItem(ModBlocks.PLATINUM_BLOCK);
-        blockWithItem(ModBlocks.RAW_PLATINUM_BLOCK);
+        blockWithItem(ModBlocks.RAGEITE_BLOCK);
         blockWithItem(ModBlocks.STAR_PLATINUM_BLOCK);
         blockWithItem(ModBlocks.ROUGH_VIBRANIUM_BLOCK);
         blockWithItem(ModBlocks.VIBRANIUM_BLOCK);
@@ -63,23 +62,24 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.RUBY_ORE);
         blockWithItem(ModBlocks.DEEPSLATE_RUBY_ORE);
       //  blockWithItem(ModBlocks.OBLIVIONITE_ORE);
-        blockWithItem(ModBlocks.WITHERITE_ORE);
         blockWithItem(ModBlocks.SOUL_ORE);
-        blockWithItem(ModBlocks.AQUAMARINE_ORE);
+        blockWithItem(ModBlocks.HYDRIC_ORE);
      //   blockWithItem(ModBlocks.JADE_ORE);
      //   blockWithItem(ModBlocks.DEEPSLATE_JADE_ORE);
        // blockWithItem(ModBlocks.QUINTESSITE_ORE);
-        blockWithItem(ModBlocks.HEMOGEM_ORE);
+        blockWithItem(ModBlocks.SANGUINE_ORE);
         blockWithItem(ModBlocks.LUNARIS_ORE);
         blockWithItem(ModBlocks.CRYPTON_ORE);
-        blockWithItem(ModBlocks.STARRITE_ORE);
+        blockWithItem(ModBlocks.PHASMIC_ORE);
         blockWithItem(ModBlocks.FLUXITE_ORE);
         blockWithItem(ModBlocks.ONYX_ORE);
-        blockWithItem(ModBlocks.MALACHITE_ORE);
-        blockWithItem(ModBlocks.DEEPSLATE_MALACHITE_ORE);
-        blockWithItem(ModBlocks.PLATINUM_ORE);
+        //blockWithItem(ModBlocks.MALACHITE_ORE);
+      //  blockWithItem(ModBlocks.DEEPSLATE_MALACHITE_ORE);
+        blockWithItem(ModBlocks.RAGING_ORE);
    //     blockWithItem(ModBlocks.COBALT_ORE);
         blockWithItem(ModBlocks.VIBRANIUM_ORE);
+        blockWithItem(ModBlocks.WAILING_ORE);
+        blockWithItem(ModBlocks.STARDUST_ORE);
     }
 
     private void blockItem(RegistryObject<Block> blockRegistryObject) {

@@ -1,0 +1,32 @@
+{
+  "parent": "oresrise:lightning",
+
+  "display": {
+    "icon": {
+      "item": "oresrise:fluxite_sword"
+    },
+    "title": {
+      "text": "High Voltage",
+      "color": "gold"
+    },
+    "description": {
+      "text": "Strike an enemy with the Voltedge"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+
+  "criteria": {
+    "voltium_sword_strike": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+
+  "requirements": [
+    [
+      "voltium_sword_strike"
+    ]
+  ]
+}

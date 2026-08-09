@@ -1,0 +1,28 @@
+{
+  "parent": "minecraft:end/elytra",
+  "display": {
+    "icon": {
+      "item": "minecraft:phantom_membrane"
+    },
+    "title": {
+      "text": "Phantom Lord"
+    },
+    "description": {
+      "text": "Slay 100 Phantoms"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "phantom_kills": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "phantom_kills"
+    ]
+  ]
+}
