@@ -23,8 +23,7 @@ public class ModTags {
         public static final TagKey<Block> NEEDS_RAGEITE_TOOL = tag("needs_rageite_tool");
         public static final TagKey<Block> NEEDS_OBSIDIUM_TOOL = tag("needs_obsidium_tool");
         public static final TagKey<Block> NEEDS_PHASMITE_TOOL = tag("needs_phasmite_tool");
-        public static final TagKey<Block> NEEDS_RESONITE_TOOL = tag("needs_resonite_tool");
-        public static final TagKey<Block> NEEDS_STAR_PLATINUM_TOOL = tag("needs_star_platinum_tool");
+        public static final TagKey<Block> NEEDS_SCOURIUM_TOOL = tag("needs_scourium_tool");
         public static final TagKey<Block> NEEDS_VOLTIUM_TOOL = tag("needs_voltium_tool");
         public static final TagKey<Block> NEEDS_KEYOLITE_TOOL = tag("needs_keyolite_tool");
        // public static final TagKey<Block> NEEDS_FIREITE_TOOL = tag("needs_fireite_tool");
@@ -37,7 +36,7 @@ public class ModTags {
         public static final TagKey<Block> NEEDS_DREADSTEEL_TOOL = tag("needs_dreadsteel_tool");
         public static final TagKey<Block> NEEDS_ONYX_TOOL = tag("needs_onyx_tool");
         public static final TagKey<Block> NEEDS_LUNARIS_TOOL = tag("needs_lunaris_tool");
-        public static final TagKey<Block> NEEDS_CRYPTON_TOOL = tag("needs_crypton_tool");
+        public static final TagKey<Block> NEEDS_COLOSSITE_TOOL = tag("needs_colossite_tool");
         // public static final TagKey<Block> NEEDS_OBLIVIONITE_TOOL = tag("needs_oblivionite_tool");
 
 

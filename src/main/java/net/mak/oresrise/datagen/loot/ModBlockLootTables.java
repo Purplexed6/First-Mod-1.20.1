@@ -43,7 +43,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         //this.dropSelf(ModBlocks.QUINTESSITE_BLOCK.get());
         this.dropSelf(ModBlocks.HEMOGEM_BLOCK.get());
         this.dropSelf(ModBlocks.HYDROGEM_BLOCK.get());
-        this.dropSelf(ModBlocks.CRYPTON_BLOCK.get());
+        this.dropSelf(ModBlocks.COLLOSITE_BLOCK.get());
         this.dropSelf(ModBlocks.DREADSTEEL_BLOCK.get());
         this.dropSelf(ModBlocks.LUNARIS_BLOCK.get());
         this.dropSelf(ModBlocks.FLUXITE_BLOCK.get());
@@ -54,13 +54,22 @@ public class ModBlockLootTables extends BlockLootSubProvider {
       //  this.dropSelf(ModBlocks.RAW_COBALT_BLOCK.get());
         this.dropSelf(ModBlocks.RAGEITE_BLOCK.get());
         //this.dropSelf(ModBlocks.MALACHITE_BLOCK.get());
-        this.dropSelf(ModBlocks.STAR_PLATINUM_BLOCK.get());
         this.dropSelf(ModBlocks.ROSE_GOLD_BLOCK.get());
-        this.dropSelf(ModBlocks.ROUGH_VIBRANIUM_BLOCK.get());
-        this.dropSelf(ModBlocks.VIBRANIUM_BLOCK.get());
+        this.dropSelf(ModBlocks.SCOURIUM_BLOCK.get());
         this.dropSelf(ModBlocks.STEEL_BLOCK.get());
         this.dropSelf(ModBlocks.KEYOLITE_BLOCK.get());
         this.dropSelf(ModBlocks.OBSIDIUM_BLOCK.get());
+
+        this.dropSelf(ModBlocks.RUGITE_BLOCK.get());
+        this.dropSelf(ModBlocks.POLISHED_RUGITE.get());
+        this.dropSelf(ModBlocks.RUGITE_BRICKS.get());
+        this.dropSelf(ModBlocks.SOULSTONE_BLOCK.get());
+        this.dropSelf(ModBlocks.POLISHED_SOULSTONE.get());
+        this.dropSelf(ModBlocks.SOULSTONE_BRICKS.get());
+        this.dropSelf(ModBlocks.ASTRALITE_BLOCK.get());
+        this.dropSelf(ModBlocks.POLISHED_ASTRALITE.get());
+        this.dropSelf(ModBlocks.ASTRALITE_BRICKS.get());
+        this.dropSelf(ModBlocks.SOUL_MAGMA.get());
 
         this.add(ModBlocks.SAPPHIRE_ORE.get(), (block) ->
                 createSilkTouchDispatchTable(block, this.applyExplosionDecay(block,
@@ -116,9 +125,9 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                                 .when(LootItemRandomChanceCondition.randomChance(0.1f))
                                 .add(LootItem.lootTableItem(Misc.COMPRESSED_SLAG.get())))); */
 
-        this.add(ModBlocks.VIBRANIUM_ORE.get(), (block) ->
+        this.add(ModBlocks.SCOUROUS_ORE.get(), (block) ->
                 createSilkTouchDispatchTable(block, this.applyExplosionDecay(block,
-                        LootItem.lootTableItem(VibraniumSet.ROUGH_VIBRANIUM.get())
+                        LootItem.lootTableItem(ScouriumSet.SCOUROUS_TEAR.get())
                                 .apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0f, 2.0f)))
                                 .apply(ApplyBonusCount.addOreBonusCount(Enchantments.BLOCK_FORTUNE))))
                         .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1.0f))
@@ -208,10 +217,10 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                                 .when(LootItemRandomChanceCondition.randomChance(0.1f))
                                 .add(LootItem.lootTableItem(Misc.ENDER_SLAG.get())))); */
 
-        this.add(ModBlocks.CRYPTON_ORE.get(), (block) ->
+        this.add(ModBlocks.COLOSSAL_ORE.get(), (block) ->
                 LootTable.lootTable()
                         .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1.0f))
-                                .add(LootItem.lootTableItem(CryptonSet.CRYPTON_SHARD.get()))) // No fortune applied here
+                                .add(LootItem.lootTableItem(ColossiteSet.COLOSSAL_ROD.get()))) // No fortune applied here
                         .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1.0f))
                                 .when(LootItemRandomChanceCondition.randomChance(0.1f))
                                 .add(LootItem.lootTableItem(Misc.ENDER_SLAG.get()))));

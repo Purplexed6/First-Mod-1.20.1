@@ -1,0 +1,109 @@
+{
+  "replace": false,
+  "values": [
+    "oresrise:soulforged_helmet",
+    "oresrise:soulforged_chestplate",
+    "oresrise:soulforged_leggings",
+    "oresrise:soulforged_boots",
+
+    "oresrise:hemogem_helmet",
+    "oresrise:hemogem_chestplate",
+    "oresrise:hemogem_leggings",
+    "oresrise:hemogem_boots",
+
+    "oresrise:hydrogem_helmet",
+    "oresrise:hydrogem_chestplate",
+    "oresrise:hydrogem_leggings",
+    "oresrise:hydrogem_boots",
+
+    "oresrise:steel_helmet",
+    "oresrise:steel_chestplate",
+    "oresrise:steel_leggings",
+    "oresrise:steel_boots",
+
+    "oresrise:lunaris_helmet",
+    "oresrise:lunaris_chestplate",
+    "oresrise:lunaris_leggings",
+    "oresrise:lunaris_boots",
+
+    "oresrise:onyx_helmet",
+    "oresrise:onyx_chestplate",
+    "oresrise:onyx_leggings",
+    "oresrise:onyx_boots",
+
+    "oresrise:dreadsteel_helmet",
+    "oresrise:dreadsteel_chestplate",
+    "oresrise:dreadsteel_leggings",
+    "oresrise:dreadsteel_boots",
+
+    "oresrise:colossite_helmet",
+    "oresrise:colossite_chestplate",
+    "oresrise:colossite_leggings",
+    "oresrise:colossite_boots",
+
+    "oresrise:witherite_helmet",
+    "oresrise:witherite_chestplate",
+    "oresrise:witherite_leggings",
+    "oresrise:witherite_boots",
+
+    "oresrise:keyolite_helmet",
+    "oresrise:keyolite_chestplate",
+    "oresrise:keyolite_leggings",
+    "oresrise:keyolite_boots",
+
+    "oresrise:voltium_helmet",
+    "oresrise:voltium_chestplate",
+    "oresrise:voltium_leggings",
+    "oresrise:voltium_boots",
+
+    "oresrise:rageite_helmet",
+    "oresrise:rageite_chestplate",
+    "oresrise:rageite_leggings",
+    "oresrise:rageite_boots",
+
+    "oresrise:phasmite_helmet",
+    "oresrise:phasmite_chestplate",
+    "oresrise:phasmite_leggings",
+    "oresrise:phasmite_boots",
+
+    "oresrise:scourium_helmet",
+    "oresrise:scourium_chestplate",
+    "oresrise:scourium_leggings",
+    "oresrise:scourium_boots",
+
+    "oresrise:rosite_helmet",
+    "oresrise:rosite_chestplate",
+    "oresrise:rosite_leggings",
+    "oresrise:rosite_boots",
+
+    "oresrise:rose_gold_helmet",
+    "oresrise:rose_gold_chestplate",
+    "oresrise:rose_gold_leggings",
+    "oresrise:rose_gold_boots",
+
+    "oresrise:amethyst_helmet",
+    "oresrise:amethyst_chestplate",
+    "oresrise:amethyst_leggings",
+    "oresrise:amethyst_boots",
+
+    "oresrise:emerald_helmet",
+    "oresrise:emerald_chestplate",
+    "oresrise:emerald_leggings",
+    "oresrise:emerald_boots",
+
+    "oresrise:obsidium_helmet",
+    "oresrise:obsidium_chestplate",
+    "oresrise:obsidium_leggings",
+    "oresrise:obsidium_boots",
+
+    "oresrise:ruby_helmet",
+    "oresrise:ruby_chestplate",
+    "oresrise:ruby_leggings",
+    "oresrise:ruby_boots",
+
+    "oresrise:sapphire_helmet",
+    "oresrise:sapphire_chestplate",
+    "oresrise:sapphire_leggings",
+    "oresrise:sapphire_boots"
+  ]
+}

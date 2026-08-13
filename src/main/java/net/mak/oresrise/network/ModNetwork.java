@@ -31,5 +31,21 @@ public class ModNetwork {
                 ShakePacket::new,
                 ShakePacket::handle
         );
+
+        CHANNEL.registerMessage(
+                id(),
+                EntitySizePacket.class,
+                EntitySizePacket::toBytes,
+                EntitySizePacket::new,
+                EntitySizePacket::handle
+        );
+
+        CHANNEL.registerMessage(
+                id(),
+                ColossiteSizePacket.class,
+                ColossiteSizePacket::toBytes,
+                ColossiteSizePacket::new,
+                ColossiteSizePacket::handle
+        );
     }
 }

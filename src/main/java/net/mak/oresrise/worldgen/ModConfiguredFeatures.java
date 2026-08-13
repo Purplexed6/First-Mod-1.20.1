@@ -1,39 +1,20 @@
 package net.mak.oresrise.worldgen;
 
-import com.mojang.blaze3d.audio.Library;
 import net.mak.oresrise.ExampleMod;
 import net.mak.oresrise.block.ModBlocks;
 import net.mak.oresrise.worldgen.feature.ModFeatures;
-import net.minecraft.core.BlockPos;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstapContext;
-import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
-import net.minecraft.util.random.WeightedEntry;
-import net.minecraft.util.valueproviders.ConstantInt;
-import net.minecraft.util.valueproviders.IntProvider;
-import net.minecraft.util.valueproviders.UniformInt;
-import net.minecraft.util.valueproviders.WeightedListInt;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.configurations.*;
-import net.minecraft.world.level.levelgen.feature.featuresize.TwoLayersFeatureSize;
-import net.minecraft.world.level.levelgen.feature.foliageplacers.BlobFoliagePlacer;
-import net.minecraft.world.level.levelgen.feature.foliageplacers.CherryFoliagePlacer;
-import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
-import net.minecraft.world.level.levelgen.feature.trunkplacers.CherryTrunkPlacer;
-import net.minecraft.world.level.levelgen.feature.trunkplacers.ForkingTrunkPlacer;
-import net.minecraft.world.level.levelgen.feature.trunkplacers.StraightTrunkPlacer;
 import net.minecraft.world.level.levelgen.structure.templatesystem.BlockMatchTest;
 import net.minecraft.world.level.levelgen.structure.templatesystem.RuleTest;
 import net.minecraft.world.level.levelgen.structure.templatesystem.TagMatchTest;
-import net.minecraft.util.valueproviders.IntProvider;
-import net.minecraft.util.valueproviders.ConstantInt;
-import net.minecraft.util.valueproviders.UniformInt;
 
 
 import java.util.List;
@@ -43,7 +24,7 @@ public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> RUBY_ORE_KEY = registerKey("ruby_ore");
  //   public static final ResourceKey<ConfiguredFeature<?, ?>> JADE_ORE_KEY = registerKey("jade_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> HYDRIC_ORE_KEY = registerKey("hydric_ore");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> VIBRANIUM_ORE_KEY = registerKey("vibranium_ore");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> SCOUROUS_ORE_KEY = registerKey("scourous_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> RAGING_ORE_KEY = registerKey("platinum_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> FLUXITE_ORE_KEY = registerKey("fluxite_ore");
 
@@ -55,8 +36,18 @@ public class ModConfiguredFeatures {
 
    // public static final ResourceKey<ConfiguredFeature<?, ?>> OBLIVIONITE_ORE_KEY = registerKey("oblivionite_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> LUNARIS_ORE_KEY = registerKey("lunaris_ore");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> CRYPTON_ORE_KEY = registerKey("crypton_ore");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> COLOSSAL_ORE_KEY = registerKey("colossal_ore");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> ONYX_ORE_KEY = registerKey("onyx_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> PHASMITE_PILLAR_KEY = registerKey("phasmite_pillar");
+
+    public static final ResourceKey<ConfiguredFeature<?, ?>> RUGITE_BLOB =
+            registerKey("rugite_blob");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> SOULSTONE_BLOB =
+            registerKey("soulstone_blob");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> ASTRALITE_BLOB =
+            registerKey("astralite_blob");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> SOUL_MAGMA_BLOB =
+            registerKey("soul_magma_blob");
 
     public static final ResourceKey<ConfiguredFeature<?, ?>> NETHER_BURIED_TREASURE =
             registerKey("nether_buried_treasure");
@@ -71,6 +62,7 @@ public class ModConfiguredFeatures {
         RuleTest endReplaceables = new BlockMatchTest(Blocks.END_STONE);
         RuleTest obsidianReplaceables = new BlockMatchTest(Blocks.OBSIDIAN);
         RuleTest tuffReplaceables = new BlockMatchTest(Blocks.TUFF);
+        RuleTest rugiteReplaceables = new BlockMatchTest(ModBlocks.RUGITE_BLOCK.get());
 
         List<OreConfiguration.TargetBlockState> overworldSapphireOres = List.of(OreConfiguration.target(stoneReplaceable,
                         ModBlocks.SAPPHIRE_ORE.get().defaultBlockState()),
@@ -87,10 +79,10 @@ public class ModConfiguredFeatures {
                         stoneReplaceable,
                         ModBlocks.HYDRIC_ORE.get().defaultBlockState()));
 
-        List<OreConfiguration.TargetBlockState> overworldVibraniumOres = List.of(
+        List<OreConfiguration.TargetBlockState> overworldScourousOres = List.of(
                 OreConfiguration.target(
-                        deepslateReplaceables,
-                        ModBlocks.VIBRANIUM_ORE.get().defaultBlockState()));
+                        rugiteReplaceables,
+                        ModBlocks.SCOUROUS_ORE.get().defaultBlockState()));
 
         List<OreConfiguration.TargetBlockState> overworldFluxiteOres = List.of(
                 OreConfiguration.target(
@@ -107,7 +99,7 @@ public class ModConfiguredFeatures {
         register(context, RUBY_ORE_KEY, Feature.ORE, new OreConfiguration(overworldRubyOres, 4, 0.5F));
      //   register(context, JADE_ORE_KEY, Feature.ORE, new OreConfiguration(overworldJadeOres, 4, 0.5F));
         register(context, HYDRIC_ORE_KEY, Feature.ORE, new OreConfiguration(overworldHydricOres, 4, 0.5F));
-        register(context, VIBRANIUM_ORE_KEY, Feature.ORE, new OreConfiguration(overworldVibraniumOres, 3));
+        register(context, SCOUROUS_ORE_KEY, Feature.ORE, new OreConfiguration(overworldScourousOres, 4));
         register(context, FLUXITE_ORE_KEY, Feature.ORE, new OreConfiguration(overworldFluxiteOres, 6));
         register(context, RAGING_ORE_KEY, Feature.ORE, new OreConfiguration(overworldRagingOres, 4));
 
@@ -131,23 +123,51 @@ public class ModConfiguredFeatures {
           //       ModBlocks.OBLIVIONITE_ORE.get().defaultBlockState(), 2));
         register(context, LUNARIS_ORE_KEY, Feature.ORE, new OreConfiguration(endReplaceables,
                 ModBlocks.LUNARIS_ORE.get().defaultBlockState(), 3));
-        register(context, CRYPTON_ORE_KEY, Feature.ORE, new OreConfiguration(endReplaceables,
-                ModBlocks.CRYPTON_ORE.get().defaultBlockState(), 2));
+        register(context, COLOSSAL_ORE_KEY, Feature.ORE, new OreConfiguration(endReplaceables,
+                ModBlocks.COLOSSAL_ORE.get().defaultBlockState(), 2));
+        register(context, ONYX_ORE_KEY, Feature.ORE, new OreConfiguration(endReplaceables,
+                ModBlocks.ONYX_ORE.get().defaultBlockState(), 3));
 
         register(
                 context,
                 PHASMITE_PILLAR_KEY,
                 ModFeatures.PHASMITE_PILLAR.get(),
-                NoneFeatureConfiguration.INSTANCE
-        );
+                NoneFeatureConfiguration.INSTANCE);
 
         register(
                 context,
                 NETHER_BURIED_TREASURE,
                 ModFeatures.NETHER_BURIED_TREASURE.get(),
+                NoneFeatureConfiguration.INSTANCE);
+
+        register(
+                context,
+                RUGITE_BLOB,
+                ModFeatures.RUGITE_BLOB.get(),
                 NoneFeatureConfiguration.INSTANCE
         );
-    }
+
+        register(
+                context,
+                SOULSTONE_BLOB,
+                ModFeatures.SOULSTONE_BLOB.get(),
+                NoneFeatureConfiguration.INSTANCE
+        );
+
+        register(
+                context,
+                ASTRALITE_BLOB,
+                ModFeatures.ASTRALITE_BLOB.get(),
+                NoneFeatureConfiguration.INSTANCE
+        );
+
+        register(
+                context,
+                SOUL_MAGMA_BLOB,
+                ModFeatures.SOUL_MAGMA_BLOB.get(),
+                NoneFeatureConfiguration.INSTANCE
+        );
+}
 
     public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name) {
         return ResourceKey.create(Registries.CONFIGURED_FEATURE, new ResourceLocation(ExampleMod.MOD_ID, name));

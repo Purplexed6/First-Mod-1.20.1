@@ -1,0 +1,57 @@
+{
+  "parent": "oresrise:rageite_sword",
+  "criteria": {
+    "rageite_armor": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "oresrise:rageite_helmet"
+            ]
+          },
+          {
+            "items": [
+              "oresrise:rageite_chestplate"
+            ]
+          },
+          {
+            "items": [
+              "oresrise:rageite_leggings"
+            ]
+          },
+          {
+            "items": [
+              "oresrise:rageite_boots"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "text": "Get a full suit of Rageborn armor"
+    },
+    "frame": "challenge",
+    "hidden": false,
+    "icon": {
+      "item": "oresrise:rageite_chestplate"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "St. Anger",
+      "color": "red"
+    }
+  },
+  "requirements": [
+    [
+      "rageite_armor"
+    ]
+  ],
+  "rewards": {
+    "experience": 100
+  },
+  "sends_telemetry_event": true
+}

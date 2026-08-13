@@ -1,8 +1,9 @@
-// 1.20.1	2026-08-09T20:11:38.9019332	Tags for minecraft:block mod id oresrise
-60399f52c50acb6bbc150bb0215593feeb13ff2e data/forge/tags/blocks/needs_netherite_tool.json
-60b6141bc27f22de9e14f234ef5e5f54eb41c878 data/forge/tags/blocks/ores.json
-ebf5bcb8074b7e4f5ac58495ec47133913ad9783 data/minecraft/tags/blocks/mineable/pickaxe.json
+// 1.20.1	2026-08-13T17:02:55.7898307	Tags for minecraft:block mod id oresrise
+0d77a991dddbaf3ea915d83f9ae10d2729e3f347 data/forge/tags/blocks/needs_netherite_tool.json
+c10613c266eabce361b34716a671869bc4369a4d data/forge/tags/blocks/ores.json
+31a8b4626ddb1885b69728da78bd73fd211e6464 data/minecraft/tags/blocks/mineable/pickaxe.json
 1f509de3202003d840812cef94aa4e3ca751790c data/minecraft/tags/blocks/needs_diamond_tool.json
-71e41f122f6b0b6fc0376253dacc8c320f7f5e03 data/minecraft/tags/blocks/needs_iron_tool.json
-651b53a545486ec5bbe8d97cbafd4955fab1056d data/oresrise/tags/blocks/needs_dreadsteel_tool.json
+a8faa92cf04f2d2bde79dcdb31b9799d727ee4cf data/minecraft/tags/blocks/needs_iron_tool.json
+016856e11abf3eaccf33bc5cb1a234d9615d030f data/minecraft/tags/blocks/needs_stone_tool.json
+1e90b99cc57c6fd508264b6326ee0bc8871cdd63 data/oresrise/tags/blocks/needs_dreadsteel_tool.json
 63052ab9337e74f1ff22193625532df00a39ed44 data/oresrise/tags/blocks/ore_detector_valuables.json

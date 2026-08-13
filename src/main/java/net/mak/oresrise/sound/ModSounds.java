@@ -17,7 +17,7 @@ public class ModSounds {
 
     public static final RegistryObject<SoundEvent> METAL_DETECTOR_FOUND_ORE = registerSoundEvents("metal_detector_found_ore");
 
-    public static final RegistryObject<SoundEvent> STAR_PLATINUM_IMPACT =
+    public static final RegistryObject<SoundEvent> WITHERITE_IMPACT =
             registerSoundEvents("star_platinum_impact");
 
     public static final RegistryObject<SoundEvent> GLOW =

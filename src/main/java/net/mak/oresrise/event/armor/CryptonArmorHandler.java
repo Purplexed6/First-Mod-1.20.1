@@ -27,15 +27,15 @@ public class CryptonArmorHandler {
     private static boolean hasFullCryptonArmor(Player player) {
 
         return player.getInventory().getArmor(0).getItem() instanceof net.minecraft.world.item.ArmorItem boots &&
-                boots.getMaterial() == ModArmorMaterials.CRYPTON &&
+                boots.getMaterial() == ModArmorMaterials.COLOSSITE &&
 
                 player.getInventory().getArmor(1).getItem() instanceof net.minecraft.world.item.ArmorItem leggings &&
-                leggings.getMaterial() == ModArmorMaterials.CRYPTON &&
+                leggings.getMaterial() == ModArmorMaterials.COLOSSITE &&
 
                 player.getInventory().getArmor(2).getItem() instanceof net.minecraft.world.item.ArmorItem chestplate &&
-                chestplate.getMaterial() == ModArmorMaterials.CRYPTON &&
+                chestplate.getMaterial() == ModArmorMaterials.COLOSSITE &&
 
                 player.getInventory().getArmor(3).getItem() instanceof net.minecraft.world.item.ArmorItem helmet &&
-                helmet.getMaterial() == ModArmorMaterials.CRYPTON;
+                helmet.getMaterial() == ModArmorMaterials.COLOSSITE;
     }
 }

@@ -3,6 +3,7 @@ package net.mak.oresrise.datagen;
 import net.mak.oresrise.ExampleMod;
 import net.mak.oresrise.item.ModItems;
 import net.mak.oresrise.item.custom.DreadsteelSet;
+import net.mak.oresrise.item.custom.LunarisSet;
 import net.mak.oresrise.item.custom.Misc;
 import net.mak.oresrise.item.custom.WitheriteSet;
 import net.mak.oresrise.loot.AddItemModifier;
@@ -97,17 +98,6 @@ public class ModGlobalLootModifiersProvider extends GlobalLootModifierProvider {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
         add("dreadsteel_template_from_bastions", new AddItemModifier(new LootItemCondition[] {
                 new LootTableIdCondition.Builder(ResourceLocation.fromNamespaceAndPath("minecraft", "chests/bastion_treasure")).build(),
                 LootItemRandomChanceCondition.randomChance(0.3f).build()
@@ -133,6 +123,18 @@ public class ModGlobalLootModifiersProvider extends GlobalLootModifierProvider {
                 new LootTableIdCondition.Builder(ResourceLocation.fromNamespaceAndPath("minecraft", "chests/nether_bridge")).build(),
                 LootItemRandomChanceCondition.randomChance(0.3f).build()
         }, DreadsteelSet.DREADSTEEL_UPGRADE_SMITHING_TEMPLATE.get(), 1));
+
+
+
+
+
+
+
+
+        add("lunaris_template_from_end_cities", new AddItemModifier(new LootItemCondition[] {
+                new LootTableIdCondition.Builder(ResourceLocation.fromNamespaceAndPath("minecraft", "chests/end_city")).build(),
+                LootItemRandomChanceCondition.randomChance(0.3f).build()
+        }, LunarisSet.LUNARIS_UPGRADE_SMITHING_TEMPLATE.get(), 1));
 
 
 

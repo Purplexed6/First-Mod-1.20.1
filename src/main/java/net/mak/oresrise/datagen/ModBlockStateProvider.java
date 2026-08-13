@@ -40,7 +40,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         //blockWithItem(ModBlocks.QUINTESSITE_BLOCK);
         blockWithItem(ModBlocks.HEMOGEM_BLOCK);
         blockWithItem(ModBlocks.DREADSTEEL_BLOCK);
-        blockWithItem(ModBlocks.CRYPTON_BLOCK);
+        blockWithItem(ModBlocks.COLLOSITE_BLOCK);
         blockWithItem(ModBlocks.LUNARIS_BLOCK);
         blockWithItem(ModBlocks.FLUXITE_BLOCK);
         blockWithItem(ModBlocks.VOLTIUM_BLOCK);
@@ -50,9 +50,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         //blockWithItem(ModBlocks.MALACHITE_BLOCK);
       //  blockWithItem(ModBlocks.RAW_COBALT_BLOCK);
         blockWithItem(ModBlocks.RAGEITE_BLOCK);
-        blockWithItem(ModBlocks.STAR_PLATINUM_BLOCK);
-        blockWithItem(ModBlocks.ROUGH_VIBRANIUM_BLOCK);
-        blockWithItem(ModBlocks.VIBRANIUM_BLOCK);
+        blockWithItem(ModBlocks.SCOURIUM_BLOCK);
         blockWithItem(ModBlocks.STEEL_BLOCK);
         blockWithItem(ModBlocks.KEYOLITE_BLOCK);
         blockWithItem(ModBlocks.OBSIDIUM_BLOCK);
@@ -69,7 +67,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
        // blockWithItem(ModBlocks.QUINTESSITE_ORE);
         blockWithItem(ModBlocks.SANGUINE_ORE);
         blockWithItem(ModBlocks.LUNARIS_ORE);
-        blockWithItem(ModBlocks.CRYPTON_ORE);
+        blockWithItem(ModBlocks.COLOSSAL_ORE);
         blockWithItem(ModBlocks.PHASMIC_ORE);
         blockWithItem(ModBlocks.FLUXITE_ORE);
         blockWithItem(ModBlocks.ONYX_ORE);
@@ -77,9 +75,20 @@ public class ModBlockStateProvider extends BlockStateProvider {
       //  blockWithItem(ModBlocks.DEEPSLATE_MALACHITE_ORE);
         blockWithItem(ModBlocks.RAGING_ORE);
    //     blockWithItem(ModBlocks.COBALT_ORE);
-        blockWithItem(ModBlocks.VIBRANIUM_ORE);
+        blockWithItem(ModBlocks.SCOUROUS_ORE);
         blockWithItem(ModBlocks.WAILING_ORE);
         blockWithItem(ModBlocks.STARDUST_ORE);
+
+        blockWithItem(ModBlocks.RUGITE_BLOCK);
+        blockWithItem(ModBlocks.POLISHED_RUGITE);
+        blockWithItem(ModBlocks.RUGITE_BRICKS);
+        blockWithItem(ModBlocks.SOULSTONE_BLOCK);
+        blockWithItem(ModBlocks.POLISHED_SOULSTONE);
+        blockWithItem(ModBlocks.SOULSTONE_BRICKS);
+        blockWithItem(ModBlocks.SOUL_MAGMA);
+        blockWithItem(ModBlocks.ASTRALITE_BLOCK);
+        blockWithItem(ModBlocks.POLISHED_ASTRALITE);
+        blockWithItem(ModBlocks.ASTRALITE_BRICKS);
     }
 
     private void blockItem(RegistryObject<Block> blockRegistryObject) {

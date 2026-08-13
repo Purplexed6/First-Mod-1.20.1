@@ -278,15 +278,15 @@ public class ModToolTiers {
             List.of(ModToolTiers.SHADOW_STEEL),
             List.of());
 
-    public static final Tier RESONITE = TierSortingRegistry.registerTier(
+    public static final Tier SCOURIUM = TierSortingRegistry.registerTier(
             new ForgeTier(
                     3, // ⬅ Diamond mining level
                     2000, // ⬅ VERY high durability (Netherite = 2031)
                     8.0f, // ⬅ Same as diamond (not faster)
                     3.0f, // ⬅ Same as diamond (not combat-focused)
                     15, // ⬅ Good enchantability
-                    ModTags.Blocks.NEEDS_RESONITE_TOOL,
-                    () -> Ingredient.of(ResoniteSet.RESONITE_INGOT.get())
+                    ModTags.Blocks.NEEDS_SCOURIUM_TOOL,
+                    () -> Ingredient.of(ScouriumSet.SCOURIUM_INGOT.get())
             ),
             ResourceLocation.fromNamespaceAndPath(ExampleMod.MOD_ID, "amber"),
             List.of(ModToolTiers.WITHERITE),
@@ -303,7 +303,7 @@ public class ModToolTiers {
                     () -> Ingredient.of(PhasmiteSet.PHASMITE.get())
             ),
             ResourceLocation.fromNamespaceAndPath(ExampleMod.MOD_ID, "phasmite"),
-            List.of(ModToolTiers.RESONITE),
+            List.of(ModToolTiers.SCOURIUM),
             List.of());
 
     public static final Tier DREADSTEEL = TierSortingRegistry.registerTier(
@@ -319,22 +319,6 @@ public class ModToolTiers {
             ResourceLocation.fromNamespaceAndPath(ExampleMod.MOD_ID, "dreadsteel"),
             List.of(ModToolTiers.PHASMITE),
             List.of());
-
-    public static final Tier STAR_PLATINUM = TierSortingRegistry.registerTier(
-            new ForgeTier(
-                    5,
-                    2450,
-                    11f,
-                    4.5f,
-                    17,
-                    ModTags.Blocks.NEEDS_STAR_PLATINUM_TOOL,
-                    () -> Ingredient.of(StarPlatinumSet.STAR_PLATINUM_INGOT.get())
-            ),
-            ResourceLocation.fromNamespaceAndPath(ExampleMod.MOD_ID, "star_platinum"),
-            List.of(ModToolTiers.DREADSTEEL),
-            List.of());
-
-
 
     /*public static final Tier QUINTESSITE = TierSortingRegistry.registerTier(
             new ForgeTier(
@@ -378,17 +362,17 @@ public class ModToolTiers {
             List.of(ModToolTiers.LUNARIS),
             List.of());
 
-    public static final Tier CRYPTON = TierSortingRegistry.registerTier(
+    public static final Tier COLOSSITE = TierSortingRegistry.registerTier(
             new ForgeTier(
                     6,      // same level as netherite
                     2800,   // durable, but not insane
                     11f,  // fast
                     5.0f,   // strong but not max
                     22,     // high enchantability
-                    ModTags.Blocks.NEEDS_CRYPTON_TOOL,
-                    () -> Ingredient.of(CryptonSet.CRYPTON.get())
+                    ModTags.Blocks.NEEDS_COLOSSITE_TOOL,
+                    () -> Ingredient.of(ColossiteSet.COLOSSITE_INGOT.get())
             ),
-            ResourceLocation.fromNamespaceAndPath(ExampleMod.MOD_ID, "crypton"),
+            ResourceLocation.fromNamespaceAndPath(ExampleMod.MOD_ID, "colossite"),
             List.of(ModToolTiers.ONYX),
             List.of()
     );

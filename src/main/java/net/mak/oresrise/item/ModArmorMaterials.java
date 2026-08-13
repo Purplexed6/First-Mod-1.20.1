@@ -58,20 +58,14 @@ public enum ModArmorMaterials implements ArmorMaterial {
             0.13f,
             () -> Ingredient.of(DreadsteelSet.DREADSTEEL_INGOT.get())),
 
-    CRYPTON("crypton",
+    COLOSSITE("colossite",
             45,                     // durability multiplier (strong but below quintessite)
             new int[]{ 4, 9, 7, 4 },// balanced protection (slightly below top tiers)
             22,                     // enchantability (high)
             SoundEvents.ARMOR_EQUIP_NETHERITE,
             4.0f,                   // toughness (solid)
             0.13f,                  // knockback resistance (light, agile feel)
-            () -> Ingredient.of(CryptonSet.CRYPTON.get())),
-
-    STAR_PLATINUM("star_platinum", 44, new int[]{ 3, 8, 6, 3 }, 18,
-            SoundEvents.ARMOR_EQUIP_DIAMOND,
-            3.6f,
-            0.15f,
-            () -> Ingredient.of(StarPlatinumSet.STAR_PLATINUM_INGOT.get())),
+            () -> Ingredient.of(ColossiteSet.COLOSSITE_INGOT.get())),
 
     WITHERITE("witherite", 40, new int[]{ 3, 8, 6, 3 }, 8,
             SoundEvents.ARMOR_EQUIP_DIAMOND, 3f, 0.05f, () -> Ingredient.of(WitheriteSet.WITHERITE_INGOT.get())),
@@ -94,11 +88,11 @@ public enum ModArmorMaterials implements ArmorMaterial {
             0.02f, // very small knockback resist
             () -> Ingredient.of(PhasmiteSet.PHASMITE.get())),
 
-    RESONITE("resonite", 40, new int[]{3, 8, 6, 3}, 15,
+    SCOURIUM("scourium", 40, new int[]{3, 8, 6, 3}, 15,
             SoundEvents.ARMOR_EQUIP_DIAMOND,
             2.0f, // ⬅ decent toughness (diamond = 2, netherite = 3)
             0.1f, // ⬅ knockback resistance
-            () -> Ingredient.of(ResoniteSet.RESONITE_INGOT.get())),
+            () -> Ingredient.of(ScouriumSet.SCOURIUM_INGOT.get())),
 
     ROSITE("rosite", 15, new int[]{ 2, 6, 5, 2 }, 18,
             SoundEvents.ARMOR_EQUIP_DIAMOND, 0f, 0f, () -> Ingredient.of(RositeSet.ROSITE_INGOT.get())),

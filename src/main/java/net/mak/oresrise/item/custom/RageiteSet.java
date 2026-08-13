@@ -18,7 +18,7 @@ public class RageiteSet {
             () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> RAGEITE_SWORD = ModItems.ITEMS.register("rageite_sword",
-            () -> new ModSwordItem(ModToolTiers.RAGEITE, 3, -2.3f, new Item.Properties()));
+            () -> new RageiteSwordItem(ModToolTiers.RAGEITE, 3, -2.3f, new Item.Properties()));
     public static final RegistryObject<Item> RAGEITE_PICKAXE = ModItems.ITEMS.register("rageite_pickaxe",
             () -> new PickaxeItem(ModToolTiers.RAGEITE, 1, -2.8f, new Item.Properties()));
     public static final RegistryObject<Item> RAGEITE_AXE = ModItems.ITEMS.register("rageite_axe",

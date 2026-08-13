@@ -29,8 +29,6 @@ public class Misc {
             () -> new StardustItem(new Item.Properties()));
     public static final RegistryObject<Item> STARDUST_FRAGMENT = ModItems.ITEMS.register("stardust_fragment",
             () -> new StardustItem(new Item.Properties()));
-    public static final RegistryObject<Item> ECHO_STEEL_INGOT = ModItems.ITEMS.register("echo_steel_ingot",
-            () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> WITHERED_BONE = ModItems.ITEMS.register("withered_bone",
             () -> new Item(new Item.Properties()));
     //public static final RegistryObject<Item> ICE_CRYSTAL = ModItems.ITEMS.register("ice_crystal",
@@ -42,6 +40,10 @@ public class Misc {
     public static final RegistryObject<Item> WEEPING_BIT = ModItems.ITEMS.register("weeping_bit",
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> MOLTEN_IRON_INGOT = ModItems.ITEMS.register("molten_iron_ingot",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> MOLTEN_NETHERITE_INGOT = ModItems.ITEMS.register("molten_netherite_ingot",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> PHANTOM_CELL = ModItems.ITEMS.register("phantom_cell",
             () -> new Item(new Item.Properties()));
 
 

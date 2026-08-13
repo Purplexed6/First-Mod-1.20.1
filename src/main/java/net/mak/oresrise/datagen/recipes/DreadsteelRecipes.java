@@ -2,7 +2,7 @@ package net.mak.oresrise.datagen.recipes;
 
 import net.mak.oresrise.ExampleMod;
 import net.mak.oresrise.block.ModBlocks;
-import net.mak.oresrise.item.custom.CryptonSet;
+import net.mak.oresrise.item.custom.ColossiteSet;
 import net.mak.oresrise.item.custom.DreadsteelSet;
 import net.mak.oresrise.item.custom.Misc;
 import net.mak.oresrise.item.custom.SoulSet;

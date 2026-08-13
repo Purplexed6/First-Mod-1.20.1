@@ -1,5 +1,6 @@
 package net.mak.oresrise.datagen.recipes;
 
+import net.mak.oresrise.block.ModBlocks;
 import net.mak.oresrise.item.ModItems;
 import net.mak.oresrise.item.custom.Misc;
 import net.mak.oresrise.item.custom.ObsidiumSet;
@@ -120,6 +121,83 @@ public class MiscRecipes {
                 .requires(ModItems.CHEESE_WHEEL.get())
                 .unlockedBy(getHasName(ModItems.CHEESE_WHEEL.get()), has(ModItems.CHEESE_WHEEL.get()))
                 .save(pWriter);
+
+
+
+
+        
+        
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Items.PHANTOM_MEMBRANE)
+                .pattern("SS")
+                .pattern("SS")
+                .define('S', Misc.PHANTOM_CELL.get())
+                .unlockedBy(getHasName(Misc.PHANTOM_CELL.get()), has(Misc.PHANTOM_CELL.get()))
+                .save(pWriter);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Misc.PHANTOM_CELL.get(), 4)
+                .requires(Items.PHANTOM_MEMBRANE)
+                .unlockedBy(getHasName(Items.PHANTOM_MEMBRANE), has(Items.PHANTOM_MEMBRANE))
+                .save(pWriter);
+
+
+
+
+
+
+
+
+
+
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.POLISHED_RUGITE.get())
+                .pattern("SS")
+                .pattern("SS")
+                .define('S', ModBlocks.RUGITE_BLOCK.get())
+                .unlockedBy(getHasName(ModBlocks.RUGITE_BLOCK.get()), has(ModBlocks.RUGITE_BLOCK.get()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.POLISHED_SOULSTONE.get())
+                .pattern("SS")
+                .pattern("SS")
+                .define('S', ModBlocks.SOULSTONE_BLOCK.get())
+                .unlockedBy(getHasName(ModBlocks.SOULSTONE_BLOCK.get()), has(ModBlocks.SOULSTONE_BLOCK.get()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.POLISHED_ASTRALITE.get())
+                .pattern("SS")
+                .pattern("SS")
+                .define('S', ModBlocks.ASTRALITE_BLOCK.get())
+                .unlockedBy(getHasName(ModBlocks.ASTRALITE_BLOCK.get()), has(ModBlocks.ASTRALITE_BLOCK.get()))
+                .save(pWriter);
+
+
+
+
+
+
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.RUGITE_BRICKS.get())
+                .pattern("SS")
+                .pattern("SS")
+                .define('S', ModBlocks.POLISHED_RUGITE.get())
+                .unlockedBy(getHasName(ModBlocks.POLISHED_RUGITE.get()), has(ModBlocks.POLISHED_RUGITE.get()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.SOULSTONE_BRICKS.get())
+                .pattern("SS")
+                .pattern("SS")
+                .define('S', ModBlocks.POLISHED_SOULSTONE.get())
+                .unlockedBy(getHasName(ModBlocks.POLISHED_SOULSTONE.get()), has(ModBlocks.POLISHED_SOULSTONE.get()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.ASTRALITE_BRICKS.get())
+                .pattern("SS")
+                .pattern("SS")
+                .define('S', ModBlocks.POLISHED_ASTRALITE.get())
+                .unlockedBy(getHasName(ModBlocks.POLISHED_ASTRALITE.get()), has(ModBlocks.POLISHED_ASTRALITE.get()))
+                .save(pWriter);
+
 
     }
     private static String getHasName(ItemLike item) {

@@ -1,0 +1,28 @@
+{
+  "parent": "oresrise:rageite_ingot",
+  "display": {
+    "icon": {
+      "item": "oresrise:rageite_sword"
+    },
+    "title": {
+      "text": "Damage, Inc."
+    },
+    "description": {
+      "text": "Feel the wrath of the Rageburst"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "rage_blast": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "rage_blast"
+    ]
+  ]
+}

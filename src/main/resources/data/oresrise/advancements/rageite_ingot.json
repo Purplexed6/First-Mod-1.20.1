@@ -1,0 +1,33 @@
+{
+  "parent": "minecraft:oresrise:oresrise",
+  "display": {
+    "icon": {
+      "item": "oresrise:rageite_ingot"
+    },
+    "title": {
+      "text": "Angry Again"
+    },
+    "description": {
+      "text": "Craft a Rageite Ingot"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "rageite_ingot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["oresrise:rageite_ingot"]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    ["rageite_ingot"]
+  ]
+}

@@ -1,8 +1,11 @@
 package net.mak.oresrise.event.sword;
 
 import net.mak.oresrise.item.custom.RageiteSet;
+import net.minecraft.advancements.Advancement;
 import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.entity.LivingEntity;
@@ -186,8 +189,12 @@ public class RageiteSwordEvents {
 
 
                     // =================================================
-                    // EXPLOSION
+                    // EXPLOSION — PLAYER IS IMMUNE
                     // =================================================
+
+                    boolean wasInvulnerable = task.player.isInvulnerable();
+
+                    task.player.setInvulnerable(true);
 
                     task.level.explode(
                             null,
@@ -197,6 +204,8 @@ public class RageiteSwordEvents {
                             EXPLOSION_POWER,
                             Level.ExplosionInteraction.NONE
                     );
+
+                    task.player.setInvulnerable(wasInvulnerable);
 
 
                     // =================================================
@@ -248,6 +257,26 @@ public class RageiteSwordEvents {
         }
     }
 
+    private static void triggerAdvancement(Player player) {
+
+        if (!(player instanceof ServerPlayer serverPlayer)) {
+            return;
+        }
+
+        Advancement advancement =
+                serverPlayer.server.getAdvancements().getAdvancement(
+                        new ResourceLocation("oresrise", "rageite_sword")
+                );
+
+        if (advancement == null) {
+            return;
+        }
+
+        serverPlayer.getAdvancements().award(
+                advancement,
+                "rage_blast"
+        );
+    }
 
     // =========================================================
     // TASK

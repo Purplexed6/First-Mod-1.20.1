@@ -29,8 +29,17 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     private static final List<ItemLike> RAGEITE_SMELTABLES = List.of(
             RageiteSet.RAGING_COMPOUND.get());
 
+    private static final List<ItemLike> COLOSSITE_SMELTABLES = List.of(
+            ColossiteSet.COLOSSAL_COMPOUND.get());
+
+    private static final List<ItemLike> SCOURIUM_SMELTABLES = List.of(
+            ScouriumSet.SCOUROUS_SUBSTANCE.get());
+
     private static final List<ItemLike> IRON_SMELTABLES = List.of(
             Items.IRON_INGOT);
+
+    private static final List<ItemLike> NETHERITE_SMELTABLES = List.of(
+            Items.NETHERITE_INGOT);
 
     private static final List<ItemLike> OBSIDIUM_SMELTABLES = List.of(
             ObsidiumSet.OBSIDIAN_ALLOY.get());
@@ -51,7 +60,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     protected void buildRecipes(Consumer<FinishedRecipe> pWriter) {
 
         AmethystRecipes.build(pWriter);
-        CryptonRecipes.build(pWriter);
+        ColossiteRecipes.build(pWriter);
         DreadsteelRecipes.build(pWriter);
         EmeraldRecipes.build(pWriter);
         FluxiteRecipes.build(pWriter);
@@ -63,13 +72,12 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         ObsidiumRecipes.build(pWriter);
         OnyxRecipes.build(pWriter);
         RageiteRecipes.build(pWriter);
-        ResoniteRecipes.build(pWriter);
+        ScouriumRecipes.build(pWriter);
         RoseGoldRecipes.build(pWriter);
         RositeRecipes.build(pWriter);
         RubyRecipes.build(pWriter);
         SapphireRecipes.build(pWriter);
         SoulForgedRecipes.build(pWriter);
-        StarPlatinumRecipes.build(pWriter);
         PhasmiteRecipes.build(pWriter);
         SteelRecipes.build(pWriter);
         VoltiumRecipes.build(pWriter);
@@ -88,14 +96,21 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         oreBlasting(pWriter, WITHERITE_SMELTABLES, RecipeCategory.MISC, WitheriteSet.WITHERITE_INGOT.get(), 0.5f, 100, "witherite_ingot");
 
         oreSmelting(pWriter, IRON_SMELTABLES, RecipeCategory.MISC, Misc.MOLTEN_IRON_INGOT.get(), 0.25f, 200, "molten_iron_ingot");
-        oreBlasting(pWriter, IRON_SMELTABLES, RecipeCategory.MISC, Misc.MOLTEN_IRON_INGOT.get(), 0.5f, 100, "molten_iron_ingot");
+        oreBlasting(pWriter, IRON_SMELTABLES, RecipeCategory.MISC, Misc.MOLTEN_IRON_INGOT.get(), 0.5f, 100, "molten_netherite_ingot");
+
+        oreBlasting(pWriter, NETHERITE_SMELTABLES, RecipeCategory.MISC, Misc.MOLTEN_NETHERITE_INGOT.get(), 0.5f, 100, "molten_iron_ingot");
 
         oreBlasting(pWriter, OBSIDIUM_SMELTABLES, RecipeCategory.MISC, ObsidiumSet.OBSIDIUM_INGOT.get(), 0.5f, 100, "obsidium_ingot");
+
+        oreBlasting(pWriter, COLOSSITE_SMELTABLES, RecipeCategory.MISC, ColossiteSet.COLOSSITE_INGOT.get(), 0.5f, 100, "colossite_ingot");
 
         oreBlasting(pWriter, VOLTIUM_SMELTABLES, RecipeCategory.MISC, VoltiumSet.VOLTIUM_INGOT.get(), 0.5f, 100, "voltium_ingot");
 
         oreSmelting(pWriter, KEYOLITE_SMELTABLES, RecipeCategory.MISC, KeyoliteSet.KEYOLITE_INGOT.get(), 0.25f, 200, "keyolite_ingot");
         oreBlasting(pWriter, KEYOLITE_SMELTABLES, RecipeCategory.MISC, KeyoliteSet.KEYOLITE_INGOT.get(), 0.5f, 100, "keyolite_ingot");
+
+        oreSmelting(pWriter, SCOURIUM_SMELTABLES, RecipeCategory.MISC, ScouriumSet.SCOURIUM_INGOT.get(), 0.25f, 200, "scourium_ingot");
+        oreBlasting(pWriter, SCOURIUM_SMELTABLES, RecipeCategory.MISC, ScouriumSet.SCOURIUM_INGOT.get(), 0.5f, 100, "scourium_ingot");
 
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(Items.ROTTEN_FLESH), RecipeCategory.MISC, Items.LEATHER, 0.25f, 200).unlockedBy("has_rotten_flesh", has(Items.ROTTEN_FLESH)).save(pWriter, new ResourceLocation("oresrise", "leather_smelting"));
         SimpleCookingRecipeBuilder.smoking(Ingredient.of(Items.ROTTEN_FLESH), RecipeCategory.MISC, Items.LEATHER, 0.5f, 100).unlockedBy("has_rotten_flesh", has(Items.ROTTEN_FLESH)).save(pWriter, new ResourceLocation("oresrise", "leather_smoking"));

@@ -1,0 +1,33 @@
+{
+  "parent": "minecraft:end/elytra",
+  "display": {
+    "icon": {
+      "item": "oresrise:phantom_cell"
+    },
+    "title": {
+      "text": "Dead Cells"
+    },
+    "description": {
+      "text": "Obtain a Phantom Cell"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "phantom_cell": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["oresrise:phantom_cell"]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    ["phantom_cell"]
+  ]
+}

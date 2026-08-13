@@ -135,7 +135,7 @@ public class ChargedSwordItem extends SwordItem {
 
     @Override
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
-        pTooltipComponents.add(Component.translatable("tooltip.oresrise.crypton_sword.tooltip"));
+        pTooltipComponents.add(Component.translatable("tooltip.oresrise.colossite_sword.tooltip"));
         super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);
     }
 }

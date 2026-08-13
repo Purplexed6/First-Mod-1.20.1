@@ -169,35 +169,37 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(VoltiumSet.VOLTIUM_BOOTS);
         simpleItem(VoltiumSet.FLUXITE_STAFF);
 
-        simpleItem(VibraniumSet.VIBRANIUM);
-        simpleItem(VibraniumSet.ROUGH_VIBRANIUM);
+        simpleItem(ScouriumSet.SCOURIUM);
+        simpleItem(ScouriumSet.SCOUROUS_TEAR);
+        simpleItem(ScouriumSet.SCOUROUS_SUBSTANCE);
+        simpleItem(ScouriumSet.SCOURIUM_INGOT);
 
-        simpleItem(ResoniteSet.RESONITE_INGOT);
-        handheldItem(ResoniteSet.RESONITE_SWORD);
-        handheldItem(ResoniteSet.RESONITE_PICKAXE);
-        handheldItem(ResoniteSet.RESONITE_AXE);
-        handheldItem(ResoniteSet.RESONITE_SHOVEL);
-        handheldItem(ResoniteSet.RESONITE_HOE);
-        simpleItem(ResoniteSet.RESONITE_HELMET);
-        simpleItem(ResoniteSet.RESONITE_CHESTPLATE);
-        simpleItem(ResoniteSet.RESONITE_LEGGINGS);
-        simpleItem(ResoniteSet.RESONITE_BOOTS);
-
-        simpleItem(Misc.ECHO_STEEL_INGOT);
+        handheldItem(ScouriumSet.SCOURIUM_SWORD);
+        handheldItem(ScouriumSet.SCOURIUM_PICKAXE);
+        handheldItem(ScouriumSet.SCOURIUM_AXE);
+        handheldItem(ScouriumSet.SCOURIUM_SHOVEL);
+        handheldItem(ScouriumSet.SCOURIUM_HOE);
+        simpleItem(ScouriumSet.SCOURIUM_HELMET);
+        simpleItem(ScouriumSet.SCOURIUM_CHESTPLATE);
+        simpleItem(ScouriumSet.SCOURIUM_LEGGINGS);
+        simpleItem(ScouriumSet.SCOURIUM_BOOTS);
 
         simpleItem(Misc.WITHERED_BONE);
 
-        simpleItem(CryptonSet.CRYPTON);
-        simpleItem(CryptonSet.CRYPTON_SHARD);
-        handheldItem(CryptonSet.CRYPTON_SWORD);
-        handheldItem(CryptonSet.CRYPTON_PICKAXE);
-        handheldItem(CryptonSet.CRYPTON_AXE);
-        handheldItem(CryptonSet.CRYPTON_SHOVEL);
-        handheldItem(CryptonSet.CRYPTON_HOE);
-        simpleItem(CryptonSet.CRYPTON_HELMET);
-        simpleItem(CryptonSet.CRYPTON_CHESTPLATE);
-        simpleItem(CryptonSet.CRYPTON_LEGGINGS);
-        simpleItem(CryptonSet.CRYPTON_BOOTS);
+        simpleItem(ColossiteSet.COLOSSAL_ROD);
+        simpleItem(ColossiteSet.COLOSSAL_STAR);
+        simpleItem(ColossiteSet.COLOSSAL_COMPOUND);
+        simpleItem(ColossiteSet.COLOSSITE_INGOT);
+        simpleItem(ColossiteSet.COLOSSAL_ROD);
+        handheldItem(ColossiteSet.COLOSSITE_SWORD);
+        handheldItem(ColossiteSet.COLOSSITE_PICKAXE);
+        handheldItem(ColossiteSet.COLOSSITE_AXE);
+        handheldItem(ColossiteSet.COLOSSITE_SHOVEL);
+        handheldItem(ColossiteSet.COLOSSITE_HOE);
+        simpleItem(ColossiteSet.COLOSSITE_HELMET);
+        simpleItem(ColossiteSet.COLOSSITE_CHESTPLATE);
+        simpleItem(ColossiteSet.COLOSSITE_LEGGINGS);
+        simpleItem(ColossiteSet.COLOSSITE_BOOTS);
 
         simpleItem(HydroSet.HYDROGEM);
         simpleItem(HydroSet.HYDRIC_FRAGMENT);
@@ -302,17 +304,6 @@ public class ModItemModelProvider extends ItemModelProvider {
         handheldItem(RageiteSet.RAGEITE_SHOVEL);
         handheldItem(RageiteSet.RAGEITE_HOE);
 
-        simpleItem(StarPlatinumSet.STAR_PLATINUM_INGOT);
-        simpleItem(StarPlatinumSet.STAR_PLATINUM_HELMET);
-        simpleItem(StarPlatinumSet.STAR_PLATINUM_CHESTPLATE);
-        simpleItem(StarPlatinumSet.STAR_PLATINUM_LEGGINGS);
-        simpleItem(StarPlatinumSet.STAR_PLATINUM_BOOTS);
-        handheldItem(StarPlatinumSet.STAR_PLATINUM_PICKAXE);
-        handheldItem(StarPlatinumSet.STAR_PLATINUM_AXE);
-        handheldItem(StarPlatinumSet.STAR_PLATINUM_SHOVEL);
-        handheldItem(StarPlatinumSet.STAR_PLATINUM_HOE);
-        handheldItem(StarPlatinumSet.STAR_BREAKER);
-
        /* simpleItem(CobaltSet.RAW_COBALT);
         simpleItem(CobaltSet.COBALT_INGOT);
         handheldItem(CobaltSet.COBALT_SWORD);
@@ -367,6 +358,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(Misc.NETHERITE_MESH);
         simpleItem(Misc.WEEPING_BIT);
         simpleItem(Misc.MOLTEN_IRON_INGOT);
+        simpleItem(Misc.MOLTEN_NETHERITE_INGOT);
+        simpleItem(Misc.PHANTOM_CELL);
     }
     private ItemModelBuilder handheldItem(RegistryObject<Item> item) {
         return withExistingParent(item.getId().getPath(),

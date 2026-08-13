@@ -61,15 +61,14 @@ public class ModItems {
         RoseGoldSet.register();
         LunarisSet.register();
         HemoSet.register();
-        CryptonSet.register();
+        ColossiteSet.register();
         JadeSet.register();
-        ResoniteSet.register();
+        ScouriumSet.register();
         QuintessiteSet.register();
         HydroSet.register();
         OnyxSet.register();
         PhasmiteSet.register();
         RageiteSet.register();
-        StarPlatinumSet.register();
         CobaltSet.register();
         AmethystSet.register();
         EmeraldSet.register();
@@ -77,7 +76,7 @@ public class ModItems {
         OblivioniteSet.register();
         ShadowSteelSet.register();
         FireiteSet.register();
-        VibraniumSet.register();
+        ScouriumSet.register();
         ObsidiumSet.register();
         SteelSet.register();
         KeyoliteSet.register();

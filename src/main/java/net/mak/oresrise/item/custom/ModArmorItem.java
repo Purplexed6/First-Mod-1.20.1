@@ -57,11 +57,6 @@ public class ModArmorItem extends ArmorItem {
                             new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40, 0, false, false)
                     ))
 
-                    .put(ModArmorMaterials.STAR_PLATINUM, List.of(
-                            new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 1, false, false),
-                            new MobEffectInstance(MobEffects.DAMAGE_BOOST, 40, 0, false, false)
-                    ))
-
                     .put(ModArmorMaterials.ONYX, List.of(
                             new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 1, false, false)
                     ))

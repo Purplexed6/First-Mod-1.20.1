@@ -22,7 +22,7 @@ public class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> RUBY_ORE_PLACED_KEY = registerKey("ruby_ore_placed");
   //  public static final ResourceKey<PlacedFeature> JADE_ORE_PLACED_KEY = registerKey("jade_ore_placed");
     public static final ResourceKey<PlacedFeature> HYDRIC_ORE_PLACED_KEY = registerKey("hydric_ore_placed");
-    public static final ResourceKey<PlacedFeature> VIBRANIUM_ORE_PLACED_KEY = registerKey("vibranium_ore_placed");
+    public static final ResourceKey<PlacedFeature> SCOUROUS_ORE_PLACED_KEY = registerKey("scourous_ore_placed");
     public static final ResourceKey<PlacedFeature> RAGING_ORE_PLACED_KEY = registerKey("platinum_ore_placed");
     public static final ResourceKey<PlacedFeature> FLUXITE_ORE_PLACED_KEY = registerKey("fluxite_ore_placed");
 
@@ -33,11 +33,21 @@ public class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> STARDUST_ORE_PLACED_KEY = registerKey("stardust_ore_placed");
 
    // public static final ResourceKey<PlacedFeature> OBLIVIONITE_ORE_PLACED_KEY = registerKey("oblivionite_ore_placed");
-    public static final ResourceKey<PlacedFeature> CRYPTON_ORE_PLACED_KEY = registerKey("crypton_ore_placed");
+    public static final ResourceKey<PlacedFeature> COLOSSAL_ORE_PLACED_KEY = registerKey("colossal_ore_placed");
+    public static final ResourceKey<PlacedFeature> ONYX_ORE_PLACED_KEY = registerKey("onyx_ore_placed");
     public static final ResourceKey<PlacedFeature> LUNARIS_ORE_PLACED_KEY = registerKey("lunaris_ore_placed");
 
     public static final ResourceKey<PlacedFeature> PHASMIC_ORE_PLACED_KEY = registerKey("phasmic_ore_placed");
     public static final ResourceKey<PlacedFeature> PHASMITE_PILLAR_PLACED_KEY = registerKey("phasmite_pillar_placed");
+
+    public static final ResourceKey<PlacedFeature> RUGITE_BLOB_PLACED =
+            registerKey("rugite_blob_placed");
+    public static final ResourceKey<PlacedFeature> SOULSTONE_BLOB_PLACED =
+            registerKey("soulstone_blob_placed");
+    public static final ResourceKey<PlacedFeature> ASTRALITE_BLOB_PLACED =
+            registerKey("astralite_blob_placed");
+    public static final ResourceKey<PlacedFeature> SOUL_MAGMA_BLOB_PLACED =
+            registerKey("soul_magma_blob_placed");
 
     public static final ResourceKey<PlacedFeature> NETHER_BURIED_TREASURE =
             registerKey("nether_buried_treasure");
@@ -75,8 +85,8 @@ public class ModPlacedFeatures {
                                 VerticalAnchor.absolute(-64),
                                 VerticalAnchor.absolute(256))));
 
-        register(context, VIBRANIUM_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.VIBRANIUM_ORE_KEY),
-                ModOrePlacement.commonOrePlacement(6,
+        register(context, SCOUROUS_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.SCOUROUS_ORE_KEY),
+                ModOrePlacement.commonOrePlacement(75,
                         HeightRangePlacement.uniform(
                                 VerticalAnchor.absolute(-64),
                                 VerticalAnchor.absolute(0))));
@@ -128,9 +138,12 @@ public class ModPlacedFeatures {
         register(context, LUNARIS_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.LUNARIS_ORE_KEY),
                 ModOrePlacement.commonOrePlacement(6,
                         HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(100))));
-        register(context, CRYPTON_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CRYPTON_ORE_KEY),
-                ModOrePlacement.commonOrePlacement(3,
-                        HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(100))));
+        register(context, COLOSSAL_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.COLOSSAL_ORE_KEY),
+                ModOrePlacement.commonOrePlacement(60,
+                        HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(128))));
+        register(context, ONYX_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.COLOSSAL_ORE_KEY),
+                ModOrePlacement.commonOrePlacement(10,
+                        HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(128))));
 
 
         register(
@@ -162,7 +175,85 @@ public class ModPlacedFeatures {
                         BiomeFilter.biome()
                 ));
 
+        Holder<ConfiguredFeature<?, ?>> rugiteBlob =
+                configuredFeatures.getOrThrow(
+                        ModConfiguredFeatures.RUGITE_BLOB
+                );
 
+        Holder<ConfiguredFeature<?, ?>> soulstoneBlob =
+                configuredFeatures.getOrThrow(
+                        ModConfiguredFeatures.SOULSTONE_BLOB
+                );
+
+        Holder<ConfiguredFeature<?, ?>> astraliteBlob =
+                configuredFeatures.getOrThrow(
+                        ModConfiguredFeatures.ASTRALITE_BLOB
+                );
+
+        Holder<ConfiguredFeature<?, ?>> soulmagmaBlob =
+                configuredFeatures.getOrThrow(
+                        ModConfiguredFeatures.SOUL_MAGMA_BLOB
+                );
+
+        register(
+                context,
+                RUGITE_BLOB_PLACED,
+                rugiteBlob,
+                List.of(
+                        CountPlacement.of(2),
+                        InSquarePlacement.spread(),
+                        HeightRangePlacement.uniform(
+                                VerticalAnchor.absolute(-64),
+                                VerticalAnchor.absolute(0)
+                        ),
+                        BiomeFilter.biome()
+                )
+        );
+
+        register(
+                context,
+                SOULSTONE_BLOB_PLACED,
+                soulstoneBlob,
+                List.of(
+                        CountPlacement.of(64),
+                        InSquarePlacement.spread(),
+                        HeightRangePlacement.uniform(
+                                VerticalAnchor.absolute(-64),
+                                VerticalAnchor.absolute(128)
+                        ),
+                        BiomeFilter.biome()
+                )
+        );
+
+        register(
+                context,
+                ASTRALITE_BLOB_PLACED,
+                astraliteBlob,
+                List.of(
+                        CountPlacement.of(1),
+                        InSquarePlacement.spread(),
+                        HeightRangePlacement.uniform(
+                                VerticalAnchor.absolute(0),
+                                VerticalAnchor.absolute(128)
+                        ),
+                        BiomeFilter.biome()
+                )
+        );
+
+        register(
+                context,
+                SOUL_MAGMA_BLOB_PLACED,
+                soulmagmaBlob,
+                List.of(
+                        CountPlacement.of(64),
+                        InSquarePlacement.spread(),
+                        HeightRangePlacement.uniform(
+                                VerticalAnchor.absolute(-64),
+                                VerticalAnchor.absolute(128)
+                        ),
+                        BiomeFilter.biome()
+                )
+        );
     }
 
 

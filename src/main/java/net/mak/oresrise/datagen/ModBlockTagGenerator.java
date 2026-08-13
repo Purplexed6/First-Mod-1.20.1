@@ -39,13 +39,13 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         //     ModBlocks.COBALT_ORE.get(),
                         ModBlocks.RAGING_ORE.get(),
                         ModBlocks.PHASMIC_ORE.get(),
-                        ModBlocks.VIBRANIUM_ORE.get(),
+                        ModBlocks.SCOUROUS_ORE.get(),
                         ModBlocks.SOUL_ORE.get(),
                         ModBlocks.FLUXITE_ORE.get(),
                         ModBlocks.SANGUINE_ORE.get(),
                         //   ModBlocks.QUINTESSITE_ORE.get(),
                         ModBlocks.ONYX_ORE.get(),
-                        ModBlocks.CRYPTON_ORE.get(),
+                        ModBlocks.COLOSSAL_ORE.get(),
                         // ModBlocks.OBLIVIONITE_ORE.get());
                         ModBlocks.LUNARIS_ORE.get());
 
@@ -81,14 +81,11 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.RAGEITE_BLOCK.get(),
                         ModBlocks.RAGING_ORE.get(),
 
-                        ModBlocks.STAR_PLATINUM_BLOCK.get(),
-
                         ModBlocks.PHASMITE_BLOCK.get(),
                         ModBlocks.PHASMIC_ORE.get(),
 
-                        ModBlocks.VIBRANIUM_ORE.get(),
-                        ModBlocks.VIBRANIUM_BLOCK.get(),
-                        ModBlocks.ROUGH_VIBRANIUM_BLOCK.get(),
+                        ModBlocks.SCOUROUS_ORE.get(),
+                        ModBlocks.SCOURIUM_BLOCK.get(),
 
 
 
@@ -119,14 +116,41 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.ONYX_BLOCK.get(),
                         ModBlocks.ONYX_ORE.get(),
 
-                        ModBlocks.CRYPTON_BLOCK.get(),
-                        ModBlocks.CRYPTON_ORE.get(),
+                        ModBlocks.COLLOSITE_BLOCK.get(),
+                        ModBlocks.COLOSSAL_ORE.get(),
 
                         ModBlocks.LUNARIS_BLOCK.get(),
-                        ModBlocks.LUNARIS_ORE.get());
+                        ModBlocks.LUNARIS_ORE.get(),
+
+
+
+                        ModBlocks.RUGITE_BLOCK.get(),
+                        ModBlocks.POLISHED_RUGITE.get(),
+                        ModBlocks.RUGITE_BRICKS.get(),
+                        ModBlocks.SOULSTONE_BLOCK.get(),
+                        ModBlocks.POLISHED_SOULSTONE.get(),
+                        ModBlocks.SOULSTONE_BRICKS.get(),
+                        ModBlocks.ASTRALITE_BLOCK.get(),
+                        ModBlocks.POLISHED_ASTRALITE.get(),
+                        ModBlocks.ASTRALITE_BRICKS.get(),
+                        ModBlocks.SOUL_MAGMA.get());
 
                      //   ModBlocks.OBLIVIONITE_BLOCK.get(),
                      //   ModBlocks.OBLIVIONITE_ORE.get());
+
+
+
+        this.tag(BlockTags.NEEDS_STONE_TOOL)
+                .add(ModBlocks.RUGITE_BLOCK.get(),
+                ModBlocks.POLISHED_RUGITE.get(),
+                ModBlocks.RUGITE_BRICKS.get(),
+                ModBlocks.SOULSTONE_BLOCK.get(),
+                ModBlocks.POLISHED_SOULSTONE.get(),
+                ModBlocks.SOULSTONE_BRICKS.get(),
+                ModBlocks.ASTRALITE_BLOCK.get(),
+                ModBlocks.POLISHED_ASTRALITE.get(),
+                ModBlocks.ASTRALITE_BRICKS.get(),
+                ModBlocks.SOUL_MAGMA.get());
 
 
 
@@ -160,8 +184,13 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.RAGEITE_BLOCK.get(),
                         ModBlocks.RAGING_ORE.get(),
 
+                        ModBlocks.SCOUROUS_ORE.get(),
+                        ModBlocks.SCOURIUM_BLOCK.get(),
+
                         ModBlocks.PHASMITE_BLOCK.get(),
                         ModBlocks.PHASMIC_ORE.get());
+
+
 
 
 
@@ -178,6 +207,8 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
 
 
 
+
+
         this.tag(Tags.Blocks.NEEDS_NETHERITE_TOOL)
                 .add(ModBlocks.SOUL_ORE.get(),
                         ModBlocks.DREADSTEEL_BLOCK.get(),
@@ -186,21 +217,18 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.WITHERITE_BLOCK.get(),
                         ModBlocks.RAW_WITHERITE_BLOCK.get(),
 
-                        ModBlocks.STARDUST_ORE.get(),
+                        ModBlocks.STARDUST_ORE.get());
 
                       //  ModBlocks.QUINTESSITE_ORE.get(),
                        // ModBlocks.QUINTESSITE_BLOCK.get(),
-
-                        ModBlocks.STAR_PLATINUM_BLOCK.get());
-
 
 
         this.tag(ModTags.Blocks.NEEDS_DREADSTEEL_TOOL)
                 .add(ModBlocks.ONYX_BLOCK.get(),
                         ModBlocks.ONYX_ORE.get(),
 
-                        ModBlocks.CRYPTON_BLOCK.get(),
-                        ModBlocks.CRYPTON_ORE.get(),
+                        ModBlocks.COLLOSITE_BLOCK.get(),
+                        ModBlocks.COLOSSAL_ORE.get(),
 
                         ModBlocks.LUNARIS_BLOCK.get(),
                         ModBlocks.LUNARIS_ORE.get());

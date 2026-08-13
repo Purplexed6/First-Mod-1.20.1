@@ -56,9 +56,6 @@ public class ModEvents {
             else if (stack.is(Items.OBSIDIAN)) {
                 processGrind(event, level, pos, player, stack, new ItemStack(ObsidiumSet.OBSIDIAN_SHARD.get()));
             }
-            else if (stack.is(VibraniumSet.ROUGH_VIBRANIUM.get())) {
-                processGrind(event, level, pos, player, stack, new ItemStack(VibraniumSet.VIBRANIUM.get()));
-            }
             else if (stack.is(Misc.STARDUST_FRAGMENT.get())) {
                 processGrind(event, level, pos, player, stack, new ItemStack(Misc.STARDUST.get()));
             }

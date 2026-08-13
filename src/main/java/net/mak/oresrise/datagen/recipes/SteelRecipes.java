@@ -110,9 +110,9 @@ public class SteelRecipes {
 
 
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, SteelSet.STEEL_INGOT.get(), 2)
-                .requires(Items.IRON_INGOT, 2)
-                .requires(Items.COAL, 2)
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, SteelSet.STEEL_INGOT.get(), 1)
+                .requires(Items.IRON_INGOT, 1)
+                .requires(Items.COAL, 1)
                 .unlockedBy("has_iron_ingot", has(Items.IRON_INGOT))
                 .save(pWriter);
 

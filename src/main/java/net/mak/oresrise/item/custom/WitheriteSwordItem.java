@@ -1,37 +1,34 @@
 package net.mak.oresrise.item.custom;
 
-import net.minecraft.advancements.Advancement;
+import net.mak.oresrise.network.ModNetwork;
+import net.mak.oresrise.network.ShakePacket;
+import net.mak.oresrise.sound.ModSounds;
 import net.minecraft.core.particles.ParticleTypes;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
-import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.level.Level;
+import net.minecraft.sounds.SoundSource;
+import net.minecraftforge.network.PacketDistributor;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.UUID;
 
 public class WitheriteSwordItem extends SwordItem {
 
-    // How long before a combo resets
+    // 70 ticks = 3.5 seconds
     private static final int COMBO_TIMEOUT = 70;
 
-    // Maximum combo bonus = +50%
+    // Impact happens on the 5th hit
     private static final int MAX_COMBO = 5;
 
-    /*
-     * Each enemy has its own combo.
-     *
-     * Enemy UUID -> ComboData
-     */
+    // Player UUID -> combo data
     private static final Map<UUID, ComboData> COMBOS = new HashMap<>();
 
 
@@ -39,11 +36,15 @@ public class WitheriteSwordItem extends SwordItem {
             Tier tier,
             int attackDamage,
             float attackSpeed,
-            Item.Properties properties
+            Properties properties
     ) {
         super(tier, attackDamage, attackSpeed, properties);
     }
 
+
+    // =========================================================
+    // HIT
+    // =========================================================
 
     @Override
     public boolean hurtEnemy(
@@ -52,6 +53,7 @@ public class WitheriteSwordItem extends SwordItem {
             LivingEntity attacker
     ) {
 
+        // Only players can build the combo
         if (!(attacker instanceof Player player)) {
             return super.hurtEnemy(stack, target, attacker);
         }
@@ -67,10 +69,10 @@ public class WitheriteSwordItem extends SwordItem {
 
             ServerLevel serverLevel = (ServerLevel) level;
 
-            UUID targetUUID = target.getUUID();
+            UUID playerUUID = player.getUUID();
 
             ComboData combo =
-                    COMBOS.get(targetUUID);
+                    COMBOS.get(playerUUID);
 
 
             // =================================================
@@ -80,18 +82,30 @@ public class WitheriteSwordItem extends SwordItem {
             if (combo == null) {
 
                 combo = new ComboData();
-                COMBOS.put(targetUUID, combo);
+
+                COMBOS.put(
+                        playerUUID,
+                        combo
+                );
 
             } else {
 
                 /*
-                 * If more than 70 ticks passed since the
-                 * previous hit, reset the combo.
+                 * If more than 70 ticks passed since
+                 * the previous hit, reset the combo.
                  */
 
-                if (serverLevel.getGameTime() - combo.lastHit > COMBO_TIMEOUT) {
+                if (
+                        serverLevel.getGameTime()
+                                - combo.lastHit
+                                > COMBO_TIMEOUT
+                ) {
 
                     combo.hits = 0;
+
+                    System.out.println(
+                            "WITHERITE COMBO RESET"
+                    );
                 }
             }
 
@@ -109,116 +123,102 @@ public class WitheriteSwordItem extends SwordItem {
                     serverLevel.getGameTime();
 
 
+            System.out.println(
+                    "WITHERITE COMBO: "
+                            + combo.hits
+            );
+
+
             // =================================================
-            // EXECUTION
+            // IMPACT
             // =================================================
 
-            /*
-             * Check the target's health BEFORE applying
-             * this hit's damage.
-             *
-             * 15% of max health.
-             */
+            if (combo.hits >= MAX_COMBO) {
 
-            float healthPercent =
-                    target.getHealth()
-                            / target.getMaxHealth();
+                System.out.println(
+                        "WITHERITE IMPACT TRIGGERED"
+                );
 
 
-            if (healthPercent < 0.15F) {
+                // -------------------------------------------------
+                // Sound
+                // -------------------------------------------------
 
-                // Instantly kill the enemy
+                serverLevel.playSound(
+                        null,
+                        target.getX(),
+                        target.getY(),
+                        target.getZ(),
+                        ModSounds.WITHERITE_IMPACT.get(),
+                        SoundSource.PLAYERS,
+                        0.8F,
+                        1.0F
+                );
+
+
+                // -------------------------------------------------
+                // Firework particles
+                // -------------------------------------------------
+
+                serverLevel.sendParticles(
+                        ParticleTypes.FIREWORK,
+                        target.getX(),
+                        target.getY() + 1.0D,
+                        target.getZ(),
+                        60,
+                        2.0D,
+                        2.0D,
+                        2.0D,
+                        0.2D
+                );
+
+
+                // -------------------------------------------------
+                // Extra impact damage
+                // -------------------------------------------------
+
                 target.hurt(
                         player.damageSources().playerAttack(player),
-                        Float.MAX_VALUE
+                        6.0F
                 );
 
 
-                /*
-                 * BIG BLACK PARTICLE EXPLOSION
-                 */
+                // -------------------------------------------------
+                // Knockback
+                // -------------------------------------------------
 
-                serverLevel.sendParticles(
-                        ParticleTypes.SMOKE,
-                        target.getX(),
-                        target.getY() + target.getBbHeight() * 0.5D,
-                        target.getZ(),
-                        80,
-                        0.6D,
-                        0.6D,
-                        0.6D,
-                        0.08D
+                target.knockback(
+                        2.0D,
+                        player.getX() - target.getX(),
+                        player.getZ() - target.getZ()
                 );
 
 
-                serverLevel.sendParticles(
-                        ParticleTypes.LARGE_SMOKE,
-                        target.getX(),
-                        target.getY() + target.getBbHeight() * 0.5D,
-                        target.getZ(),
-                        40,
-                        0.4D,
-                        0.4D,
-                        0.4D,
-                        0.05D
+                // -------------------------------------------------
+                // Screen shake
+                // -------------------------------------------------
+
+                ModNetwork.CHANNEL.send(
+                        PacketDistributor.TRACKING_ENTITY_AND_SELF
+                                .with(() -> target),
+                        new ShakePacket(
+                                1.5F,
+                                15
+                        )
                 );
 
 
-                // Reset this enemy's combo
-                COMBOS.remove(targetUUID);
+                // -------------------------------------------------
+                // Reset combo after impact
+                // -------------------------------------------------
 
-            } else {
+                COMBOS.remove(playerUUID);
 
-                /*
-                 * The normal sword hit is handled by
-                 * super.hurtEnemy().
-                 *
-                 * The combo damage multiplier is applied
-                 * separately below.
-                 */
-
-                float bonusMultiplier =
-                        1.0F + (combo.hits * 0.10F);
-
-
-                /*
-                 * combo.hits:
-                 *
-                 * 1 hit = +10%
-                 * 2 hits = +20%
-                 * 3 hits = +30%
-                 * 4 hits = +40%
-                 * 5 hits = +50%
-                 */
-
-                float baseDamage =
-                        (float) player.getAttributeValue(
-                                net.minecraft.world.entity.ai.attributes.Attributes.ATTACK_DAMAGE
-                        );
-
-
-                float bonusDamage =
-                        baseDamage * (bonusMultiplier - 1.0F);
-
-
-                /*
-                 * Deal the extra combo damage.
-                 *
-                 * super.hurtEnemy() below handles the
-                 * normal sword damage.
-                 */
-
-                if (bonusDamage > 0.0F) {
-
-                    target.hurt(
-                            player.damageSources().playerAttack(player),
-                            bonusDamage
-                    );
-                }
             }
         }
 
 
+        // Normal sword damage
         return super.hurtEnemy(
                 stack,
                 target,
@@ -226,97 +226,75 @@ public class WitheriteSwordItem extends SwordItem {
         );
     }
 
+
+    // =========================================================
+    // RIGHT CLICK
+    // =========================================================
+
     @Override
     public InteractionResultHolder<ItemStack> use(
             Level level,
             Player player,
             InteractionHand hand
     ) {
-        ItemStack stack = player.getItemInHand(hand);
 
+        ItemStack stack =
+                player.getItemInHand(hand);
+
+
+        // Cooldown
         if (player.getCooldowns().isOnCooldown(this)) {
-            return InteractionResultHolder.fail(stack);
+
+            return InteractionResultHolder.fail(
+                    stack
+            );
         }
+
 
         if (!level.isClientSide) {
 
             double radius = 5.0D;
 
-            List<LivingEntity> enemies =
+
+            // Find nearby living enemies
+            var enemies =
                     level.getEntitiesOfClass(
                             LivingEntity.class,
                             player.getBoundingBox().inflate(radius),
                             entity ->
                                     entity != player
                                             && entity.isAlive()
-                                            && entity.distanceTo(player) <= radius
+                                            && entity.distanceTo(player)
+                                            <= radius
                     );
 
+
+            // Apply Slowness II
             for (LivingEntity enemy : enemies) {
 
-                // Wither II for 3 seconds
                 enemy.addEffect(
-                        new MobEffectInstance(
-                                MobEffects.WITHER,
+                        new net.minecraft.world.effect.MobEffectInstance(
+                                net.minecraft.world.effect.MobEffects.MOVEMENT_SLOWDOWN,
                                 60,
                                 1,
-                                false,
-                                false
-                        )
-                );
-                // Slowness II for 3 seconds
-                enemy.addEffect(
-                        new MobEffectInstance(
-                                MobEffects.MOVEMENT_SLOWDOWN,
-                                60,
-                                1,
-                                false,
-                                false
-                        )
-                );
-                // blindness for 3 seconds
-                enemy.addEffect(
-                        new MobEffectInstance(
-                                MobEffects.BLINDNESS,
-                                60,
-                                0,
                                 false,
                                 false
                         )
                 );
             }
 
-            triggerAdvancement(player);
 
             // 5 second cooldown
-            player.getCooldowns().addCooldown(this, 20 * 5);
+            player.getCooldowns().addCooldown(
+                    this,
+                    20 * 5
+            );
         }
 
-        return InteractionResultHolder.success(stack);
-    }
 
-    private void triggerAdvancement(Player player) {
-
-        if (!(player instanceof ServerPlayer serverPlayer))
-            return;
-
-        Advancement advancement =
-                serverPlayer.server.getAdvancements()
-                        .getAdvancement(
-                                new ResourceLocation(
-                                        "oresrise",
-                                        "blackened"
-                                )
-                        );
-
-        if (advancement == null)
-            return;
-
-        serverPlayer.getAdvancements()
-                .award(
-                        advancement,
-                        "blackened"
-                );
+        return InteractionResultHolder.success(
+                stack
+        );
     }
 
 

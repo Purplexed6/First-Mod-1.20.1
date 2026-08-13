@@ -106,7 +106,7 @@ public class RoseGoldRecipes {
 
 
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, RoseGoldSet.ROSE_GOLD_INGOT.get(), 2)
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, RoseGoldSet.ROSE_GOLD_INGOT.get(), 1)
                 .requires(Items.GOLD_INGOT)
                 .requires(Items.COPPER_INGOT)
                 .unlockedBy("has_gold_ingot", has(Items.GOLD_INGOT))

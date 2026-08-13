@@ -2,6 +2,7 @@ package net.mak.oresrise;
 
 import com.mojang.logging.LogUtils;
 import net.mak.oresrise.block.ModBlocks;
+import net.mak.oresrise.effect.ModEffects;
 import net.mak.oresrise.entity.ModEntities;
 import net.mak.oresrise.event.armor.ArmorEvents;
 import net.mak.oresrise.event.MoltenIronEvents;
@@ -56,6 +57,10 @@ public class ExampleMod {
 
         ModBlocks.register(
                 modEventBus
+        );
+
+        ModEffects.register
+                (modEventBus
         );
 
         ModSounds.register(

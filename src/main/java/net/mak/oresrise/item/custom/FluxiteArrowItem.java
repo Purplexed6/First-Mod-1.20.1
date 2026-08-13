@@ -28,6 +28,12 @@ public class FluxiteArrowItem extends ArrowItem {
         arrow.setOwner(shooter);
         arrow.setEffectsFromItem(stack);
 
+        arrow.setPos(
+                shooter.getX(),
+                shooter.getEyeY() - 0.1D,
+                shooter.getZ()
+        );
+
         return arrow;
     }
 }

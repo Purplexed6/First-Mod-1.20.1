@@ -44,12 +44,10 @@ public class ModBlocks {
     public static final RegistryObject<Block> ROSITE_BLOCK = registerBlock("rosite_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
 
-    public static final RegistryObject<Block> VIBRANIUM_BLOCK = registerBlock("vibranium_block",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST)));
-    public static final RegistryObject<Block> ROUGH_VIBRANIUM_BLOCK = registerBlock("rough_vibranium_block",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
-    public static final RegistryObject<Block> VIBRANIUM_ORE = registerBlock("vibranium_ore",
-            () -> new VibraniumOreBlock(BlockBehaviour.Properties.copy(Blocks.DIAMOND_ORE)
+    public static final RegistryObject<Block> SCOURIUM_BLOCK = registerBlock("scourium_block",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.STONE)));
+    public static final RegistryObject<Block> SCOUROUS_ORE = registerBlock("scourous_ore",
+            () -> new PhasmicOreBlock(BlockBehaviour.Properties.copy(Blocks.DIAMOND_ORE)
                     .requiresCorrectToolForDrops(), UniformInt.of(3,  8)));
 
     /* public static final RegistryObject<Block> OBLIVIONITE_BLOCK = registerBlock("oblivionite_block",
@@ -105,10 +103,10 @@ public class ModBlocks {
             () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.DIAMOND_ORE)
                     .requiresCorrectToolForDrops(), UniformInt.of(4, 8)));
 
-    public static final RegistryObject<Block> CRYPTON_BLOCK = registerBlock("crypton_block",
+    public static final RegistryObject<Block> COLLOSITE_BLOCK = registerBlock("colossite_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).sound(SoundType.AMETHYST)));
-    public static final RegistryObject<Block> CRYPTON_ORE = registerBlock("crypton_ore",
-            () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.DIAMOND_ORE)
+    public static final RegistryObject<Block> COLOSSAL_ORE = registerBlock("colossal_ore",
+            () -> new ColossalOreBlock(BlockBehaviour.Properties.copy(Blocks.DIAMOND_ORE)
                     .requiresCorrectToolForDrops(), UniformInt.of(4, 8)));
 
     public static final RegistryObject<Block> FLUXITE_BLOCK = registerBlock("fluxite_block",
@@ -135,9 +133,6 @@ public class ModBlocks {
             () -> new RagingOreBlock(BlockBehaviour.Properties.copy(Blocks.DIAMOND_ORE)
                     .requiresCorrectToolForDrops(), UniformInt.of(4, 8)));
     public static final RegistryObject<Block> RAGEITE_BLOCK = registerBlock("rageite_block",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).sound(SoundType.STONE)));
-
-    public static final RegistryObject<Block> STAR_PLATINUM_BLOCK = registerBlock("star_platinum_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).sound(SoundType.STONE)));
 
     /* public static final RegistryObject<Block> COBALT_BLOCK = registerBlock("cobalt_block",
@@ -175,6 +170,30 @@ public class ModBlocks {
     public static final RegistryObject<Block> STARDUST_ORE = registerBlock("stardust_ore",
             () -> new StardustOreBlock(BlockBehaviour.Properties.copy(Blocks.DIAMOND_ORE)
                     .requiresCorrectToolForDrops(), UniformInt.of(16, 20)));
+
+    public static final RegistryObject<Block> RUGITE_BLOCK = registerBlock("rugite_block",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE).sound(SoundType.GILDED_BLACKSTONE)));
+    public static final RegistryObject<Block> POLISHED_RUGITE = registerBlock("polished_rugite",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.POLISHED_ANDESITE).sound(SoundType.STONE)));
+    public static final RegistryObject<Block> RUGITE_BRICKS = registerBlock("rugite_bricks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_BRICKS).sound(SoundType.STONE)));
+
+    public static final RegistryObject<Block> SOULSTONE_BLOCK = registerBlock("soulstone_block",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.BLACKSTONE).sound(SoundType.CALCITE)));
+    public static final RegistryObject<Block> POLISHED_SOULSTONE = registerBlock("polished_soulstone",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.POLISHED_ANDESITE).sound(SoundType.STONE)));
+    public static final RegistryObject<Block> SOULSTONE_BRICKS = registerBlock("soulstone_bricks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_BRICKS).sound(SoundType.NETHER_BRICKS)));
+
+    public static final RegistryObject<Block> ASTRALITE_BLOCK = registerBlock("astralite_block",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.END_STONE).sound(SoundType.DEEPSLATE)));
+    public static final RegistryObject<Block> POLISHED_ASTRALITE = registerBlock("polished_astralite",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.POLISHED_ANDESITE).sound(SoundType.POLISHED_DEEPSLATE)));
+    public static final RegistryObject<Block> ASTRALITE_BRICKS = registerBlock("astralite_bricks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.END_STONE_BRICKS).sound(SoundType.DEEPSLATE_BRICKS)));
+
+    public static final RegistryObject<Block> SOUL_MAGMA = registerBlock("soul_magma",
+            () -> new MagmaBlock(BlockBehaviour.Properties.copy(Blocks.MAGMA_BLOCK).sound(SoundType.STONE)));
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {

@@ -1,6 +1,7 @@
 package net.mak.oresrise.item.custom;
 
 import net.mak.oresrise.client.ClientShakeHandler;
+import net.mak.oresrise.effect.ModEffects;
 import net.mak.oresrise.item.ModToolTiers;
 import net.mak.oresrise.network.ModNetwork;
 import net.mak.oresrise.network.ShakePacket;
@@ -159,61 +160,16 @@ public class ModSwordItem extends SwordItem {
             ));
         }
 
-        if (this.getTier() == ModToolTiers.STAR_PLATINUM && attacker instanceof Player player) {
+        if (this.getTier() == ModToolTiers.SCOURIUM) {
 
-            var id = player.getUUID();
-
-            int combo = COMBO_MAP.getOrDefault(id, 0) + 1;
-            COMBO_MAP.put(id, combo);
-
-            player.getPersistentData().putInt("oresrise_last_hit", player.tickCount);
-
-            System.out.println("COMBO: " + combo);
-
-            if (combo >= 5) {
-
-                System.out.println("IMPACT TRIGGERED");
-
-                if (!attacker.level().isClientSide) {
-
-                    attacker.level().playSound(
-                            null,
-                            attacker.getX(),
-                            attacker.getY(),
-                            attacker.getZ(),
-                            ModSounds.STAR_PLATINUM_IMPACT.get(),
-                            SoundSource.PLAYERS,
-                            0.8f,
-                            1.0f
-                    );
-
-                    ((ServerLevel) target.level()).sendParticles(
-                            ParticleTypes.FIREWORK,
-                            target.getX(),
-                            target.getY() + 1,
-                            target.getZ(),
-                            60,
-                            2.0, 2.0, 2.0,
-                            0.2
-                    );
-
-                    target.hurt(
-                            attacker.damageSources().playerAttack(player),
-                            6.0f
-                    );
-
-                    target.knockback(2f,
-                            attacker.getX() - target.getX(),
-                            attacker.getZ() - target.getZ());
-
-                    COMBO_MAP.put(id, 0);
-                }
-
-                ModNetwork.CHANNEL.send(
-                        PacketDistributor.TRACKING_ENTITY_AND_SELF.with(() -> attacker),
-                        new ShakePacket(1.5f, 15)
-                );
-            }
+            target.addEffect(new MobEffectInstance(
+                    ModEffects.SCOURIUM_INFECTION.get(),
+                    60,
+                    1,
+                    false,
+                    true,
+                    true
+            ));
         }
 
         float charged = attacker.getPersistentData().getFloat("charged_hit");
