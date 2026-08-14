@@ -440,13 +440,26 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.RUGITE_BLOCK.get());
                         pOutput.accept(ModBlocks.POLISHED_RUGITE.get());
                         pOutput.accept(ModBlocks.RUGITE_BRICKS.get());
+
                         pOutput.accept(ModBlocks.SOULSTONE_BLOCK.get());
                         pOutput.accept(ModBlocks.POLISHED_SOULSTONE.get());
                         pOutput.accept(ModBlocks.SOULSTONE_BRICKS.get());
+
                         pOutput.accept(ModBlocks.ASTRALITE_BLOCK.get());
                         pOutput.accept(ModBlocks.POLISHED_ASTRALITE.get());
                         pOutput.accept(ModBlocks.ASTRALITE_BRICKS.get());
+
+                        pOutput.accept(ModBlocks.ECHOROCK_BLOCK.get());
+                        pOutput.accept(ModBlocks.POLISHED_ECHOROCK.get());
+                        pOutput.accept(ModBlocks.ECHOROCK_BRICKS.get());
+
+                        pOutput.accept(ModBlocks.VOIDSTONE_BLOCK.get());
+                        pOutput.accept(ModBlocks.POLISHED_VOIDSTONE.get());
+                        pOutput.accept(ModBlocks.VOIDSTONE_BRICKS.get());
+
                         pOutput.accept(ModBlocks.SOUL_MAGMA.get());
+                        pOutput.accept(ModBlocks.SOUL_GRAVEL.get());
+                        pOutput.accept(ModBlocks.SOULSTONE_QUARTZ_ORE.get());
 
                        // pOutput.accept(ModBlocks.OBLIVIONITE_BLOCK.get());
                        // pOutput.accept(ModBlocks.OBLIVIONITE_ORE.get());

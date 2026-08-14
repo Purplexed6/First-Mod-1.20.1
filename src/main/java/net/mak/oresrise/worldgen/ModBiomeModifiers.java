@@ -43,12 +43,16 @@ public class ModBiomeModifiers {
 
     public static final ResourceKey<BiomeModifier> ADD_RUGITE =
             registerKey("add_rugite");
-    public static final ResourceKey<BiomeModifier> ADD_SOULSTONE =
-            registerKey("add_soulstone");
+    //public static final ResourceKey<BiomeModifier> ADD_SOULSTONE =
+      //      registerKey("add_soulstone");
     public static final ResourceKey<BiomeModifier> ADD_ASTRALITE =
             registerKey("add_astralite");
-    public static final ResourceKey<BiomeModifier> ADD_SOUL_MAGMA =
-            registerKey("add_soul_magma");
+    public static final ResourceKey<BiomeModifier> ADD_VOIDSTONE =
+            registerKey("add_voidstone");
+    public static final ResourceKey<BiomeModifier> ADD_ECHOROCK =
+            registerKey("add_echorock");
+    //public static final ResourceKey<BiomeModifier> ADD_SOUL_MAGMA =
+  //          registerKey("add_soul_magma");
 
     public static void bootstrap(BootstapContext<BiomeModifier> context) {
         var placedFeatures = context.lookup(Registries.PLACED_FEATURE);
@@ -182,7 +186,7 @@ public class ModBiomeModifiers {
                 )
         );
 
-        context.register(
+        /*context.register(
                 ADD_SOULSTONE,
                 new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
                         HolderSet.direct(
@@ -195,7 +199,7 @@ public class ModBiomeModifiers {
                         ),
                         GenerationStep.Decoration.UNDERGROUND_ORES
                 )
-        );
+        );*/
 
         context.register(
                 ADD_ASTRALITE,
@@ -211,6 +215,34 @@ public class ModBiomeModifiers {
         );
 
         context.register(
+                ADD_ECHOROCK,
+                new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                        biomes.getOrThrow(BiomeTags.IS_END),
+                        HolderSet.direct(
+                                placedFeatures.getOrThrow(
+                                        ModPlacedFeatures.ECHOROCK_BLOB_PLACED
+                                )
+                        ),
+                        GenerationStep.Decoration.UNDERGROUND_ORES
+                )
+        );
+
+        context.register(
+                ADD_VOIDSTONE,
+                new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                        HolderSet.direct(
+                                biomes.getOrThrow(Biomes.SMALL_END_ISLANDS)
+                        ),
+                        HolderSet.direct(
+                                placedFeatures.getOrThrow(
+                                        ModPlacedFeatures.VOIDSTONE_BLOB_PLACED
+                                )
+                        ),
+                        GenerationStep.Decoration.UNDERGROUND_ORES
+                )
+        );
+
+        /*context.register(
                 ADD_SOUL_MAGMA,
                 new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
                         HolderSet.direct(
@@ -223,7 +255,7 @@ public class ModBiomeModifiers {
                         ),
                         GenerationStep.Decoration.UNDERGROUND_ORES
                 )
-        );
+        );*/
     }
 
     private static ResourceKey<BiomeModifier> registerKey(String name) {

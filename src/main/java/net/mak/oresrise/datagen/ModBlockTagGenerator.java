@@ -49,6 +49,8 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         // ModBlocks.OBLIVIONITE_ORE.get());
                         ModBlocks.LUNARIS_ORE.get());
 
+        this.tag(BlockTags.MINEABLE_WITH_SHOVEL)
+                .add(ModBlocks.SOUL_GRAVEL.get());
 
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(ModBlocks.SAPPHIRE_BLOCK.get(),
@@ -130,9 +132,11 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.SOULSTONE_BLOCK.get(),
                         ModBlocks.POLISHED_SOULSTONE.get(),
                         ModBlocks.SOULSTONE_BRICKS.get(),
+                        ModBlocks.SOULSTONE_QUARTZ_ORE.get(),
                         ModBlocks.ASTRALITE_BLOCK.get(),
                         ModBlocks.POLISHED_ASTRALITE.get(),
                         ModBlocks.ASTRALITE_BRICKS.get(),
+                        ModBlocks.ECHOROCK_BLOCK.get(),
                         ModBlocks.SOUL_MAGMA.get());
 
                      //   ModBlocks.OBLIVIONITE_BLOCK.get(),
@@ -144,12 +148,25 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.RUGITE_BLOCK.get(),
                 ModBlocks.POLISHED_RUGITE.get(),
                 ModBlocks.RUGITE_BRICKS.get(),
+
                 ModBlocks.SOULSTONE_BLOCK.get(),
                 ModBlocks.POLISHED_SOULSTONE.get(),
                 ModBlocks.SOULSTONE_BRICKS.get(),
+                ModBlocks.SOULSTONE_QUARTZ_ORE.get(),
+
                 ModBlocks.ASTRALITE_BLOCK.get(),
                 ModBlocks.POLISHED_ASTRALITE.get(),
                 ModBlocks.ASTRALITE_BRICKS.get(),
+
+                ModBlocks.ECHOROCK_BLOCK.get(),
+                ModBlocks.POLISHED_ECHOROCK.get(),
+                ModBlocks.ECHOROCK_BRICKS.get(),
+
+                ModBlocks.VOIDSTONE_BLOCK.get(),
+                ModBlocks.POLISHED_VOIDSTONE.get(),
+                ModBlocks.VOIDSTONE_BRICKS.get(),
+
+                ModBlocks.SOUL_GRAVEL.get(),
                 ModBlocks.SOUL_MAGMA.get());
 
 

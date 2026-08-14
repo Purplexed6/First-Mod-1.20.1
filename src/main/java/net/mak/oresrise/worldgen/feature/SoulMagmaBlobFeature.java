@@ -1,4 +1,4 @@
-package net.mak.oresrise.worldgen.feature;
+/*package net.mak.oresrise.worldgen.feature;
 
 import com.mojang.serialization.Codec;
 import net.mak.oresrise.block.ModBlocks;
@@ -32,12 +32,6 @@ public class SoulMagmaBlobFeature extends Feature<NoneFeatureConfiguration> {
         BlockPos.MutableBlockPos pos =
                 new BlockPos.MutableBlockPos();
 
-        /*
-         * TITANIC BLOB
-         *
-         * X/Z: 25–45 blocks radius
-         * Y:    12–25 blocks radius
-         */
         int radiusX = 25 + random.nextInt(21);
         int radiusY = 12 + random.nextInt(14);
         int radiusZ = 25 + random.nextInt(21);
@@ -53,7 +47,7 @@ public class SoulMagmaBlobFeature extends Feature<NoneFeatureConfiguration> {
                                     + (double) (y * y) / (radiusY * radiusY)
                                     + (double) (z * z) / (radiusZ * radiusZ);
 
-                    // Slight randomness around the edge
+
                     if (normalizedDistance > 1.0D + random.nextDouble() * 1.1D) {
                         continue;
                     }
@@ -69,9 +63,6 @@ public class SoulMagmaBlobFeature extends Feature<NoneFeatureConfiguration> {
                             origin.getZ() + z
                     );
 
-                    /*
-                     * Only replace Netherrack.
-                     */
                     if (level.getBlockState(pos).is(Blocks.MAGMA_BLOCK)) {
 
                         level.setBlock(
@@ -88,4 +79,4 @@ public class SoulMagmaBlobFeature extends Feature<NoneFeatureConfiguration> {
 
         return placed > 0;
     }
-}
+}*/

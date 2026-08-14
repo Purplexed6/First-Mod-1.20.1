@@ -42,9 +42,11 @@
     "oresrise:soulstone_block",
     "oresrise:polished_soulstone",
     "oresrise:soulstone_bricks",
+    "oresrise:soulstone_quartz_ore",
     "oresrise:astralite_block",
     "oresrise:polished_astralite",
     "oresrise:astralite_bricks",
+    "oresrise:echorock_block",
     "oresrise:soul_magma"
   ]
 }

@@ -42,12 +42,16 @@ public class ModPlacedFeatures {
 
     public static final ResourceKey<PlacedFeature> RUGITE_BLOB_PLACED =
             registerKey("rugite_blob_placed");
-    public static final ResourceKey<PlacedFeature> SOULSTONE_BLOB_PLACED =
-            registerKey("soulstone_blob_placed");
+    //public static final ResourceKey<PlacedFeature> SOULSTONE_BLOB_PLACED =
+      //      registerKey("soulstone_blob_placed");
     public static final ResourceKey<PlacedFeature> ASTRALITE_BLOB_PLACED =
             registerKey("astralite_blob_placed");
-    public static final ResourceKey<PlacedFeature> SOUL_MAGMA_BLOB_PLACED =
-            registerKey("soul_magma_blob_placed");
+    public static final ResourceKey<PlacedFeature> ECHOROCK_BLOB_PLACED =
+            registerKey("echorock_blob_placed");
+    public static final ResourceKey<PlacedFeature> VOIDSTONE_BLOB_PLACED =
+            registerKey("voidstone_blob_placed");
+    //public static final ResourceKey<PlacedFeature> SOUL_MAGMA_BLOB_PLACED =
+      //      registerKey("soul_magma_blob_placed");
 
     public static final ResourceKey<PlacedFeature> NETHER_BURIED_TREASURE =
             registerKey("nether_buried_treasure");
@@ -180,20 +184,29 @@ public class ModPlacedFeatures {
                         ModConfiguredFeatures.RUGITE_BLOB
                 );
 
-        Holder<ConfiguredFeature<?, ?>> soulstoneBlob =
+        /*Holder<ConfiguredFeature<?, ?>> soulstoneBlob =
                 configuredFeatures.getOrThrow(
                         ModConfiguredFeatures.SOULSTONE_BLOB
-                );
+                );*/
 
         Holder<ConfiguredFeature<?, ?>> astraliteBlob =
                 configuredFeatures.getOrThrow(
                         ModConfiguredFeatures.ASTRALITE_BLOB
                 );
 
-        Holder<ConfiguredFeature<?, ?>> soulmagmaBlob =
+        Holder<ConfiguredFeature<?, ?>> voidstoneBlob =
                 configuredFeatures.getOrThrow(
-                        ModConfiguredFeatures.SOUL_MAGMA_BLOB
+                        ModConfiguredFeatures.VOIDSTONE_BLOB
                 );
+
+        Holder<ConfiguredFeature<?, ?>> echorockBlob =
+                configuredFeatures.getOrThrow(
+                        ModConfiguredFeatures.ECHOROCK_BLOB
+                );
+
+        //Holder<ConfiguredFeature<?, ?>> soulmagmaBlob =
+          //      configuredFeatures.getOrThrow(
+            //            ModConfiguredFeatures.SOUL_MAGMA_BLOB);
 
         register(
                 context,
@@ -210,7 +223,7 @@ public class ModPlacedFeatures {
                 )
         );
 
-        register(
+        /*register(
                 context,
                 SOULSTONE_BLOB_PLACED,
                 soulstoneBlob,
@@ -223,14 +236,14 @@ public class ModPlacedFeatures {
                         ),
                         BiomeFilter.biome()
                 )
-        );
+        );*/
 
         register(
                 context,
                 ASTRALITE_BLOB_PLACED,
                 astraliteBlob,
                 List.of(
-                        CountPlacement.of(1),
+                        CountPlacement.of(5),
                         InSquarePlacement.spread(),
                         HeightRangePlacement.uniform(
                                 VerticalAnchor.absolute(0),
@@ -241,6 +254,36 @@ public class ModPlacedFeatures {
         );
 
         register(
+                context,
+                ECHOROCK_BLOB_PLACED,
+                echorockBlob,
+                List.of(
+                        RarityFilter.onAverageOnceEvery(8),
+                        InSquarePlacement.spread(),
+                        HeightRangePlacement.uniform(
+                                VerticalAnchor.absolute(0),
+                                VerticalAnchor.absolute(128)
+                        ),
+                        BiomeFilter.biome()
+                )
+        );
+
+        register(
+                context,
+                VOIDSTONE_BLOB_PLACED,
+                voidstoneBlob,
+                List.of(
+                        CountPlacement.of(128),
+                        InSquarePlacement.spread(),
+                        HeightRangePlacement.uniform(
+                                VerticalAnchor.absolute(-64),
+                                VerticalAnchor.absolute(128)
+                        ),
+                        BiomeFilter.biome()
+                )
+        );
+
+        /*register(
                 context,
                 SOUL_MAGMA_BLOB_PLACED,
                 soulmagmaBlob,
@@ -253,7 +296,7 @@ public class ModPlacedFeatures {
                         ),
                         BiomeFilter.biome()
                 )
-        );
+        );*/
     }
 
 

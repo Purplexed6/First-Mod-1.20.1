@@ -36,18 +36,28 @@ public class ModFeatures {
                     "rugite_blob",
                     () -> new RugiteBlobFeature(NoneFeatureConfiguration.CODEC));
 
-    public static final RegistryObject<Feature<NoneFeatureConfiguration>> SOULSTONE_BLOB =
+    /*public static final RegistryObject<Feature<NoneFeatureConfiguration>> SOULSTONE_BLOB =
             FEATURES.register(
                     "soulstone_blob",
-                    () -> new SoulstoneBlobFeature(NoneFeatureConfiguration.CODEC));
+                    () -> new SoulstoneBlobFeature(NoneFeatureConfiguration.CODEC));*/
 
     public static final RegistryObject<Feature<NoneFeatureConfiguration>> ASTRALITE_BLOB =
             FEATURES.register(
                     "astralite_blob",
                     () -> new AstraliteBlobFeature(NoneFeatureConfiguration.CODEC));
 
-    public static final RegistryObject<Feature<NoneFeatureConfiguration>> SOUL_MAGMA_BLOB =
+    public static final RegistryObject<Feature<NoneFeatureConfiguration>> VOIDSTONE_BLOB =
+            FEATURES.register(
+                    "voidstone_blob",
+                    () -> new VoidstoneIslandFeature(NoneFeatureConfiguration.CODEC));
+
+    public static final RegistryObject<Feature<NoneFeatureConfiguration>> ECHOROCK_BLOB =
+            FEATURES.register(
+                    "echorock_blob",
+                    () -> new EchorockBlobFeature(NoneFeatureConfiguration.CODEC));
+
+    /*public static final RegistryObject<Feature<NoneFeatureConfiguration>> SOUL_MAGMA_BLOB =
             FEATURES.register(
                     "soul_magma_blob",
-                    () -> new SoulMagmaBlobFeature(NoneFeatureConfiguration.CODEC));
+                    () -> new SoulMagmaBlobFeature(NoneFeatureConfiguration.CODEC));*/
 }

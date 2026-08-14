@@ -82,13 +82,25 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.RUGITE_BLOCK);
         blockWithItem(ModBlocks.POLISHED_RUGITE);
         blockWithItem(ModBlocks.RUGITE_BRICKS);
+
         blockWithItem(ModBlocks.SOULSTONE_BLOCK);
         blockWithItem(ModBlocks.POLISHED_SOULSTONE);
         blockWithItem(ModBlocks.SOULSTONE_BRICKS);
         blockWithItem(ModBlocks.SOUL_MAGMA);
+        blockWithItem(ModBlocks.SOUL_GRAVEL);
+        blockWithItem(ModBlocks.SOULSTONE_QUARTZ_ORE);
+
         blockWithItem(ModBlocks.ASTRALITE_BLOCK);
         blockWithItem(ModBlocks.POLISHED_ASTRALITE);
         blockWithItem(ModBlocks.ASTRALITE_BRICKS);
+
+        blockWithItem(ModBlocks.ECHOROCK_BLOCK);
+        blockWithItem(ModBlocks.POLISHED_ECHOROCK);
+        blockWithItem(ModBlocks.ECHOROCK_BRICKS);
+
+        blockWithItem(ModBlocks.VOIDSTONE_BLOCK);
+        blockWithItem(ModBlocks.POLISHED_VOIDSTONE);
+        blockWithItem(ModBlocks.VOIDSTONE_BRICKS);
     }
 
     private void blockItem(RegistryObject<Block> blockRegistryObject) {

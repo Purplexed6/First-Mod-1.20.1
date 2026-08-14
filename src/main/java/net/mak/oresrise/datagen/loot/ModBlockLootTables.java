@@ -8,6 +8,7 @@ import net.minecraft.advancements.critereon.StatePropertiesPredicate;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.storage.loot.LootPool;
@@ -69,6 +70,12 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.ASTRALITE_BLOCK.get());
         this.dropSelf(ModBlocks.POLISHED_ASTRALITE.get());
         this.dropSelf(ModBlocks.ASTRALITE_BRICKS.get());
+        this.dropSelf(ModBlocks.ECHOROCK_BLOCK.get());
+        this.dropSelf(ModBlocks.POLISHED_ECHOROCK.get());
+        this.dropSelf(ModBlocks.ECHOROCK_BRICKS.get());
+        this.dropSelf(ModBlocks.VOIDSTONE_BLOCK.get());
+        this.dropSelf(ModBlocks.POLISHED_VOIDSTONE.get());
+        this.dropSelf(ModBlocks.VOIDSTONE_BRICKS.get());
         this.dropSelf(ModBlocks.SOUL_MAGMA.get());
 
         this.add(ModBlocks.SAPPHIRE_ORE.get(), (block) ->
@@ -169,6 +176,20 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                         LootItem.lootTableItem(SoulSet.SOUL_FRAGMENT.get())
                                 .apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0f, 2.0f)))
                                 .apply(ApplyBonusCount.addOreBonusCount(Enchantments.BLOCK_FORTUNE)))));
+
+        this.add(ModBlocks.SOUL_GRAVEL.get(), (block) ->
+                createSilkTouchDispatchTable(block, this.applyExplosionDecay(block,
+                        LootItem.lootTableItem(ModBlocks.SOUL_GRAVEL.get())))
+                        .withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1.0f))
+                                .when(LootItemRandomChanceCondition.randomChance(0.1f))
+                                .add(LootItem.lootTableItem(SoulSet.SOUL_FRAGMENT.get()))));
+
+        this.add(ModBlocks.SOULSTONE_QUARTZ_ORE.get(), (block) ->
+                createSilkTouchDispatchTable(block,
+                        this.applyExplosionDecay(block,
+                                LootItem.lootTableItem(Items.QUARTZ)
+                                        .apply(ApplyBonusCount.addOreBonusCount(
+                                                Enchantments.BLOCK_FORTUNE)))));
 
         /*this.add(ModBlocks.QUINTESSITE_ORE.get(), (block) ->
                 createSilkTouchDispatchTable(block, this.applyExplosionDecay(block,

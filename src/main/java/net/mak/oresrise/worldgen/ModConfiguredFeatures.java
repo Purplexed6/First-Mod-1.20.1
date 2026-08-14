@@ -42,12 +42,16 @@ public class ModConfiguredFeatures {
 
     public static final ResourceKey<ConfiguredFeature<?, ?>> RUGITE_BLOB =
             registerKey("rugite_blob");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> SOULSTONE_BLOB =
-            registerKey("soulstone_blob");
+    //public static final ResourceKey<ConfiguredFeature<?, ?>> SOULSTONE_BLOB =
+      //      registerKey("soulstone_blob");
     public static final ResourceKey<ConfiguredFeature<?, ?>> ASTRALITE_BLOB =
             registerKey("astralite_blob");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> SOUL_MAGMA_BLOB =
-            registerKey("soul_magma_blob");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> VOIDSTONE_BLOB =
+            registerKey("voidstone_blob");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> ECHOROCK_BLOB =
+            registerKey("echorock_blob");
+    //public static final ResourceKey<ConfiguredFeature<?, ?>> SOUL_MAGMA_BLOB =
+      //      registerKey("soul_magma_blob");
 
     public static final ResourceKey<ConfiguredFeature<?, ?>> NETHER_BURIED_TREASURE =
             registerKey("nether_buried_treasure");
@@ -147,12 +151,12 @@ public class ModConfiguredFeatures {
                 NoneFeatureConfiguration.INSTANCE
         );
 
-        register(
+        /*register(
                 context,
                 SOULSTONE_BLOB,
                 ModFeatures.SOULSTONE_BLOB.get(),
                 NoneFeatureConfiguration.INSTANCE
-        );
+        );*/
 
         register(
                 context,
@@ -163,10 +167,24 @@ public class ModConfiguredFeatures {
 
         register(
                 context,
+                VOIDSTONE_BLOB,
+                ModFeatures.VOIDSTONE_BLOB.get(),
+                NoneFeatureConfiguration.INSTANCE
+        );
+
+        register(
+                context,
+                ECHOROCK_BLOB,
+                ModFeatures.ECHOROCK_BLOB.get(),
+                NoneFeatureConfiguration.INSTANCE
+        );
+
+        /*register(
+                context,
                 SOUL_MAGMA_BLOB,
                 ModFeatures.SOUL_MAGMA_BLOB.get(),
                 NoneFeatureConfiguration.INSTANCE
-        );
+        );*/
 }
 
     public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name) {

@@ -30,14 +30,71 @@ public class AstraliteBlobFeature extends Feature<NoneFeatureConfiguration> {
         BlockPos.MutableBlockPos pos =
                 new BlockPos.MutableBlockPos();
 
-        // Smaller End-style blob dimensions
-        int radiusX = 4 + random.nextInt(4);
-        int radiusY = 4 + random.nextInt(4);
-        int radiusZ = 4 + random.nextInt(4);
+        // =====================================================
+        // FIND A CHORUS PLANT NEARBY
+        // =====================================================
+
+        int searchRadius = 8;
+
+        BlockPos chorusBase = null;
+
+        for (int x = -searchRadius; x <= searchRadius && chorusBase == null; x++) {
+            for (int y = -8; y <= 8 && chorusBase == null; y++) {
+                for (int z = -searchRadius; z <= searchRadius; z++) {
+
+                    BlockPos checkPos = origin.offset(x, y, z);
+
+                    BlockState state = level.getBlockState(checkPos);
+
+                    if (state.is(Blocks.CHORUS_PLANT)
+                            || state.is(Blocks.CHORUS_FLOWER)) {
+
+                        // Find the bottom of the chorus plant
+                        BlockPos base = checkPos;
+
+                        while (base.getY() > level.getMinBuildHeight()
+                                && level.getBlockState(base.below())
+                                .is(Blocks.CHORUS_PLANT)) {
+
+                            base = base.below();
+                        }
+
+                        chorusBase = base;
+                        break;
+                    }
+                }
+            }
+        }
+
+        // No chorus plant nearby
+        if (chorusBase == null) {
+            return false;
+        }
+
+        // =====================================================
+        // MAKE SURE CHORUS IS ACTUALLY GROWING FROM END STONE
+        // =====================================================
+
+        BlockPos ground = chorusBase.below();
+
+        if (!level.getBlockState(ground).is(Blocks.END_STONE)) {
+            return false;
+        }
+
+        // =====================================================
+        // ASTRALITE PATCH SIZE
+        // =====================================================
+
+        int radiusX = 3 + random.nextInt(3); // 3-5
+        int radiusY = 1 + random.nextInt(2); // 1-2
+        int radiusZ = 3 + random.nextInt(3); // 3-5
 
         int placed = 0;
 
-        // Create an ellipsoid
+        // =====================================================
+        // CREATE PATCH UNDER CHORUS PLANT
+        // =====================================================
+
         for (int x = -radiusX; x <= radiusX; x++) {
             for (int y = -radiusY; y <= radiusY; y++) {
                 for (int z = -radiusZ; z <= radiusZ; z++) {
@@ -47,25 +104,27 @@ public class AstraliteBlobFeature extends Feature<NoneFeatureConfiguration> {
                                     + (double) (y * y) / (radiusY * radiusY)
                                     + (double) (z * z) / (radiusZ * radiusZ);
 
-                    // Slight randomness around the edge
+                    // Irregular edge
                     if (normalizedDistance >
-                            1.0D + random.nextDouble() * 0.25D) {
+                            1.0D + random.nextDouble() * 0.35D) {
                         continue;
                     }
 
-                    // Make the blob slightly irregular
-                    if (random.nextFloat() < 0.08F) {
+                    // Small imperfections
+                    if (random.nextFloat() < 0.12F) {
                         continue;
                     }
 
                     pos.set(
-                            origin.getX() + x,
-                            origin.getY() + y + 3,
-                            origin.getZ() + z
+                            ground.getX() + x,
+                            ground.getY() + y,
+                            ground.getZ() + z
                     );
 
-                    BlockState current = level.getBlockState(pos);
+                    BlockState current =
+                            level.getBlockState(pos);
 
+                    // Only replace End Stone
                     if (current.is(Blocks.END_STONE)) {
 
                         level.setBlock(

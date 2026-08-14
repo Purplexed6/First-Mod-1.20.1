@@ -434,15 +434,32 @@
   "block.oresrise.rugite_block": "Rugite",
   "block.oresrise.polished_rugite": "Polished Rugite",
   "block.oresrise.rugite_bricks": "Rugite Bricks",
+
   "block.oresrise.soulstone_block": "Soulstone",
   "block.oresrise.polished_soulstone": "Polished Soulstone",
   "block.oresrise.soulstone_bricks": "Soulstone Bricks",
+
   "block.oresrise.astralite_block": "Astralite",
   "block.oresrise.polished_astralite": "Polished Astralite",
   "block.oresrise.astralite_bricks": "Astralite Bricks",
+
+  "block.oresrise.echorock_block": "Echorock",
+  "block.oresrise.polished_echorock": "Polished Echorock",
+  "block.oresrise.echorock_bricks": "Echorock Bricks",
+
+  "block.oresrise.voidstone_block": "Voidstone",
+  "block.oresrise.polished_voidstone": "Polished Voidstone",
+  "block.oresrise.voidstone_bricks": "Voidstone Bricks",
+
   "block.oresrise.soul_magma": "Spectral Magma Block",
+  "block.oresrise.soul_gravel": "Spectral Gravel",
+  "block.oresrise.soulstone_quartz_ore": "Soulstone Quartz Ore",
+
+
 
   "effect.oresrise.scourium_infection": "Scouria",
+
+
 
   "creativetab.item_tab": "Ores Rise Items",
   "creativetab.block_tab": "Ores Rise Blocks"
